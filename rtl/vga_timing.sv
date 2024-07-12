@@ -1,13 +1,11 @@
 /**
- * Copyright (C) 2023  AGH University of Science and Technology
- * MTM UEC2
- * Author: Piotr Kaczmarczyk
+ * MTM Project_HubertSikora_ZuzannaSchab
+ * 
+ * Author: Hubert Sikora
  *
  * Description:
- * Vga timing controller.
+ * Timing module for VGA display
  */
-
-`timescale 1 ns / 1 ps
 
  module vga_timing (
     input  logic clk,
