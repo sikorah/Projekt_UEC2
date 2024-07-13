@@ -41,7 +41,7 @@ PlayerDisplay u_PlayerDisplay(
    .vcount(vga_in.vcount),
    .blank(vga_in.vblnk | vga_in.hblnk),
    .rgb_in(vga_in.rgb),
-   .rgb_out(vga_out.rgb),
+   .rgb_out(vga_out.rgb)
 );
 
 endmodule

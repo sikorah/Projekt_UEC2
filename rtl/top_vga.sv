@@ -88,7 +88,7 @@ draw_bg u_draw_bg (
     .vga_out(vga_rect)
 );
 */
-draw_rect u_draw_rect (
+/*draw_rect u_draw_rect (
     .clk(clk_40),
     .rst,
 
@@ -98,8 +98,8 @@ draw_rect u_draw_rect (
     .xpos,
     .ypos
 );
-
-
+*/
+/*
 MouseCtl u_MouseCtl(
     .clk(clk_100),
     .rst,
@@ -120,12 +120,12 @@ MouseCtl u_MouseCtl(
     .setmax_y('0)
 
     );
-
+*/
 always_ff @(posedge clk_40) begin
     xpos <= xpos_buf;
     ypos <= ypos_buf;
 end
-
+/*
 draw_mouse u_draw_mouse(
     .clk(clk_40),
     .rst,
@@ -135,7 +135,5 @@ draw_mouse u_draw_mouse(
     .ypos
 );
 
-
-
-
+*/
 endmodule

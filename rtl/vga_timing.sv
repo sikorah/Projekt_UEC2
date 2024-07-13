@@ -17,8 +17,8 @@
     output logic hsync,
     output logic hblnk,
     
-   vga_if.IN vga_in,
-   vga_if.OUT vga_out
+    vga_if.in vga_in,
+    vga_if.out vga_out
 );
 
 import vga_pkg::*;
