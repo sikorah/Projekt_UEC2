@@ -4,7 +4,7 @@
  * Author: Zuzanna Schab
  *
  * Description:
- * Module for drawing background (ROM image) on VGA display
+ * Module for drawing background frame on VGA display (to know where our screen ends)
  */
 
 
@@ -16,17 +16,11 @@
  
      vga_if.in vga_in,
      vga_if.out vga_out
-
-    // input  logic [11:0] address,  // address = {addry[5:0], addrx[5:0]}
-     //output logic [11:0] rgb
  );
  
  import vga_pkg::*;
  logic [11:0] rgb_nxt;
- 
- //reg [11:0] rom [0:4095];
- 
- 
+  
 
   always_ff @(posedge clk) begin : bg_ff_blk
     if (rst) begin
@@ -63,10 +57,4 @@ end
      end
 end
  
-//* Relative path from the simulation or synthesis working directory */
-       //      initial $readmemh("../../rtl/image_rom.data", rom);
-
-    //always @(posedge clk)
-        // rgb <= rom[address];
-
  endmodule

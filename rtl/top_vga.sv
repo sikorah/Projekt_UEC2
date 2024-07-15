@@ -1,12 +1,7 @@
 /**
- * San Jose State University
- * EE178 Lab #4
- * Author: prof. Eric Crabilla
- *
- * Modified by:
- * 2023  AGH University of Science and Technology
- * MTM UEC2
- * Piotr Kaczmarczyk
+ * MTM Project_HubertSikora_ZuzannaSchab
+ * 
+ * Author: Hubert Sikora & Zuzanna Schab
  *
  * Description:
  * The project top module.
@@ -36,7 +31,7 @@ module top_vga (
 vga_if vga_tim();
 vga_if vga_bg();
 vga_if vga_rect();
-vga_if mouse_out();
+//vga_if mouse_out();
 
 logic [11:0] xpos;
 logic [11:0] ypos;
@@ -48,9 +43,9 @@ logic [11:0] ypos_buf;
  * Signals assignments
  */
 
- assign vs = mouse_out.vsync;
- assign hs = mouse_out.hsync;
- assign {r,g,b} = mouse_out.rgb;
+ //assign vs = mouse_out.vsync;
+// assign hs = mouse_out.hsync;
+ //assign {r,g,b} = mouse_out.rgb;
 
 
 /**
@@ -73,6 +68,11 @@ draw_bg u_draw_bg (
     .vga_out(vga_bg)
 
 );
+image_rom u_image_rom(
+    .clk(clk40),
+    .address(rect2rom_adress),
+    .rgb(rom2rect_pixel)
+    );
 
 /*draw_rect  #(
     .POSITION_X(100),

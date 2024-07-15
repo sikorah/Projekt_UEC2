@@ -15,6 +15,7 @@ sv work ../../rtl/vga_pkg.sv \
         ../../rtl/top_vga.sv \
         ../../rtl/vga_if.sv \
         ../../rtl/draw_player.sv \
+        ../../rtl/image_rom.sv \
         ../common/tiff_writer.sv \
         top_vga_tb.sv
 
