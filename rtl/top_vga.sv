@@ -74,6 +74,17 @@ image_rom u_image_rom(
     .rgb(rom2rect_pixel)
     );
 
+/*draw_player u_draw_plaer(
+    .clk(clk_40),
+    .rst,
+    .vga_in(vga_rect),
+    .vga_out(mouse_out),
+    .xpos,
+    .ypos
+    );
+*/
+
+
 /*draw_rect  #(
     .POSITION_X(100),
     .POSITION_Y(50),
@@ -99,7 +110,7 @@ image_rom u_image_rom(
     .ypos
 );
 */
-/*
+
 MouseCtl u_MouseCtl(
     .clk(clk_100),
     .rst,
@@ -120,12 +131,12 @@ MouseCtl u_MouseCtl(
     .setmax_y('0)
 
     );
-*/
+
 always_ff @(posedge clk_40) begin
     xpos <= xpos_buf;
     ypos <= ypos_buf;
 end
-/*
+
 draw_mouse u_draw_mouse(
     .clk(clk_40),
     .rst,
@@ -135,5 +146,5 @@ draw_mouse u_draw_mouse(
     .ypos
 );
 
-*/
+
 endmodule

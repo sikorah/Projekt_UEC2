@@ -37,30 +37,29 @@ set sv_files {
     ../rtl/vga_if.sv
     ../rtl/vga_timing.sv
     ../rtl/draw_bg.sv
-    ../rtl/draw_rect.sv
     ../rtl/draw_mouse.sv
-    ../rtl/draw_rect_ctl.sv
+    ../rtl/draw_player.sv
     ../rtl/top_vga.sv
-    ../rtl/delay.sv
     ../rtl/image_rom.sv
     rtl/top_vga_basys3.sv
-    rtl/clk_wiz_0_clk_wiz.v
-    rtl/clk_wiz_0.v
+
 }
 
 # Specify Verilog design files location         -- EDIT
-# set verilog_files {
-#     path/to/file.v
-# }
+ set verilog_files {
+    rtl/clk_wiz_0_clk_wiz.v
+    rtl/clk_wiz_0.v
+ }
 
 # Specify VHDL design files location            -- EDIT
 set vhdl_files {
+    ../rtl/Ps2Interface.vhd
     ../rtl/MouseCtl.vhd
     ../rtl/MouseDisplay.vhd
-    ../rtl/Ps2Interface.vhd
+    
 }
 
 # Specify files for a memory initialization     -- EDIT
  set mem_files {
-    ../rtl/rect/image_rom.data
+    ../rtl/background_image_2.dat
  }
