@@ -6,7 +6,7 @@ Oct 19 2021
 /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv,1721039337,systemVerilog,,/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv,,draw_bg,,unisims_ver,,,,,,
 /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player.sv,1720878244,systemVerilog,,/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv,,draw_player,,unisims_ver,,,,,,
 /home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv,1721377171,systemVerilog,,/home/student/zschab/Desktop/Projekt_UEC2/sim/common/tiff_writer.sv,,image_rom,,unisims_ver,,,,,,
-/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv,1721377499,systemVerilog,,/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv,,top_vga,,unisims_ver,,,,,,
+/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv,1722246373,systemVerilog,,/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv,,top_vga,,unisims_ver,,,,,,
 /home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv,1720858562,systemVerilog,,/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player.sv,,vga_if,,unisims_ver,,,,,,
 /home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_pkg.sv,1720858562,systemVerilog,/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv;/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv,/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv,,vga_pkg,,unisims_ver,,,,,,
 /home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv,1720878402,systemVerilog,,/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv,,vga_timing,,unisims_ver,,,,,,

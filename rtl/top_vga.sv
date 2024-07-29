@@ -85,10 +85,6 @@ draw_bg u_draw_bg (
     );
 */
 
-
-=======
-*/
->>>>>>> 9462674 (moje stare)
 /*draw_rect  #(
     .POSITION_X(100),
     .POSITION_Y(50),
@@ -115,44 +111,9 @@ draw_bg u_draw_bg (
 );
 */
 
-MouseCtl u_MouseCtl(
-    .clk(clk_100),
-    .rst,
-    .ps2_data,
-    .ps2_clk,
-    .xpos(xpos_buf),
-    .ypos(ypos_buf),
-
-    .zpos(),
-    .left(),
-    .middle(),
-    .right(),
-    .new_event(),
-    .value('0),
-    .setx('0),
-    .sety('0),
-    .setmax_x('0),
-    .setmax_y('0)
-
-    );
-
 always_ff @(posedge clk_40) begin
     xpos <= xpos_buf;
     ypos <= ypos_buf;
 end
-
-draw_mouse u_draw_mouse(
-    .clk(clk_40),
-    .rst,
-    .vga_in(vga_rect),
-    .vga_out(mouse_out),
-    .xpos,
-    .ypos
-);
-
-<<<<<<< HEAD
-=======
-*/
->>>>>>> 9462674 (moje stare)
 
 endmodule

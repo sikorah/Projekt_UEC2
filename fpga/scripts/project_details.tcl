@@ -37,7 +37,6 @@ set sv_files {
     ../rtl/vga_if.sv
     ../rtl/vga_timing.sv
     ../rtl/draw_bg.sv
-    ../rtl/draw_mouse.sv
     ../rtl/draw_player.sv
     ../rtl/top_vga.sv
     ../rtl/image_rom.sv
@@ -53,10 +52,7 @@ set sv_files {
 
 # Specify VHDL design files location            -- EDIT
 set vhdl_files {
-    ../rtl/Ps2Interface.vhd
-    ../rtl/MouseCtl.vhd
-    ../rtl/MouseDisplay.vhd
-    
+    ../rtl/Ps2Interface.vhd   
 }
 
 # Specify files for a memory initialization     -- EDIT
