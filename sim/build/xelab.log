@@ -1,0 +1,40 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab work.top_vga_tb -snapshot top_vga_tb -prj /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga.prj -timescale 1ns/1ps -L unisims_ver -standalone -runall 
+Multi-threading is on. Using 6 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv" into library work
+INFO: [VRFC 10-311] analyzing module vga_timing
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_bg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv" into library work
+INFO: [VRFC 10-311] analyzing module top_vga
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_player
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv" into library work
+INFO: [VRFC 10-311] analyzing module image_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/sim/common/tiff_writer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tiff_writer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module top_vga_tb
+INFO: [VRFC 10-2458] undeclared symbol clk_40, assumed default net type wire [/home/student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv:63]
+INFO: [VRFC 10-2458] undeclared symbol clk_100, assumed default net type wire [/home/student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv:64]
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/Ps2Interface.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'Ps2Interface'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'vcount' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:55]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.vga_pkg
+Compiling module work.vga_if
+Compiling module work.vga_timing
+Compiling module work.draw_bg
+Compiling module work.top_vga
+Compiling module work.tiff_writer
+Compiling module work.top_vga_tb
+Built simulation snapshot top_vga_tb
