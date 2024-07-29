@@ -1,4 +1,0 @@
-WARNING: File ../../rtl/background_image_2.data referenced from process on /home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv at line 29 cannot be opened for reading. Please ensure that this file is available in the current working directory.
-If simulation ends before the testbench
-completes, use the menu option to run all.
-Prepare to wait a long time...
