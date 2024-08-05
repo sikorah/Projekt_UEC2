@@ -1,0 +1,87 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Aug  5 16:37:07 2024
+# Process ID: 5570
+# Current directory: /home/student/zschab/Desktop/Projekt_UEC2
+# Command line: vivado -mode tcl -source fpga/scripts/program_fpga.tcl -tclargs results/top_vga_basys3.bit
+# Log file: /home/student/zschab/Desktop/Projekt_UEC2/vivado.log
+# Journal file: /home/student/zschab/Desktop/Projekt_UEC2/vivado.jou
+# Running On: cadence38, OS: Linux, CPU Frequency: 3542.968 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+#-----------------------------------------------------------
+source fpga/scripts/program_fpga.tcl
+# set bitstream_file [lindex ${argv} 0]
+# proc program_fpga {bitstream_file} {
+#     if {[file exists $bitstream_file] == 0} {
+#         puts "ERROR: Bitstream not found"
+#         exit 1
+#     } else {
+#         open_hw_manager
+#         connect_hw_server
+#         current_hw_target [get_hw_targets *]
+#         open_hw_target
+#         current_hw_device [lindex [get_hw_devices] 0]
+#         refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+# 
+#         set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+#         set_property FULL_PROBES.FILE {} [lindex [get_hw_devices] 0]
+#         set_property PROGRAM.FILE ${bitstream_file} [lindex [get_hw_devices] 0]
+# 
+#         program_hw_devices [lindex [get_hw_devices] 0]
+#         refresh_hw_device [lindex [get_hw_devices] 0]
+#     }
+# }
+# if {${argc} != 1} {
+#     puts "ERROR: Bitsream not specified"
+#     exit 1
+# } else {
+#     program_fpga $bitstream_file
+#     exit
+# }
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2021.2
+  **** Build date : Oct 19 2021 at 03:13:42
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2021.2.0
+  ****** Build date   : Sep 27 2021-23:44:20
+    **** Build number : 2021.2.1632779060
+      ** Copyright 2017-2024 Xilinx, Inc. All Rights Reserved.
+
+
+
+ERROR: [Labtoolstcl 44-199] No matching targets found on connected servers: localhost
+Resolution: If needed connect the desired target to a server and use command refresh_hw_server. Then rerun the get_hw_targets command.
+ERROR: [Common 17-39] 'get_hw_targets' failed due to earlier errors.
+
+    while executing
+"get_hw_targets *"
+    invoked from within
+"if {[file exists $bitstream_file] == 0} {
+        puts "ERROR: Bitstream not found"
+        exit 1
+    } else {
+        open_hw_manager
+        connec..."
+    (procedure "program_fpga" line 2)
+    invoked from within
+"program_fpga $bitstream_file"
+    invoked from within
+"if {${argc} != 1} {
+    puts "ERROR: Bitsream not specified"
+    exit 1
+} else {
+    program_fpga $bitstream_file
+    exit
+}"
+    (file "fpga/scripts/program_fpga.tcl" line 38)
