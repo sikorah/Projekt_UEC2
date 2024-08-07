@@ -57,7 +57,7 @@ assign {r,g,b} = vga_out.rgb;
 vga_timing u_vga_timing (
     .clk(clk_40),
     .rst,
-    //.vga_in(vga_tim),
+    .vga_in(vga_tim),
     .vga_out(vga_tim)
     
 );
