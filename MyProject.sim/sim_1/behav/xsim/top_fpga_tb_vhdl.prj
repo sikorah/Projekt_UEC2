@@ -1,8 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../MyProject.srcs/sources_1/imports/rtl/MouseCtl.vhd" \
-"../../../../MyProject.srcs/sources_1/imports/rtl/MouseDisplay.vhd" \
-"../../../../MyProject.srcs/sources_1/imports/rtl/Ps2Interface.vhd" \
-
-# Do not sort compile order
-nosort
