@@ -1,1 +1,1 @@
-"work.top_vga_tb" -snapshot "top_vga_tb" -prj "/home/student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga.prj" -timescale "1ns/1ps" -L "unisims_ver" -standalone -runall 
+"work.top_vga_tb" -snapshot "top_vga_tb" -prj "/home/student/zschab/Desktop/Cyfr_proj/projekt-testowanie/MyProject/sim/top_vga/top_vga.prj" -timescale "1ns/1ps" -L "unisims_ver" -standalone -runall 

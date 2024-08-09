@@ -10,6 +10,7 @@
 
 
 sv work ../../rtl/vga_pkg.sv \
-        ../../rtl/vga_if.sv \
         ../../rtl/vga_timing.sv \
+        ../../rtl/vga_if.sv \
+        ../../rtl/draw_rect.sv \
         vga_timing_tb.sv

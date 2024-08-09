@@ -1,10 +1,16 @@
 /**
- * MTM Project_HubertSikora_ZuzannaSchab
- * 
- * Author: Zuzanna Schab
+ * Copyright (C) 2023  AGH University of Science and Technology
+ * MTM UEC2
+ * Author: Robert Szczygiel
+ * Modified: Piotr Kaczmarczyk
  *
  * Description:
- * Background image ROM
+ * This is the ROM for the 'AGH48x64.png' image.
+ * The image size is 48 x 64 pixels.
+ * The input 'address' is a 12-bit number, composed of the concatenated
+ * 6-bit y and 6-bit x pixel coordinates.
+ * The output 'rgb' is 12-bit number with concatenated
+ * red, green and blue color values (4-bit each)
  */
 
  module image_rom (
@@ -18,7 +24,7 @@
  * Local variables and signals
  */
 
-reg [11:0] rom [0:786435];
+reg [11:0] rom [0:4095];
 
 
 /**
@@ -33,8 +39,7 @@ initial $readmemh("../../rtl/background_image_2.dat", rom);
  * Internal logic
  */
 
-always @(posedge clk) begin
+always @(posedge clk)
     rgb <= rom[address];
- end
 
 endmodule

@@ -7,99 +7,124 @@
  * Timing module for VGA display
  */
 
- module vga_timing (
-    input  logic clk,
-    input  logic rst,
-    output logic [10:0] vcount,
-    output logic vsync,
-    output logic vblnk,
-    output logic [10:0] hcount,
-    output logic hsync,
-    output logic hblnk,
-    
-    vga_if.in vga_in,
-    vga_if.out vga_out
-);
+ /**
+ * Copyright (C) 2023  AGH University of Science and Technology
+ * MTM UEC2
+ * Author: Piotr Kaczmarczyk
+ *
+ * Description:
+ * Vga timing controller.
+ */
 
-import vga_pkg::*;
+ `timescale 1 ns / 1 ps
+
+ module vga_timing (
+     input  logic clk,
+     input  logic rst,
+     vga_if.out vga_out   // Wyjście interfejsu vga_if
+ );
  
- logic [10:0] vcount_nxt = 1'd0;
- logic [10:0] hcount_nxt = 1'd0;
- logic vsync_nxt = 1'd0;
- logic hsync_nxt = 1'd0;
- logic vblnk_nxt = 1'd0;
- logic hblnk_nxt = 1'd0;
+ import vga_pkg::*;
  
- always_ff @(posedge clk or posedge rst) begin
-   if(rst) begin
-     vga_out.hcount<=1'b0;
-     vga_out.hblnk<=1'b0;
-     vga_out.hsync<=1'b0;
-     vga_out.vcount<=1'b0;
-     vga_out.vblnk<=1'b0;
-     vga_out.vsync<=1'b0;
-   end
-   else begin
-     vga_out.hcount<=hcount_nxt;
-     vga_out.hblnk<=hblnk_nxt;
-     vga_out.hsync<=hsync_nxt;
-     vga_out.vcount<=vcount_nxt;
-     vga_out.vblnk<=vblnk_nxt;
-     vga_out.vsync<=vsync_nxt;
-    end
-  end
-      
+ 
+ /**
+  * Local variables and signals
+  */
+ 
+ logic [10:0] hcount_nxt;
+ logic hsync_nxt;
+ logic hblnk_nxt;
+ logic [10:0] vcount_nxt;
+ logic vsync_nxt;
+ logic vblnk_nxt;
+ 
+ 
+ /**
+  * Internal logic
+  */
+ 
+ always_ff @(posedge clk) begin
+     if(rst) begin
+         vga_out.hcount <= '0;
+         vga_out.hsync <= '0;
+         vga_out.hblnk <= '0;
+         vga_out.vcount <= '0;
+         vga_out.vsync <= '0;
+         vga_out.vblnk <= '0;
+     end
+     else begin
+         vga_out.hcount <= hcount_nxt;
+         vga_out.hsync <= hsync_nxt;
+         vga_out.hblnk <= hblnk_nxt;
+         vga_out.vcount <= vcount_nxt;
+         vga_out.vsync <= vsync_nxt;
+         vga_out.vblnk <= vblnk_nxt;
+     end
+ end
+ 
  always_comb begin
-   if(vga_in.hcount < HOR_TOTAL_TIME) begin
-       hcount_nxt = vga_in.hcount + 1;
-       vcount_nxt = vga_in.vcount;
+     if (vga_out.hcount < HOR_TOTAL_TIME - 1) begin
+       hcount_nxt = vga_out.hcount + 1;
+       vcount_nxt = vga_out.vcount;
+     end 
+     else if (vga_out.vcount < VER_TOTAL_TIME - 1 && vga_out.hcount == HOR_TOTAL_TIME - 1) begin
+       vcount_nxt = vga_out.vcount + 1;
+       hcount_nxt = '0;
+     end    
+     else begin
+       vcount_nxt = '0;
+       hcount_nxt = '0;
+     end
    end
-   else if(vga_in.vcount < VER_TOTAL_TIME && vga_in.hcount == HOR_TOTAL_TIME) begin
-     hcount_nxt = 0;
-     vcount_nxt = vga_in.vcount + 1;
+ 
+   always_comb begin 
+     if (vga_out.hcount == HOR_SYNC_END - 1) begin                  
+         hsync_nxt = '0;
+     end 
+     else if (vga_out.hcount == HOR_SYNC_START - 1) begin
+       hsync_nxt = '1;                                  
+     end        
+     else begin
+       hsync_nxt = vga_out.hsync;
+     end
+   end
+ 
+   always_comb begin  
+     if (vga_out.hcount == HOR_TOTAL_TIME - 1) begin 
+         hblnk_nxt = '0;                                  
+       end 
+     else if (vga_out.hcount == HOR_BLANK_START - 1) begin     
+       hblnk_nxt = '1;                                   
+     end        
+     else begin
+       hblnk_nxt = vga_out.hblnk;
+     end
    end 
-   else begin
-     hcount_nxt = 0;
-     vcount_nxt = 0;
+ 
+   always_comb begin  
+     if (vga_out.vcount == VER_SYNC_END- 1 && vga_out.hcount == HOR_TOTAL_TIME - 1) begin 
+         vsync_nxt = '0;                                  
+       end  
+     else if (vga_out.vcount == VER_SYNC_START - 1 && vga_out.hcount == HOR_TOTAL_TIME - 1) begin
+       vsync_nxt = '1;                                  
+     end   
+     else begin
+       vsync_nxt = vga_out.vsync;
+     end
    end
- end 
  
- always_comb begin
-   case(vga_in.hcount)
-     (HOR_BLANK_START - 1) : hblnk_nxt = 1'b1;
-     HOR_BLANK_STOP : hblnk_nxt = 1'b0;
-     
-     default: hblnk_nxt = vga_in.hblnk;
-   endcase 
- end
+   always_comb begin  
+    if (vga_out.vcount == VER_TOTAL_TIME - 1 && vga_out.hcount == HOR_TOTAL_TIME - 1) begin 
+         vblnk_nxt = '0;  
+    end                      
+     else if (vga_out.vcount == VER_BLANK_START - 1 && vga_out.hcount == HOR_TOTAL_TIME - 1) begin         
+       vblnk_nxt = '1;                                  
+     end       
+     else begin
+       vblnk_nxt = vga_out.vblnk;
+     end
+   end
  
- always_comb begin
-   case(vga_in.hcount)
-     (HOR_SYNC_START - 1) : hsync_nxt = 1'b1;
-     HOR_SYNC_STOP : hsync_nxt = 1'b0;
-     
-     default: hsync_nxt = vga_in.hsync;
-   endcase
- end
  
- always_comb begin
-       if(vga_in.hcount == HOR_TOTAL_TIME)
-         case(vga_out.vcount) 
-           (VER_BLANK_START - 1) : vblnk_nxt = 1'b1; 
-           VER_BLANK_STOP : vblnk_nxt = 1'b0;
-           
-           default: vblnk_nxt = vga_in.vblnk;
-         endcase 
-       end
-       
- always_comb begin
-       if(vga_in.hcount == HOR_TOTAL_TIME)
-         case(vga_in.vcount) 
-           (VER_SYNC_START - 1) : vsync_nxt = 1'b1; 
-           VER_SYNC_STOP : vsync_nxt = 1'b0;
-           
-           default: vsync_nxt = vga_in.vsync;
-         endcase 
-       end
-  
-endmodule
+ endmodule
+ 

@@ -53,23 +53,27 @@ initial begin
         forever #(CLK100_PERIOD/2) clk100 = ~clk100;
     join
 end
-
-
+/*
+initial begin
+    force dut.x_pos=400;
+    force dut.y_pos=250;
+end
+*/
 /**
  * Submodules instances
  */
 
 top_vga dut (
-    .clk_40(clk_40),
-    .clk_100(clk_100),
-    .ps2_clk(),
-    .ps2_data(),
+    .clk_40(clk40),
+    .clk_100(clk100),
     .rst(rst),
     .vs(vs),
     .hs(hs),
     .r(r),
     .g(g),
-    .b(b)
+    .b(b),
+    .ps2_clk(),
+    .ps2_data()
 );
 
 tiff_writer #(
@@ -88,7 +92,6 @@ tiff_writer #(
 /**
  * Main test
  */
-
 
 initial begin
     rst = 1'b0;

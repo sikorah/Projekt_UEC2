@@ -7,78 +7,66 @@
  * The project top module.
  */
 
-`timescale 1 ns / 1 ps
+ `timescale 1 ns / 1 ps
+ module top_vga (
+     input  logic clk_40,
+     input  logic clk_100,
+     inout  logic ps2_clk,
+     inout  logic ps2_data,
+     input  logic rst,
+     output logic vs,
+     output logic hs,
+     output logic [3:0] r,
+     output logic [3:0] g,
+     output logic [3:0] b
+ );
+ 
+ /**
+  * Local variables and signals
+  */
+ vga_if vga_tim();
+ vga_if vga_bg();
 
-module top_vga (
-    input  logic clk_40,
-    input  logic clk_100,
-    input  logic ps2_clk,
-    input  logic ps2_data,
-    input  logic rst,
-    output logic vs,
-    output logic hs,
-    output logic [3:0] r,
-    output logic [3:0] g,
-    output logic [3:0] b
-);
+ logic [11:0] rect2rom_adress;  // Address to access the image ROM
+ logic [11:0] rom2rect_pixel;   // Pixel data from the image ROM
 
-/**
- * Local variables and signals
- */
+ /**
+  * Signals assignments
+  */
+ 
+ assign vs = vga_bg.vsync;
+ assign hs = vga_bg.hsync;
+ assign {r, g, b} = vga_bg.rgb[11:8];  // Extract higher bits for RGB
 
-
-vga_if vga_tim();
-vga_if vga_bg();
-vga_if vga_out();
-//vga_if vga_rect();
-//vga_if mouse_out();
-
-
-logic [11:0] xpos;
-logic [11:0] ypos;
-
-logic [11:0] xpos_buf;
-logic [11:0] ypos_buf;
-
-
-/**
- * Signals assignments
- */
-
-assign vs = vga_out.vsync;
-assign hs = vga_out.hsync;
- //assign {r,g,b} = mouse_out.rgb;
-assign {r,g,b} = vga_out.rgb;
-
-/**
- * Submodules instances
- */
-
-vga_timing u_vga_timing (
-    .clk(clk_40),
-    .rst,
-    .vga_in(vga_tim),
-    .vga_out(vga_tim)
-    
-);
+ /**
+  * Submodules instances
+  */
+ 
+ vga_timing u_vga_timing (
+     .clk(clk_40),
+     .rst,
+     .vga_out(vga_tim)
+ );
 
 draw_bg u_draw_bg (
     .clk(clk_40),
     .rst,
-
     .vga_in(vga_tim),
     .vga_out(vga_bg)
-    
-
+ //   .rom_addr(rect2rom_adress),  // Output address to ROM
+ //   .rom_pixel(rom2rect_pixel)   // Input pixel data from ROM
 );
-/*image_rom u_image_rom(
-    .clk(clk40),
-    .address(rect2rom_adress),
-    .rgb(rom2rect_pixel)
-    );
-<<<<<<< HEAD
+/*
+image_rom u_image_rom (
+    .clk(clk_40),
+    .address(rect2rom_adress),   // Receive address from draw_bg
+    .rgb(rom2rect_pixel)         // Output pixel data to draw_bg
+);
+*/
+/*
+<<<<< HEAD
 
-/*draw_player u_draw_plaer(
+draw_player u_draw_plaer(
     .clk(clk_40),
     .rst,
     .vga_in(vga_rect),
@@ -86,7 +74,7 @@ draw_bg u_draw_bg (
     .xpos,
     .ypos
     );
-*/
+
 
 /*draw_rect  #(
     .POSITION_X(100),
@@ -113,10 +101,10 @@ draw_bg u_draw_bg (
     .ypos
 );
 */
-
+/*
 always_ff @(posedge clk_40) begin
     xpos <= xpos_buf;
     ypos <= ypos_buf;
 end
-
+*/
 endmodule
