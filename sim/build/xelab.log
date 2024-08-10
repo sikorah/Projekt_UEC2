@@ -7,7 +7,7 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv" into library work
 INFO: [VRFC 10-311] analyzing module vga_timing
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv" into library work
-INFO: [VRFC 10-311] analyzing module draw_bg
+INFO: [VRFC 10-311] analyzing module draw_bg_with_image_rom
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv" into library work
 INFO: [VRFC 10-311] analyzing module top_vga
 WARNING: [VRFC 10-159] /* in comment [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:79]

@@ -58,6 +58,6 @@ set sv_files {
  }
 
 # Specify files for a memory initialization     -- EDIT
-# set mem_files {
-#    path/to/file.data
-# }
+ set mem_files {
+    ../rtl/background_image_2.data
+ }

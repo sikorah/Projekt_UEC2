@@ -52,9 +52,9 @@ draw_bg u_draw_bg (
     .clk(clk_40),
     .rst,
     .vga_in(vga_tim),
-    .vga_out(vga_bg)
- //   .rom_addr(rect2rom_adress),  // Output address to ROM
- //   .rom_pixel(rom2rect_pixel)   // Input pixel data from ROM
+    .vga_out(vga_bg),
+    .rom_addr(rect2rom_adress),  // Output address to ROM
+    .rom_pixel(rom2rect_pixel)   // Input pixel data from ROM
 );
 /*
 image_rom u_image_rom (
