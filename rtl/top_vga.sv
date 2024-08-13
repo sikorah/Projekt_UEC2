@@ -36,7 +36,7 @@
  
  assign vs = vga_bg.vsync;
  assign hs = vga_bg.hsync;
- assign {r, g, b} = vga_bg.rgb[11:8];  // Extract higher bits for RGB
+ assign {r, g, b} = vga_bg.rgb;  // Extract higher bits for RGB
 
  /**
   * Submodules instances
@@ -52,9 +52,9 @@ draw_bg u_draw_bg (
     .clk(clk_40),
     .rst,
     .vga_in(vga_tim),
-    .vga_out(vga_bg),
-    .rom_addr(rect2rom_adress),  // Output address to ROM
-    .rom_pixel(rom2rect_pixel)   // Input pixel data from ROM
+    .vga_out(vga_bg)
+   // .rom_addr(rect2rom_adress),  // Output address to ROM
+   // .rom_pixel(rom2rect_pixel)   // Input pixel data from ROM
 );
 /*
 image_rom u_image_rom (
@@ -74,7 +74,7 @@ draw_player u_draw_plaer(
     .xpos,
     .ypos
     );
-
+*/
 
 /*draw_rect  #(
     .POSITION_X(100),
