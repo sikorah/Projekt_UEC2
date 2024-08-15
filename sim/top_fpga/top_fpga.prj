@@ -15,6 +15,7 @@ sv work ../../rtl/vga_pkg.sv \
         ../../rtl/top_vga.sv \
         ../../rtl/vga_if.sv \
         ../../rtl/draw_rect.sv \
+        ../../rtl/draw_rect_ctl.sv \
         ../../rtl/image_rom.sv \
         ../../fpga/rtl/top_vga_basys3.sv \
         ../../fpga/rtl/clk_wiz_0_clk_wiz.v \

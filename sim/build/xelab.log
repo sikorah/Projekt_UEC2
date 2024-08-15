@@ -13,6 +13,8 @@ INFO: [VRFC 10-311] analyzing module top_vga
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv" into library work
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv" into library work
 INFO: [VRFC 10-311] analyzing module draw_rect
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_rect_ctl
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_mouse.sv" into library work
 INFO: [VRFC 10-311] analyzing module draw_mouse
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/sim/common/tiff_writer.sv" into library work
@@ -27,15 +29,19 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UE
 INFO: [VRFC 10-3107] analyzing entity 'MouseDisplay'
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3645] port 'rgb_out' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:51]
+WARNING: [VRFC 10-3645] port 'rgb_out' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:41]
+WARNING: [VRFC 10-3645] port 'rgb_address' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:48]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package work.vga_pkg
+Compiling package work.$unit_vga_pkg_sv
 Compiling module work.vga_if
 Compiling module work.vga_timing
 Compiling module work.draw_bg
+Compiling module work.draw_rect
+Compiling module work.draw_rect_ctl
 Compiling module work.top_vga
 Compiling module work.tiff_writer
 Compiling module work.top_vga_tb

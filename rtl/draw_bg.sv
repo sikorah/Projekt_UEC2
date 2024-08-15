@@ -110,10 +110,10 @@ end
          else if ((vga_in.vcount > 490 && vga_in.vcount <= 500) && ((vga_in.hcount > 200 && vga_in.hcount < 250) || (vga_in.hcount > 600 && vga_in.hcount < 650)))
              rgb_nxt = 12'hf_0_0;                  
 
-             // the obsticle do tego raczej oddzielny modol
+            /* // the obsticle do tego raczej oddzielny modol
         else if ((vga_in.vcount > 350 && vga_in.vcount <= 500) && (vga_in.hcount >  370 && vga_in.hcount < 470))
              rgb_nxt = 12'hF0F;  
-
+            */
              //house
         else if ((vga_in.vcount > 350 && vga_in.vcount <= 500) && (vga_in.hcount > 699 && vga_in.hcount < 725))
              rgb_nxt = 12'hf_f_0;
