@@ -110,10 +110,19 @@ end
          else if ((vga_in.vcount > 490 && vga_in.vcount <= 500) && ((vga_in.hcount > 200 && vga_in.hcount < 250) || (vga_in.hcount > 600 && vga_in.hcount < 650)))
              rgb_nxt = 12'hf_0_0;                  
 
-            /* // the obsticle do tego raczej oddzielny modol
-        else if ((vga_in.vcount > 350 && vga_in.vcount <= 500) && (vga_in.hcount >  370 && vga_in.hcount < 470))
-             rgb_nxt = 12'hF0F;  
-            */
+             //player standing
+             //eyes
+        else if ((((vga_in.vcount - 440)**2 + (vga_in.hcount - 10)**2 <= 30)) || ((vga_in.vcount - 440)**2 + (vga_in.hcount - 27)**2 <= 30))
+             rgb_nxt = 12'h0FF;
+             //body
+        else if ((vga_in.vcount > 420 && vga_in.vcount <= 480) && (vga_in.hcount > 0 && vga_in.hcount < 40))
+            rgb_nxt = 12'hFFF;
+             //legs
+        else if ((vga_in.vcount > 480 && vga_in.vcount < 500) && ((vga_in.hcount > 0 && vga_in.hcount < 15) || (vga_in.hcount > 25 && vga_in.hcount < 40)))
+            rgb_nxt = 12'hFFF;
+            
+        
+
              //house
         else if ((vga_in.vcount > 350 && vga_in.vcount <= 500) && (vga_in.hcount > 699 && vga_in.hcount < 725))
              rgb_nxt = 12'hf_f_0;
