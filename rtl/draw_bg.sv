@@ -123,6 +123,7 @@ end
             rgb_nxt = 12'hFFF;
             
             */
+           /*
              //player going right
              //body
         else if ((vga_in.vcount > 420 && vga_in.vcount < 500) && (vga_in.hcount > 0 && vga_in.hcount < 25))
@@ -130,7 +131,16 @@ end
              //eye
         else if ((vga_in.vcount > 425 && vga_in.vcount < 455) && (vga_in.hcount >= 25 && vga_in.hcount < 30))
              rgb_nxt = 12'h0FF;
+            */
 
+             //player going left
+             //body
+        else if ((vga_in.vcount > 420 && vga_in.vcount < 500) && (vga_in.hcount > 5 && vga_in.hcount < 30))
+             rgb_nxt = 12'hFFF;
+             //eye
+        else if ((vga_in.vcount > 425 && vga_in.vcount < 455) && (vga_in.hcount >= 0 && vga_in.hcount < 5))
+             rgb_nxt = 12'h0FF;
+             
              //house
         else if ((vga_in.vcount > 350 && vga_in.vcount <= 500) && (vga_in.hcount > 699 && vga_in.hcount < 725))
              rgb_nxt = 12'hf_f_0;
