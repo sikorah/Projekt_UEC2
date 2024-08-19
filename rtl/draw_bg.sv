@@ -1,7 +1,7 @@
 /**
  * Copyright (C) 2023  AGH University of Science and Technology
  * MTM UEC2
- * Author: Piotr Kaczmarczyk
+ * Author: Zuzanna Schab
  *
  * Description:
  * Draw background.
@@ -103,44 +103,17 @@ end
         //terrain
 
              //ground
-         else if (vga_in.vcount > 500)             
+        else if (vga_in.vcount > 500)             
              rgb_nxt = 12'h0_f_0;
-         
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////       
+             
              //buttons - do tego raczej oddzielny modol
-         else if ((vga_in.vcount > 490 && vga_in.vcount <= 500) && ((vga_in.hcount > 200 && vga_in.hcount < 250) || (vga_in.hcount > 600 && vga_in.hcount < 650)))
+        else if ((vga_in.vcount > 490 && vga_in.vcount <= 500) && ((vga_in.hcount > 200 && vga_in.hcount < 250) || (vga_in.hcount > 600 && vga_in.hcount < 650)))
              rgb_nxt = 12'hf_0_0;                  
 
-             /*
-             //player standing
-             //eyes
-        else if ((((vga_in.vcount - 440)**2 + (vga_in.hcount - 10)**2 <= 30)) || ((vga_in.vcount - 440)**2 + (vga_in.hcount - 27)**2 <= 30))
-             rgb_nxt = 12'h0FF;
-             //body
-        else if ((vga_in.vcount > 420 && vga_in.vcount <= 480) && (vga_in.hcount > 0 && vga_in.hcount < 40))
-            rgb_nxt = 12'hFFF;
-             //legs
-        else if ((vga_in.vcount > 480 && vga_in.vcount < 500) && ((vga_in.hcount > 0 && vga_in.hcount < 15) || (vga_in.hcount > 25 && vga_in.hcount < 40)))
-            rgb_nxt = 12'hFFF;
-            
-            */
-           /*
-             //player going right
-             //body
-        else if ((vga_in.vcount > 420 && vga_in.vcount < 500) && (vga_in.hcount > 0 && vga_in.hcount < 25))
-             rgb_nxt = 12'hFFF;
-             //eye
-        else if ((vga_in.vcount > 425 && vga_in.vcount < 455) && (vga_in.hcount >= 25 && vga_in.hcount < 30))
-             rgb_nxt = 12'h0FF;
-            */
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-             //player going left
-             //body
-        else if ((vga_in.vcount > 420 && vga_in.vcount < 500) && (vga_in.hcount > 5 && vga_in.hcount < 30))
-             rgb_nxt = 12'hFFF;
-             //eye
-        else if ((vga_in.vcount > 425 && vga_in.vcount < 455) && (vga_in.hcount >= 0 && vga_in.hcount < 5))
-             rgb_nxt = 12'h0FF;
-             
              //house
         else if ((vga_in.vcount > 350 && vga_in.vcount <= 500) && (vga_in.hcount > 699 && vga_in.hcount < 725))
              rgb_nxt = 12'hf_f_0;
@@ -157,7 +130,9 @@ end
         else if ((vga_in.vcount > 425 && vga_in.vcount <= 500) && (vga_in.hcount > 725 && vga_in.hcount < 775))
              rgb_nxt = 12'h0_0_0;
 
-            //clouds
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+             //clouds
         else if (((vga_in.vcount - 100)**2 + (vga_in.hcount - 100)**2 <= 300) || ((vga_in.vcount - 100)**2 + (vga_in.hcount - 150)**2 <= 300) || ((vga_in.vcount - 90)**2 + (vga_in.hcount - 125)**2 <= 600))
              rgb_nxt = 12'hFFF;
         else if (((vga_in.vcount - 275)**2 + (vga_in.hcount - 200)**2 <= 300) || ((vga_in.vcount - 275)**2 + (vga_in.hcount - 250)**2 <= 300) || ((vga_in.vcount - 265)**2 + (vga_in.hcount - 225)**2 <= 600))
@@ -168,7 +143,7 @@ end
              rgb_nxt = 12'hFFF;
         else if (((vga_in.vcount - 50)**2 + (vga_in.hcount - 700)**2 <= 300) || ((vga_in.vcount - 50)**2 + (vga_in.hcount - 750)**2 <= 300) || ((vga_in.vcount - 40)**2 + (vga_in.hcount - 725)**2 <= 600))
              rgb_nxt = 12'hFFF;
-         else                                    // The rest of active display pixels:
+        else                                    // The rest of active display pixels:
              rgb_nxt = 12'h00F;                // - fill withdeep blue.
      end
         

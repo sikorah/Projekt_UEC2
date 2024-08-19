@@ -4,6 +4,7 @@ Running: /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab work.top_v
 Multi-threading is on. Using 6 slave threads.
 Determining compilation order of HDL files.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/state_pkg.sv" into library work
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv" into library work
 INFO: [VRFC 10-311] analyzing module vga_timing
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv" into library work
@@ -29,8 +30,8 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UE
 INFO: [VRFC 10-3107] analyzing entity 'MouseDisplay'
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3645] port 'rgb_out' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:41]
-WARNING: [VRFC 10-3645] port 'rgb_address' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:48]
+WARNING: [VRFC 10-3645] port 'rgb_out' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:42]
+WARNING: [VRFC 10-3645] port 'rgb_address' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:49]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
