@@ -1,37 +1,36 @@
 Vivado Simulator v2021.2
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab work.top_vga_tb -snapshot top_vga_tb -prj /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga.prj -timescale 1ns/1ps -L unisims_ver -standalone -runall 
+Running: /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab work.top_vga_tb -snapshot top_vga_tb -prj /home/student/hsikora/Desktop/Projekt/sim/top_vga/top_vga.prj -timescale 1ns/1ps -L unisims_ver -standalone -runall 
 Multi-threading is on. Using 6 slave threads.
 Determining compilation order of HDL files.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_pkg.sv" into library work
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/state_pkg.sv" into library work
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/rtl/vga_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/rtl/state_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/rtl/vga_timing.sv" into library work
 INFO: [VRFC 10-311] analyzing module vga_timing
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/rtl/draw_bg.sv" into library work
 INFO: [VRFC 10-311] analyzing module draw_bg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/rtl/top_vga.sv" into library work
 INFO: [VRFC 10-311] analyzing module top_vga
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv" into library work
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/rtl/vga_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/rtl/keyboard.sv" into library work
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/rtl/draw_rect.sv" into library work
 INFO: [VRFC 10-311] analyzing module draw_rect
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/rtl/draw_rect_ctl.sv" into library work
 INFO: [VRFC 10-311] analyzing module draw_rect_ctl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_mouse.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/rtl/draw_mouse.sv" into library work
 INFO: [VRFC 10-311] analyzing module draw_mouse
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/sim/common/tiff_writer.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/sim/common/tiff_writer.sv" into library work
 INFO: [VRFC 10-311] analyzing module tiff_writer
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/hsikora/Desktop/Projekt/sim/top_vga/top_vga_tb.sv" into library work
 INFO: [VRFC 10-311] analyzing module top_vga_tb
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd" into library work
-INFO: [VRFC 10-3107] analyzing entity 'MouseCtl'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/Ps2Interface.vhd" into library work
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/hsikora/Desktop/Projekt/rtl/Ps2Interface.vhd" into library work
 INFO: [VRFC 10-3107] analyzing entity 'Ps2Interface'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseDisplay.vhd" into library work
-INFO: [VRFC 10-3107] analyzing entity 'MouseDisplay'
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3645] port 'rgb_out' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:42]
-WARNING: [VRFC 10-3645] port 'rgb_address' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:49]
+WARNING: [VRFC 10-3645] port 'rgb_out' remains unconnected for this instance [/home/student/hsikora/Desktop/Projekt/rtl/top_vga.sv:43]
+WARNING: [VRFC 10-3645] port 'rgb_address' remains unconnected for this instance [/home/student/hsikora/Desktop/Projekt/rtl/top_vga.sv:50]
+WARNING: [VRFC 10-3645] port 'led_g' remains unconnected for this instance [/home/student/hsikora/Desktop/Projekt/rtl/top_vga.sv:67]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -43,6 +42,7 @@ Compiling module work.vga_timing
 Compiling module work.draw_bg
 Compiling module work.draw_rect
 Compiling module work.draw_rect_ctl
+Compiling module work.keyboard
 Compiling module work.top_vga
 Compiling module work.tiff_writer
 Compiling module work.top_vga_tb

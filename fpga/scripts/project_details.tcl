@@ -42,20 +42,20 @@ set sv_files {
     ../rtl/draw_rect_ctl.sv
     ../rtl/top_vga.sv
     ../rtl/draw_mouse.sv
+    ../rtl/keyboard.sv
     rtl/top_vga_basys3.sv
     rtl/clk_wiz_0_clk_wiz.v
     rtl/clk_wiz_0.v
 }
 
 # Specify Verilog design files location         -- EDIT
-# set verilog_files {
-#     path/to/file.v
-# }
+ set verilog_files {
+    rtl/clk_wiz_0_clk_wiz.v
+    rtl/clk_wiz_0.v
+ }
 
 # Specify VHDL design files location            -- EDIT
  set vhdl_files {
-    ../rtl/MouseCtl.vhd
-    ../rtl/MouseDisplay.vhd
     ../rtl/Ps2Interface.vhd
  }
 

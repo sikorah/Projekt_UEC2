@@ -18,6 +18,7 @@ vga_if vga_tim();
 vga_if vga_bg();
 vga_if vga_rect();
 
+
 logic [11:0] xpos, ypos;
 //logic [1:0] state;
 //logic a_pressed, d_pressed;
@@ -61,6 +62,12 @@ draw_rect_ctl u_draw_rect_ctl (
     .v_tick(vga_bg.vsync),
     .xpos(xpos),
     .ypos(ypos)
+);
+
+keyboard u_keyboard (
+    .clk(clk_100),
+    .ps2_clk,
+    .ps2_data
 );
 
 /*
