@@ -43,8 +43,6 @@ set sv_files {
     ../rtl/top_vga.sv
     ../rtl/draw_mouse.sv
     ../rtl/keyboard.sv
-    ../rtl/image_rom.sv
-    ../rtl/draw_buttons.sv
     rtl/top_vga_basys3.sv
     rtl/clk_wiz_0_clk_wiz.v
     rtl/clk_wiz_0.v
@@ -58,12 +56,10 @@ set sv_files {
 
 # Specify VHDL design files location            -- EDIT
  set vhdl_files {
-    ../rtl/MouseCtl.vhd
-    ../rtl/MouseDisplay.vhd
     ../rtl/Ps2Interface.vhd
  }
 
 # Specify files for a memory initialization     -- EDIT
  set mem_files {
-    ../rtl/mine.dat
+    ../rtl/background_image_2.data
  }
