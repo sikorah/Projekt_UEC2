@@ -19,6 +19,7 @@ vga_if vga_bg();
 vga_if vga_rect();
 vga_if vga_buttons();
 
+
 logic [11:0] xpos, ypos;
 logic button_pressed;
 
@@ -77,6 +78,12 @@ draw_rect_ctl u_draw_rect_ctl (
     .button_pressed(button_pressed),
     .rgb_pixel(rom2rect_pixel),
     .rgb_address(rect2rom_adress)
+);
+
+keyboard u_keyboard (
+    .clk(clk_100),
+    .ps2_clk,
+    .ps2_data
 );
 
 /*
