@@ -1,12 +1,20 @@
-typedef enum bit [1:0] { IDLE, FALL, ELEVATE } State;
-
 module draw_rect_ctl (
     input logic rst,
     input logic v_tick,
     input logic clk,
+    input logic button_pressed,
     output logic [11:0] xpos,
-    output logic [11:0] ypos
+    output logic [11:0] ypos,
+    output logic [15:0] rgb_address, 
+    output logic [7:0] rgb_pixel     
 );
+
+// Definicja stanów
+typedef enum logic [1:0] {
+    IDLE = 2'b00,
+    ELEVATE = 2'b01,
+    FALL = 2'b10
+} State;
 
 State state, state_nxt;
 
@@ -15,36 +23,40 @@ logic v_tick_old;
 
 always_ff @(posedge clk) begin
     if (rst) begin
-        state   <= IDLE;
-        xpos    <= 350;
-        ypos    <= 350;
+        state <= IDLE;
+        xpos <= 350;
+        ypos <= 350;
     end else begin
         v_tick_old <= v_tick;
         if (v_tick && !v_tick_old) begin
-            state   <= state_nxt;
-            xpos    <= xpos_nxt;
-            ypos    <= ypos_nxt;
+            state <= state_nxt;
+            xpos <= xpos_nxt;
+            ypos <= ypos_nxt;
         end
     end
 end
 
 always_comb begin
-    xpos_nxt = xpos;  // X position remains constant
+    xpos_nxt = xpos;
     ypos_nxt = ypos;
+    state_nxt = state;
 
     case (state)
         IDLE: begin
-            state_nxt = ELEVATE;
+            if (button_pressed)
+                state_nxt = ELEVATE;
         end
         ELEVATE: begin
-            if (ypos > 220)  // Move up to ypos 220 (370 - 150)
+            if (ypos > 220)
                 ypos_nxt = ypos - 1;
             else
-                state_nxt = FALL;
+                state_nxt = IDLE;
         end
         FALL: begin
-            if (ypos < 370)  // Move back down to ypos 370
+            if (!button_pressed && ypos < 370)
                 ypos_nxt = ypos + 1;
+            else if (button_pressed)
+                state_nxt = ELEVATE;
             else
                 state_nxt = IDLE;
         end

@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Aug 20 00:43:15 2024
-| Host         : cadence30 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Date         : Sat Aug 24 14:06:02 2024
+| Host         : cadence33 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command      : report_methodology -file top_vga_basys3_methodology_drc_routed.rpt -pb top_vga_basys3_methodology_drc_routed.pb -rpx top_vga_basys3_methodology_drc_routed.rpx
 | Design       : top_vga_basys3
 | Device       : xc7a35tcpg236-1
@@ -23,14 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 74
-+-----------+----------+------------------------------------------------------+------------+
-| Rule      | Severity | Description                                          | Violations |
-+-----------+----------+------------------------------------------------------+------------+
-| SYNTH-10  | Warning  | Wide multiplier                                      | 70         |
-| TIMING-20 | Warning  | Non-clocked latch                                    | 3          |
-| XDCC-8    | Warning  | User Clock constraint overwritten on the same source | 1          |
-+-----------+----------+------------------------------------------------------+------------+
+             Violations found: 70
++----------+----------+-----------------+------------+
+| Rule     | Severity | Description     | Violations |
++----------+----------+-----------------+------------+
+| SYNTH-10 | Warning  | Wide multiplier | 70         |
++----------+----------+-----------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -186,12 +184,12 @@ Related violations: <none>
 
 SYNTH-10#31 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#32 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#33 Warning
@@ -382,28 +380,6 @@ Related violations: <none>
 SYNTH-10#70 Warning
 Wide multiplier  
 Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__9 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch u_top_vga/u_draw_rect_ctl/FSM_onehot_state_nxt_reg[0] cannot be properly analyzed as its control pin u_top_vga/u_draw_rect_ctl/FSM_onehot_state_nxt_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch u_top_vga/u_draw_rect_ctl/FSM_onehot_state_nxt_reg[1] cannot be properly analyzed as its control pin u_top_vga/u_draw_rect_ctl/FSM_onehot_state_nxt_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch u_top_vga/u_draw_rect_ctl/FSM_onehot_state_nxt_reg[2] cannot be properly analyzed as its control pin u_top_vga/u_draw_rect_ctl/FSM_onehot_state_nxt_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-XDCC-8#1 Warning
-User Clock constraint overwritten on the same source  
-A new clock constraint create_clock overrides a previous user clock constraint defined on the same source.
-New: create_clock -period 10.000 [get_ports clk] (Source: /home/student/hsikora/Desktop/Projekt/fpga/constraints/clk_wiz_0.xdc (Line: 56))
-Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk] (Source: /home/student/hsikora/Desktop/Projekt/fpga/constraints/top_vga_basys3.xdc (Line: 9))
 Related violations: <none>
 
 

@@ -59,6 +59,8 @@ module draw_rect
 
      assign addry =  vga_in.vcount - ypos;
      assign addrx =  vga_in.hcount - xpos;
-     assign rgb_address  = {addry[5:0],addrx[5:0]};
+     assign rgb_address  = addry * 293 + addrx;
+
+    
     
     endmodule
