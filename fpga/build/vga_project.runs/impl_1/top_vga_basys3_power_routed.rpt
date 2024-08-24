@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date             : Fri Aug  9 15:53:49 2024
-| Host             : cadence38 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Date             : Sat Aug 24 14:06:04 2024
+| Host             : cadence33 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command          : report_power -file top_vga_basys3_power_routed.rpt -pb top_vga_basys3_power_summary_routed.pb -rpx top_vga_basys3_power_routed.rpx
 | Design           : top_vga_basys3
 | Device           : xc7a35tcpg236-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.184        |
+| Total On-Chip Power (W)  | 0.219        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.112        |
+| Dynamic (W)              | 0.147        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.1         |
-| Junction Temperature (C) | 25.9         |
+| Max Ambient (C)          | 83.9         |
+| Junction Temperature (C) | 26.1         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      171 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       81 |     20800 |            0.39 |
-|   CARRY4       |    <0.001 |        4 |      8150 |            0.05 |
-|   Register     |    <0.001 |       40 |     41600 |            0.10 |
-|   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |    <0.001 |      150 |       --- |             --- |
+| Clocks         |     0.001 |        5 |       --- |             --- |
+| Slice Logic    |     0.005 |     2368 |       --- |             --- |
+|   LUT as Logic |     0.004 |     1588 |     20800 |            7.63 |
+|   CARRY4       |    <0.001 |      335 |      8150 |            4.11 |
+|   Register     |    <0.001 |      104 |     41600 |            0.25 |
+|   Others       |     0.000 |       26 |       --- |             --- |
+| Signals        |     0.007 |     4608 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
-| DSPs           |    <0.001 |        2 |        90 |            2.22 |
+| DSPs           |     0.023 |       70 |        90 |           77.78 |
 | I/O            |     0.005 |       17 |       106 |           16.04 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.184 |          |           |                 |
+| Total          |     0.219 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.012 |       0.002 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.047 |       0.037 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,14 +141,15 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------+-----------+
-| Name           | Power (W) |
-+----------------+-----------+
-| top_vga_basys3 |     0.112 |
-|   u_clk        |     0.106 |
-|     inst       |     0.106 |
-|   u_top_vga    |     0.001 |
-|     u_draw_bg  |     0.001 |
-+----------------+-----------+
++------------------+-----------+
+| Name             | Power (W) |
++------------------+-----------+
+| top_vga_basys3   |     0.147 |
+|   u_clk          |     0.106 |
+|     inst         |     0.106 |
+|   u_top_vga      |     0.036 |
+|     u_draw_bg    |     0.034 |
+|     u_vga_timing |     0.002 |
++------------------+-----------+
 
 

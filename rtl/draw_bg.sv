@@ -107,12 +107,6 @@ end
              rgb_nxt = 12'h0_f_0;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////       
-             
-             //buttons - do tego raczej oddzielny modol
-        else if ((vga_in.vcount > 490 && vga_in.vcount <= 500) && ((vga_in.hcount > 200 && vga_in.hcount < 250) || (vga_in.hcount > 600 && vga_in.hcount < 650)))
-             rgb_nxt = 12'hf_0_0;                  
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
              //house
         else if ((vga_in.vcount > 350 && vga_in.vcount <= 500) && (vga_in.hcount > 699 && vga_in.hcount < 725))

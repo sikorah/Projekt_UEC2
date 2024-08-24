@@ -17,10 +17,13 @@ module top_vga (
 vga_if vga_tim();
 vga_if vga_bg();
 vga_if vga_rect();
+vga_if vga_buttons();
 
 logic [11:0] xpos, ypos;
-//logic [1:0] state;
-//logic a_pressed, d_pressed;
+logic button_pressed;
+
+wire [11:0] rom2rect_pixel;
+wire [11:0] rect2rom_adress;
 
 /**
  * Signals assignments
@@ -46,10 +49,20 @@ draw_bg u_draw_bg (
     .vga_out(vga_bg)
 );
 
-draw_rect u_draw_rect (
+draw_buttons u_draw_buttons (
     .clk(clk_40),
     .rst,
     .vga_in(vga_bg),
+    .vga_out(vga_buttons),
+    .player_xpos(xpos),
+    .player_ypos(ypos),
+    .button_pressed(button_pressed)
+);
+
+draw_rect u_draw_rect (
+    .clk(clk_40),
+    .rst,
+    .vga_in(vga_buttons),
     .vga_out(vga_rect),
     .xpos(xpos),
     .ypos(ypos)
@@ -60,14 +73,17 @@ draw_rect_ctl u_draw_rect_ctl (
     .rst,
     .v_tick(vga_bg.vsync),
     .xpos(xpos),
-    .ypos(ypos)
+    .ypos(ypos),
+    .button_pressed(button_pressed),
+    .rgb_pixel(rom2rect_pixel),
+    .rgb_address(rect2rom_adress)
 );
 
 /*
 draw_player u_draw_player (
     .clk(clk_40),
     .rst(rst),
-    .vga_in(vga_bg),
+    .vga_in(vga_buttons),
     .vga_out(vga_rect),
     .xpos(xpos),
     .ypos(ypos),
@@ -86,5 +102,10 @@ draw_player_ctl u_draw_player_ctl (
 );
 
 */
-endmodule
+keyboard u_keyboard (
+    .clk(clk_100),
+    .ps2_clk,
+    .ps2_data
+);
 
+endmodule

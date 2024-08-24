@@ -42,15 +42,19 @@ set sv_files {
     ../rtl/draw_rect_ctl.sv
     ../rtl/top_vga.sv
     ../rtl/draw_mouse.sv
+    ../rtl/keyboard.sv
+    ../rtl/image_rom.sv
+    ../rtl/draw_buttons.sv
     rtl/top_vga_basys3.sv
     rtl/clk_wiz_0_clk_wiz.v
     rtl/clk_wiz_0.v
 }
 
 # Specify Verilog design files location         -- EDIT
-# set verilog_files {
-#     path/to/file.v
-# }
+ set verilog_files {
+    rtl/clk_wiz_0_clk_wiz.v
+    rtl/clk_wiz_0.v
+ }
 
 # Specify VHDL design files location            -- EDIT
  set vhdl_files {
@@ -61,5 +65,5 @@ set sv_files {
 
 # Specify files for a memory initialization     -- EDIT
  set mem_files {
-    ../rtl/background_image_2.data
+    ../rtl/mine.dat
  }
