@@ -34,11 +34,10 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UE
 INFO: [VRFC 10-3107] analyzing entity 'MouseDisplay'
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 8 for port 'rgb_pixel' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:78]
-WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 16 for port 'rgb_address' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:79]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 12 for port 'address' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:86]
 WARNING: [VRFC 10-3645] port 'rgb_out' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:45]
-WARNING: [VRFC 10-3645] port 'rgb_address' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:62]
-WARNING: [VRFC 10-3645] port 'led_g' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:105]
+WARNING: [VRFC 10-3645] port 'rgb_out' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:73]
+WARNING: [VRFC 10-3645] port 'led_g' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:90]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -50,6 +49,7 @@ Compiling module work.draw_bg
 Compiling module work.draw_buttons
 Compiling module work.draw_rect
 Compiling module work.draw_rect_ctl
+Compiling module work.image_rom
 Compiling module work.keyboard
 Compiling module work.top_vga
 Compiling module work.tiff_writer
