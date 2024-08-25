@@ -5,8 +5,8 @@ module draw_player(
     input  logic rst,
     vga_if.out vga_out,
     vga_if.in vga_in,
-    input logic [11:0] xpos,
-    input logic [11:0] ypos,
+    input logic [11:0] player_xpos,
+    input logic [11:0] player_ypos,
     input State state,  // Typ State zdefiniowany w state_pkg
     output  logic [11:0] rgb_address
 );
@@ -91,8 +91,8 @@ always_comb begin : bg_comb_blk
     endcase
 end
 
-assign addry = vga_in.vcount - ypos;
-assign addrx = vga_in.hcount - xpos;
+assign addry = vga_in.vcount - player_ypos;
+assign addrx = vga_in.hcount - player_xpos;
 assign rgb_address  = {addry[5:0], addrx[5:0]};
 
 endmodule

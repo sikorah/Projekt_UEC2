@@ -87,15 +87,29 @@ image_rom u_image_rom (
     .rgb(rom2rect_pixel)
 );
 
-keyboard u_keyboard (
+/*keyboard u_keyboard (
     .clk(clk_100),
     .ps2_clk(ps2_clk),
     .ps2_data(ps2_data)
+);*/
+
+
+ps2_keyboard u_ps2_keyboard(
+	.clk(clk_100),
+	.rst,
+	.ps2_clk, 
+	.ps2_data,
+    .ps2_code,
+    .ps2_code_new
 );
 
+debounce u_debounce(
+    .clk(clk_100),
+    .rst,
+    .button,
+    .result
+);
 
-
-/*
 draw_player u_draw_player (
     .clk(clk_40),
     .rst(rst),
@@ -114,10 +128,11 @@ draw_player_ctl u_draw_player_ctl (
     .d_pressed(d_pressed),
     .xpos(xpos),
     .ypos(ypos),
-    .state(state)  // Odbieramy stan z kontrolera
+    .state(state), // Odbieramy stan z kontrolera
+    .result  
 );
 
-*/
+
 
 
 endmodule

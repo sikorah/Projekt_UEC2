@@ -10,16 +10,21 @@
 
 
 sv work ../../rtl/vga_pkg.sv \
+        ../../rtl/state_pkg.sv \
         ../../rtl/vga_timing.sv \
         ../../rtl/draw_bg.sv \
         ../../rtl/top_vga.sv \
         ../../rtl/vga_if.sv \
+        ../../rtl/keyboard.sv \
         ../../rtl/draw_rect.sv \
+        ../../rtl/keyboard.sv \
         ../../rtl/draw_rect_ctl.sv \
         ../../rtl/image_rom.sv \
         ../../rtl/draw_player.sv \
-        ../../rtl/keyboard.sv \
         ../../rtl/draw_player_ctl.sv \
+        ../../rtl/draw_mouse.sv \
+        ../../rtl/draw_buttons.sv \
+        ../common/tiff_writer.sv \
         ../../fpga/rtl/top_vga_basys3.sv \
         ../../fpga/rtl/clk_wiz_0_clk_wiz.v \
         ../../fpga/rtl/clk_wiz_0.v \
@@ -30,3 +35,5 @@ sv work ../../rtl/vga_pkg.sv \
 verilog work ../common/glbl.v
 
 vhdl work ../../rtl/Ps2Interface.vhd \
+../../rtl/ps2_keyboard.vhd \
+../../rtl/debounce.vhd \

@@ -36,6 +36,10 @@ set sv_files {
     ../rtl/vga_pkg.sv 
     ../rtl/state_pkg.sv
     ../rtl/vga_if.sv
+    ../rtl/image_rom.sv
+    ../rtl/draw_player.sv
+    ../rtl/draw_player_ctl.sv
+    ../rtl/draw_buttons.sv
     ../rtl/vga_timing.sv
     ../rtl/draw_bg.sv
     ../rtl/draw_rect.sv
@@ -57,9 +61,11 @@ set sv_files {
 # Specify VHDL design files location            -- EDIT
  set vhdl_files {
     ../rtl/Ps2Interface.vhd
+    ../rtl/ps2_keyboard.vhd
+    ../rtl/debounce.vhd
  }
 
 # Specify files for a memory initialization     -- EDIT
  set mem_files {
-    ../rtl/background_image_2.data
+    ../rtl/mine.dat
  }

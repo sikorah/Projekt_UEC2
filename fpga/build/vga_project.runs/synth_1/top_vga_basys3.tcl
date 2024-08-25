@@ -83,19 +83,27 @@ set_property target_language Verilog [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem /home/student/hsikora/Desktop/Projekt/rtl/background_image_2.data
+read_mem /home/student/hsikora/Desktop/Projekt/rtl/mine.dat
 read_verilog -library xil_defaultlib -sv {
   /home/student/hsikora/Desktop/Projekt/fpga/rtl/clk_wiz_0.v
   /home/student/hsikora/Desktop/Projekt/fpga/rtl/clk_wiz_0_clk_wiz.v
   /home/student/hsikora/Desktop/Projekt/rtl/vga_pkg.sv
   /home/student/hsikora/Desktop/Projekt/rtl/draw_bg.sv
+  /home/student/hsikora/Desktop/Projekt/rtl/draw_buttons.sv
+  /home/student/hsikora/Desktop/Projekt/rtl/state_pkg.sv
+  /home/student/hsikora/Desktop/Projekt/rtl/draw_player_ctl.sv
+  /home/student/hsikora/Desktop/Projekt/rtl/draw_player.sv
   /home/student/hsikora/Desktop/Projekt/rtl/draw_rect.sv
   /home/student/hsikora/Desktop/Projekt/rtl/draw_rect_ctl.sv
-  /home/student/hsikora/Desktop/Projekt/rtl/keyboard.sv
+  /home/student/hsikora/Desktop/Projekt/rtl/image_rom.sv
   /home/student/hsikora/Desktop/Projekt/rtl/top_vga.sv
   /home/student/hsikora/Desktop/Projekt/rtl/vga_if.sv
   /home/student/hsikora/Desktop/Projekt/rtl/vga_timing.sv
   /home/student/hsikora/Desktop/Projekt/fpga/rtl/top_vga_basys3.sv
+}
+read_vhdl -library xil_defaultlib {
+  /home/student/hsikora/Desktop/Projekt/rtl/debounce.vhd
+  /home/student/hsikora/Desktop/Projekt/rtl/ps2_keyboard.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
