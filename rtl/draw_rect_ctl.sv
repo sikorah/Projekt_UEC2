@@ -26,7 +26,7 @@ always_ff @(posedge clk) begin
     if (rst) begin
         state <= IDLE;
         xpos <= 350;
-        ypos <= 350;
+        ypos <= 400;
     end else begin
         v_tick_old <= v_tick;
         if (v_tick && !v_tick_old) begin
@@ -48,13 +48,13 @@ always_comb begin
                 state_nxt = ELEVATE;
         end
         ELEVATE: begin
-            if (ypos > 220)
+            if (ypos > 300)
                 ypos_nxt = ypos - 1;
             else
                 state_nxt = IDLE;
         end
         FALL: begin
-            if (!button_pressed && ypos < 370)
+            if (!button_pressed && ypos < 400)
                 ypos_nxt = ypos + 1;
             else if (button_pressed)
                 state_nxt = ELEVATE;
