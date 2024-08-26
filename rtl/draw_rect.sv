@@ -9,7 +9,7 @@ module draw_rect
         vga_if.out vga_out,
         vga_if.in vga_in,
 
-        input logic [11:0] xpos, ypos,
+        input logic [11:0] xpos_rect, ypos_rect,
         output logic [13:0] rgb_address,  // Adres dla odczytu z ROM
         input  logic [11:0] rgb_pixel     // Dane piksela z ROM
     );
@@ -48,15 +48,14 @@ module draw_rect
     end
     
      always_comb begin : bg_comb_blk                            
-        if (vga_in.vcount <= ypos + W && vga_in.vcount >= ypos &&
-            vga_in.hcount <= xpos + L && vga_in.hcount >= xpos) begin
+        if (vga_in.vcount <= ypos_rect + W && vga_in.vcount >= ypos_rect && vga_in.hcount <= xpos_rect + L && vga_in.hcount >= xpos_rect) begin
             rgb_nxt = rgb_pixel;  // Z ROM
         end else
             rgb_nxt = vga_in.rgb;
      end
 
-     assign addry = vga_in.vcount - ypos;
-     assign addrx = vga_in.hcount - xpos;
+     assign addry = vga_in.vcount - ypos_rect;
+     assign addrx = vga_in.hcount - xpos_rect;
      assign rgb_address = addry * 100 + addrx;  // Konwersja adresu na 14-bitowy format
 
 endmodule

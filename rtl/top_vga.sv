@@ -18,10 +18,12 @@ vga_if vga_tim();
 vga_if vga_bg();
 vga_if vga_rect();
 vga_if vga_buttons();
+vga_if rect2cursor();
+vga_if vga_out_mouse();
 
 logic [11:0] xpos, ypos;
 logic button_pressed;
-
+wire m_left, m_right;
 wire [11:0] rom2rect_pixel;
 wire [13:0] rect2rom_address;
 
@@ -64,8 +66,8 @@ draw_rect u_draw_rect (
     .rst(rst),
     .vga_in(vga_buttons),
     .vga_out(vga_rect),
-    .xpos(xpos),
-    .ypos(ypos),
+    .xpos_rect(xpos),
+    .ypos_rect(ypos),
     .rgb_address(rect2rom_address),
     .rgb_pixel(rom2rect_pixel)
 );
@@ -74,8 +76,8 @@ draw_rect_ctl u_draw_rect_ctl (
     .clk(clk_40),
     .rst(rst),
     .v_tick(vga_bg.vsync),
-    .xpos(xpos),
-    .ypos(ypos),
+    .xpos_rect(xpos),
+    .ypos_rect(ypos),
     .button_pressed(button_pressed),
     .rgb_pixel(rom2rect_pixel),
     .rgb_address(rect2rom_address)
@@ -93,7 +95,33 @@ keyboard u_keyboard (
     .ps2_data(ps2_data)
 );
 
+MouseCtl  u_mouse_ctl(
+	.clk(clk_100),
+	.rst,
+	.xpos(x_pos),
+	.ypos(y_pos),
+	.setmax_x(1'b0),
+	.setmax_y(1'b0),
+	.ps2_clk, 
+	.ps2_data,
+    .left(m_left),
+    .right(m_right),
+    .zpos(),
+    .middle(),
+    .new_event(),
+    .value('0),
+    .setx('0),
+    .sety('0)
+	);
 
+draw_mouse  u_draw_mouse(
+        .clk(clk_40),
+        .rst,
+        .vga_in(rect2cursor),
+        .vga_out(vga_out_mouse),
+        .xpos(x_pos),
+        .ypos(y_pos)
+    );
 
 /*
 draw_player u_draw_player (
