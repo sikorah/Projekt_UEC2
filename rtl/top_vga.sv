@@ -19,7 +19,7 @@ vga_if vga_bg();
 vga_if vga_rect();
 vga_if vga_buttons();
 vga_if rect2cursor();
-vga_if vga_out_mouse();
+vga_if vga_out();
 
 logic [11:0] xpos, ypos;
 logic button_pressed;
@@ -30,9 +30,9 @@ wire [13:0] rect2rom_address;
 /**
  * Signals assignments
  */
-assign vs = vga_bg.vsync;
-assign hs = vga_bg.hsync;
-assign {r, g, b} = vga_rect.rgb;  // Extract higher bits for RGB
+assign vs = vga_out.vsync;
+assign hs = vga_out.hsync;
+assign {r, g, b} = vga_out.rgb;  // Extract higher bits for RGB
 
 /**
  * Submodules instances
@@ -60,27 +60,15 @@ draw_buttons u_draw_buttons (
     .player_ypos(ypos),
     .button_pressed(button_pressed)
 );
-
 draw_rect u_draw_rect (
     .clk(clk_40),
     .rst(rst),
     .vga_in(vga_buttons),
-    .vga_out(vga_rect),
+    .vga_out(vga_out),
     .xpos_rect(xpos),
     .ypos_rect(ypos),
     .rgb_address(rect2rom_address),
     .rgb_pixel(rom2rect_pixel)
-);
-
-draw_rect_ctl u_draw_rect_ctl (
-    .clk(clk_40),
-    .rst(rst),
-    .v_tick(vga_bg.vsync),
-    .xpos_rect(xpos),
-    .ypos_rect(ypos),
-    .button_pressed(button_pressed),
-    .rgb_pixel(rom2rect_pixel),
-    .rgb_address(rect2rom_address)
 );
 
 image_rom u_image_rom (
@@ -89,12 +77,23 @@ image_rom u_image_rom (
     .rgb(rom2rect_pixel)
 );
 
+draw_rect_ctl u_draw_rect_ctl (
+    .clk(clk_40),
+    .rst(rst),
+    .v_tick(vga_tim.vsync),
+    .xpos_rect(xpos),
+    .ypos_rect(ypos),
+    .button_pressed(button_pressed)
+);
+
+
+
 keyboard u_keyboard (
     .clk(clk_100),
     .ps2_clk(ps2_clk),
     .ps2_data(ps2_data)
 );
-
+/*
 MouseCtl  u_mouse_ctl(
 	.clk(clk_100),
 	.rst,

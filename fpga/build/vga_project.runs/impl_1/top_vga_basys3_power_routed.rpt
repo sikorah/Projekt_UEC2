@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date             : Sat Aug 24 14:06:04 2024
+| Date             : Mon Aug 26 16:54:09 2024
 | Host             : cadence33 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command          : report_power -file top_vga_basys3_power_routed.rpt -pb top_vga_basys3_power_summary_routed.pb -rpx top_vga_basys3_power_routed.rpx
 | Design           : top_vga_basys3
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        5 |       --- |             --- |
-| Slice Logic    |     0.005 |     2368 |       --- |             --- |
-|   LUT as Logic |     0.004 |     1588 |     20800 |            7.63 |
+| Slice Logic    |     0.005 |     2327 |       --- |             --- |
+|   LUT as Logic |     0.004 |     1538 |     20800 |            7.39 |
 |   CARRY4       |    <0.001 |      335 |      8150 |            4.11 |
-|   Register     |    <0.001 |      104 |     41600 |            0.25 |
+|   Register     |    <0.001 |      106 |     41600 |            0.25 |
 |   Others       |     0.000 |       26 |       --- |             --- |
-| Signals        |     0.007 |     4608 |       --- |             --- |
+| Signals        |     0.007 |     4571 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
 | DSPs           |     0.023 |       70 |        90 |           77.78 |
 | I/O            |     0.005 |       17 |       106 |           16.04 |

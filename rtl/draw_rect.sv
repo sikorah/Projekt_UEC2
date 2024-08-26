@@ -16,7 +16,7 @@ module draw_rect
     
     import vga_pkg::*;
     
-    localparam COLOR = 12'hF0F;
+
     
     logic [11:0] rgb_nxt;
     logic [6:0] addrx, addry;  // Adresy X i Y w obrębie obrazka

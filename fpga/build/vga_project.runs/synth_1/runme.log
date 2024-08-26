@@ -16,9 +16,10 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7413
+INFO: [Synth 8-7075] Helper process launched with PID 29788
+WARNING: [Synth 8-1102] /* in comment [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:125]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 168 ; free virtual = 11714
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 4488 ; free virtual = 10467
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_vga_basys3' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:17]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v:71]
@@ -65,6 +66,10 @@ INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/
 INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
 INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
 INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
 INFO: [Synth 8-6157] synthesizing module 'vga_timing' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:21]
 WARNING: [Synth 8-3848] Net vga_out\.rgb in module/entity vga_timing does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:24]
 INFO: [Synth 8-6155] done synthesizing module 'vga_timing' (9#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:21]
@@ -77,14 +82,116 @@ WARNING: [Synth 8-87] always_comb on 'button2_pressed_reg' did not result in com
 INFO: [Synth 8-6155] done synthesizing module 'draw_buttons' (11#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'draw_rect' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'draw_rect' (12#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'image_rom' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:1]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../rtl/mine.dat'; please make sure the file is added to project and has read permission, ignoring [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:17]
+WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:11]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'image_rom' (13#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'draw_rect_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:1]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:44]
-WARNING: [Synth 8-3848] Net rgb_address in module/entity draw_rect_ctl does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:8]
-WARNING: [Synth 8-3848] Net rgb_pixel in module/entity draw_rect_ctl does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:9]
-INFO: [Synth 8-6155] done synthesizing module 'draw_rect_ctl' (13#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:1]
-WARNING: [Synth 8-689] width (12) of port connection 'rgb_pixel' does not match port width (8) of module 'draw_rect_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:78]
-WARNING: [Synth 8-689] width (12) of port connection 'rgb_address' does not match port width (16) of module 'draw_rect_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:79]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:105]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:42]
+INFO: [Synth 8-6155] done synthesizing module 'draw_rect_ctl' (14#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:91]
 INFO: [Synth 8-6157] synthesizing module 'keyboard' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv:10]
 WARNING: [Synth 8-151] case item 2'b10 is unreachable [/home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv:61]
 WARNING: [Synth 8-151] case item 2'b11 is unreachable [/home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv:74]
@@ -96,39 +203,13 @@ WARNING: [Synth 8-6014] Unused sequential element rxregister_reg was removed.  [
 WARNING: [Synth 8-6014] Unused sequential element rxactive_reg was removed.  [/home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv:50]
 WARNING: [Synth 8-6014] Unused sequential element dataready_reg was removed.  [/home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv:51]
 WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [/home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv:46]
-WARNING: [Synth 8-3848] Net rxdata in module/entity keyboard does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv:26]
-WARNING: [Synth 8-3848] Net datafetched in module/entity keyboard does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv:27]
-INFO: [Synth 8-6155] done synthesizing module 'keyboard' (14#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv:10]
-WARNING: [Synth 8-7071] port 'led_g' of module 'keyboard' is unconnected for instance 'u_keyboard' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:105]
-WARNING: [Synth 8-7023] instance 'u_keyboard' of module 'keyboard' has 4 connections declared, but only 3 given [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:105]
-INFO: [Synth 8-6155] done synthesizing module 'top_vga' (15#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'top_vga_basys3' (16#1) [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'keyboard' (15#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv:10]
+WARNING: [Synth 8-7071] port 'led_g' of module 'keyboard' is unconnected for instance 'u_keyboard' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:91]
+WARNING: [Synth 8-7023] instance 'u_keyboard' of module 'keyboard' has 4 connections declared, but only 3 given [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:91]
+INFO: [Synth 8-6155] done synthesizing module 'top_vga' (16#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_vga_basys3' (17#1) [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:17]
 WARNING: [Synth 8-7129] Port ps2_data in module keyboard is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ps2_clk in module keyboard is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[15] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[14] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[13] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[12] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[11] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[10] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[9] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[8] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[7] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[6] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[5] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[4] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[3] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[2] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[1] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_address[0] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_pixel[7] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_pixel[6] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_pixel[5] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_pixel[4] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_pixel[3] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_pixel[2] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_pixel[1] in module draw_rect_ctl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_pixel[0] in module draw_rect_ctl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rgb_out[11] in module draw_bg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rgb_out[10] in module draw_bg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rgb_out[9] in module draw_bg is either unconnected or has no load
@@ -166,18 +247,18 @@ WARNING: [Synth 8-7129] Port vga_out\.rgb[2] in module vga_timing is either unco
 WARNING: [Synth 8-7129] Port vga_out\.rgb[1] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[0] in module vga_timing is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 1187 ; free virtual = 12711
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 5433 ; free virtual = 11416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 1181 ; free virtual = 12708
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 5452 ; free virtual = 11436
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 1181 ; free virtual = 12708
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 5452 ; free virtual = 11436
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 1173 ; free virtual = 12700
+Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 5412 ; free virtual = 11402
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_clk/inst/clkout1_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_clk/inst/clkout2_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
@@ -199,27 +280,27 @@ Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constr
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 1050 ; free virtual = 12594
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2781.730 ; gain = 0.000 ; free physical = 5180 ; free virtual = 11181
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   BUFGCE => BUFGCTRL: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 1051 ; free virtual = 12594
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2781.730 ; gain = 0.000 ; free physical = 5175 ; free virtual = 11177
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 1124 ; free virtual = 12666
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 5406 ; free virtual = 11412
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 1123 ; free virtual = 12665
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 5406 ; free virtual = 11412
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 1116 ; free virtual = 12658
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 5406 ; free virtual = 11412
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'draw_rect_ctl'
 WARNING: [Synth 8-327] inferring latch for variable 'button2_pressed_reg' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv:45]
@@ -232,7 +313,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'button1_pressed_reg' [/home
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'draw_rect_ctl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 1103 ; free virtual = 12649
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 5347 ; free virtual = 11359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -243,16 +324,16 @@ Detailed RTL Component Info :
 	   3 Input   32 Bit       Adders := 10    
 	   2 Input   13 Bit       Adders := 2     
 	   2 Input   11 Bit       Adders := 2     
-	   3 Input    6 Bit       Adders := 2     
+	   3 Input    7 Bit       Adders := 2     
 +---Registers : 
-	               12 Bit    Registers := 4     
+	               12 Bit    Registers := 5     
 	               11 Bit    Registers := 8     
 	                8 Bit    Registers := 2     
 	                1 Bit    Registers := 18    
 +---Multipliers : 
 	              32x32  Multipliers := 20    
 +---Muxes : 
-	   2 Input   12 Bit        Muxes := 8     
+	   2 Input   12 Bit        Muxes := 7     
 	  14 Input   12 Bit        Muxes := 1     
 	   3 Input   12 Bit        Muxes := 2     
 	   3 Input    4 Bit        Muxes := 1     
@@ -567,249 +648,220 @@ DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
 DSP Report: Generating DSP rgb_nxt5, operation Mode is: (PCIN>>17)+(A:0x7fff)*B.
 DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
 DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
-WARNING: [Synth 8-7129] Port rgb_out[11] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[10] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[9] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[8] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[7] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[6] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[5] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[4] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[3] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[2] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[1] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rgb_out[0] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[11] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[10] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[9] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[8] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[7] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[6] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[5] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[4] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[3] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[2] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[1] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[0] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PS2Clk in module top_vga_basys3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PS2Data in module top_vga_basys3 is either unconnected or has no load
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_buttons/button2_pressed_reg) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_buttons/button1_pressed_reg) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_rect_ctl/FSM_sequential_state_reg) is unused and will be removed from module top_vga_basys3.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 1050 ; free virtual = 12606
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:07 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 5277 ; free virtual = 11319
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 97, Available = 90. Use report_utilization command for details.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt4 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt4.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: Generating DSP u_top_vga/u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
-DSP Report: operator u_top_vga/u_draw_bg/rgb_nxt5 is absorbed into DSP u_top_vga/u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: operator u_draw_bg/rgb_nxt4 is absorbed into DSP u_draw_bg/rgb_nxt4.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: Generating DSP u_draw_bg/rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
+DSP Report: operator u_draw_bg/rgb_nxt5 is absorbed into DSP u_draw_bg/rgb_nxt5.
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -925,19 +977,20 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 906 ; free virtual = 12471
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:16 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 5159 ; free virtual = 11208
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+info: optimization accepted worst group hill climbing move (9186.0/oG.CP 19.0ps)
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 905 ; free virtual = 12468
+Finished Timing Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:37 . Memory (MB): peak = 2814.711 ; gain = 96.891 ; free physical = 5032 ; free virtual = 11094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 894 ; free virtual = 12457
+Finished Technology Mapping : Time (s): cpu = 00:01:29 ; elapsed = 00:01:42 . Memory (MB): peak = 2814.711 ; gain = 96.891 ; free physical = 5070 ; free virtual = 11132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -955,37 +1008,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 909 ; free virtual = 12472
+Finished IO Insertion : Time (s): cpu = 00:01:32 ; elapsed = 00:01:46 . Memory (MB): peak = 2814.711 ; gain = 96.891 ; free physical = 5063 ; free virtual = 11128
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 920 ; free virtual = 12484
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:32 ; elapsed = 00:01:46 . Memory (MB): peak = 2814.711 ; gain = 96.891 ; free physical = 5053 ; free virtual = 11117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 914 ; free virtual = 12478
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:34 ; elapsed = 00:01:48 . Memory (MB): peak = 2814.711 ; gain = 96.891 ; free physical = 5067 ; free virtual = 11133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 912 ; free virtual = 12476
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:34 ; elapsed = 00:01:48 . Memory (MB): peak = 2814.711 ; gain = 96.891 ; free physical = 5067 ; free virtual = 11134
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 926 ; free virtual = 12490
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:34 ; elapsed = 00:01:48 . Memory (MB): peak = 2814.711 ; gain = 96.891 ; free physical = 5067 ; free virtual = 11134
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 925 ; free virtual = 12488
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:34 ; elapsed = 00:01:48 . Memory (MB): peak = 2814.711 ; gain = 96.891 ; free physical = 5067 ; free virtual = 11133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1006,42 +1059,43 @@ Report Cell Usage:
 |3     |BUFH       |     2|
 |4     |CARRY4     |   336|
 |5     |DSP48E1    |    70|
-|6     |LUT1       |    29|
-|7     |LUT2       |   777|
-|8     |LUT3       |   257|
-|9     |LUT4       |   325|
-|10    |LUT5       |   191|
-|11    |LUT6       |   326|
+|6     |LUT1       |    37|
+|7     |LUT2       |   798|
+|8     |LUT3       |   252|
+|9     |LUT4       |   312|
+|10    |LUT5       |   198|
+|11    |LUT6       |   272|
 |12    |MMCME2_ADV |     1|
 |13    |ODDR       |     2|
-|14    |FDRE       |   103|
+|14    |FDRE       |   105|
 |15    |IBUF       |     2|
 |16    |OBUF       |    15|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 921 ; free virtual = 12484
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:34 ; elapsed = 00:01:48 . Memory (MB): peak = 2814.711 ; gain = 96.891 ; free physical = 5067 ; free virtual = 11133
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 33 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 971 ; free virtual = 12534
-Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 976 ; free virtual = 12540
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:30 ; elapsed = 00:01:42 . Memory (MB): peak = 2814.711 ; gain = 32.980 ; free physical = 5127 ; free virtual = 11193
+Synthesis Optimization Complete : Time (s): cpu = 00:01:34 ; elapsed = 00:01:48 . Memory (MB): peak = 2814.711 ; gain = 96.891 ; free physical = 5127 ; free virtual = 11193
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 962 ; free virtual = 12528
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2814.711 ; gain = 0.000 ; free physical = 5119 ; free virtual = 11187
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_clk/inst/clkout1_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_clk/inst/clkout2_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 INFO: [Netlist 29-17] Analyzing 411 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 1002 ; free virtual = 12569
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2846.723 ; gain = 0.000 ; free physical = 5146 ; free virtual = 11215
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   BUFGCE => BUFGCTRL: 2 instances
 
-Synth Design complete, checksum: bf924c66
+Synth Design complete, checksum: 6e9efdc5
 INFO: [Common 17-83] Releasing license: Synthesis
-63 Infos, 123 Warnings, 0 Critical Warnings and 0 Errors encountered.
+70 Infos, 164 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2781.727 ; gain = 64.031 ; free physical = 1221 ; free virtual = 12788
+synth_design: Time (s): cpu = 00:01:44 ; elapsed = 00:01:55 . Memory (MB): peak = 2846.723 ; gain = 129.023 ; free physical = 5379 ; free virtual = 11446
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/home/student/zschab/Desktop/Projekt_UEC2/fpga/build/vga_project.runs/synth_1/top_vga_basys3.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_vga_basys3_utilization_synth.rpt -pb top_vga_basys3_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Aug 24 14:04:37 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 26 16:52:23 2024...

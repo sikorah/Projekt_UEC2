@@ -4,10 +4,7 @@ module draw_rect_ctl (
     input  logic clk,
     input  logic button_pressed,
     output logic [11:0] xpos_rect,
-    output logic [11:0] ypos_rect,
-    output logic [13:0] rgb_address,  // Adres do odczytu z ROM
-    input  logic [11:0] rgb_pixel,    // Dane piksela z ROM
-    output logic [11:0] rgb_out       // Wyjściowy kolor piksela
+    output logic [11:0] ypos_rect
 );
 
 // Definicja stanów
@@ -64,8 +61,5 @@ always_comb begin
     endcase
 end
 
-// Wyprowadzenie adresu i koloru piksela
-assign rgb_address = ypos_rect * 100 + xpos_rect;
-assign rgb_out = rgb_pixel;
 
 endmodule
