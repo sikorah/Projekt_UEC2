@@ -33,8 +33,7 @@ set xdc_files {
 
 # Specify SystemVerilog design files location   -- EDIT
 set sv_files {
-    ../rtl/vga_pkg.sv 
-    ../rtl/state_pkg.sv
+    ../rtl/vga_pkg.sv
     ../rtl/vga_if.sv
     ../rtl/image_rom.sv
     ../rtl/draw_player.sv
@@ -45,8 +44,6 @@ set sv_files {
     ../rtl/draw_rect.sv
     ../rtl/draw_rect_ctl.sv
     ../rtl/top_vga.sv
-    ../rtl/draw_mouse.sv
-    ../rtl/keyboard.sv
     rtl/top_vga_basys3.sv
     rtl/clk_wiz_0_clk_wiz.v
     rtl/clk_wiz_0.v

@@ -1,5 +1,3 @@
-`include "state_pkg.sv"
-
 module draw_player_ctl (
     input logic rst,
     input logic v_tick,
@@ -9,7 +7,11 @@ module draw_player_ctl (
     output logic [11:0] player_ypos
 );
 
-import state_pkg::*;
+typedef enum bit [1:0] {
+    IDLE  = 2'b00,
+    RIGHT = 2'b01,
+    LEFT  = 2'b10
+} State;
 
 State state, state_nxt;
 logic [11:0] player_xpos_nxt, player_ypos_nxt;

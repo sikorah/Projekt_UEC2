@@ -1,4 +1,3 @@
-import state_pkg::*;
 
 module draw_player(
     input  logic clk,
@@ -7,12 +6,18 @@ module draw_player(
     vga_if.in vga_in,
     input logic [11:0] player_xpos,
     input logic [11:0] player_ypos,
-    input State state,  // Typ State zdefiniowany w state_pkg
     output  logic [11:0] rgb_address
 );
 
 import vga_pkg::*;
 
+typedef enum bit [1:0] {
+    IDLE  = 2'b00,
+    RIGHT = 2'b01,
+    LEFT  = 2'b10
+} State;
+
+State state, state_nxt;
 logic [11:0] rgb_nxt;
 logic [5:0] addrx, addry;
 
@@ -49,7 +54,7 @@ always_comb begin : bg_comb_blk
     rgb_nxt = 12'h000;
     
     // Sprawdzenie stanu i odpowiednie rysowanie postaci
-    case (state)
+    case(state)
         IDLE: begin
             // player standing
             // eyes

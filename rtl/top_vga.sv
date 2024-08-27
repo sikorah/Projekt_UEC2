@@ -3,6 +3,8 @@ module top_vga (
     input  logic clk_100,
     inout  logic ps2_clk,
     inout  logic ps2_data,
+    inout  logic ps2_code,
+    inout  logic ps2_code_new,
     input  logic rst,
     output logic vs,
     output logic hs,
@@ -20,7 +22,11 @@ vga_if vga_rect();
 vga_if vga_buttons();
 
 logic [11:0] xpos, ypos;
-logic button_pressed;
+logic [11:0] button_pressed;
+
+wire [11:0] result;
+wire [11:0] button;
+wire [1:0] error;
 
 wire [11:0] rom2rect_pixel;
 wire [13:0] rect2rom_address;
@@ -39,6 +45,7 @@ assign {r, g, b} = vga_rect.rgb;  // Extract higher bits for RGB
 vga_timing u_vga_timing (
     .clk(clk_40),
     .rst(rst),
+    .vga_in(vga_tin),
     .vga_out(vga_tim)
 );
 
@@ -100,7 +107,10 @@ ps2_keyboard u_ps2_keyboard(
 	.ps2_clk, 
 	.ps2_data,
     .ps2_code,
-    .ps2_code_new
+    .ps2_code_new,
+    .button,
+    .result,
+    .error
 );
 
 debounce u_debounce(
@@ -124,14 +134,28 @@ draw_player_ctl u_draw_player_ctl (
     .clk(clk_40),
     .rst(rst),
     .v_tick(vga_bg.vsync),  // Use vsync as the vertical tick
-    .a_pressed(a_pressed),
-    .d_pressed(d_pressed),
+    .result(result),
     .xpos(xpos),
     .ypos(ypos),
     .state(state), // Odbieramy stan z kontrolera
     .result  
 );
 
+draw_rect_char u_draw_rect_char(
+    .rst,
+    .in(cursor2char),
+    .out(vga_out),
+    .clk(clk40),
+    .char_line(char2font_addr),
+    .char_pixels(font2char_pix),
+    .char_xy(char2char16x16)
+);
+
+char_rom_16x16 u_char_rom_16x16(
+    .clk(clk40),
+    .char_code(char16x162font),
+    .char_xy(char2char16x16)
+);
 
 
 
