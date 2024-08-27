@@ -2,8 +2,8 @@ If simulation ends before the testbench
 completes, use the menu option to run all.
 Prepare to wait a long time...
 Info: tiff_writer started frame           0
-Info: negedge VS at          15333228000
+Info: negedge VS at          15333276000
 Info: tiff writer finished frame           0
 Info: tiff_writer started frame           1
-Info: negedge VS at          31249260000
+Info: negedge VS at          31249308000
 Simulation is over, check the waveforms.

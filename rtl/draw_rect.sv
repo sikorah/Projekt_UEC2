@@ -1,3 +1,11 @@
+/**
+ * Copyright (C) 2024  AGH University of Science and Technology
+ * MTM UEC2
+ * Author: Zuzanna Schab
+ *
+ * Description:
+ * Draw obsticle with ROM.
+ */
 module draw_rect
     #(
         parameter  W = 100,

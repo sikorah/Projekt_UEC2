@@ -1,3 +1,11 @@
+/**
+ * Copyright (C) 2024  AGH University of Science and Technology
+ * MTM UEC2
+ * Author: Zuzanna Schab
+ *
+ * Description:
+ * Control of obstice's movements.
+ */
 module draw_rect_ctl (
     input  logic rst,
     input  logic v_tick,

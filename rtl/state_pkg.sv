@@ -1,3 +1,11 @@
+/**
+ * Copyright (C) 2024  AGH University of Science and Technology
+ * MTM UEC2
+ * Author: Zuzanna Schab
+ *
+ * Description:
+ * State package.
+ */
 package state_pkg;
     typedef enum bit [1:0] {
         IDLE  = 2'b00,

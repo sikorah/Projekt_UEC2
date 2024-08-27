@@ -1,3 +1,11 @@
+/**
+ * Copyright (C) 2024  AGH University of Science and Technology
+ * MTM UEC2
+ * Author: Zuzanna Schab
+ *
+ * Description:
+ * ROM module.
+ */
 module image_rom (
     input  logic clk,
     input  logic [13:0] address,  // Adres = {7-bit addry, 7-bit addrx} (dla obrazu 100x100 pikseli)

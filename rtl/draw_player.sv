@@ -1,22 +1,27 @@
-import state_pkg::*;
+/**
+ * Copyright (C) 2024  AGH University of Science and Technology
+ * MTM UEC2
+ * Author: Zuzanna Schab
+ *
+ * Description:
+ * Draw player in various states.
+ */
+
+ import state_pkg::*;
 
 module draw_player(
     input  logic clk,
     input  logic rst,
     vga_if.out vga_out,
     vga_if.in vga_in,
-    input logic [11:0] xpos,
-    input logic [11:0] ypos,
-    input State state,  // Typ State zdefiniowany w state_pkg
-    output  logic [11:0] rgb_address
+    input logic [11:0] xpos_player,
+    input logic [11:0] ypos_player,
+    input State state
 );
 
 import vga_pkg::*;
 
 logic [11:0] rgb_nxt;
-logic [5:0] addrx, addry;
-
-
 
 always_ff @(posedge clk) begin : bg_ff_blk
     if (rst) begin
@@ -45,8 +50,7 @@ always_ff @(posedge clk) begin
 end
 
 always_comb begin : bg_comb_blk                            
-    // Domyślny kolor tła (czarny)
-    rgb_nxt = 12'h000;
+    rgb_nxt = vga_in.rgb;
     
     // Sprawdzenie stanu i odpowiednie rysowanie postaci
     case (state)
@@ -90,9 +94,5 @@ always_comb begin : bg_comb_blk
         end
     endcase
 end
-
-assign addry = vga_in.vcount - ypos;
-assign addrx = vga_in.hcount - xpos;
-assign rgb_address  = {addry[5:0], addrx[5:0]};
 
 endmodule

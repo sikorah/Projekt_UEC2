@@ -21,6 +21,8 @@ sv work ../../rtl/vga_pkg.sv \
         ../../rtl/draw_mouse.sv \
         ../../rtl/draw_buttons.sv \
         ../../rtl/image_rom.sv \
+        ../../rtl/draw_player.sv \
+        ../../rtl/draw_player_ctl.sv \
         ../common/tiff_writer.sv \
         top_vga_tb.sv
 

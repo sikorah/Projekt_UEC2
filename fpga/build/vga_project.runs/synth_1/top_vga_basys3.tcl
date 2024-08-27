@@ -90,14 +90,20 @@ read_verilog -library xil_defaultlib -sv {
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_pkg.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv
+  /home/student/zschab/Desktop/Projekt_UEC2/rtl/state_pkg.sv
+  /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player.sv
+  /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv
-  /home/student/zschab/Desktop/Projekt_UEC2/rtl/keyboard.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv
   /home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv
+}
+read_vhdl -library xil_defaultlib {
+  /home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd
+  /home/student/zschab/Desktop/Projekt_UEC2/rtl/Ps2Interface.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

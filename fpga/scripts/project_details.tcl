@@ -45,6 +45,8 @@ set sv_files {
     ../rtl/keyboard.sv
     ../rtl/image_rom.sv
     ../rtl/draw_buttons.sv
+    ../rtl/draw_player.sv
+    ../rtl/draw_player_ctl.sv
     rtl/top_vga_basys3.sv
     rtl/clk_wiz_0_clk_wiz.v
     rtl/clk_wiz_0.v

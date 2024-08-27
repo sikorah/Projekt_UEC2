@@ -1,10 +1,18 @@
-module draw_buttons (
+/**
+ * Copyright (C) 2024  AGH University of Science and Technology
+ * MTM UEC2
+ * Author: Zuzanna Schab
+ *
+ * Description:
+ * Draw buttons.
+ * 
+ */module draw_buttons (
     input logic clk,
     input logic rst,
     vga_if.out vga_out,
     vga_if.in vga_in,
-    input logic [11:0] player_xpos,
-    input logic [11:0] player_ypos,
+    input logic [11:0] xpos_player,
+    input logic [11:0] ypos_player,
     output logic button_pressed
 );
 
@@ -38,11 +46,11 @@ always_comb begin
     // Rysowanie przycisków
     if ((vga_in.vcount > 490 && vga_in.vcount <= 500) && (vga_in.hcount > 200 && vga_in.hcount < 250)) begin
         rgb_nxt = 12'hf_0_0;
-        button1_pressed = (player_xpos >= 200 && player_xpos <= 250) && (player_ypos >= 490 && player_ypos <= 500);
+        button1_pressed = (xpos_player >= 200 && xpos_player <= 250) && (ypos_player >= 490 && ypos_player <= 500);
     
     end else if ((vga_in.vcount > 490 && vga_in.vcount <= 500) && (vga_in.hcount > 600 && vga_in.hcount < 650)) begin
         rgb_nxt = 12'hf_0_0;
-        button2_pressed = (player_xpos >= 600 && player_xpos <= 650) && (player_ypos >= 490 && player_ypos <= 500);
+        button2_pressed = (xpos_player >= 600 && xpos_player <= 650) && (ypos_player >= 490 && ypos_player <= 500);
     
     end else begin
         button1_pressed = 0;
