@@ -1,5 +1,0 @@
-General information about this run 
--- piranha worklib.vga_if:sv
--- TOOL:	cfe	19.09-s003
--- Options : +TOOLNAME halsynth -HAL ALL -BB_SIG_SIZE 16384 +DISABLE -MULTI_DRIVEN_REG TRI -NOLOG +PRIM_TRI +FSM_RULE_CHECKS -SYNTHESIS ALL -IGNORE_COMB_INIT -VITAL_BLACKBOX +MDARRAY_ON +SYSVLOG1 +SYSAP +ALLOW_FOREACH +ALLOW_SV_NESTED_IFACE +ALLOW_SV_IFACE_ARRAY +ALLOW_SV_IFACE_FUNC_TASK +IFACE_GENNAME_SUPPORT -CLOG2SUPPORT +ALLOW_UNPCKARR_PARAM +ALLOW_OOMR_FIELD_SELECT +SYSAP +ASSIGN_REPLOPR +ALLOW_INSIDE_SUPPORT -DEFINES /cad/env/hal_mtm_rtl_rules.def -DUMP +RULES_LIST +HAL_SIDEFILE xrun.log -PRAGMA ALL -cdslib ./xcelium.d/run.lnx86.19.09.d/cds.lib -hdlvar ./xcelium.d/run.lnx86.19.09.d/hdl.var -NOWARN DSEMEL worklib.vga_if:sv
--- SMV File is :/home/student/zschab/Desktop/Projekt_UEC2/xcelium.d/worklib/vga_if/sv/vga_if.smv
