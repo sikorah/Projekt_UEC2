@@ -1,0 +1,13 @@
+#Vivado temporary files#
+
+*.pb
+*.log
+*.jou
+*.xpr
+
+#Build directiories#
+
+.Xil/
+.dvt/
+build/
+xcelium.d/

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Aug 28 17:38:02 2024
+| Date         : Wed Aug 28 19:31:32 2024
 | Host         : cadence33 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command      : report_drc -file top_vga_basys3_drc_routed.rpt -pb top_vga_basys3_drc_routed.pb -rpx top_vga_basys3_drc_routed.rpx
 | Design       : top_vga_basys3
