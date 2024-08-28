@@ -11,6 +11,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/
 INFO: [VRFC 10-311] analyzing module draw_bg
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv" into library work
 INFO: [VRFC 10-311] analyzing module top_vga
+INFO: [VRFC 10-2458] undeclared symbol xpos_mouse, assumed default net type wire [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:97]
+INFO: [VRFC 10-2458] undeclared symbol ypos_mouse, assumed default net type wire [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:98]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv" into library work
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv" into library work
 INFO: [VRFC 10-311] analyzing module draw_rect
@@ -40,34 +42,5 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UE
 INFO: [VRFC 10-3107] analyzing entity 'MouseDisplay'
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3645] port 'rgb_out' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:48]
-WARNING: [VRFC 10-3645] port 'state' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:91]
-WARNING: [VRFC 10-3645] port 'setx' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:110]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling package work.vga_pkg
-Compiling package work.state_pkg
-Compiling module work.vga_if
-Compiling module work.vga_timing
-Compiling module work.draw_bg
-Compiling module work.draw_buttons
-Compiling module work.draw_rect
-Compiling module work.image_rom
-Compiling module work.draw_rect_ctl
-Compiling module work.draw_player
-Compiling module work.draw_player_ctl
-Compiling architecture behavioral of entity work.Ps2Interface [ps2interface_default]
-Compiling architecture behavioral of entity work.MouseCtl [mousectl_default]
-Compiling module work.top_vga
-Compiling module work.tiff_writer
-Compiling module work.top_vga_tb
-Built simulation snapshot top_vga_tb
+ERROR: [VRFC 10-8389] size mismatch in mixed language port association, VHDL port 'xpos' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:94]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

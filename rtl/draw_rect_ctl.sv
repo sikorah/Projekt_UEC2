@@ -51,12 +51,16 @@ always_comb begin
         IDLE: begin
             if (button_pressed)
                 state_nxt = ELEVATE;
+            if (!button_pressed)
+                state_nxt = IDLE;
         end
         ELEVATE: begin
-            if (ypos_rect > 300)
+            if (ypos_rect > 300 && button_pressed)
                 ypos_nxt = ypos_rect - 1;
+            else if (ypos_rect == 300 && button_pressed)
+                ypos_nxt = ypos_rect;
             else
-                state_nxt = IDLE;
+                state_nxt = FALL;
         end
         FALL: begin
             if (!button_pressed && ypos_rect < 400)
@@ -65,6 +69,9 @@ always_comb begin
                 state_nxt = ELEVATE;
             else
                 state_nxt = IDLE;
+        end
+        default: begin
+            state_nxt = IDLE;
         end
     endcase
 end

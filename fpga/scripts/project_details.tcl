@@ -68,4 +68,5 @@ set sv_files {
 # Specify files for a memory initialization     -- EDIT
  set mem_files {
     ../rtl/mine.dat
+ 
  }

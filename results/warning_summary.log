@@ -1,147 +1,26 @@
 Warnings, critical warnings and errors from synthesis and implementation
 
-Created: 2024-08-27 16:42:19
+Created: 2024-08-28 14:11:24
 
 ----SYNTHESIS----
 WARNING: [Synth 8-7071] port 'locked' of module 'clk_wiz_0' is unconnected for instance 'u_clk' [fpga/rtl/top_vga_basys3.sv:46]
 WARNING: [Synth 8-7023] instance 'u_clk' of module 'clk_wiz_0' has 4 connections declared, but only 3 given [fpga/rtl/top_vga_basys3.sv:46]
 WARNING: [Synth 8-3848] Net vga_out\.rgb in module/entity vga_timing does not have driver. [rtl/vga_timing.sv:16]
 WARNING: [Synth 8-3848] Net rgb_out in module/entity draw_bg does not have driver. [rtl/draw_bg.sv:20]
-WARNING: [Synth 8-87] always_comb on 'button1_pressed_reg' did not result in combinational logic [rtl/draw_buttons.sv:49]
-WARNING: [Synth 8-87] always_comb on 'button2_pressed_reg' did not result in combinational logic [rtl/draw_buttons.sv:53]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../rtl/mine.dat'; please make sure the file is added to project and has read permission, ignoring [rtl/image_rom.sv:25]
-WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
-WARNING: [Synth 8-3848] Net rom in module/entity image_rom does not have driver. [rtl/image_rom.sv:19]
 WARNING: [Synth 8-6014] Unused sequential element set_x.inc_reg was removed.  [rtl/MouseCtl.vhd:450]
 WARNING: [Synth 8-6014] Unused sequential element set_x.x_inter_reg was removed.  [rtl/MouseCtl.vhd:456]
 WARNING: [Synth 8-6014] Unused sequential element set_y.inc_reg was removed.  [rtl/MouseCtl.vhd:514]
 WARNING: [Synth 8-6014] Unused sequential element set_y.y_inter_reg was removed.  [rtl/MouseCtl.vhd:520]
-WARNING: [Synth 8-7071] port 'setx' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:110]
-WARNING: [Synth 8-7071] port 'sety' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:110]
-WARNING: [Synth 8-7071] port 'setmax_x' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:110]
-WARNING: [Synth 8-7071] port 'setmax_y' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:110]
-WARNING: [Synth 8-7023] instance 'u_mouse_ctl' of module 'MouseCtl' has 16 connections declared, but only 12 given [rtl/top_vga.sv:110]
-WARNING: [Synth 8-7129] Port xpos_player[11] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[10] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[9] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[8] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[7] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[6] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[5] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[4] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[3] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[2] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[1] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player[0] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[11] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[10] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[9] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[8] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[7] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[6] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[5] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[4] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[3] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[2] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[1] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_player[0] in module draw_player is either unconnected or has no load
+WARNING: [Synth 8-689] width (1) of port connection 'xpos' does not match port width (12) of module 'MouseCtl' [rtl/top_vga.sv:97]
+WARNING: [Synth 8-689] width (1) of port connection 'ypos' does not match port width (12) of module 'MouseCtl' [rtl/top_vga.sv:98]
+WARNING: [Synth 8-7071] port 'setx' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:94]
+WARNING: [Synth 8-7071] port 'sety' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:94]
+WARNING: [Synth 8-7071] port 'setmax_x' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:94]
+WARNING: [Synth 8-7071] port 'setmax_y' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:94]
+WARNING: [Synth 8-7023] instance 'u_mouse_ctl' of module 'MouseCtl' has 16 connections declared, but only 12 given [rtl/top_vga.sv:94]
+WARNING: [Synth 8-7071] port 'xpos' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:81]
+WARNING: [Synth 8-7071] port 'ypos' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:81]
+WARNING: [Synth 8-7023] instance 'u_top_vga' of module 'top_vga' has 12 connections declared, but only 10 given [fpga/rtl/top_vga_basys3.sv:81]
 WARNING: [Synth 8-7129] Port rgb_out[11] in module draw_bg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rgb_out[10] in module draw_bg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rgb_out[9] in module draw_bg is either unconnected or has no load
@@ -178,16 +57,49 @@ WARNING: [Synth 8-7129] Port vga_out\.rgb[3] in module vga_timing is either unco
 WARNING: [Synth 8-7129] Port vga_out\.rgb[2] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[1] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[0] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-327] inferring latch for variable 'button2_pressed_reg' [rtl/draw_buttons.sv:53]
-WARNING: [Synth 8-327] inferring latch for variable 'button1_pressed_reg' [rtl/draw_buttons.sv:49]
+WARNING: [Synth 8-7129] Port xpos in module top_vga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos in module top_vga is either unconnected or has no load
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3332] Sequential element (button2_pressed_reg) is unused and will be removed from module draw_buttons.
-WARNING: [Synth 8-3332] Sequential element (button1_pressed_reg) is unused and will be removed from module draw_buttons.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_reg) is unused and will be removed from module draw_rect_ctl.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_reg[1]) is unused and will be removed from module draw_player_ctl.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_reg[0]) is unused and will be removed from module draw_player_ctl.
+WARNING: [Synth 8-7129] Port rgb_out[11] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[10] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[9] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[8] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[7] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[6] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[5] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[4] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[3] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[2] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[1] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[0] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[11] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[10] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[9] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[8] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[7] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[6] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[5] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[4] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[3] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[2] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[1] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[0] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[11] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[10] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[9] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[8] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[7] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[6] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[5] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[4] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[3] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[2] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[1] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[0] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos in module top_vga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos in module top_vga is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_reg[1]) is unused and will be removed from module draw_rect_ctl.
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 108, Available = 90. Use report_utilization command for details.
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 
 ----IMPLEMENTATION----
 WARNING: [DRC DPIP-1] Input pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt4 input u_top_vga/u_draw_bg/rgb_nxt4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.

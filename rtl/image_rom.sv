@@ -22,7 +22,7 @@ reg [11:0] rom [0:9999];  // ROM dla obrazu 100x100 pikseli
  * Memory initialization from a file
  */
 
-initial $readmemh("../../rtl/mine.dat", rom);  // Zmodyfikowano do obsługi 100x100 pikseli
+initial $readmemh("mine.dat", rom);  // Zmodyfikowano do obsługi 100x100 pikseli
 
 /**
  * Internal logic

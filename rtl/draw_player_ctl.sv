@@ -12,8 +12,10 @@ module draw_player_ctl (
     input logic clk,
     input logic m_left,
     input logic m_right,
+    input logic button_pressed,
     output logic [11:0] xpos_player,
     output logic [11:0] ypos_player
+
 );
 
 import state_pkg::*;
@@ -25,8 +27,6 @@ logic v_tick_old;
 always_ff @(posedge clk) begin
     if (rst) begin
         state   <= IDLE;
-        xpos_player    <= 0;
-        ypos_player    <= 0;
     end else begin
         v_tick_old <= v_tick;
         if (v_tick && !v_tick_old) begin
@@ -38,36 +38,76 @@ always_ff @(posedge clk) begin
 end
 
 always_comb begin
-    xpos_nxt = xpos_player;
-    ypos_nxt = ypos_player;
-    state_nxt = state; // Domyślne przypisanie bieżącego stanu
+    // xpos_nxt = xpos_player;
+    // ypos_nxt = ypos_player;
+    // state_nxt = state; // Domyślne przypisanie bieżącego stanu
 
     case (state)
         IDLE: begin
             if (m_right) begin
                 state_nxt = RIGHT;
-            end else if (m_left) begin
+            end 
+            else if (m_left) begin
                 state_nxt = LEFT;
-            end else begin
+            end
+            
+            else begin
                 state_nxt = IDLE;
             end
+            xpos_nxt = xpos_player;
+            ypos_nxt = ypos_player;
         end
         RIGHT: begin
-            if (xpos_player < 1023 && m_right) begin
+            if (xpos_player < 300 && m_right && !button_pressed) begin
                 xpos_nxt = xpos_player + 1;
-            end else begin
-                state_nxt = IDLE;
+                state_nxt = state;
+            end 
+            else if ((xpos_player == 300) && m_right && !button_pressed) begin
+                xpos_nxt  = xpos_player;
+                state_nxt = state;
             end
+            else if (xpos_player > 400  && m_right && !button_pressed) begin
+                xpos_nxt = xpos_player + 1;
+                state_nxt = state;
+            end 
+            else if (xpos_player > 300 && xpos_player <= 400 && m_right && button_pressed) begin
+                xpos_nxt = xpos_player + 1;
+                state_nxt = state;
+            end 
+
+            else begin
+                state_nxt = IDLE;
+                xpos_nxt = xpos_player ;
+            end
+            ypos_nxt = ypos_player;
         end
         LEFT: begin
-            if (xpos_player > 0 && m_left) begin
+            if (xpos_player > 0 && m_left && !button_pressed) begin
                 xpos_nxt = xpos_player - 1;
-            end else begin
-                state_nxt = IDLE;
+                state_nxt = state;
+            end 
+            else if ((xpos_player == 450) && m_left && !button_pressed) begin
+                xpos_nxt = xpos_player;
+                state_nxt = state;
             end
+            else if (xpos_player > 300 && xpos_player <= 400 && m_left && button_pressed) begin
+                xpos_nxt = xpos_player - 1;
+                state_nxt = state;
+            end 
+            else if ((xpos_player == 400) && m_left && !button_pressed) begin
+                xpos_nxt  = xpos_player - 1;
+                state_nxt = state;
+            end
+            else begin
+                state_nxt = IDLE;
+                xpos_nxt  = xpos_player;
+            end
+            ypos_nxt = ypos_player;
         end
         default: begin
             state_nxt = IDLE;
+            xpos_nxt = xpos_player;
+            ypos_nxt = ypos_player;
         end
     endcase
 end

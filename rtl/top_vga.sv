@@ -3,6 +3,7 @@ module top_vga (
     input  logic clk_100,
     inout  logic ps2_clk,
     inout  logic ps2_data,
+    inout logic xpos, ypos,
     input  logic rst,
     output logic vs,
     output logic hs,
@@ -20,9 +21,10 @@ vga_if vga_buttons();
 vga_if vga_rect();
 vga_if vga_player();
 
-logic [11:0] xpos_mouse, ypos_mouse;
+//logic [11:0] xpos_mouse, ypos_mouse;
 logic [11:0] xpos_rect_ctl, ypos_rect_ctl;
 logic [11:0] xpos_player_ctl, ypos_player_ctl;
+
 logic button_pressed;
 wire m_left, m_right;
 wire [11:0] rom2rect_pixel;
@@ -83,29 +85,11 @@ draw_rect_ctl u_draw_rect_ctl (
     .clk(clk_40),
     .rst(rst),
     .v_tick(vga_tim.vsync),
-    .xpos_rect(xpos_rect_ctl),  
-    .ypos_rect(ypos_rect_ctl),  
+    .xpos_rect(xpos_player_ctl),  
+    .ypos_rect(ypos_player_ctl),  
     .button_pressed(button_pressed)
 );
 
-draw_player u_draw_player(
-    .clk(clk_40),
-    .rst(rst),
-    .vga_out(vga_player),
-    .vga_in(vga_rect),
-    .xpos_player(xpos_player_ctl),  
-    .ypos_player(ypos_player_ctl)   
-);
-
-draw_player_ctl u_draw_player_ctl (
-    .clk(clk_40),
-    .rst(rst),
-    .v_tick(vga_tim.vsync),
-    .m_left(m_left),
-    .m_right(m_right),
-    .xpos_player(xpos_player_ctl),
-    .ypos_player(ypos_player_ctl)
-);
 
 MouseCtl u_mouse_ctl(
     .clk(clk_100),
@@ -120,6 +104,28 @@ MouseCtl u_mouse_ctl(
     .middle(),
     .new_event(),
     .value('0)
+);
+
+draw_player_ctl u_draw_player_ctl (
+    .clk(clk_40),
+    .rst(rst),
+    .v_tick(vga_tim.vsync),
+    .m_left(m_left),
+    .m_right(m_right),
+    .xpos_player(xpos_player_ctl),
+    .ypos_player(ypos_player_ctl),
+    .button_pressed(button_pressed)
+
+);
+
+
+draw_player u_draw_player(
+    .clk(clk_40),
+    .rst(rst),
+    .vga_out(vga_player),
+    .vga_in(vga_rect),
+    .xpos_player(xpos_player_ctl),  
+    .ypos_player(ypos_player_ctl)   
 );
 
 endmodule
