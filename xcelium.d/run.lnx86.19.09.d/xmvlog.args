@@ -1,0 +1,22 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx86.19.09.d
+-RUNMODE
+-NOWARN
+DSEMEL
+rtl/vga_pkg.sv
+rtl/vga_if.sv
+rtl/draw_buttons.sv
+-CDSLIB
+./xcelium.d/run.lnx86.19.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx86.19.09.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-MIXEDLANG
+-XLLIBSTORE
+./xcelium.d/run.lnx86.19.09.d/xllibs
+-ALLOWUNBOUND

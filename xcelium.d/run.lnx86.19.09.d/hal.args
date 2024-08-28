@@ -1,0 +1,21 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-NO_DESIGN_FACTS
+-RULEFILE
+/cad/env/hal_mtm_rtl_rules.def
+-NOWARN
+DSEMEL
+-PARTIALDESIGN
+-cdslib
+./xcelium.d/run.lnx86.19.09.d/cds.lib
+-hdlvar
+./xcelium.d/run.lnx86.19.09.d/hdl.var
+worklib.vga_if:sv
+-logfile
+xrun.log
+-cflag
+-I/cad/XCELIUM1909/tools/include
+-cflag
+-I/cad/XCELIUM1909/tools/inca/include

@@ -1,3 +1,4 @@
+
 /**
  * Copyright (C) 2024  AGH University of Science and Technology
  * MTM UEC2
@@ -43,35 +44,54 @@ always_ff @(posedge clk) begin
 end
 
 always_comb begin
-    xpos_nxt = xpos_rect;
-    ypos_nxt = ypos_rect;
-    state_nxt = state;
 
     case (state)
         IDLE: begin
-            if (button_pressed)
+            if (button_pressed) begin
                 state_nxt = ELEVATE;
-            if (!button_pressed)
+            end
+            else begin
                 state_nxt = IDLE;
+            end
+            ypos_nxt = ypos_rect;
+            xpos_nxt = xpos_rect;
+
         end
         ELEVATE: begin
-            if (ypos_rect > 300 && button_pressed)
+            if (ypos_rect > 300 && button_pressed) begin
+                state_nxt = state;
                 ypos_nxt = ypos_rect - 1;
-            else if (ypos_rect == 300 && button_pressed)
+            end
+            else if (ypos_rect == 300 && button_pressed) begin
                 ypos_nxt = ypos_rect;
-            else
+                state_nxt = state;
+            end
+            else begin
                 state_nxt = FALL;
+                ypos_nxt = ypos_rect;
+            end 
+                xpos_nxt = xpos_rect;
         end
         FALL: begin
-            if (!button_pressed && ypos_rect < 400)
+            if (!button_pressed && ypos_rect < 400) begin
                 ypos_nxt = ypos_rect + 1;
-            else if (button_pressed)
+                state_nxt = state;
+            end
+            else if (button_pressed) begin
                 state_nxt = ELEVATE;
-            else
+                ypos_nxt = ypos_rect;
+            end
+            else begin
                 state_nxt = IDLE;
+                ypos_nxt = ypos_rect;
+            end
+            xpos_nxt = xpos_rect;
         end
         default: begin
             state_nxt = IDLE;
+            xpos_nxt = xpos_rect;
+            ypos_nxt = ypos_rect;
+
         end
     endcase
 end

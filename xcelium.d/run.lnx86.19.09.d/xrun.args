@@ -1,0 +1,14 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-hal
+-clean
+-nohistory
+-no_design_facts
+-rulefile
+/cad/env/hal_mtm_rtl_rules.def
++nowarnDSEMEL
+rtl/vga_pkg.sv
+rtl/vga_if.sv
+rtl/draw_buttons.sv

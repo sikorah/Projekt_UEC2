@@ -1,0 +1,353 @@
+hal: Options:   -cdslib ./xcelium.d/run.lnx86.19.09.d/cds.lib -logfile xrun.log -f /home/student/zschab/Desktop/Projekt_UEC2/xcelium.d/run.lnx86.19.09.d/hal.args .
+hal: Snapshot:  worklib.vga_if:sv.
+hal: Workspace: /home/student/zschab/Desktop/Projekt_UEC2.
+hal: Date: Wed Aug 28 16:30:19 CEST 2024.
+hal: Running on elaborated SNAPSHOT.....
+hal: *M,_SCOPE: __dummy_top
+halcheck: *M,_SCOPE: draw_buttons
+halcheck: *W,STYVAL (./rtl/draw_buttons.sv,14|0): Numeric value '11' used for identifier 'xpos_player'. Use constants to avoid portability issues.
+halcheck: *W,STYVAL (./rtl/draw_buttons.sv,15|0): Numeric value '11' used for identifier 'ypos_player'. Use constants to avoid portability issues.
+halcheck: *W,STYVAL (./rtl/draw_buttons.sv,20|0): Numeric value '11' used for identifier 'rgb_nxt'. Use constants to avoid portability issues.
+halcheck: *W,NOBLKN (./rtl/draw_buttons.sv,24|0): Each block should be labeled with a meaningful name.
+halcheck: *W,NOBLKN (./rtl/draw_buttons.sv,46|0): Each block should be labeled with a meaningful name.
+halcheck: *W,IMPDTC (./rtl/draw_buttons.sv,50|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit draw_buttons.
+halcheck: *W,IMPDTC (./rtl/draw_buttons.sv,52|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit draw_buttons.
+halcheck: *W,IMPDTC (./rtl/draw_buttons.sv,56|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit draw_buttons.
+halcheck: *W,IMPDTC (./rtl/draw_buttons.sv,58|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit draw_buttons.
+halcheck: *W,IFSMCD (./rtl/draw_buttons.sv,62|0): Condition 'vcount > 490' is present in all the branches of if/if-else statement.
+halcheck: *W,IFSMCD (./rtl/draw_buttons.sv,62|0): Condition 'vcount <= 500' is present in all the branches of if/if-else statement.
+halcheck: *W,REVROP (./rtl/draw_buttons.sv,70|0): Register 'button1_pressed' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./rtl/draw_buttons.sv,46): Assigned using blocking assignment in this process.
+halcheck: *W,REVROP (./rtl/draw_buttons.sv,70|0): Register 'button2_pressed' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./rtl/draw_buttons.sv,46): Assigned using blocking assignment in this process.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,13|0): Parameter 'HOR_PIXELS' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,14|0): Parameter 'VER_PIXELS' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,15|0): Parameter 'HOR_TOTAL_TIME' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,16|0): Parameter 'HOR_BLANK_START' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,17|0): Parameter 'HOR_SYNC_START' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,18|0): Parameter 'VER_TOTAL_TIME' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,19|0): Parameter 'VER_BLANK_START' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,20|0): Parameter 'VER_SYNC_START' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,23|0): Parameter 'HOR_SYNC_END' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,24|0): Parameter 'HOR_BLANK_END' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,25|0): Parameter 'VER_SYNC_END' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,26|0): Parameter 'VER_BLANK_END' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,28|0): Parameter 'RECT_LENGTH' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,29|0): Parameter 'RECT_HEIGHT' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,31|0): Parameter 'CHARX' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,32|0): Parameter 'CHARY' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,33|0): Parameter 'CHARH' defined in package 'vga_pkg' is unused.
+halcheck: *W,USEPAR (./rtl/vga_pkg.sv,34|0): Parameter 'CHARL' defined in package 'vga_pkg' is unused.
+halcheck: Total errors   = 0.
+halcheck: Total warnings = 31.
+hal: *M,_SCOPE: __dummy_top
+halsynth: Loading design snapshot....
+halsynth: *W,MULTOP: The snapshot contains multiple top-level modules. Use the -TOP option to specify the hierarchy to be processed.
+halsynth: Traversing design hierarchy....
+~:CLKOUT
+~:CLKSRD
+~:COMBLP
+~:INPOUT
+~:MUDREG
+~:MULWIR
+~:UNDRIV
+halsynth: *M,_SCOPE: draw_buttons
+halsynth: Total errors   = 0.
+halsynth: Total warnings = 1.
+hal: *M,_SCOPE: __dummy_top
+halstruct: *M,_SCOPE: draw_buttons
+halstruct: Total errors   = 0.
+halstruct: Total warnings = 0.
+~:DSCNCK
+^:DSCNCK
+~:SLENEX
+^:SLENEX
+~:DSCNEN
+^:DSCNEN
+~:PCNOTC
+^:PCNOTC
+~:INPASN
+~:UNCONN
+~:UNDRIV
+~:USEPRT
+~:UASPRT
+~:URDPRT
+~:GATCLK
+~:RENAME
+~:RWRACE
+~:WWRACE
+~:LPISCS
+~:LPSRCS
+~:CMBPAU
+^:CMBPAU
+~:ASNCFL
+^:ASNCFL
+~:CONTLN
+^:CONTLN
+~:LATINF
+^:LATINF
+~:MULMCK
+^:MULMCK
+~:FFCKNP
+^:FFCKNP
+~:GTDCLK
+^:GTDCLK
+~:CLKLAT
+^:CLKLAT
+~:CLKNPI
+^:CLKNPI
+~:GTCLKN
+^:GTCLKN
+~:MRSTDT
+^:MRSTDT
+~:FDTHRU
+^:FDTHRU
+~:DFDRVS
+^:DFDRVS
+~:NEFLOP
+^:NEFLOP
+~:ACNCPI
+^:ACNCPI
+~:LENCPI
+^:LENCPI
+~:CLKDAT
+^:CLKDAT
+~:CLKLDT
+^:CLKLDT
+~:CLKINF
+^:CLKINF
+~:CDFDAT
+^:CDFDAT
+~:CDLDAT
+^:CDLDAT
+~:CAAFSR
+^:CAAFSR
+~:CACSRF
+^:CACSRF
+~:CAALSR
+^:CAALSR
+~:CACSRL
+^:CACSRL
+~:CLKDMN
+^:CLKDMN
+~:INSYNC
+^:INSYNC
+~:CBPAHI
+^:CBPAHI
+~:LFLTSE
+^:LFLTSE
+~:LFFTNE
+^:LFFTNE
+~:INFNOT
+^:INFNOT
+~:DALIAS
+^:DALIAS
+~:JKFFDT
+^:JKFFDT
+~:LATRAN
+^:LATRAN
+~:UNCONI
+^:UNCONI
+~:UNCONO
+^:UNCONO
+~:DIFCLK
+^:DIFCLK
+~:DIFRST
+^:DIFRST
+~:MLTDRV
+^:MLTDRV
+~:SUTHRU
+^:SUTHRU
+~:SEICLK
+^:SEICLK
+~:SMTCLK
+^:SMTCLK
+~:ASRTCK
+^:ASRTCK
+~:ASRTCL
+^:ASRTCL
+~:ASRTSC
+^:ASRTSC
+~:SCICLK
+^:SCICLK
+~:MULTCK
+^:MULTCK
+~:NOTCLK
+^:NOTCLK
+~:TCDFDT
+^:TCDFDT
+~:TCDLDT
+^:TCDLDT
+~:TCKDAT
+^:TCKDAT
+~:TCKLDT
+^:TCKLDT
+~:TXCNOP
+^:TXCNOP
+~:MEMNOP
+^:MEMNOP
+~:TENNOC
+^:TENNOC
+~:TENNOD
+^:TENNOD
+~:GLTASR
+^:GLTASR
+~:RSTEDG
+^:RSTEDG
+~:NOTSCN
+^:NOTSCN
+~:MCKNDB
+^:MCKNDB
+~:WENNDB
+^:WENNDB
+~:SCNLEN
+^:SCNLEN
+~:TMSCFF
+^:TMSCFF
+~:OUTMNR
+^:OUTMNR
+~:INPMNR
+^:INPMNR
+~:SRENSL
+^:SRENSL
+~:LDFFPI
+^:LDFFPI
+~:RSTDAT
+^:RSTDAT
+~:RSTGNH
+^:RSTGNH
+~:CLKGNH
+^:CLKGNH
+~:MXTSBC
+^:MXTSBC
+~:TSBNTH
+^:TSBNTH
+~:MXFNOT
+^:MXFNOT
+~:ATLGLC
+^:ATLGLC
+~:SLNOTP
+^:SLNOTP
+~:TPOUNR
+^:TPOUNR
+~:SELCLK
+^:SELCLK
+~:EDGMIX
+^:EDGMIX
+~:LGRSTL
+^:LGRSTL
+~:FRSTDL
+^:FRSTDL
+~:FRSTDF
+^:FRSTDF
+~:RSTDPT
+^:RSTDPT
+~:CLKDPT
+^:CLKDPT
+~:CLKUCL
+^:CLKUCL
+~:RSTUCL
+^:RSTUCL
+~:ENGTNR
+^:ENGTNR
+~:RSTDMN
+^:RSTDMN
+~:CLKNTP
+^:CLKNTP
+~:ADRSND
+^:ADRSND
+~:CGCENC
+^:CGCENC
+~:SEDFRS
+^:SEDFRS
+~:MULTCC
+^:MULTCC
+~:SMCKRS
+^:SMCKRS
+~:MEMNCB
+^:MEMNCB
+~:MTOMPH
+^:MTOMPH
+~:UVRFCN
+^:UVRFCN
+~:CONVRF
+^:CONVRF
+~:RSTENA
+^:RSTENA
+~:MOTINP
+^:MOTINP
+~:OPDNMT
+^:OPDNMT
+~:FENCNT
+^:FENCNT
+~:TPIUNR
+^:TPIUNR
+~:IPRTNR
+^:IPRTNR
+~:SYNPRT
+^:SYNPRT
+~:CONCLK
+^:CONCLK
+~:DATUNB
+^:DATUNB
+~:RSTINF
+^:RSTINF
+~:CKSMFC
+^:CKSMFC
+~:CDRNCF
+^:CDRNCF
+~:SAMESR
+^:SAMESR
+~:CGECCP
+^:CGECCP
+~:RSTNFR
+^:RSTNFR
+~:DTUNCP
+^:DTUNCP
+~:INSTCL
+^:INSTCL
+~:INSTCN
+^:INSTCN
+~:RSTCCK
+^:RSTCCK
+~:CGCPCK
+^:CGCPCK
+~:RSTCLK
+^:RSTCLK
+~:FFSRST
+^:FFSRST
+~:SGUNDV
+^:SGUNDV
+~:FFWASR
+^:FFWASR
+~:FFWNSR
+^:FFWNSR
+~:FFASRT
+^:FFASRT
+~:LCNSTD
+^:LCNSTD
+~:FFCSTD
+^:FFCSTD
+~:GENTOP
+^:GENTOP
+~:LTCHNT
+^:LTCHNT
+~:MLTDIO
+^:MLTDIO
+~:SYNASN
+^:SYNASN
+~:MULRST
+^:MULRST
+~:MCKDMN
+^:MCKDMN
+~:CLKGNP
+^:CLKGNP
+~:RSTGNP
+^:RSTGNP
+~:TSBINF
+^:TSBINF
+~:RTCDAT
+^:RTCDAT
+~:LENCPC
+^:LENCPC
+hal: *M,_SCOPE: __dummy_top

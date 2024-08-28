@@ -27,6 +27,8 @@ logic v_tick_old;
 always_ff @(posedge clk) begin
     if (rst) begin
         state   <= IDLE;
+        xpos_player    <= '0;
+        ypos_player    <= '0;
     end else begin
         v_tick_old <= v_tick;
         if (v_tick && !v_tick_old) begin
@@ -38,9 +40,6 @@ always_ff @(posedge clk) begin
 end
 
 always_comb begin
-    // xpos_nxt = xpos_player;
-    // ypos_nxt = ypos_player;
-    // state_nxt = state; // Domyślne przypisanie bieżącego stanu
 
     case (state)
         IDLE: begin

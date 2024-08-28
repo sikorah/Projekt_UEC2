@@ -46,13 +46,13 @@ end
 always_comb begin
     rgb_nxt = vga_in.rgb;
 
-    if ((xpos_player >= 200 && xpos_player <= 250) && (ypos_player >= 490 && ypos_player <= 500)) begin
+    if ((xpos_player >= 200 && xpos_player <= 250) ) begin
         button1_pressed = 1;
     end else begin
         button1_pressed = 0;
     end
     
-    if ((xpos_player >= 600 && xpos_player <= 650) && (ypos_player >= 490 && ypos_player <= 500)) begin
+    if ((xpos_player >= 600 && xpos_player <= 650) ) begin
         button2_pressed = 1;
     end else begin
         button2_pressed = 0;
@@ -66,7 +66,8 @@ always_comb begin
         rgb_nxt = 12'hf_0_0;
     
     end
-end
-assign button_pressed_nxt = button1_pressed || button2_pressed;
+
+    button_pressed_nxt = button1_pressed || button2_pressed;
+end 
 
 endmodule

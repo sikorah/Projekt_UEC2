@@ -85,8 +85,8 @@ draw_rect_ctl u_draw_rect_ctl (
     .clk(clk_40),
     .rst(rst),
     .v_tick(vga_tim.vsync),
-    .xpos_rect(xpos_player_ctl),  
-    .ypos_rect(ypos_player_ctl),  
+    .xpos_rect(xpos_rect_ctl),  
+    .ypos_rect(ypos_rect_ctl),  
     .button_pressed(button_pressed)
 );
 
