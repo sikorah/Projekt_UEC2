@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Aug 28 19:30:56 2024
+| Date         : Wed Aug 28 20:01:01 2024
 | Host         : cadence33 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command      : report_control_sets -verbose -file top_vga_basys3_control_sets_placed.rpt
 | Design       : top_vga_basys3
@@ -78,8 +78,8 @@ Table of Contents
 |  u_clk/inst/clk100MHz                  | u_top_vga/u_mouse_ctl/Inst_Ps2Interface/p_0_in                       |                                                                      |                3 |              7 |         2.33 |
 |  u_clk/inst/clk40MHz_clk_wiz_0_en_clk  |                                                                      |                                                                      |                1 |              8 |         8.00 |
 |  u_clk/inst/clk100MHz_clk_wiz_0_en_clk |                                                                      |                                                                      |                1 |              8 |         8.00 |
-|  u_clk/inst/clk100MHz                  | u_top_vga/u_mouse_ctl/Inst_Ps2Interface/load_rx_data                 |                                                                      |                2 |              8 |         4.00 |
 |  u_clk/inst/clk100MHz                  | u_top_vga/u_mouse_ctl/tx_data[7]_i_1_n_0                             |                                                                      |                2 |              8 |         4.00 |
+|  u_clk/inst/clk100MHz                  | u_top_vga/u_mouse_ctl/Inst_Ps2Interface/load_rx_data                 |                                                                      |                2 |              8 |         4.00 |
 |  u_clk/inst/clk100MHz                  | u_top_vga/u_mouse_ctl/Inst_Ps2Interface/frame[9]_i_1_n_0             |                                                                      |                2 |             10 |         5.00 |
 |  u_clk/inst/clk100MHz                  | u_top_vga/u_mouse_ctl/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0 | u_top_vga/u_mouse_ctl/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0 |                3 |             11 |         3.67 |
 |  u_clk/inst/clk40MHz                   | u_top_vga/u_draw_player_ctl/xpos_player[11]_i_1_n_0                  | btnC_IBUF                                                            |                4 |             12 |         3.00 |

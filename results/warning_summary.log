@@ -1,6 +1,6 @@
 Warnings, critical warnings and errors from synthesis and implementation
 
-Created: 2024-08-28 19:32:11
+Created: 2024-08-28 20:02:22
 
 ----SYNTHESIS----
 WARNING: [Synth 8-7071] port 'locked' of module 'clk_wiz_0' is unconnected for instance 'u_clk' [fpga/rtl/top_vga_basys3.sv:46]

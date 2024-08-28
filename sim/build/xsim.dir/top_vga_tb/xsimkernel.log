@@ -1,4 +1,0 @@
-Running: xsim.dir/top_vga_tb/axsim top_vga_tb -runall
-Design successfully loaded
-Design Loading Memory Usage: 31976 KB (Peak: 31976 KB)
-Design Loading CPU Usage: 2900 ms
