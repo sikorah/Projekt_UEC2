@@ -7,6 +7,8 @@
  * top module of the game
  */
 
+import state_pkg::*;
+
 module top_vga (
     input  logic clk_40,
     input  logic clk_100,
@@ -25,10 +27,12 @@ module top_vga (
  * Local variables and signals
  */
 vga_if vga_tim();
-vga_if vga_bg();
+vga_if vga_start();
+vga_if vga_control();
 vga_if vga_buttons();
 vga_if vga_rect();
 vga_if vga_player();
+vga_if vga_out();
 
 //logic [11:0] xpos_mouse, ypos_mouse;
 logic [11:0] xpos_rect_ctl, ypos_rect_ctl;
@@ -40,6 +44,7 @@ wire [11:0] rom2rect_pixel;
 wire [13:0] rect2rom_address;
 
 g_state game_state;
+State state;
 
 /**
  * Signals assignments
@@ -61,8 +66,8 @@ vga_timing u_vga_timing (
 MouseCtl u_mouse_ctl(
     .clk(clk_100),
     .rst(rst),
-    .xpos(xpos_mouse),
-    .ypos(ypos_mouse),
+    //.xpos(xpos_mouse),
+    //.ypos(ypos_mouse),
     .ps2_clk(ps2_clk), 
     .ps2_data(ps2_data),
     .left(m_left),
@@ -73,40 +78,37 @@ MouseCtl u_mouse_ctl(
     .value('0)
 );
 
-draw_mouse  u_draw_mouse(
-    .clk(clk_40),
-    .rst,
-    .vga_in(vga_tim),
-    .vga_out(vga_player),
-    .xpos(x_pos),
-    .ypos(y_pos)
-);
-
 start_game u_start_game(
-    .clk(clk_40),
+    .clk_40(clk_40),
     .rst(rst),
     .game_state,
     .vga_in(vga_tim),
-    .vga_out(vga_bg) //czy dobrze?
+    .vga_out(vga_start) //czy dobrze?
 );
 
 state_control u_state_control(
-    .clk(clk_40),
+    .clk_40(clk_40),
     .rst(rst),
-    
+    .vga_in(vga_start),
+    .vga_out(vga_control),
+    .m_left(m_left),
+    .ypos_player(ypos_player),
+    .game_state
 );
 
-/*draw_bg u_draw_bg (
+draw_mouse  u_draw_mouse(
     .clk(clk_40),
-    .rst(rst),
-    .vga_in(vga_tim),
-    .vga_out(vga_bg)
+    .rst,
+    .vga_in(vga_player),
+    .vga_out(vga_out),
+    .xpos(x_pos),
+    .ypos(y_pos)
 );
 
 draw_buttons u_draw_buttons (
     .clk(clk_40),
     .rst(rst),
-    .vga_in(vga_bg),
+    .vga_in(vga_control),
     .vga_out(vga_buttons),
     .xpos_player(xpos_player_ctl),
     .ypos_player(ypos_player_ctl),
@@ -150,10 +152,9 @@ draw_player_ctl u_draw_player_ctl (
     .xpos_player(xpos_player_ctl),
     .ypos_player(ypos_player_ctl),
     .button_pressed(button_pressed),
-    .state(state)
+    .state
 
 );
-
 
 draw_player u_draw_player(
     .clk(clk_40),
@@ -162,7 +163,7 @@ draw_player u_draw_player(
     .vga_in(vga_rect),
     .xpos_player(xpos_player_ctl),  
     .ypos_player(ypos_player_ctl),
-    .state(state)
-);*/
+    .state
+);
 
 endmodule

@@ -10,7 +10,7 @@
 
  `timescale 1 ns / 1 ps
 
- module draw_bg (
+ module finish_screen(
      input  logic clk,
      input  logic rst,
  
@@ -48,9 +48,9 @@ end
  
  always_comb begin : bg_comb_blk
      if (vga_in.vblnk || vga_in.hblnk) begin             
-         rgb_nxt = 12'h0_f_0;                    // green background
-     end else begin                              
-         if (vga_in.vcount >= 225 && vga_in.vcount <= 375 && vga_in.hcount >= 300 && vga_in.hcount <= 500)                     
+         rgb_nxt = 12'hf_0_0;                    // green background
+     end else if (vga_in.vcount >= 225 && vga_in.vcount <= 375 && vga_in.hcount >= 300 && vga_in.hcount <= 500) begin     
+         rgb_nxt = 12'h0_f_0;                  
      end
         
  end

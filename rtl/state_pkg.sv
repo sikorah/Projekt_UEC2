@@ -12,4 +12,6 @@ package state_pkg;
         RIGHT = 2'b01,
         LEFT  = 2'b10
     } State;
+
+    typedef enum logic [1:0] {START, LEVEL_1, FINISH} g_state;
 endpackage

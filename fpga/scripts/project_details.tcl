@@ -37,12 +37,15 @@ set sv_files {
     ../rtl/state_pkg.sv
     ../rtl/vga_if.sv
     ../rtl/vga_timing.sv
-    ../rtl/draw_bg.sv
+    ../rtl/state_control.sv 
+    ../rtl/start_screen.sv 
+    ../rtl/start_game.sv 
+    ../rtl/level_1.sv 
+    ../rtl/finish_screen.sv 
     ../rtl/draw_rect.sv
     ../rtl/draw_rect_ctl.sv
     ../rtl/top_vga.sv
     ../rtl/draw_mouse.sv
-    ../rtl/keyboard.sv
     ../rtl/image_rom.sv
     ../rtl/draw_buttons.sv
     ../rtl/draw_player.sv
