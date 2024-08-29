@@ -1,0 +1,80 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Aug 28 21:18:46 2024
+# Process ID: 14970
+# Current directory: /home/student/zschab/Desktop/Projekt_UEC2/fpga
+# Command line: vivado -mode tcl -source scripts/generate_bitstream.tcl
+# Log file: /home/student/zschab/Desktop/Projekt_UEC2/fpga/vivado.log
+# Journal file: /home/student/zschab/Desktop/Projekt_UEC2/fpga/vivado.jou
+# Running On: cadence33, OS: Linux, CPU Frequency: 3448.046 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+#-----------------------------------------------------------
+source scripts/generate_bitstream.tcl
+# source scripts/project_details.tcl
+## set project_name vga_project
+## set top_module top_vga_basys3
+## set target xc7a35tcpg236-1
+## set xdc_files {
+##     constraints/top_vga_basys3.xdc
+##     constraints/clk_wiz_0.xdc
+##     constraints/clk_wiz_0_late.xdc
+## }
+## set sv_files {
+##     ../rtl/vga_pkg.sv 
+##     ../rtl/state_pkg.sv
+##     ../rtl/vga_if.sv
+##     ../rtl/vga_timing.sv
+##     ../rtl/draw_bg.sv
+##     ../rtl/draw_rect.sv
+##     ../rtl/draw_rect_ctl.sv
+##     ../rtl/top_vga.sv
+##     ../rtl/draw_mouse.sv
+##     ../rtl/keyboard.sv
+##     ../rtl/image_rom.sv
+##     ../rtl/draw_buttons.sv
+##     ../rtl/draw_player.sv
+##     ../rtl/draw_player_ctl.sv
+##     rtl/top_vga_basys3.sv
+##     rtl/clk_wiz_0_clk_wiz.v
+##     rtl/clk_wiz_0.v
+## }
+## set verilog_files {
+##     rtl/clk_wiz_0_clk_wiz.v
+##     rtl/clk_wiz_0.v
+##  }
+## set vhdl_files {
+##     ../rtl/MouseCtl.vhd
+##     ../rtl/MouseDisplay.vhd
+##     ../rtl/Ps2Interface.vhd
+##  }
+## set mem_files {
+##     ../rtl/mine.dat
+##  
+##  }
+# proc create_new_project {project_name target top_module} {
+#     file mkdir build
+#     create_project ${project_name} build -part ${target} -force
+# 
+#     # read files from the variables provided by the project_details.tcl
+#     if {[info exists ::xdc_files]}     {read_xdc ${::xdc_files}}
+#     if {[info exists ::sv_files]}      {read_verilog -sv ${::sv_files}}
+#     if {[info exists ::verilog_files]} {read_verilog ${::verilog_files}}
+#     if {[info exists ::vhdl_files]}    {read_vhdl ${::vhdl_files}}
+#     if {[info exists ::mem_files]}     {read_mem ${::mem_files}}
+# 
+#     set_property top ${top_module} [current_fileset]
+#     update_compile_order -fileset sources_1
+# }
+# proc generate_bitstream {} {
+#     # Run synthesis
+#     reset_run synth_1
+#     launch_runs synth_1 -jobs 8
+#     wait_on_run synth_1
+# 
+#     # Run implemenatation up to bitstream generation
+#     launch_runs impl_1 -to_step write_bitstream -jobs 8
+#     wait_on_run impl_1
+# }
+# create_new_project $project_name $target $top_module
+ERROR: [Common 17-275] File does not exist [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc]

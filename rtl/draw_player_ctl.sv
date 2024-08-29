@@ -6,6 +6,8 @@
  * Description:
  * Control of players movements.
  */
+import state_pkg::*;
+
 module draw_player_ctl (
     input logic rst,
     input logic v_tick,
@@ -14,13 +16,12 @@ module draw_player_ctl (
     input logic m_right,
     input logic button_pressed,
     output logic [11:0] xpos_player,
-    output logic [11:0] ypos_player
+    output logic [11:0] ypos_player,
+    output State state
 
 );
 
-import state_pkg::*;
-
-State state, state_nxt;
+State state_nxt;
 logic [11:0] xpos_nxt, ypos_nxt;
 logic v_tick_old;
 
@@ -61,12 +62,12 @@ always_comb begin
                 xpos_nxt = xpos_player + 1;
                 state_nxt = state;
             end 
-            else if ((xpos_player == 350) && m_right && !button_pressed) begin //na granicy klocka, przycisk nie wciśnięty
+            else if ((xpos_player <= 350) && m_right && !button_pressed) begin //na granicy klocka, przycisk nie wciśnięty
                 xpos_nxt  = xpos_player;
                 state_nxt = state;
             end
             
-            else if (xpos_player >= 350 && xpos_player <= 450 && m_right && button_pressed) begin //w granicach klocka, przycisk wciśnięty
+            else if (xpos_player > 350 && xpos_player < 450 && m_right && button_pressed) begin //w granicach klocka, przycisk wciśnięty
                 xpos_nxt = xpos_player + 1;
                 state_nxt = state;
             end 
@@ -85,11 +86,11 @@ always_comb begin
                 xpos_nxt = xpos_player - 1;
                 state_nxt = state;
             end 
-            else if ((xpos_player == 450) && m_left && !button_pressed) begin //na granicy klocka, przycisk nie wciśnięty
+            else if ((xpos_player >= 450) && m_left && !button_pressed) begin //na granicy klocka, przycisk nie wciśnięty
                 xpos_nxt = xpos_player;
                 state_nxt = state;
             end
-            else if (xpos_player >= 350 && xpos_player <= 450 && m_left && button_pressed) begin //w granicach klocka, przycisk wciśnięty
+            else if (xpos_player > 350 && xpos_player < 450 && m_left && button_pressed) begin //w granicach klocka, przycisk wciśnięty
                 xpos_nxt = xpos_player - 1;
                 state_nxt = state;
             end 

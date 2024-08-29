@@ -24,11 +24,13 @@ vga_if vga_player();
 //logic [11:0] xpos_mouse, ypos_mouse;
 logic [11:0] xpos_rect_ctl, ypos_rect_ctl;
 logic [11:0] xpos_player_ctl, ypos_player_ctl;
+logic [1:0] button_pressed;
 
-logic button_pressed;
 wire m_left, m_right;
 wire [11:0] rom2rect_pixel;
 wire [13:0] rect2rom_address;
+
+State state;
 
 /**
  * Signals assignments
@@ -114,7 +116,8 @@ draw_player_ctl u_draw_player_ctl (
     .m_right(m_right),
     .xpos_player(xpos_player_ctl),
     .ypos_player(ypos_player_ctl),
-    .button_pressed(button_pressed)
+    .button_pressed(button_pressed),
+    .state(state)
 
 );
 
@@ -125,7 +128,8 @@ draw_player u_draw_player(
     .vga_out(vga_player),
     .vga_in(vga_rect),
     .xpos_player(xpos_player_ctl),  
-    .ypos_player(ypos_player_ctl)   
+    .ypos_player(ypos_player_ctl),
+    .state(state)
 );
 
 endmodule

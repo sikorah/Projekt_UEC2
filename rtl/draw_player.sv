@@ -78,7 +78,7 @@ always_comb begin : bg_comb_blk
                 rgb_nxt = 12'hFFF;
             // eye
             if ((vga_in.vcount > 425 + ypos_player && vga_in.vcount < 455 + ypos_player) && 
-                     (vga_in.hcount + xpos_player >= 25 && vga_in.hcount + xpos_player < 30))
+                     (vga_in.hcount  >= 25 + xpos_player && vga_in.hcount < 30 + xpos_player ))
                 rgb_nxt = 12'h000;
         end
         LEFT: begin

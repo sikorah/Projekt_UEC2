@@ -1,9 +1,9 @@
 #Vivado temporary files#
 
-../*.pb
-../*.log
-../*.jou
-../*.xpr
+../fpga/*.pb
+../fpga/*.log
+../fpga/*.jou
+../fpga/*.xpr
 
 #Build directiories#
 
