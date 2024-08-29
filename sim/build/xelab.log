@@ -1,5 +1,0 @@
-Vivado Simulator v2021.2
-Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab work.top_vga_tb -snapshot top_vga_tb -prj /home/student/hsikora/Desktop/Projekt/sim/top_vga/top_vga.prj -timescale 1ns/1ps -L unisims_ver -standalone -runall 
-Multi-threading is on. Using 6 slave threads.
-Determining compilation order of HDL files.

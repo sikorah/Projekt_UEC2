@@ -1,0 +1,19 @@
+#Vivado temporary files#
+
+fpga/*.pb
+fpga/*.log
+fpga/*.jou
+fpga/*.xpr
+.nfs*
+*.xpr
+*.jou
+*.log
+*.pb
+
+#Build directiories#
+
+.Xil/
+.dvt/
+sim/build/
+fpga/build/
+xcelium.d/
