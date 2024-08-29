@@ -1,14 +1,15 @@
 #Vivado temporary files#
 
-fpga/*.pb
-fpga/*.log
-fpga/*.jou
-fpga/*.xpr
-.nfs*
+../fpga/*.pb
+../fpga/*.log
+../fpga/*.jou
+../fpga/*.xpr
+../fpga/.nfs*
 *.xpr
 *.jou
 *.log
 *.pb
+xvlog.pb
 
 #Build directiories#
 
