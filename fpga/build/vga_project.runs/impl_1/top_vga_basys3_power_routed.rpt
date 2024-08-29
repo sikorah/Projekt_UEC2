@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date             : Thu Aug 29 20:26:04 2024
+| Date             : Thu Aug 29 22:13:37 2024
 | Host             : cadence33 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command          : report_power -file top_vga_basys3_power_routed.rpt -pb top_vga_basys3_power_summary_routed.pb -rpx top_vga_basys3_power_routed.rpx
 | Design           : top_vga_basys3
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.233        |
+| Total On-Chip Power (W)  | 0.236        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.161        |
+| Dynamic (W)              | 0.164        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.8         |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.004 |        6 |       --- |             --- |
-| Slice Logic             |     0.009 |     6223 |       --- |             --- |
-|   LUT as Logic          |     0.007 |     3723 |     20800 |           17.90 |
-|   CARRY4                |     0.001 |      897 |      8150 |           11.01 |
-|   Register              |    <0.001 |      403 |     41600 |            0.97 |
+| Slice Logic             |     0.010 |     7639 |       --- |             --- |
+|   LUT as Logic          |     0.009 |     4585 |     20800 |           22.04 |
+|   CARRY4                |     0.002 |     1149 |      8150 |           14.10 |
+|   Register              |    <0.001 |      443 |     41600 |            1.06 |
 |   LUT as Shift Register |    <0.001 |        2 |      9600 |            0.02 |
-|   Others                |     0.000 |       92 |       --- |             --- |
-| Signals                 |     0.011 |     7976 |       --- |             --- |
+|   Others                |     0.000 |      116 |       --- |             --- |
+| Signals                 |     0.013 |     9450 |       --- |             --- |
 | Block RAM               |     0.003 |        4 |        50 |            8.00 |
 | MMCM                    |     0.106 |        1 |         5 |           20.00 |
-| DSPs                    |     0.023 |       68 |        90 |           75.56 |
+| DSPs                    |     0.022 |       69 |        90 |           76.67 |
 | I/O                     |     0.005 |       19 |       106 |           17.92 |
 | Static Power            |     0.072 |          |           |                 |
-| Total                   |     0.233 |          |           |                 |
+| Total                   |     0.236 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,9 +75,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.060 |       0.050 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.063 |       0.053 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -147,12 +147,13 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| top_vga_basys3          |     0.161 |
+| top_vga_basys3          |     0.164 |
 |   u_clk                 |     0.107 |
 |     inst                |     0.107 |
-|   u_top_vga             |     0.049 |
-|     u_draw_bg           |     0.035 |
-|     u_draw_player       |     0.004 |
+|   u_top_vga             |     0.052 |
+|     u_draw_bg           |     0.034 |
+|     u_draw_player1      |     0.004 |
+|     u_draw_player2      |     0.004 |
 |     u_image_rom         |     0.003 |
 |     u_mouse_ctl         |     0.003 |
 |       Inst_Ps2Interface |     0.001 |

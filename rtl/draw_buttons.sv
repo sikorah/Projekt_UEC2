@@ -11,8 +11,10 @@
     input logic rst,
     vga_if.out vga_out,
     vga_if.in vga_in,
-    input logic [11:0] xpos_player,
-    input logic [11:0] ypos_player,
+    input logic [11:0] xpos_player1,
+    input logic [11:0] ypos_player1,
+    input logic [11:0] xpos_player2,
+    input logic [11:0] ypos_player2,
     output logic button_pressed
 );
 
@@ -46,13 +48,13 @@ end
 always_comb begin
     rgb_nxt = vga_in.rgb;
 
-    if ((xpos_player >= 200 && xpos_player <= 250) ) begin
+    if ((xpos_player1 >= 200 && xpos_player1 <= 250) || (xpos_player2 >= 200 && xpos_player2 <= 250)) begin
         button1_pressed = 1;
     end else begin
         button1_pressed = 0;
     end
     
-    if ((xpos_player >= 600 && xpos_player <= 650) ) begin
+    if ((xpos_player1 >= 600 && xpos_player1 <= 650) || (xpos_player2 >= 600 && xpos_player2 <= 650) ) begin
         button2_pressed = 1;
     end else begin
         button2_pressed = 0;

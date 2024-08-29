@@ -19,11 +19,13 @@ vga_if vga_tim();
 vga_if vga_bg();
 vga_if vga_buttons();
 vga_if vga_rect();
-vga_if vga_player();
+vga_if vga_player1();
+vga_if vga_player2();
 
 //logic [11:0] xpos_mouse, ypos_mouse;
 logic [11:0] xpos_rect_ctl, ypos_rect_ctl;
-logic [11:0] xpos_player_ctl, ypos_player_ctl;
+logic [11:0] xpos_player_ctl1, ypos_player_ctl1;
+logic [11:0] xpos_player_ctl2, ypos_player_ctl2;
 logic [1:0] button_pressed;
 
 wire m_left, m_right;
@@ -35,9 +37,9 @@ State state;
 /**
  * Signals assignments
  */
-assign vs = vga_player.vsync;
-assign hs = vga_player.hsync;
-assign {r, g, b} = vga_player.rgb;  // Extract higher bits for RGB
+assign vs = vga_player2.vsync;
+assign hs = vga_player2.hsync;
+assign {r, g, b} = vga_player2.rgb;  // Extract higher bits for RGB
 
 /**
  * Submodules instances
@@ -61,8 +63,10 @@ draw_buttons u_draw_buttons (
     .rst(rst),
     .vga_in(vga_bg),
     .vga_out(vga_buttons),
-    .xpos_player(xpos_player_ctl),
-    .ypos_player(ypos_player_ctl),
+    .xpos_player1(xpos_player_ctl1),
+    .ypos_player1(ypos_player_ctl1),
+    .xpos_player2(xpos_player_ctl2),
+    .ypos_player2(ypos_player_ctl2),
     .button_pressed(button_pressed)
 );
 
@@ -103,7 +107,7 @@ MouseCtl u_mouse_ctl(
     .left(m_left),
     .right(m_right),
     .zpos(),
-    .middle(),
+    .middle(middle),
     .new_event(),
     .value('0)
 );
@@ -114,21 +118,33 @@ draw_player_ctl u_draw_player_ctl (
     .v_tick(vga_tim.vsync),
     .m_left(m_left),
     .m_right(m_right),
-    .xpos_player(xpos_player_ctl),
-    .ypos_player(ypos_player_ctl),
+    .middle(middle),
+    .xpos_player1(xpos_player_ctl1),
+    .ypos_player1(ypos_player_ctl1),
+    .xpos_player2(xpos_player_ctl2),
+    .ypos_player2(ypos_player_ctl2),
     .button_pressed(button_pressed),
     .state(state)
 
 );
 
 
-draw_player u_draw_player(
+draw_player1 u_draw_player1(
     .clk(clk_40),
     .rst(rst),
-    .vga_out(vga_player),
+    .vga_out(vga_player1),
     .vga_in(vga_rect),
-    .xpos_player(xpos_player_ctl),  
-    .ypos_player(ypos_player_ctl),
+    .xpos_player1(xpos_player_ctl1),
+    .ypos_player1(ypos_player_ctl1),
+    .state(state)
+);
+draw_player2 u_draw_player2(
+    .clk(clk_40),
+    .rst(rst),
+    .vga_out(vga_player2),
+    .vga_in(vga_player1),
+    .xpos_player2(xpos_player_ctl2),
+    .ypos_player2(ypos_player_ctl2),
     .state(state)
 );
 

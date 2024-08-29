@@ -91,7 +91,8 @@ read_verilog -library xil_defaultlib -sv {
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/state_pkg.sv
-  /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player.sv
+  /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv
+  /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player2.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv
