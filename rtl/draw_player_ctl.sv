@@ -62,16 +62,20 @@ always_comb begin
                 xpos_nxt = xpos_player + 1;
                 state_nxt = state;
             end 
-            else if ((xpos_player <= 350) && m_right && !button_pressed) begin //na granicy klocka, przycisk nie wciśnięty
+            else if ((xpos_player <= 350) && m_right && !button_pressed) begin //na granicy klocka od lewej, przycisk nie wciśnięty
                 xpos_nxt  = xpos_player;
                 state_nxt = state;
             end
-            
-            else if (xpos_player > 350 && xpos_player < 450 && m_right && button_pressed) begin //w granicach klocka, przycisk wciśnięty
+            else if (xpos_player >= 350 && xpos_player <= 450 && m_right && button_pressed) begin //w granicach klocka, przycisk wciśnięty
                 xpos_nxt = xpos_player + 1;
                 state_nxt = state;
             end 
-            else if (xpos_player > 450 && xpos_player < 1056 && m_right ) begin // po klocku
+            else if ((xpos_player >= 450) && m_right && !button_pressed) begin //na granicy klocka od prawej, przycisk nie wciśnięty
+                xpos_nxt = xpos_player + 1;
+                state_nxt = state;
+            end
+            
+            else if (xpos_player >= 450 && xpos_player < 760 && m_right ) begin // po klocku
                 xpos_nxt = xpos_player + 1;
                 state_nxt = state;
             end 
@@ -86,11 +90,15 @@ always_comb begin
                 xpos_nxt = xpos_player - 1;
                 state_nxt = state;
             end 
-            else if ((xpos_player >= 450) && m_left && !button_pressed) begin //na granicy klocka, przycisk nie wciśnięty
+            else if ((xpos_player >= 450) && m_left && !button_pressed) begin //na granicy klocka od prawej, przycisk nie wciśnięty
                 xpos_nxt = xpos_player;
                 state_nxt = state;
             end
-            else if (xpos_player > 350 && xpos_player < 450 && m_left && button_pressed) begin //w granicach klocka, przycisk wciśnięty
+            else if ((xpos_player <= 350) && m_left && !button_pressed) begin //na granicy klocka od lewej, przycisk nie wciśnięty
+                xpos_nxt = xpos_player - 1;
+                state_nxt = state;
+            end
+            else if (xpos_player >= 350 && xpos_player <= 450 && m_left && button_pressed) begin //w granicach klocka, przycisk wciśnięty
                 xpos_nxt = xpos_player - 1;
                 state_nxt = state;
             end 
