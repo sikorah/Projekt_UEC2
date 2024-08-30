@@ -58,15 +58,15 @@ always_comb begin
             ypos_nxt = ypos_player;
         end
         RIGHT: begin
-            if (xpos_player < 350 && m_right) begin      //przed klockiem
+            if (xpos_player < 310 && m_right) begin      //przed klockiem
                 xpos_nxt = xpos_player + 1;
                 state_nxt = state;
             end 
-            else if ((xpos_player <= 350) && m_right && !button_pressed) begin //na granicy klocka od lewej, przycisk nie wciśnięty
+            else if ((xpos_player <= 310) && m_right && !button_pressed) begin //na granicy klocka od lewej, przycisk nie wciśnięty
                 xpos_nxt  = xpos_player;
                 state_nxt = state;
             end
-            else if (xpos_player >= 350 && xpos_player <= 450 && m_right && button_pressed) begin //w granicach klocka, przycisk wciśnięty
+            else if (xpos_player >= 310 && xpos_player <= 450 && m_right && button_pressed) begin //w granicach klocka, przycisk wciśnięty
                 xpos_nxt = xpos_player + 1;
                 state_nxt = state;
             end 
@@ -75,18 +75,36 @@ always_comb begin
                 state_nxt = state;
             end
             
-            else if (xpos_player >= 450 && xpos_player < 760 && m_right ) begin // po klocku
+            else if (xpos_player >= 450 && xpos_player < 640 && m_right ) begin // po klocku
                 xpos_nxt = xpos_player + 1;
+                state_nxt = state;
+            end 
+            else if (xpos_player <= 640 && m_right ) begin // na granicy ekranu
+                xpos_nxt = xpos_player;
                 state_nxt = state;
             end 
             else begin
                 state_nxt = IDLE;
-                xpos_nxt = xpos_player ;
+                xpos_nxt = xpos_player;
             end
             ypos_nxt = ypos_player;
         end
         LEFT: begin
-            if (xpos_player > 0 && xpos_player < 350 && m_left ) begin // przed klockiem
+            
+            if (xpos_player > 0 && xpos_player < 310 && m_left ) begin // przed klockiem
+                xpos_nxt = xpos_player - 1;
+                state_nxt = state;
+            end 
+            else if (xpos_player <= 0 && m_left ) begin // na granicy ekranu
+                xpos_nxt = xpos_player;
+                state_nxt = state;
+            end 
+            
+            else if ((xpos_player <= 310) && m_left && !button_pressed) begin //na granicy klocka od lewej, przycisk nie wciśnięty
+                xpos_nxt = xpos_player - 1;
+                state_nxt = state;
+            end
+            else if (xpos_player >= 310 && xpos_player <= 450 && m_left && button_pressed) begin //w granicach klocka, przycisk wciśnięty
                 xpos_nxt = xpos_player - 1;
                 state_nxt = state;
             end 
@@ -94,14 +112,7 @@ always_comb begin
                 xpos_nxt = xpos_player;
                 state_nxt = state;
             end
-            else if ((xpos_player <= 350) && m_left && !button_pressed) begin //na granicy klocka od lewej, przycisk nie wciśnięty
-                xpos_nxt = xpos_player - 1;
-                state_nxt = state;
-            end
-            else if (xpos_player >= 350 && xpos_player <= 450 && m_left && button_pressed) begin //w granicach klocka, przycisk wciśnięty
-                xpos_nxt = xpos_player - 1;
-                state_nxt = state;
-            end 
+            
             else if ((xpos_player > 450) && m_left) begin //po klocku
                 xpos_nxt  = xpos_player - 1;
                 state_nxt = state;

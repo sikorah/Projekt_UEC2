@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date             : Thu Aug 29 20:26:04 2024
-| Host             : cadence33 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Date             : Fri Aug 30 10:42:21 2024
+| Host             : cadence36 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command          : report_power -file top_vga_basys3_power_routed.rpt -pb top_vga_basys3_power_summary_routed.pb -rpx top_vga_basys3_power_routed.rpx
 | Design           : top_vga_basys3
 | Device           : xc7a35tcpg236-1
@@ -52,14 +52,14 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.004 |        6 |       --- |             --- |
-| Slice Logic             |     0.009 |     6223 |       --- |             --- |
-|   LUT as Logic          |     0.007 |     3723 |     20800 |           17.90 |
-|   CARRY4                |     0.001 |      897 |      8150 |           11.01 |
-|   Register              |    <0.001 |      403 |     41600 |            0.97 |
+| Clocks                  |     0.003 |        6 |       --- |             --- |
+| Slice Logic             |     0.009 |     6203 |       --- |             --- |
+|   LUT as Logic          |     0.007 |     3698 |     20800 |           17.78 |
+|   CARRY4                |     0.001 |      892 |      8150 |           10.94 |
+|   Register              |    <0.001 |      405 |     41600 |            0.97 |
 |   LUT as Shift Register |    <0.001 |        2 |      9600 |            0.02 |
 |   Others                |     0.000 |       92 |       --- |             --- |
-| Signals                 |     0.011 |     7976 |       --- |             --- |
+| Signals                 |     0.011 |     7946 |       --- |             --- |
 | Block RAM               |     0.003 |        4 |        50 |            8.00 |
 | MMCM                    |     0.106 |        1 |         5 |           20.00 |
 | DSPs                    |     0.023 |       68 |        90 |           75.56 |
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.060 |       0.050 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -154,7 +154,7 @@ Table of Contents
 |     u_draw_bg           |     0.035 |
 |     u_draw_player       |     0.004 |
 |     u_image_rom         |     0.003 |
-|     u_mouse_ctl         |     0.003 |
+|     u_mouse_ctl         |     0.002 |
 |       Inst_Ps2Interface |     0.001 |
 |     u_vga_timing        |     0.003 |
 +-------------------------+-----------+
