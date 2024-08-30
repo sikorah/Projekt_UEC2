@@ -75,11 +75,11 @@ always_comb begin
                 state_nxt = state;
             end
             
-            else if (xpos_player >= 450 && xpos_player < 640 && m_right ) begin // po klocku
+            else if (xpos_player >= 450 && xpos_player < 660 && m_right ) begin // po klocku
                 xpos_nxt = xpos_player + 1;
                 state_nxt = state;
             end 
-            else if (xpos_player <= 640 && m_right ) begin // na granicy ekranu
+            else if (xpos_player <= 660 && m_right ) begin // na granicy ekranu
                 xpos_nxt = xpos_player;
                 state_nxt = state;
             end 

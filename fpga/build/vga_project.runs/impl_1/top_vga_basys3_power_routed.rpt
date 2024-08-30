@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date             : Fri Aug 30 10:42:21 2024
+| Date             : Fri Aug 30 10:48:07 2024
 | Host             : cadence36 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command          : report_power -file top_vga_basys3_power_routed.rpt -pb top_vga_basys3_power_summary_routed.pb -rpx top_vga_basys3_power_routed.rpx
 | Design           : top_vga_basys3
@@ -52,14 +52,14 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.003 |        6 |       --- |             --- |
-| Slice Logic             |     0.009 |     6203 |       --- |             --- |
-|   LUT as Logic          |     0.007 |     3698 |     20800 |           17.78 |
+| Clocks                  |     0.004 |        6 |       --- |             --- |
+| Slice Logic             |     0.009 |     6199 |       --- |             --- |
+|   LUT as Logic          |     0.007 |     3688 |     20800 |           17.73 |
 |   CARRY4                |     0.001 |      892 |      8150 |           10.94 |
 |   Register              |    <0.001 |      405 |     41600 |            0.97 |
 |   LUT as Shift Register |    <0.001 |        2 |      9600 |            0.02 |
 |   Others                |     0.000 |       92 |       --- |             --- |
-| Signals                 |     0.011 |     7946 |       --- |             --- |
+| Signals                 |     0.011 |     7932 |       --- |             --- |
 | Block RAM               |     0.003 |        4 |        50 |            8.00 |
 | MMCM                    |     0.106 |        1 |         5 |           20.00 |
 | DSPs                    |     0.023 |       68 |        90 |           75.56 |

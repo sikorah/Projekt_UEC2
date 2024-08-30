@@ -1,6 +1,6 @@
 Warnings, critical warnings and errors from synthesis and implementation
 
-Created: 2024-08-30 10:42:57
+Created: 2024-08-30 10:48:45
 
 ----SYNTHESIS----
 WARNING: [Synth 8-7071] port 'locked' of module 'clk_wiz_0' is unconnected for instance 'u_clk' [fpga/rtl/top_vga_basys3.sv:46]
@@ -24,6 +24,18 @@ WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not ma
 WARNING: [Synth 8-7071] port 'xpos' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:81]
 WARNING: [Synth 8-7071] port 'ypos' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:81]
 WARNING: [Synth 8-7023] instance 'u_top_vga' of module 'top_vga' has 12 connections declared, but only 10 given [fpga/rtl/top_vga_basys3.sv:81]
+WARNING: [Synth 8-7129] Port xpos_player[11] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[10] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[9] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[8] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[7] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[6] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[5] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[4] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[3] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[2] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[1] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[0] in module draw_buttons is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos_player[11] in module draw_buttons is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos_player[10] in module draw_buttons is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos_player[9] in module draw_buttons is either unconnected or has no load
@@ -75,6 +87,18 @@ WARNING: [Synth 8-7129] Port vga_out\.rgb[0] in module vga_timing is either unco
 WARNING: [Synth 8-7129] Port xpos in module top_vga is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos in module top_vga is either unconnected or has no load
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port xpos_player[11] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[10] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[9] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[8] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[7] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[6] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[5] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[4] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[3] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[2] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[1] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player[0] in module draw_buttons is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos_player[11] in module draw_buttons is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos_player[10] in module draw_buttons is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos_player[9] in module draw_buttons is either unconnected or has no load
@@ -101,30 +125,6 @@ WARNING: [Synth 8-7129] Port rgb_out[1] in module draw_bg is either unconnected 
 WARNING: [Synth 8-7129] Port rgb_out[0] in module draw_bg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_in\.rgb[11] in module draw_bg is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_in\.rgb[10] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[9] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[8] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[7] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[6] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[5] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[4] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[3] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[2] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[1] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_in\.rgb[0] in module draw_bg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[11] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[10] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[9] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[8] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[7] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[6] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[5] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[4] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[3] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[2] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[1] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vga_out\.rgb[0] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos in module top_vga is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos in module top_vga is either unconnected or has no load
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 108, Available = 90. Use report_utilization command for details.
 
 ----IMPLEMENTATION----

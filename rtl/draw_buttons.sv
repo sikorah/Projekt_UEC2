@@ -49,7 +49,7 @@ always_comb begin
     if ((xpos_player >= 200 && xpos_player <= 250) ) begin
         button1_pressed = 1;
     end else begin
-        button1_pressed = 0;
+        button1_pressed = 1;
     end
     
     if ((xpos_player >= 600 && xpos_player <= 650) ) begin

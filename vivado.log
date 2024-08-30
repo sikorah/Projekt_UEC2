@@ -2,13 +2,13 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Fri Aug 30 10:43:01 2024
-# Process ID: 11751
+# Start of session at: Fri Aug 30 10:48:53 2024
+# Process ID: 14385
 # Current directory: /home/student/zschab/Desktop/Projekt_UEC2
 # Command line: vivado -mode tcl -source fpga/scripts/program_fpga.tcl -tclargs results/top_vga_basys3.bit
 # Log file: /home/student/zschab/Desktop/Projekt_UEC2/vivado.log
 # Journal file: /home/student/zschab/Desktop/Projekt_UEC2/vivado.jou
-# Running On: cadence36, OS: Linux, CPU Frequency: 3828.320 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+# Running On: cadence36, OS: Linux, CPU Frequency: 3737.109 MHz, CPU Physical cores: 4, Host memory: 16720 MB
 #-----------------------------------------------------------
 source fpga/scripts/program_fpga.tcl
 # set bitstream_file [lindex ${argv} 0]
@@ -46,4 +46,4 @@ INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 INFO: [Labtools 27-3164] End of startup status: HIGH
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 10:43:17 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 10:49:13 2024...
