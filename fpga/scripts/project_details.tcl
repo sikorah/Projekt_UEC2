@@ -26,7 +26,7 @@ set target xc7a35tcpg236-1
 #-----------------------------------------------------#
 # Specify .xdc files location                   -- EDIT
 set xdc_files {
-    constraints/top_vga_basys3.xdc
+    constraints/top_vga_basys3.xdc    
     constraints/clk_wiz_0.xdc
     constraints/clk_wiz_0_late.xdc
 }
@@ -42,7 +42,6 @@ set sv_files {
     ../rtl/draw_rect_ctl.sv
     ../rtl/top_vga.sv
     ../rtl/draw_mouse.sv
-    ../rtl/keyboard.sv
     ../rtl/image_rom.sv
     ../rtl/draw_buttons.sv
     ../rtl/draw_player1.sv

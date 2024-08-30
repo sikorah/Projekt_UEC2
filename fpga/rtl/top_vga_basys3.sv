@@ -17,12 +17,13 @@
 module top_vga_basys3 (
     input  wire clk,
     input  wire btnC,
+    input  wire JA1, JA2,       //for mouse from second board
     output wire Vsync,
     output wire Hsync,
     output wire [3:0] vgaRed,
     output wire [3:0] vgaGreen,
     output wire [3:0] vgaBlue,
-    output wire JA1,
+
     inout wire  PS2Clk,PS2Data
 );
 
@@ -40,7 +41,7 @@ wire pclk_mirror100;
 // https://docs.xilinx.com/r/en-US/ug901-vivado-synthesis/Synthesis-Attributes
 
 
-assign JA1 = pclk_mirror40;
+//assign JA1 = pclk_mirror40;
 
 
 clk_wiz_0  u_clk
@@ -88,7 +89,9 @@ top_vga u_top_vga (
     .hs(Hsync),
     .vs(Vsync),
     .ps2_clk(PS2Clk),
-    .ps2_data(PS2Data)
+    .ps2_data(PS2Data),
+    .gpio_left (JA1),
+    .gpio_right (JA2)
 );
 
 endmodule
