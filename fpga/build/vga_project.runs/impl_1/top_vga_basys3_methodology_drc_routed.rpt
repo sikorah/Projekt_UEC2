@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Aug 30 08:51:53 2024
+| Date         : Fri Aug 30 13:45:22 2024
 | Host         : cadence36 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command      : report_methodology -file top_vga_basys3_methodology_drc_routed.rpt -pb top_vga_basys3_methodology_drc_routed.pb -rpx top_vga_basys3_methodology_drc_routed.rpx
 | Design       : top_vga_basys3
@@ -23,12 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 71
+             Violations found: 96
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| SYNTH-10  | Warning  | Wide multiplier               | 68         |
+| SYNTH-10  | Warning  | Wide multiplier               | 69         |
 | TIMING-18 | Warning  | Missing input or output delay | 3          |
+| TIMING-20 | Warning  | Non-clocked latch             | 24         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -185,92 +186,92 @@ Related violations: <none>
 
 SYNTH-10#31 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#32 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__0 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#33 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#34 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__10 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__10 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#35 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__11 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__11 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#36 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__12 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__12 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#37 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__13 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__13 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#38 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__14 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__14 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#39 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__15 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__15 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#40 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__16 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__16 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#41 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__17 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__17 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#42 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__18 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__18 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#43 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__19 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__19 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#44 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__2 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#45 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__20 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__20 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#46 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__21 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__21 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#47 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__22 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__22 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#48 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__23 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__23 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#49 Warning
@@ -285,92 +286,97 @@ Related violations: <none>
 
 SYNTH-10#51 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__26 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__3 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#52 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__27 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__4 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#53 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__28 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__5 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#54 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__6 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#55 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__7 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#56 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__5 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__8 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#57 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__6 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__9 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#58 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__7 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#59 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__8 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#60 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_bg/rgb_nxt5__9 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#61 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#62 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#63 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#64 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__2 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player2/rgb_nxt4 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#65 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__3 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player2/rgb_nxt4__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#66 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__4 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player2/rgb_nxt4__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#67 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__5 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player2/rgb_nxt4__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#68 Warning
 Wide multiplier  
-Detected multiplier at u_top_vga/u_draw_player1/rgb_nxt4__6 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at u_top_vga/u_draw_player2/rgb_nxt4__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#69 Warning
+Wide multiplier  
+Detected multiplier at u_top_vga/u_draw_player2/rgb_nxt4__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -386,6 +392,126 @@ Related violations: <none>
 TIMING-18#3 Warning
 Missing input or output delay  
 An input delay is missing on btnC relative to clock(s) clk
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[0] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[10] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[11] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[1] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[2] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[3] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[4] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[5] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[6] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[7] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[8] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[9] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[0] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[10] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[11] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[1] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[2] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[3] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[4] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[5] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[6] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[7] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[8] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[9] cannot be properly analyzed as its control pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 

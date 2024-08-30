@@ -2,13 +2,13 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Thu Aug 29 22:07:46 2024
-# Process ID: 9390
+# Start of session at: Fri Aug 30 11:05:36 2024
+# Process ID: 14362
 # Current directory: /home/student/zschab/Desktop/Projekt_UEC2/fpga
 # Command line: vivado -mode tcl -source scripts/generate_bitstream.tcl
 # Log file: /home/student/zschab/Desktop/Projekt_UEC2/fpga/vivado.log
 # Journal file: /home/student/zschab/Desktop/Projekt_UEC2/fpga/vivado.jou
-# Running On: cadence33, OS: Linux, CPU Frequency: 3289.843 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+# Running On: cadence36, OS: Linux, CPU Frequency: 3687.500 MHz, CPU Physical cores: 4, Host memory: 16720 MB
 #-----------------------------------------------------------
 source scripts/generate_bitstream.tcl
 # source scripts/project_details.tcl
@@ -78,14 +78,17 @@ source scripts/generate_bitstream.tcl
 #     wait_on_run impl_1
 # }
 # create_new_project $project_name $target $top_module
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2716.691 ; gain = 8.961 ; free physical = 2708 ; free virtual = 12296
 WARNING: [filemgmt 56-12] File '/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v' cannot be added to the project because it already exists in the project, skipping this file
 WARNING: [filemgmt 56-12] File '/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v' cannot be added to the project because it already exists in the project, skipping this file
 # generate_bitstream
+WARNING: [HDL 9-3756] overwriting previous definition of module 'draw_player1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:12]
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'draw_player1()' found in library 'xil_defaultlib'
+Duplicate found at line 12 of file /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv
+	(Active) Duplicate found at line 12 of file /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv
 WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
-[Thu Aug 29 22:08:02 2024] Launched synth_1...
+[Fri Aug 30 11:05:52 2024] Launched synth_1...
 Run output will be captured here: /home/student/zschab/Desktop/Projekt_UEC2/fpga/build/vga_project.runs/synth_1/runme.log
-[Thu Aug 29 22:08:02 2024] Waiting for synth_1 to finish...
+[Fri Aug 30 11:05:52 2024] Waiting for synth_1 to finish...
 
 *** Running vivado
     with args -log top_vga_basys3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_vga_basys3.tcl
@@ -104,9 +107,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10514
+INFO: [Synth 8-7075] Helper process launched with PID 15486
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 1015 ; free virtual = 10603
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 180 ; free virtual = 10616
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_vga_basys3' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:17]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v:71]
@@ -155,8 +158,6 @@ INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/
 INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
 INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
 INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
-INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
-INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
 INFO: [Synth 8-6157] synthesizing module 'vga_timing' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:13]
 WARNING: [Synth 8-3848] Net vga_out\.rgb in module/entity vga_timing does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:16]
 INFO: [Synth 8-6155] done synthesizing module 'vga_timing' (9#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:13]
@@ -190,27 +191,23 @@ WARNING: [Synth 8-7071] port 'sety' of module 'MouseCtl' is unconnected for inst
 WARNING: [Synth 8-7071] port 'setmax_x' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:100]
 WARNING: [Synth 8-7071] port 'setmax_y' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:100]
 WARNING: [Synth 8-7023] instance 'u_mouse_ctl' of module 'MouseCtl' has 16 connections declared, but only 12 given [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:100]
-INFO: [Synth 8-6157] synthesizing module 'draw_player_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'draw_player_ctl' (17#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:11]
-WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_player_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:126]
-INFO: [Synth 8-6157] synthesizing module 'draw_player1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv:12]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv:56]
-INFO: [Synth 8-6155] done synthesizing module 'draw_player1' (18#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv:12]
-ERROR: [Synth 8-439] module 'draw_player2' not found [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:141]
+ERROR: [Synth 8-439] module 'draw_player_ctl' not found [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:115]
+ERROR: [Synth 8-27] virtual interface in continuous assignment not supported [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:118]
+ERROR: [Synth 8-6038] cannot resolve hierarchical name for the item 'vsync' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:118]
 ERROR: [Synth 8-6156] failed synthesizing module 'top_vga' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:1]
 ERROR: [Synth 8-6156] failed synthesizing module 'top_vga_basys3' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:17]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 1490 ; free virtual = 11079
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 1151 ; free virtual = 11594
 ---------------------------------------------------------------------------------
 RTL Elaboration failed
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 18 Warnings, 0 Critical Warnings and 4 Errors encountered.
+52 Infos, 17 Warnings, 0 Critical Warnings and 6 Errors encountered.
 synth_design failed
 ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 29 22:08:23 2024...
-[Thu Aug 29 22:08:33 2024] synth_1 finished
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 11:06:17 2024...
+[Fri Aug 30 11:06:28 2024] synth_1 finished
 WARNING: [Vivado 12-8222] Failed run(s) : 'synth_1'
-wait_on_runs: Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 2724.812 ; gain = 0.000 ; free physical = 2704 ; free virtual = 12290
+wait_on_runs: Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 2724.812 ; gain = 0.000 ; free physical = 2109 ; free virtual = 12545
 ERROR: [Common 17-70] Application Exception: Failed to launch run 'impl_1' due to failures in the following run(s):
 synth_1
 These failed run(s) need to be reset prior to launching 'impl_1' again.

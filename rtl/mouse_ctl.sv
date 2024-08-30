@@ -1,0 +1,151 @@
+/**
+ * Copyright (C) 2024  AGH University of Science and Technology
+ * MTM UEC2
+ * Author: Zuzanna Schab
+ *
+ * Description:
+ * Mouse control.
+ */
+
+ module mouse_ctl(
+  input wire clk, rst,
+  input wire rx_data,
+  input wire [2:0] op_code_data,
+
+  output logic [7:0] tx_data, 
+  vga_if.in in,
+  vga_if.out out
+);
+
+
+
+//local viariables
+logic [7:0] data_to_transmit_nxt;
+logic pos_update, pos_update_nxt;
+typedef enum bit [1:0] {WAIT, READY, SEND} uart_machine;
+uart_machine uart_state, uart_state_nxt ;
+logic update_tick, update_tick_nxt;
+logic [11:0] xpos_out, xpos_out_nxt ;
+
+//Interfaces
+vga_if out_mouse();
+
+
+//submodules
+
+always_ff @(posedge clk) begin : data_passed_through
+  if (rst) begin
+      out.vcount <= '0;
+      out.vsync  <= '0;
+      out.vblnk  <= '0;
+      out.hcount <= '0;
+      out.hsync  <= '0;
+      out.hblnk  <= '0;
+      out.rgb    <= '0;
+
+      xpos_out <= '0 ;
+  end 
+  else begin
+      out.vcount <= out_sel.vcount;
+      out.vsync  <= out_sel.vsync;
+      out.vblnk  <= out_sel.vblnk;
+      out.hcount <= out_sel.hcount;
+      out.hsync  <= out_sel.hsync;
+      out.hblnk  <= out_sel.hblnk;
+      out.rgb    <= out_sel.rgb;
+
+      xpos_out <= xpos_out_nxt ;
+  end
+end
+
+
+always_ff @(posedge clk) begin : data_transmision
+  if(rst) begin
+      data_to_transmit <= 8'b00000000;
+      pos_update <= '0;
+      update_tick <= '0;
+      uart_state <= WAIT ;
+  end
+  else begin
+      data_to_transmit <= data_to_transmit_nxt;
+      pos_update <= pos_update_nxt;
+      uart_state <= uart_state_nxt ;
+      update_tick <= update_tick_nxt;
+  end
+end
+
+always_comb begin
+  if(!tx_full && uart_state == READY)
+      uart_state_nxt = SEND ;
+  else if(tx_full && uart_state == WAIT)
+      uart_state_nxt = READY ;
+  else 
+      uart_state_nxt = uart_state ;
+
+  if((tx_full == 0) && (op_code_data == 3'b111)) begin 
+      update_tick_nxt = 1'b1;
+  end
+  else if(update_tick) begin
+      update_tick_nxt = 1'b0;
+  end
+  else begin
+      update_tick_nxt = update_tick;
+  end
+  
+  if(uart_state == SEND) begin
+      if(pos_update == 0) begin
+          data_to_transmit_nxt = {xpos_out[4:0], 3'b001};
+          if(update_tick == 1'b1) begin
+              pos_update_nxt = 1'b1;
+          end
+          else begin
+              pos_update_nxt = 1'b0;
+          end
+      end
+      else begin
+          data_to_transmit_nxt = {xpos_out[9:5], 3'b010};
+          if(update_tick == 1'b1) begin
+              pos_update_nxt = 1'b0;
+          end
+          else begin
+              pos_update_nxt = 1'b1;
+          end
+      end
+      uart_state_nxt = WAIT ;
+  end
+  else begin
+      if(!tx_full && uart_state == READY)
+          uart_state_nxt = SEND ;
+      else if(tx_full && uart_state == WAIT)
+          uart_state_nxt = READY ;
+      else 
+          uart_state_nxt = uart_state ;
+          
+      data_to_transmit_nxt = data_to_transmit;
+      pos_update_nxt = pos_update;
+  end
+
+end
+
+always_comb begin : uart_data_processing
+  if(xpos > 1023) begin
+      xpos_out_nxt = 1023 ;
+  end
+  else begin 
+      xpos_out_nxt = xpos ;
+  end
+end
+
+always_comb begin 
+  out_sel.hblnk = out_mouse.hblnk;
+  out_sel.hcount = out_mouse.hcount;
+  out_sel.hsync = out_mouse.hsync;
+  out_sel.rgb = out_mouse.rgb;
+  out_sel.vblnk = out_mouse.vblnk;
+  out_sel.vcount = out_mouse.vcount;
+  out_sel.vsync = out_mouse.vsync;
+end
+
+
+
+endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Aug 30 08:51:51 2024
+| Date         : Fri Aug 30 13:45:20 2024
 | Host         : cadence36 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command      : report_drc -file top_vga_basys3_drc_routed.rpt -pb top_vga_basys3_drc_routed.pb -rpx top_vga_basys3_drc_routed.rpx
 | Design       : top_vga_basys3
@@ -24,14 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 272
-+--------+----------+------------------------+------------+
-| Rule   | Severity | Description            | Violations |
-+--------+----------+------------------------+------------+
-| DPIP-1 | Warning  | Input pipelining       | 136        |
-| DPOP-1 | Warning  | PREG Output pipelining | 68         |
-| DPOP-2 | Warning  | MREG Output pipelining | 68         |
-+--------+----------+------------------------+------------+
+             Violations found: 278
++----------+----------+------------------------+------------+
+| Rule     | Severity | Description            | Violations |
++----------+----------+------------------------+------------+
+| DPIP-1   | Warning  | Input pipelining       | 138        |
+| DPOP-1   | Warning  | PREG Output pipelining | 69         |
+| DPOP-2   | Warning  | MREG Output pipelining | 69         |
+| PDRC-153 | Warning  | Gated clock check      | 2          |
++----------+----------+------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -537,182 +538,192 @@ Related violations: <none>
 
 DPIP-1#101 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__26 input u_top_vga/u_draw_bg/rgb_nxt5__26/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__3 input u_top_vga/u_draw_bg/rgb_nxt5__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#102 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__26 input u_top_vga/u_draw_bg/rgb_nxt5__26/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__3 input u_top_vga/u_draw_bg/rgb_nxt5__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#103 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__27 input u_top_vga/u_draw_bg/rgb_nxt5__27/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__4 input u_top_vga/u_draw_bg/rgb_nxt5__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#104 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__27 input u_top_vga/u_draw_bg/rgb_nxt5__27/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__4 input u_top_vga/u_draw_bg/rgb_nxt5__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#105 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__28 input u_top_vga/u_draw_bg/rgb_nxt5__28/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__5 input u_top_vga/u_draw_bg/rgb_nxt5__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#106 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__28 input u_top_vga/u_draw_bg/rgb_nxt5__28/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__5 input u_top_vga/u_draw_bg/rgb_nxt5__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#107 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__3 input u_top_vga/u_draw_bg/rgb_nxt5__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__6 input u_top_vga/u_draw_bg/rgb_nxt5__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#108 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__3 input u_top_vga/u_draw_bg/rgb_nxt5__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__6 input u_top_vga/u_draw_bg/rgb_nxt5__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#109 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__4 input u_top_vga/u_draw_bg/rgb_nxt5__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__7 input u_top_vga/u_draw_bg/rgb_nxt5__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#110 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__4 input u_top_vga/u_draw_bg/rgb_nxt5__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__7 input u_top_vga/u_draw_bg/rgb_nxt5__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#111 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__5 input u_top_vga/u_draw_bg/rgb_nxt5__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__8 input u_top_vga/u_draw_bg/rgb_nxt5__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#112 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__5 input u_top_vga/u_draw_bg/rgb_nxt5__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__8 input u_top_vga/u_draw_bg/rgb_nxt5__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#113 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__6 input u_top_vga/u_draw_bg/rgb_nxt5__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__9 input u_top_vga/u_draw_bg/rgb_nxt5__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#114 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__6 input u_top_vga/u_draw_bg/rgb_nxt5__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__9 input u_top_vga/u_draw_bg/rgb_nxt5__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#115 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__7 input u_top_vga/u_draw_bg/rgb_nxt5__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4 input u_top_vga/u_draw_player1/rgb_nxt4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#116 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__7 input u_top_vga/u_draw_bg/rgb_nxt5__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4 input u_top_vga/u_draw_player1/rgb_nxt4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#117 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__8 input u_top_vga/u_draw_bg/rgb_nxt5__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__0 input u_top_vga/u_draw_player1/rgb_nxt4__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#118 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__8 input u_top_vga/u_draw_bg/rgb_nxt5__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__0 input u_top_vga/u_draw_player1/rgb_nxt4__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#119 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__9 input u_top_vga/u_draw_bg/rgb_nxt5__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__1 input u_top_vga/u_draw_player1/rgb_nxt4__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#120 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__9 input u_top_vga/u_draw_bg/rgb_nxt5__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__1 input u_top_vga/u_draw_player1/rgb_nxt4__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#121 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4 input u_top_vga/u_draw_player1/rgb_nxt4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__2 input u_top_vga/u_draw_player1/rgb_nxt4__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#122 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4 input u_top_vga/u_draw_player1/rgb_nxt4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__2 input u_top_vga/u_draw_player1/rgb_nxt4__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#123 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__0 input u_top_vga/u_draw_player1/rgb_nxt4__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__3 input u_top_vga/u_draw_player1/rgb_nxt4__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#124 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__0 input u_top_vga/u_draw_player1/rgb_nxt4__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__3 input u_top_vga/u_draw_player1/rgb_nxt4__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#125 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__1 input u_top_vga/u_draw_player1/rgb_nxt4__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__4 input u_top_vga/u_draw_player1/rgb_nxt4__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#126 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__1 input u_top_vga/u_draw_player1/rgb_nxt4__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__4 input u_top_vga/u_draw_player1/rgb_nxt4__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#127 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__2 input u_top_vga/u_draw_player1/rgb_nxt4__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player2/rgb_nxt4 input u_top_vga/u_draw_player2/rgb_nxt4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#128 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__2 input u_top_vga/u_draw_player1/rgb_nxt4__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player2/rgb_nxt4 input u_top_vga/u_draw_player2/rgb_nxt4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#129 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__3 input u_top_vga/u_draw_player1/rgb_nxt4__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__0 input u_top_vga/u_draw_player2/rgb_nxt4__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#130 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__3 input u_top_vga/u_draw_player1/rgb_nxt4__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__0 input u_top_vga/u_draw_player2/rgb_nxt4__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#131 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__4 input u_top_vga/u_draw_player1/rgb_nxt4__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__1 input u_top_vga/u_draw_player2/rgb_nxt4__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#132 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__4 input u_top_vga/u_draw_player1/rgb_nxt4__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__1 input u_top_vga/u_draw_player2/rgb_nxt4__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#133 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__5 input u_top_vga/u_draw_player1/rgb_nxt4__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__2 input u_top_vga/u_draw_player2/rgb_nxt4__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#134 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__5 input u_top_vga/u_draw_player1/rgb_nxt4__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__2 input u_top_vga/u_draw_player2/rgb_nxt4__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#135 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__6 input u_top_vga/u_draw_player1/rgb_nxt4__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__3 input u_top_vga/u_draw_player2/rgb_nxt4__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#136 Warning
 Input pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__6 input u_top_vga/u_draw_player1/rgb_nxt4__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__3 input u_top_vga/u_draw_player2/rgb_nxt4__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#137 Warning
+Input pipelining  
+DSP u_top_vga/u_draw_player2/rgb_nxt4__4 input u_top_vga/u_draw_player2/rgb_nxt4__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#138 Warning
+Input pipelining  
+DSP u_top_vga/u_draw_player2/rgb_nxt4__4 input u_top_vga/u_draw_player2/rgb_nxt4__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-1#1 Warning
@@ -967,92 +978,97 @@ Related violations: <none>
 
 DPOP-1#51 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__26 output u_top_vga/u_draw_bg/rgb_nxt5__26/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__3 output u_top_vga/u_draw_bg/rgb_nxt5__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#52 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__27 output u_top_vga/u_draw_bg/rgb_nxt5__27/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__4 output u_top_vga/u_draw_bg/rgb_nxt5__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#53 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__28 output u_top_vga/u_draw_bg/rgb_nxt5__28/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__5 output u_top_vga/u_draw_bg/rgb_nxt5__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#54 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__3 output u_top_vga/u_draw_bg/rgb_nxt5__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__6 output u_top_vga/u_draw_bg/rgb_nxt5__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#55 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__4 output u_top_vga/u_draw_bg/rgb_nxt5__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__7 output u_top_vga/u_draw_bg/rgb_nxt5__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#56 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__5 output u_top_vga/u_draw_bg/rgb_nxt5__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__8 output u_top_vga/u_draw_bg/rgb_nxt5__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#57 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__6 output u_top_vga/u_draw_bg/rgb_nxt5__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__9 output u_top_vga/u_draw_bg/rgb_nxt5__9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#58 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__7 output u_top_vga/u_draw_bg/rgb_nxt5__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player1/rgb_nxt4 output u_top_vga/u_draw_player1/rgb_nxt4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#59 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__8 output u_top_vga/u_draw_bg/rgb_nxt5__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__0 output u_top_vga/u_draw_player1/rgb_nxt4__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#60 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__9 output u_top_vga/u_draw_bg/rgb_nxt5__9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__1 output u_top_vga/u_draw_player1/rgb_nxt4__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#61 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4 output u_top_vga/u_draw_player1/rgb_nxt4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__2 output u_top_vga/u_draw_player1/rgb_nxt4__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#62 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__0 output u_top_vga/u_draw_player1/rgb_nxt4__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__3 output u_top_vga/u_draw_player1/rgb_nxt4__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#63 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__1 output u_top_vga/u_draw_player1/rgb_nxt4__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__4 output u_top_vga/u_draw_player1/rgb_nxt4__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#64 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__2 output u_top_vga/u_draw_player1/rgb_nxt4__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player2/rgb_nxt4 output u_top_vga/u_draw_player2/rgb_nxt4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#65 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__3 output u_top_vga/u_draw_player1/rgb_nxt4__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__0 output u_top_vga/u_draw_player2/rgb_nxt4__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#66 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__4 output u_top_vga/u_draw_player1/rgb_nxt4__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__1 output u_top_vga/u_draw_player2/rgb_nxt4__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#67 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__5 output u_top_vga/u_draw_player1/rgb_nxt4__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__2 output u_top_vga/u_draw_player2/rgb_nxt4__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#68 Warning
 PREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__6 output u_top_vga/u_draw_player1/rgb_nxt4__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__3 output u_top_vga/u_draw_player2/rgb_nxt4__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#69 Warning
+PREG Output pipelining  
+DSP u_top_vga/u_draw_player2/rgb_nxt4__4 output u_top_vga/u_draw_player2/rgb_nxt4__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning
@@ -1307,92 +1323,107 @@ Related violations: <none>
 
 DPOP-2#51 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__26 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__26/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__3 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#52 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__27 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__27/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__4 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#53 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__28 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__28/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__5 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#54 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__3 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__6 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#55 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__4 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__7 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#56 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__5 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__8 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#57 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__6 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_bg/rgb_nxt5__9 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#58 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__7 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player1/rgb_nxt4 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#59 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__8 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__0 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#60 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_bg/rgb_nxt5__9 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__1 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#61 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__2 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#62 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__0 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__3 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#63 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__1 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player1/rgb_nxt4__4 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#64 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__2 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player2/rgb_nxt4 multiplier stage u_top_vga/u_draw_player2/rgb_nxt4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#65 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__3 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__0 multiplier stage u_top_vga/u_draw_player2/rgb_nxt4__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#66 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__4 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__1 multiplier stage u_top_vga/u_draw_player2/rgb_nxt4__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#67 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__5 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__2 multiplier stage u_top_vga/u_draw_player2/rgb_nxt4__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#68 Warning
 MREG Output pipelining  
-DSP u_top_vga/u_draw_player1/rgb_nxt4__6 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP u_top_vga/u_draw_player2/rgb_nxt4__3 multiplier stage u_top_vga/u_draw_player2/rgb_nxt4__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#69 Warning
+MREG Output pipelining  
+DSP u_top_vga/u_draw_player2/rgb_nxt4__4 multiplier stage u_top_vga/u_draw_player2/rgb_nxt4__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[11]_i_2_n_0 is a gated clock net sourced by a combinational pin u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[11]_i_2/O, cell u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[11]_i_2_n_0 is a gated clock net sourced by a combinational pin u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[11]_i_2/O, cell u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

@@ -10,6 +10,8 @@ package state_pkg;
     typedef enum logic [2:0] {
         IDLE  = 3'b000,
         RIGHT1 = 3'b001,
-        LEFT1  = 3'b010
+        LEFT1  = 3'b010,
+        RIGHT2 = 3'b011,
+        LEFT2 = 3'b100
     } State;
 endpackage

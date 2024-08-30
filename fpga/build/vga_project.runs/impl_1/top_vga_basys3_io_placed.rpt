@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date                      : Fri Aug 30 08:51:08 2024
+| Date                      : Fri Aug 30 13:44:31 2024
 | Host                      : cadence36 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command                   : report_io -file top_vga_basys3_io_placed.rpt
 | Design                    : top_vga_basys3
