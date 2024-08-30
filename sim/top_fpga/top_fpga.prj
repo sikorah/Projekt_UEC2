@@ -16,6 +16,7 @@ sv work ../../rtl/vga_pkg.sv \
         ../../rtl/state_control.sv \
         ../../rtl/start_screen.sv \
         ../../rtl/start_game.sv \
+        ../../rtl/delay.sv \
         ../../rtl/draw_mouse.sv \
         ../../rtl/level_1.sv \
         ../../rtl/finish_screen.sv \

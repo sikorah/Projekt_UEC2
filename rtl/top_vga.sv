@@ -14,7 +14,7 @@ module top_vga (
     input  logic clk_100,
     inout  logic ps2_clk,
     inout  logic ps2_data,
-    inout logic xpos, ypos,
+    inout  logic [11:0] xpos, ypos,
     input  logic rst,
     output logic vs,
     output logic hs,
@@ -29,15 +29,12 @@ module top_vga (
 vga_if vga_tim();
 vga_if vga_start();
 vga_if vga_control();
-vga_if vga_buttons();
-vga_if vga_rect();
-vga_if vga_player();
 vga_if vga_out();
 
-//logic [11:0] xpos_mouse, ypos_mouse;
+logic [11:0] xpos_mouse, ypos_mouse;
 logic [11:0] xpos_rect_ctl, ypos_rect_ctl;
 logic [11:0] xpos_player_ctl, ypos_player_ctl;
-logic [1:0] button_pressed;
+logic  button_pressed;
 
 wire m_left, m_right;
 wire [11:0] rom2rect_pixel;
@@ -49,9 +46,9 @@ State state;
 /**
  * Signals assignments
  */
-assign vs = vga_player.vsync;
-assign hs = vga_player.hsync;
-assign {r, g, b} = vga_player.rgb;  // Extract higher bits for RGB
+assign vs = vga_out.vsync;
+assign hs = vga_out.hsync;
+assign {r, g, b} = vga_out.rgb;  // Extract higher bits for RGB
 
 /**
  * Submodules instances
@@ -66,8 +63,10 @@ vga_timing u_vga_timing (
 MouseCtl u_mouse_ctl(
     .clk(clk_100),
     .rst(rst),
-    //.xpos(xpos_mouse),
-    //.ypos(ypos_mouse),
+    .xpos(xpos_mouse),
+    .ypos(ypos_mouse),
+    .setmax_x(1'b0),
+    .setmax_y(1'b0),
     .ps2_clk(ps2_clk), 
     .ps2_data(ps2_data),
     .left(m_left),
@@ -75,55 +74,30 @@ MouseCtl u_mouse_ctl(
     .zpos(),
     .middle(),
     .new_event(),
-    .value('0)
+    .value('0),
+    .setx('0),
+    .sety('0)
 );
 
 start_game u_start_game(
     .clk_40(clk_40),
     .rst(rst),
     .game_state,
+    .state,
+    .xpos,
+    .ypos,
     .vga_in(vga_tim),
-    .vga_out(vga_start) //czy dobrze?
+    .vga_out(vga_out)
 );
 
 state_control u_state_control(
     .clk_40(clk_40),
     .rst(rst),
-    .vga_in(vga_start),
-    .vga_out(vga_control),
+    .xpos_mouse(xpos_mouse),
+    .ypos_mouse(ypos_mouse),
     .m_left(m_left),
     .ypos_player(ypos_player),
     .game_state
-);
-
-draw_mouse  u_draw_mouse(
-    .clk(clk_40),
-    .rst,
-    .vga_in(vga_player),
-    .vga_out(vga_out),
-    .xpos(x_pos),
-    .ypos(y_pos)
-);
-
-draw_buttons u_draw_buttons (
-    .clk(clk_40),
-    .rst(rst),
-    .vga_in(vga_control),
-    .vga_out(vga_buttons),
-    .xpos_player(xpos_player_ctl),
-    .ypos_player(ypos_player_ctl),
-    .button_pressed(button_pressed)
-);
-
-draw_rect u_draw_rect (
-    .clk(clk_40),
-    .rst(rst),
-    .vga_in(vga_buttons),
-    .vga_out(vga_rect),
-    .xpos_rect(xpos_rect_ctl),
-    .ypos_rect(ypos_rect_ctl),
-    .rgb_address(rect2rom_address),
-    .rgb_pixel(rom2rect_pixel)
 );
 
 image_rom u_image_rom (
@@ -154,16 +128,6 @@ draw_player_ctl u_draw_player_ctl (
     .button_pressed(button_pressed),
     .state
 
-);
-
-draw_player u_draw_player(
-    .clk(clk_40),
-    .rst(rst),
-    .vga_out(vga_player),
-    .vga_in(vga_rect),
-    .xpos_player(xpos_player_ctl),  
-    .ypos_player(ypos_player_ctl),
-    .state
 );
 
 endmodule

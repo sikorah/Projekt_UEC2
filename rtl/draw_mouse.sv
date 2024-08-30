@@ -11,6 +11,15 @@
    vga_if.in    vga_in
  );
 
+ delay#(
+  .W(24),
+  .CLK_DEL(1))
+ u_delay_pos(
+  .clk,
+  .rst,
+  .din({xpos,ypos}),
+  .dout({xpos_delay, ypos_delay})
+ );
  
  always_ff @(posedge clk) begin
   if(rst) begin

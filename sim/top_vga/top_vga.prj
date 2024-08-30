@@ -14,6 +14,7 @@ sv work ../../rtl/vga_pkg.sv \
         ../../rtl/vga_timing.sv \
         ../../rtl/top_vga.sv \
         ../../rtl/vga_if.sv \
+        ../../rtl/delay.sv \
         ../../rtl/state_control.sv \
         ../../rtl/start_screen.sv \
         ../../rtl/start_game.sv \

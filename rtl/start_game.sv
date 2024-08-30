@@ -14,33 +14,82 @@ module start_game(
     input logic clk_40,
     input logic rst,
     input g_state game_state,
-    inout logic [3:0] r,
-    inout logic [3:0] g,
-    inout logic [3:0] b,
+    inout logic [11:0] xpos, ypos,
+    input State state,
 
     vga_if.in vga_in,
     vga_if.out vga_out
 );
-
+vga_if lvl_start();
+vga_if buttons();
+vga_if rect();
+vga_if mouse();
 vga_if game_menu();
 vga_if level_1();
 vga_if out();
 vga_if finish();
 
+logic [11:0] xpos_rect_ctl, ypos_rect_ctl;
+logic [11:0] xpos_player_ctl, ypos_player_ctl;
+logic  button_pressed;
 
+wire m_left, m_right;
+wire [11:0] rom2rect_pixel;
+wire [13:0] rect2rom_address;
 
 start_screen u_start_screen(
     .clk(clk_40),
     .rst(rst),
     .vga_in,
-    .vga_out(game_menu)
+    .vga_out(mouse)
 );
+
+draw_mouse  u_draw_mouse(
+    .clk(clk_40),
+    .rst,
+    .vga_in(mouse),
+    .vga_out(game_menu),
+    .xpos(x_pos),
+    .ypos(y_pos)
+);
+
 
 level_1 u_level_1(
     .clk(clk_40),
     .rst(rst),
     .vga_in,
-    .vga_out(level_1)
+    .vga_out(lvl_start)
+);
+
+draw_buttons u_draw_buttons (
+    .clk(clk_40),
+    .rst(rst),
+    .vga_in(lvl_start),
+    .vga_out(buttons),
+    .xpos_player(xpos_player_ctl),
+    .ypos_player(ypos_player_ctl),
+    .button_pressed(button_pressed)
+);
+
+draw_rect u_draw_rect (
+    .clk(clk_40),
+    .rst(rst),
+    .vga_in(buttons),
+    .vga_out(rect),
+    .xpos_rect(xpos_rect_ctl),
+    .ypos_rect(ypos_rect_ctl),
+    .rgb_address(rect2rom_address),
+    .rgb_pixel(rom2rect_pixel)
+);
+
+draw_player u_draw_player(
+    .clk(clk_40),
+    .rst(rst),
+    .vga_out(rect),
+    .vga_in(level_1),
+    .xpos_player(xpos_player_ctl),  
+    .ypos_player(ypos_player_ctl),
+    .state
 );
 
 finish_screen u_finish_screen(

@@ -14,12 +14,11 @@ module state_control(
     input logic clk_40,
     input logic rst,
     input logic m_left,
+    input logic xpos_mouse,
+    input logic ypos_mouse,
     input logic ypos_player,
 
-    output g_state game_state,
-
-    vga_if.in vga_in,
-    vga_if.out vga_out
+    output g_state game_state
 );
 
 g_state game_state_nxt;
@@ -36,7 +35,7 @@ end
 always_comb begin
     case(game_state)
         START: begin
-            if(m_left && vga_in.vcount >= 225 && vga_in.vcount <= 375 && vga_in.hcount >= 300 && vga_in.hcount <= 500) begin
+            if(m_left && ypos_mouse >= 225 && ypos_mouse<= 375 && xpos_mouse >= 300 && xpos_mouse <= 500) begin
                 game_state_nxt = LEVEL_1;
             end
             else begin

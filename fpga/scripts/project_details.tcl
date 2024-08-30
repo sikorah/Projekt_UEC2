@@ -39,6 +39,7 @@ set sv_files {
     ../rtl/vga_timing.sv
     ../rtl/state_control.sv 
     ../rtl/start_screen.sv 
+    ..rtl/delay.sv 
     ../rtl/start_game.sv 
     ../rtl/level_1.sv 
     ../rtl/finish_screen.sv 
