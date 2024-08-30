@@ -2,13 +2,13 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Thu Aug 29 21:51:22 2024
-# Process ID: 14746
+# Start of session at: Fri Aug 30 08:36:40 2024
+# Process ID: 31569
 # Current directory: /home/student/zschab/Desktop/Projekt_UEC2/fpga
 # Command line: vivado -mode tcl -source scripts/generate_bitstream.tcl
 # Log file: /home/student/zschab/Desktop/Projekt_UEC2/fpga/vivado.log
 # Journal file: /home/student/zschab/Desktop/Projekt_UEC2/fpga/vivado.jou
-# Running On: cadence33, OS: Linux, CPU Frequency: 3626.953 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+# Running On: cadence36, OS: Linux, CPU Frequency: 3700.195 MHz, CPU Physical cores: 4, Host memory: 16720 MB
 #-----------------------------------------------------------
 source scripts/generate_bitstream.tcl
 # source scripts/project_details.tcl
@@ -33,7 +33,8 @@ source scripts/generate_bitstream.tcl
 ##     ../rtl/keyboard.sv
 ##     ../rtl/image_rom.sv
 ##     ../rtl/draw_buttons.sv
-##     ../rtl/draw_player.sv
+##     ../rtl/draw_player1.sv
+##     ../rtl/draw_player2.sv
 ##     ../rtl/draw_player_ctl.sv
 ##     rtl/top_vga_basys3.sv
 ##     rtl/clk_wiz_0_clk_wiz.v
@@ -81,9 +82,9 @@ WARNING: [filemgmt 56-12] File '/home/student/zschab/Desktop/Projekt_UEC2/fpga/r
 WARNING: [filemgmt 56-12] File '/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v' cannot be added to the project because it already exists in the project, skipping this file
 # generate_bitstream
 WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
-[Thu Aug 29 21:51:39 2024] Launched synth_1...
+[Fri Aug 30 08:36:55 2024] Launched synth_1...
 Run output will be captured here: /home/student/zschab/Desktop/Projekt_UEC2/fpga/build/vga_project.runs/synth_1/runme.log
-[Thu Aug 29 21:51:39 2024] Waiting for synth_1 to finish...
+[Fri Aug 30 08:36:55 2024] Waiting for synth_1 to finish...
 
 *** Running vivado
     with args -log top_vga_basys3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_vga_basys3.tcl
@@ -102,9 +103,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 15974
+INFO: [Synth 8-7075] Helper process launched with PID 32167
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 2040 ; free virtual = 11540
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 2763 ; free virtual = 14155
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_vga_basys3' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:17]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v:71]
@@ -153,6 +154,8 @@ INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/
 INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
 INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
 INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
 INFO: [Synth 8-6157] synthesizing module 'vga_timing' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:13]
 WARNING: [Synth 8-3848] Net vga_out\.rgb in module/entity vga_timing does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:16]
 INFO: [Synth 8-6155] done synthesizing module 'vga_timing' (9#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:13]
@@ -161,7 +164,7 @@ WARNING: [Synth 8-3848] Net rgb_out in module/entity draw_bg does not have drive
 INFO: [Synth 8-6155] done synthesizing module 'draw_bg' (10#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv:13]
 INFO: [Synth 8-6157] synthesizing module 'draw_buttons' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv:9]
 INFO: [Synth 8-6155] done synthesizing module 'draw_buttons' (11#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv:9]
-WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_buttons' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:69]
+WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_buttons' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:70]
 INFO: [Synth 8-6157] synthesizing module 'draw_rect' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv:9]
 INFO: [Synth 8-6155] done synthesizing module 'draw_rect' (12#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv:9]
 INFO: [Synth 8-6157] synthesizing module 'image_rom' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:9]
@@ -169,7 +172,7 @@ INFO: [Synth 8-3876] $readmem data file 'mine.dat' is read successfully [/home/s
 INFO: [Synth 8-6155] done synthesizing module 'image_rom' (13#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:9]
 INFO: [Synth 8-6157] synthesizing module 'draw_rect_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:10]
 INFO: [Synth 8-6155] done synthesizing module 'draw_rect_ctl' (14#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:10]
-WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_rect_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:95]
+WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_rect_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:96]
 INFO: [Synth 8-638] synthesizing module 'MouseCtl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:207]
 INFO: [Synth 8-3491] module 'Ps2Interface' declared at '/home/student/zschab/Desktop/Projekt_UEC2/rtl/Ps2Interface.vhd:152' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:369]
 INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/Ps2Interface.vhd:180]
@@ -179,48 +182,36 @@ WARNING: [Synth 8-6014] Unused sequential element set_x.x_inter_reg was removed.
 WARNING: [Synth 8-6014] Unused sequential element set_y.inc_reg was removed.  [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:514]
 WARNING: [Synth 8-6014] Unused sequential element set_y.y_inter_reg was removed.  [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:520]
 INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (16#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:207]
-WARNING: [Synth 8-689] width (1) of port connection 'xpos' does not match port width (12) of module 'MouseCtl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:102]
-WARNING: [Synth 8-689] width (1) of port connection 'ypos' does not match port width (12) of module 'MouseCtl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:103]
-WARNING: [Synth 8-7071] port 'setx' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:99]
-WARNING: [Synth 8-7071] port 'sety' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:99]
-WARNING: [Synth 8-7071] port 'setmax_x' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:99]
-WARNING: [Synth 8-7071] port 'setmax_y' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:99]
-WARNING: [Synth 8-7023] instance 'u_mouse_ctl' of module 'MouseCtl' has 16 connections declared, but only 12 given [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:99]
+WARNING: [Synth 8-689] width (1) of port connection 'xpos' does not match port width (12) of module 'MouseCtl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:103]
+WARNING: [Synth 8-689] width (1) of port connection 'ypos' does not match port width (12) of module 'MouseCtl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:104]
+WARNING: [Synth 8-7071] port 'setx' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:100]
+WARNING: [Synth 8-7071] port 'sety' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:100]
+WARNING: [Synth 8-7071] port 'setmax_x' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:100]
+WARNING: [Synth 8-7071] port 'setmax_y' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:100]
+WARNING: [Synth 8-7023] instance 'u_mouse_ctl' of module 'MouseCtl' has 16 connections declared, but only 12 given [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:100]
 INFO: [Synth 8-6157] synthesizing module 'draw_player_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:11]
 INFO: [Synth 8-6155] done synthesizing module 'draw_player_ctl' (17#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:11]
-WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_player_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:125]
-INFO: [Synth 8-6157] synthesizing module 'draw_player' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player.sv:12]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'draw_player' (18#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player.sv:12]
+WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_player_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:126]
+INFO: [Synth 8-6157] synthesizing module 'draw_player1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv:12]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'draw_player1' (18#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv:12]
 INFO: [Synth 8-6155] done synthesizing module 'top_vga' (19#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:1]
 WARNING: [Synth 8-7071] port 'xpos' of module 'top_vga' is unconnected for instance 'u_top_vga' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:81]
 WARNING: [Synth 8-7071] port 'ypos' of module 'top_vga' is unconnected for instance 'u_top_vga' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:81]
 WARNING: [Synth 8-7023] instance 'u_top_vga' of module 'top_vga' has 12 connections declared, but only 10 given [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:81]
 INFO: [Synth 8-6155] done synthesizing module 'top_vga_basys3' (20#1) [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:17]
-WARNING: [Synth 8-7129] Port xpos_player1[11] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[10] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[9] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[8] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[7] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[6] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[5] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[4] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[3] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[2] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[1] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[0] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[11] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[10] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[9] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[8] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[7] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[6] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[5] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[4] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[3] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[2] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[1] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[0] in module draw_player is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[11] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[10] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[9] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[8] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[7] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[6] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[5] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[4] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[3] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[2] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[1] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[0] in module draw_player1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port middle in module draw_player_ctl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos_player1[11] in module draw_buttons is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos_player1[10] in module draw_buttons is either unconnected or has no load
@@ -285,18 +276,18 @@ WARNING: [Synth 8-7129] Port vga_out\.rgb[0] in module vga_timing is either unco
 WARNING: [Synth 8-7129] Port xpos in module top_vga is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos in module top_vga is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 2886 ; free virtual = 12387
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 3734 ; free virtual = 15128
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 2906 ; free virtual = 12407
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 3735 ; free virtual = 15129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 2906 ; free virtual = 12407
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 3735 ; free virtual = 15129
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 2897 ; free virtual = 12399
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 3726 ; free virtual = 15120
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_clk/inst/clkout1_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_clk/inst/clkout2_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
@@ -318,27 +309,27 @@ Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constr
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2781.730 ; gain = 0.000 ; free physical = 2799 ; free virtual = 12300
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 3606 ; free virtual = 14999
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   BUFGCE => BUFGCTRL: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2781.730 ; gain = 0.000 ; free physical = 2799 ; free virtual = 12300
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 3620 ; free virtual = 15013
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2884 ; free virtual = 12385
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3718 ; free virtual = 15111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2884 ; free virtual = 12385
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3718 ; free virtual = 15111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2884 ; free virtual = 12385
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3718 ; free virtual = 15111
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'draw_rect_ctl'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Ps2Interface'
@@ -419,13 +410,13 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    IDLE |                              001 |                              000
-                  RIGHT1 |                              010 |                              001
-                   LEFT1 |                              100 |                              010
+                    IDLE |                               00 |                              000
+                  RIGHT1 |                               01 |                              001
+                   LEFT1 |                               10 |                              010
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'draw_player_ctl'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'draw_player_ctl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2868 ; free virtual = 12370
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3696 ; free virtual = 15090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -433,11 +424,11 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   32 Bit       Adders := 32    
-	   3 Input   32 Bit       Adders := 20    
+	   3 Input   32 Bit       Adders := 15    
 	   2 Input   26 Bit       Adders := 1     
 	   2 Input   24 Bit       Adders := 1     
-	   3 Input   14 Bit       Adders := 14    
-	   2 Input   13 Bit       Adders := 10    
+	   3 Input   14 Bit       Adders := 7     
+	   2 Input   13 Bit       Adders := 6     
 	   2 Input   12 Bit       Adders := 6     
 	   2 Input   11 Bit       Adders := 3     
 	   2 Input    8 Bit       Adders := 1     
@@ -454,7 +445,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 4     
 	                1 Bit    Registers := 57    
 +---Multipliers : 
-	              32x32  Multipliers := 24    
+	              32x32  Multipliers := 22    
 +---ROMs : 
 	                    ROMs := 1     
 +---Muxes : 
@@ -467,16 +458,18 @@ Detailed RTL Component Info :
 	   2 Input   12 Bit        Muxes := 26    
 	  14 Input   12 Bit        Muxes := 1     
 	   3 Input   12 Bit        Muxes := 3     
+	   4 Input   12 Bit        Muxes := 1     
 	   2 Input   11 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 2     
 	  37 Input    8 Bit        Muxes := 3     
 	   3 Input    4 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 1     
 	  37 Input    4 Bit        Muxes := 1     
-	  14 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 4     
 	   2 Input    2 Bit        Muxes := 5     
-	   2 Input    1 Bit        Muxes := 20    
+	  14 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 16    
 	   3 Input    1 Bit        Muxes := 4     
 	  17 Input    1 Bit        Muxes := 4     
 	  37 Input    1 Bit        Muxes := 20    
@@ -820,87 +813,36 @@ DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
 DSP Report: Generating DSP rgb_nxt4, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
 DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-WARNING: [Synth 8-7129] Port xpos_player1[11] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[10] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[9] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[8] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[7] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[6] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[5] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[4] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[3] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[2] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[1] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player1[0] in module draw_player is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_player2[11] in module draw_player is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[11] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[10] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[9] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[8] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[7] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[6] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[5] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[4] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[3] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[2] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[1] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player1[0] in module draw_player1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port middle in module draw_player_ctl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[11] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[10] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[9] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[8] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[7] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[6] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[5] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[4] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[3] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[2] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[1] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[0] in module draw_buttons is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2821 ; free virtual = 12327
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3664 ; free virtual = 15066
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 119, Available = 90. Use report_utilization command for details.
-DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
-DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
-DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
-DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
-DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): A*B.
-DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
-DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
-DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
-DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 108, Available = 90. Use report_utilization command for details.
 DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): A*B.
 DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
 DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
@@ -1039,6 +981,18 @@ DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
 DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): A*B.
 DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
 DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
 DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
 DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
 DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
@@ -1060,7 +1014,22 @@ DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
 DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
 DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
 DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
+DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): A*B.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: Generating DSP rgb_nxt5, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
+DSP Report: operator rgb_nxt5 is absorbed into DSP rgb_nxt5.
 DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
+DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
+DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): A*B.
+DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
+DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
+DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): (PCIN>>17)+A*B.
 DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
 DSP Report: operator rgb_nxt4 is absorbed into DSP rgb_nxt4.
 DSP Report: Generating DSP rgb_nxt4, operation Mode is (post resource management): A*B.
@@ -1091,129 +1060,118 @@ ROM: Preliminary Mapping Report
 
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping             | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|draw_bg     | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (A:0x1fffe)*B           | 18     | 12     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_bg     | (PCIN>>17)+(A:0x7fff)*B | 15     | 12     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|draw_player | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++-------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping             | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|draw_bg      | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (A:0x1fffe)*B           | 18     | 12     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_bg      | (PCIN>>17)+(A:0x7fff)*B | 15     | 12     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | A*B                     | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | (PCIN>>17)+A*B          | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | A*B                     | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | (PCIN>>17)+A*B          | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | A*B                     | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|draw_player1 | (PCIN>>17)+A*B          | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -1223,13 +1181,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:07 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2666 ; free virtual = 12178
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3518 ; free virtual = 14920
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2646 ; free virtual = 12156
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3497 ; free virtual = 14899
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -1239,7 +1197,7 @@ INFO: [Synth 8-7052] The timing for the instance u_top_vga/u_image_rom/rgb_reg_1
 INFO: [Synth 8-7052] The timing for the instance u_top_vga/u_image_rom/rgb_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance u_top_vga/u_image_rom/rgb_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2640 ; free virtual = 12150
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3487 ; free virtual = 14889
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1257,49 +1215,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:19 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2638 ; free virtual = 12148
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3486 ; free virtual = 14888
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:19 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2638 ; free virtual = 12147
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3486 ; free virtual = 14887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2635 ; free virtual = 12145
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3487 ; free virtual = 14889
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2635 ; free virtual = 12145
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3487 ; free virtual = 14889
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2636 ; free virtual = 12146
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3487 ; free virtual = 14889
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2636 ; free virtual = 12146
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3487 ; free virtual = 14889
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+---------------+--------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name    | RTL Name                                   | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+---------------+--------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|top_vga_basys3 | u_top_vga/u_draw_player/vga_out\.hsync_reg | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|top_vga_basys3 | u_top_vga/u_draw_player/vga_out\.vsync_reg | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-+---------------+--------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++---------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name    | RTL Name                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_vga_basys3 | u_top_vga/u_draw_player1/vga_out\.hsync_reg | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top_vga_basys3 | u_top_vga/u_draw_player1/vga_out\.vsync_reg | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++---------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1321,59 +1279,59 @@ Report Cell Usage:
 |1     |BUFG       |     1|
 |2     |BUFGCE     |     2|
 |3     |BUFH       |     2|
-|4     |CARRY4     |  1295|
-|5     |DSP48E1    |    69|
-|6     |LUT1       |   204|
-|7     |LUT2       |  2048|
-|8     |LUT3       |  1155|
-|9     |LUT4       |  1282|
-|10    |LUT5       |   746|
-|11    |LUT6       |  1039|
+|4     |CARRY4     |   977|
+|5     |DSP48E1    |    68|
+|6     |LUT1       |   148|
+|7     |LUT2       |  1603|
+|8     |LUT3       |   871|
+|9     |LUT4       |  1002|
+|10    |LUT5       |   626|
+|11    |LUT6       |   825|
 |12    |MMCME2_ADV |     1|
 |13    |ODDR       |     2|
 |14    |RAMB36E1   |     4|
 |18    |SRL16E     |     2|
 |19    |FDCE       |    55|
 |20    |FDPE       |     4|
-|21    |FDRE       |   347|
-|22    |FDSE       |     4|
+|21    |FDRE       |   343|
+|22    |FDSE       |     3|
 |23    |IBUF       |     2|
 |24    |IOBUF      |     2|
 |25    |OBUF       |    15|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:01:23 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2637 ; free virtual = 12147
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3487 ; free virtual = 14889
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 89 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:10 ; elapsed = 00:01:20 . Memory (MB): peak = 2781.730 ; gain = 0.000 ; free physical = 2692 ; free virtual = 12201
-Synthesis Optimization Complete : Time (s): cpu = 00:01:12 ; elapsed = 00:01:23 . Memory (MB): peak = 2781.730 ; gain = 63.910 ; free physical = 2691 ; free virtual = 12201
+Synthesis finished with 0 errors, 0 critical warnings and 77 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 3552 ; free virtual = 14954
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 2781.727 ; gain = 63.910 ; free physical = 3552 ; free virtual = 14954
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2781.730 ; gain = 0.000 ; free physical = 2789 ; free virtual = 12299
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 3642 ; free virtual = 15044
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_clk/inst/clkout1_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
 WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_clk/inst/clkout2_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
-INFO: [Netlist 29-17] Analyzing 1375 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1056 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2792.730 ; gain = 0.000 ; free physical = 2731 ; free virtual = 12241
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 3580 ; free virtual = 14982
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   BUFGCE => BUFGCTRL: 2 instances
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Synth Design complete, checksum: 88f3f4d6
+Synth Design complete, checksum: b0a2b818
 INFO: [Common 17-83] Releasing license: Synthesis
-85 Infos, 127 Warnings, 0 Critical Warnings and 0 Errors encountered.
+87 Infos, 127 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:29 . Memory (MB): peak = 2792.730 ; gain = 75.031 ; free physical = 2952 ; free virtual = 12462
+synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:07 . Memory (MB): peak = 2781.727 ; gain = 64.031 ; free physical = 3806 ; free virtual = 15208
 INFO: [Common 17-1381] The checkpoint '/home/student/zschab/Desktop/Projekt_UEC2/fpga/build/vga_project.runs/synth_1/top_vga_basys3.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_vga_basys3_utilization_synth.rpt -pb top_vga_basys3_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 29 21:53:23 2024...
-[Thu Aug 29 21:53:33 2024] synth_1 finished
-wait_on_runs: Time (s): cpu = 00:01:37 ; elapsed = 00:01:55 . Memory (MB): peak = 2724.816 ; gain = 0.000 ; free physical = 3827 ; free virtual = 13326
-[Thu Aug 29 21:53:34 2024] Launched impl_1...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 08:38:17 2024...
+[Fri Aug 30 08:38:27 2024] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 2724.812 ; gain = 0.000 ; free physical = 4668 ; free virtual = 16060
+[Fri Aug 30 08:38:28 2024] Launched impl_1...
 Run output will be captured here: /home/student/zschab/Desktop/Projekt_UEC2/fpga/build/vga_project.runs/impl_1/runme.log
-[Thu Aug 29 21:53:34 2024] Waiting for impl_1 to finish...
+[Fri Aug 30 08:38:28 2024] Waiting for impl_1 to finish...
 
 *** Running vivado
     with args -log top_vga_basys3.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_vga_basys3.tcl -notrace
@@ -1389,8 +1347,8 @@ Command: link_design -top top_vga_basys3 -part xc7a35tcpg236-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2717.820 ; gain = 0.000 ; free physical = 3241 ; free virtual = 12742
-INFO: [Netlist 29-17] Analyzing 1373 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 4091 ; free virtual = 15485
+INFO: [Netlist 29-17] Analyzing 1054 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2021.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1399,19 +1357,19 @@ Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constr
 Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc]
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2865.570 ; gain = 91.844 ; free physical = 2745 ; free virtual = 12244
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2861.566 ; gain = 87.844 ; free physical = 3575 ; free virtual = 14967
 Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc]
 Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0_late.xdc]
 Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0_late.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2865.574 ; gain = 0.000 ; free physical = 2770 ; free virtual = 12269
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2861.570 ; gain = 0.000 ; free physical = 3595 ; free virtual = 14987
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 9 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2865.574 ; gain = 147.871 ; free physical = 2770 ; free virtual = 12269
+link_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2861.570 ; gain = 143.871 ; free physical = 3594 ; free virtual = 14986
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -1422,62 +1380,62 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.80 . Memory (MB): peak = 2929.602 ; gain = 64.027 ; free physical = 2758 ; free virtual = 12257
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.81 . Memory (MB): peak = 2925.598 ; gain = 64.027 ; free physical = 3595 ; free virtual = 14987
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 178a107cb
+Ending Cache Timing Information Task | Checksum: 1c14bf7b8
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.40 . Memory (MB): peak = 2929.602 ; gain = 0.000 ; free physical = 2719 ; free virtual = 12218
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2925.598 ; gain = 0.000 ; free physical = 3578 ; free virtual = 14970
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_draw_bg/vga_out\\.rgb[11]_i_4510 into driver instance u_top_vga/u_vga_timing/vga_out\\.rgb[11]_i_2424, which resulted in an inversion of 16 pins
-INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_draw_bg/vga_out\\.rgb[11]_i_4539 into driver instance u_top_vga/u_vga_timing/vga_out\\.rgb[11]_i_4535, which resulted in an inversion of 77 pins
-INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_draw_bg/vga_out\\.rgb[11]_i_4793 into driver instance u_top_vga/u_vga_timing/vga_out\\.rgb[11]_i_2578, which resulted in an inversion of 123 pins
-INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_draw_bg/vga_out\\.rgb[11]_i_4879 into driver instance u_top_vga/u_vga_timing/vga_out\\.rgb[11]_i_2855, which resulted in an inversion of 125 pins
-INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_draw_bg/vga_out\\.rgb[11]_i_4890 into driver instance u_top_vga/u_vga_timing/vga_out\\.rgb[11]_i_4679, which resulted in an inversion of 76 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_draw_bg/vga_out\\.rgb[11]_i_4363 into driver instance u_top_vga/u_vga_timing/vga_out\\.rgb[11]_i_2409, which resulted in an inversion of 16 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_draw_bg/vga_out\\.rgb[11]_i_4386 into driver instance u_top_vga/u_vga_timing/vga_out\\.rgb[11]_i_4382, which resulted in an inversion of 77 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_draw_bg/vga_out\\.rgb[11]_i_4629 into driver instance u_top_vga/u_vga_timing/vga_out\\.rgb[11]_i_2561, which resulted in an inversion of 123 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_draw_bg/vga_out\\.rgb[11]_i_4710 into driver instance u_top_vga/u_vga_timing/vga_out\\.rgb[11]_i_2832, which resulted in an inversion of 125 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_draw_bg/vga_out\\.rgb[11]_i_4721 into driver instance u_top_vga/u_vga_timing/vga_out\\.rgb[11]_i_4523, which resulted in an inversion of 76 pins
 INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_mouse_ctl/Inst_Ps2Interface/ps2_clk_h_inv_i_1 into driver instance u_top_vga/u_mouse_ctl/Inst_Ps2Interface/ps2_clk_h_inv_i_2, which resulted in an inversion of 1 pins
 INFO: [Opt 31-1287] Pulled Inverter u_top_vga/u_mouse_ctl/Inst_Ps2Interface/ps2_data_h_inv_i_1 into driver instance u_top_vga/u_mouse_ctl/Inst_Ps2Interface/ps2_data_h_inv_i_2, which resulted in an inversion of 1 pins
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1b7aafb71
+Phase 1 Retarget | Checksum: 12c04becf
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.45 . Memory (MB): peak = 3142.570 ; gain = 0.004 ; free physical = 2519 ; free virtual = 12018
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 9 cells
+Time (s): cpu = 00:00:00.95 ; elapsed = 00:00:00.38 . Memory (MB): peak = 3137.566 ; gain = 0.004 ; free physical = 3362 ; free virtual = 14754
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 7 cells
 INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 19fd46458
+Phase 2 Constant propagation | Checksum: 152603f16
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.77 . Memory (MB): peak = 3142.570 ; gain = 0.004 ; free physical = 2519 ; free virtual = 12018
-INFO: [Opt 31-389] Phase Constant propagation created 402 cells and removed 979 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.66 . Memory (MB): peak = 3137.566 ; gain = 0.004 ; free physical = 3364 ; free virtual = 14758
+INFO: [Opt 31-389] Phase Constant propagation created 287 cells and removed 714 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 122d3a4aa
+Phase 3 Sweep | Checksum: 11fc6354d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3142.570 ; gain = 0.004 ; free physical = 2518 ; free virtual = 12017
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.86 . Memory (MB): peak = 3137.566 ; gain = 0.004 ; free physical = 3364 ; free virtual = 14757
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 16f93a1a8
+Phase 4 BUFG optimization | Checksum: 1ee06344f
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3142.570 ; gain = 0.004 ; free physical = 2518 ; free virtual = 12017
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.96 . Memory (MB): peak = 3137.566 ; gain = 0.004 ; free physical = 3363 ; free virtual = 14757
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 16f93a1a8
+Phase 5 Shift Register Optimization | Checksum: 1ee06344f
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3142.570 ; gain = 0.004 ; free physical = 2518 ; free virtual = 12017
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.97 . Memory (MB): peak = 3137.566 ; gain = 0.004 ; free physical = 3363 ; free virtual = 14757
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 122d3a4aa
+Phase 6 Post Processing Netlist | Checksum: 11fc6354d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3142.570 ; gain = 0.004 ; free physical = 2519 ; free virtual = 12018
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.98 . Memory (MB): peak = 3137.566 ; gain = 0.004 ; free physical = 3363 ; free virtual = 14757
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -1486,8 +1444,8 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               9  |                                              1  |
-|  Constant propagation         |             402  |             979  |                                              0  |
+|  Retarget                     |               0  |               7  |                                              1  |
+|  Constant propagation         |             287  |             714  |                                              0  |
 |  Sweep                        |               0  |               1  |                                              0  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
@@ -1498,10 +1456,10 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3142.570 ; gain = 0.000 ; free physical = 2517 ; free virtual = 12018
-Ending Logic Optimization Task | Checksum: 22732795a
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3137.566 ; gain = 0.000 ; free physical = 3363 ; free virtual = 14757
+Ending Logic Optimization Task | Checksum: 1b74df459
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3142.570 ; gain = 0.004 ; free physical = 2517 ; free virtual = 12018
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3137.566 ; gain = 0.004 ; free physical = 3363 ; free virtual = 14757
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -1517,34 +1475,34 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 4 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 8
-Ending PowerOpt Patch Enables Task | Checksum: 22732795a
+Ending PowerOpt Patch Enables Task | Checksum: 1b74df459
 
-Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2505 ; free virtual = 12007
-Ending Power Optimization Task | Checksum: 22732795a
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3357 ; free virtual = 14751
+Ending Power Optimization Task | Checksum: 1b74df459
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3412.496 ; gain = 269.926 ; free physical = 2511 ; free virtual = 12013
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3406.562 ; gain = 268.996 ; free physical = 3363 ; free virtual = 14757
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 22732795a
+Ending Final Cleanup Task | Checksum: 1b74df459
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2511 ; free virtual = 12013
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3363 ; free virtual = 14757
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2511 ; free virtual = 12013
-Ending Netlist Obfuscation Task | Checksum: 22732795a
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3363 ; free virtual = 14757
+Ending Netlist Obfuscation Task | Checksum: 1b74df459
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2511 ; free virtual = 12013
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3363 ; free virtual = 14757
 INFO: [Common 17-83] Releasing license: Implementation
 39 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3412.496 ; gain = 546.922 ; free physical = 2511 ; free virtual = 12013
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3406.562 ; gain = 544.992 ; free physical = 3363 ; free virtual = 14757
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2485 ; free virtual = 11990
+Write XDEF Complete: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3344 ; free virtual = 14739
 INFO: [Common 17-1381] The checkpoint '/home/student/zschab/Desktop/Projekt_UEC2/fpga/build/vga_project.runs/impl_1/top_vga_basys3_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file top_vga_basys3_drc_opted.rpt -pb top_vga_basys3_drc_opted.pb -rpx top_vga_basys3_drc_opted.rpx
 Command: report_drc -file top_vga_basys3_drc_opted.rpt -pb top_vga_basys3_drc_opted.pb -rpx top_vga_basys3_drc_opted.rpx
@@ -1571,64 +1529,69 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2419 ; free virtual = 11923
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1b7023ea2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3254 ; free virtual = 14650
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 133151279
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2419 ; free virtual = 11923
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2419 ; free virtual = 11923
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3254 ; free virtual = 14650
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3253 ; free virtual = 14649
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 129d77024
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 151f40623
 
-Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.27 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2452 ; free virtual = 11956
+Time (s): cpu = 00:00:00.47 ; elapsed = 00:00:00.25 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3292 ; free virtual = 14688
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1be8b1e51
+Phase 1.3 Build Placer Netlist Model | Checksum: 2164a61ae
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2462 ; free virtual = 11966
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3304 ; free virtual = 14700
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1be8b1e51
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2164a61ae
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2462 ; free virtual = 11966
-Phase 1 Placer Initialization | Checksum: 1be8b1e51
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3304 ; free virtual = 14700
+Phase 1 Placer Initialization | Checksum: 2164a61ae
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2462 ; free virtual = 11966
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3304 ; free virtual = 14700
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 19e2ce705
+Phase 2.1 Floorplanning | Checksum: 1b727ffab
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2456 ; free virtual = 11960
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3299 ; free virtual = 14695
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1e4aee255
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1e220732e
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2458 ; free virtual = 11962
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3298 ; free virtual = 14693
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 1e4aee255
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1e220732e
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2458 ; free virtual = 11962
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3294 ; free virtual = 14690
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 413 LUT instances to create LUTNM shape
-INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 183 nets or LUTs. Breaked 0 LUT, combined 183 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1035] Found 2 LUTNM shape to break, 325 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 2, two critical 0, total 2, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 145 nets or LUTs. Breaked 2 LUTs, combined 143 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2431 ; free virtual = 11935
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3287 ; free virtual = 14683
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -1637,68 +1600,73 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            183  |                   183  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            2  |            143  |                   145  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            183  |                   183  |           0  |           4  |  00:00:00  |
+|  Total                                            |            2  |            143  |                   145  |           0  |           9  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.1 Physical Synthesis In Placer | Checksum: 10093b414
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: 1fa003cb5
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2431 ; free virtual = 11935
-Phase 2.4 Global Placement Core | Checksum: 1640c33a5
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:07 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3285 ; free virtual = 14682
+Phase 2.4 Global Placement Core | Checksum: 1e3e5973e
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2430 ; free virtual = 11935
-Phase 2 Global Placement | Checksum: 1640c33a5
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:09 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3283 ; free virtual = 14679
+Phase 2 Global Placement | Checksum: 1e3e5973e
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2431 ; free virtual = 11935
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:09 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3283 ; free virtual = 14679
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1c6812107
+Phase 3.1 Commit Multi Column Macros | Checksum: 24f883b38
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:07 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2432 ; free virtual = 11936
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:09 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3283 ; free virtual = 14679
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1447be2a7
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1843e40e5
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:08 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2414 ; free virtual = 11919
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:10 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3281 ; free virtual = 14677
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1fef6b739
+Phase 3.3 Area Swap Optimization | Checksum: 1cf85c614
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:08 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2417 ; free virtual = 11921
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:10 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3281 ; free virtual = 14677
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 18c0f4dd0
+Phase 3.4 Pipeline Register Optimization | Checksum: 19f3b6bb1
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:08 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2428 ; free virtual = 11932
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:10 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3281 ; free virtual = 14677
 
-Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 17584bdfd
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 200c8b2b4
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2433 ; free virtual = 11937
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:10 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3280 ; free virtual = 14676
 
-Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: e1ee1d35
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1fdcb9783
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2432 ; free virtual = 11936
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:11 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3279 ; free virtual = 14675
 
-Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 18d16efb0
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1e9893e05
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2434 ; free virtual = 11938
-Phase 3 Detail Placement | Checksum: 18d16efb0
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:11 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3281 ; free virtual = 14677
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2434 ; free virtual = 11938
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 22bafbe72
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:11 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3279 ; free virtual = 14675
+Phase 3 Detail Placement | Checksum: 22bafbe72
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:11 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3272 ; free virtual = 14668
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -1706,7 +1674,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 139b3a63d
+Post Placement Optimization Initialization | Checksum: 205cdd970
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -1714,33 +1682,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.758 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 19c54ac0d
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.504 | TNS=-5.359 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1a6599874
 
-Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2422 ; free virtual = 11926
+Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3271 ; free virtual = 14667
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 1740f7132
+Ending Physical Synthesis Task | Checksum: 23aa5e14d
 
-Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.10 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2422 ; free virtual = 11926
-Phase 4.1.1.1 BUFG Insertion | Checksum: 139b3a63d
+Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.10 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3271 ; free virtual = 14667
+Phase 4.1.1.1 BUFG Insertion | Checksum: 205cdd970
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2423 ; free virtual = 11927
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3271 ; free virtual = 14668
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.758. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 116165e8e
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.560. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 2589e5496
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2423 ; free virtual = 11927
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3255 ; free virtual = 14651
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2423 ; free virtual = 11927
-Phase 4.1 Post Commit Optimization | Checksum: 116165e8e
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3257 ; free virtual = 14653
+Phase 4.1 Post Commit Optimization | Checksum: 2589e5496
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2423 ; free virtual = 11927
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3253 ; free virtual = 14649
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 116165e8e
+Phase 4.2 Post Placement Cleanup | Checksum: 2589e5496
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2423 ; free virtual = 11927
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3253 ; free virtual = 14649
 
 Phase 4.3 Placer Reporting
 
@@ -1750,62 +1718,62 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |           | Global Congestion | Short Congestion  |
 | Direction | Region Size       | Region Size       |
 |___________|___________________|___________________|
-|      North|                1x1|                1x1|
+|      North|                1x1|                2x2|
 |___________|___________________|___________________|
-|      South|                1x1|                2x2|
+|      South|                1x1|                1x1|
 |___________|___________________|___________________|
 |       East|                1x1|                1x1|
 |___________|___________________|___________________|
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 116165e8e
+Phase 4.3.1 Print Estimated Congestion | Checksum: 2589e5496
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2423 ; free virtual = 11927
-Phase 4.3 Placer Reporting | Checksum: 116165e8e
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3252 ; free virtual = 14648
+Phase 4.3 Placer Reporting | Checksum: 2589e5496
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2422 ; free virtual = 11926
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3252 ; free virtual = 14648
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2422 ; free virtual = 11926
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3252 ; free virtual = 14648
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2422 ; free virtual = 11926
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 113a52e6d
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3252 ; free virtual = 14648
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2280b5cd7
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2422 ; free virtual = 11926
-Ending Placer Task | Checksum: 1016e0659
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3252 ; free virtual = 14648
+Ending Placer Task | Checksum: 18a0d6e3c
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2422 ; free virtual = 11926
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3252 ; free virtual = 14648
 INFO: [Common 17-83] Releasing license: Implementation
-76 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+81 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2438 ; free virtual = 11942
+place_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:14 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3266 ; free virtual = 14662
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2423 ; free virtual = 11942
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3259 ; free virtual = 14667
 INFO: [Common 17-1381] The checkpoint '/home/student/zschab/Desktop/Projekt_UEC2/fpga/build/vga_project.runs/impl_1/top_vga_basys3_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file top_vga_basys3_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2423 ; free virtual = 11930
+report_io: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3258 ; free virtual = 14657
 INFO: [runtcl-4] Executing : report_utilization -file top_vga_basys3_utilization_placed.rpt -pb top_vga_basys3_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_vga_basys3_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2430 ; free virtual = 11937
+report_control_sets: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3265 ; free virtual = 14663
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-85 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+90 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2379 ; free virtual = 11900
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3228 ; free virtual = 14639
 INFO: [Common 17-1381] The checkpoint '/home/student/zschab/Desktop/Projekt_UEC2/fpga/build/vga_project.runs/impl_1/top_vga_basys3_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -1820,35 +1788,35 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: d8f34e8 ConstDB: 0 ShapeSum: f3ded171 RouteDB: 0
-Post Restoration Checksum: NetGraph: 4cbd5e4b NumContArr: 6a2e62e Constraints: 0 Timing: 0
-Phase 1 Build RT Design | Checksum: 53604479
+Checksum: PlaceDB: e7e0896a ConstDB: 0 ShapeSum: a22ce4d2 RouteDB: 0
+Post Restoration Checksum: NetGraph: e86999a7 NumContArr: 7e91c7fb Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 166fb61a2
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2279 ; free virtual = 11785
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3146 ; free virtual = 14545
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 53604479
+Phase 2.1 Create Timer | Checksum: 166fb61a2
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2285 ; free virtual = 11791
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3138 ; free virtual = 14538
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 53604479
+Phase 2.2 Fix Topology Constraints | Checksum: 166fb61a2
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2251 ; free virtual = 11757
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3109 ; free virtual = 14509
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 53604479
+Phase 2.3 Pre Route Cleanup | Checksum: 166fb61a2
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2251 ; free virtual = 11757
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3105 ; free virtual = 14505
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 137172f0e
+Phase 2.4 Update Timing | Checksum: aa418051
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2233 ; free virtual = 11740
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.048  | TNS=0.000  | WHS=-0.322 | THS=-6.877 |
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3095 ; free virtual = 14496
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.721  | TNS=0.000  | WHS=-0.250 | THS=-7.104 |
 
 
 Router Utilization Summary
@@ -1857,107 +1825,92 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 9495
+  Number of Failed Nets               = 7913
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 9495
+  Number of Unrouted Nets             = 7913
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: 1342fe6ec
+Phase 2 Router Initialization | Checksum: 107ccacaa
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2231 ; free virtual = 11738
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3093 ; free virtual = 14494
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 1342fe6ec
+Phase 3.1 Global Routing | Checksum: 107ccacaa
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2231 ; free virtual = 11738
-Phase 3 Initial Routing | Checksum: 26fb5b39e
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3093 ; free virtual = 14494
+Phase 3 Initial Routing | Checksum: 2a7d9b441
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2224 ; free virtual = 11734
-INFO: [Route 35-580] Design has 1 pins with tight setup and hold constraints.
-
-The top 5 pins with tight setup and hold constraints:
-
-+=====================+====================+=======================================================+
-| Launch Clock        | Capture Clock      | Pin                                                   |
-+=====================+====================+=======================================================+
-| clk100MHz_clk_wiz_0 | clk40MHz_clk_wiz_0 | u_top_vga/u_draw_player_ctl/FSM_onehot_state_reg[0]/D |
-+---------------------+--------------------+-------------------------------------------------------+
-
-File with complete list of pins: tight_setup_hold_pins.txt
-
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3091 ; free virtual = 14493
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1664
- Number of Nodes with overlaps = 547
- Number of Nodes with overlaps = 262
- Number of Nodes with overlaps = 149
- Number of Nodes with overlaps = 75
- Number of Nodes with overlaps = 38
- Number of Nodes with overlaps = 16
- Number of Nodes with overlaps = 8
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1754
+ Number of Nodes with overlaps = 675
+ Number of Nodes with overlaps = 346
+ Number of Nodes with overlaps = 150
+ Number of Nodes with overlaps = 63
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.101  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.571  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 2326beec5
+Phase 4.1 Global Iteration 0 | Checksum: 1c07af06d
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2220 ; free virtual = 11730
-Phase 4 Rip-up And Reroute | Checksum: 2326beec5
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3083 ; free virtual = 14484
+Phase 4 Rip-up And Reroute | Checksum: 1c07af06d
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2220 ; free virtual = 11730
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3083 ; free virtual = 14484
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 2264817d4
+Phase 5.1.1 Update Timing | Checksum: 22c1c8949
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2220 ; free virtual = 11730
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.101  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3083 ; free virtual = 14484
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.578  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 2264817d4
+Phase 5.1 Delay CleanUp | Checksum: 22c1c8949
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2220 ; free virtual = 11730
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3083 ; free virtual = 14484
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 2264817d4
+Phase 5.2 Clock Skew Optimization | Checksum: 22c1c8949
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2221 ; free virtual = 11731
-Phase 5 Delay and Skew Optimization | Checksum: 2264817d4
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3083 ; free virtual = 14484
+Phase 5 Delay and Skew Optimization | Checksum: 22c1c8949
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2221 ; free virtual = 11731
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3083 ; free virtual = 14484
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 21f40cb84
+Phase 6.1.1 Update Timing | Checksum: 17ac33f94
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2221 ; free virtual = 11731
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.101  | TNS=0.000  | WHS=0.086  | THS=0.000  |
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3073 ; free virtual = 14474
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.578  | TNS=0.000  | WHS=0.089  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 15cd6b9d7
+Phase 6.1 Hold Fix Iter | Checksum: 19bf33eab
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2221 ; free virtual = 11731
-Phase 6 Post Hold Fix | Checksum: 15cd6b9d7
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3069 ; free virtual = 14470
+Phase 6 Post Hold Fix | Checksum: 19bf33eab
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2221 ; free virtual = 11731
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3067 ; free virtual = 14467
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 3.1152 %
-  Global Horizontal Routing Utilization  = 3.0328 %
+  Global Vertical Routing Utilization    = 2.72997 %
+  Global Horizontal Routing Utilization  = 2.61556 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1967,44 +1920,44 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 1bc07310c
+Phase 7 Route finalize | Checksum: 22dedb1a0
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2221 ; free virtual = 11731
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3076 ; free virtual = 14477
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 1bc07310c
+Phase 8 Verifying routed nets | Checksum: 22dedb1a0
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:28 . Memory (MB): peak = 3412.496 ; gain = 0.000 ; free physical = 2220 ; free virtual = 11730
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:31 . Memory (MB): peak = 3406.562 ; gain = 0.000 ; free physical = 3070 ; free virtual = 14471
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 24d7f7e93
+Phase 9 Depositing Routes | Checksum: 2370d952c
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:29 . Memory (MB): peak = 3444.012 ; gain = 31.516 ; free physical = 2219 ; free virtual = 11729
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:32 . Memory (MB): peak = 3439.078 ; gain = 32.516 ; free physical = 3081 ; free virtual = 14482
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=1.101  | TNS=0.000  | WHS=0.086  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.578  | TNS=0.000  | WHS=0.089  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 24d7f7e93
+Phase 10 Post Router Timing | Checksum: 2370d952c
 
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:29 . Memory (MB): peak = 3444.012 ; gain = 31.516 ; free physical = 2219 ; free virtual = 11728
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:32 . Memory (MB): peak = 3439.078 ; gain = 32.516 ; free physical = 3081 ; free virtual = 14482
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:29 . Memory (MB): peak = 3444.012 ; gain = 31.516 ; free physical = 2260 ; free virtual = 11769
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:32 . Memory (MB): peak = 3439.078 ; gain = 32.516 ; free physical = 3119 ; free virtual = 14520
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-101 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+105 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:03 ; elapsed = 00:00:31 . Memory (MB): peak = 3444.012 ; gain = 31.516 ; free physical = 2260 ; free virtual = 11769
+route_design: Time (s): cpu = 00:01:07 ; elapsed = 00:00:34 . Memory (MB): peak = 3439.078 ; gain = 32.516 ; free physical = 3120 ; free virtual = 14521
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3444.012 ; gain = 0.000 ; free physical = 2238 ; free virtual = 11764
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3439.078 ; gain = 0.000 ; free physical = 3109 ; free virtual = 14524
 INFO: [Common 17-1381] The checkpoint '/home/student/zschab/Desktop/Projekt_UEC2/fpga/build/vga_project.runs/impl_1/top_vga_basys3_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file top_vga_basys3_drc_routed.rpt -pb top_vga_basys3_drc_routed.pb -rpx top_vga_basys3_drc_routed.rpx
 Command: report_drc -file top_vga_basys3_drc_routed.rpt -pb top_vga_basys3_drc_routed.pb -rpx top_vga_basys3_drc_routed.rpx
@@ -2024,7 +1977,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-113 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+117 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file top_vga_basys3_route_status.rpt -pb top_vga_basys3_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file top_vga_basys3_timing_summary_routed.rpt -pb top_vga_basys3_timing_summary_routed.pb -rpx top_vga_basys3_timing_summary_routed.rpx -warn_on_violation 
@@ -2193,6 +2146,9 @@ WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__23 output u_top_vga/u_draw_bg/rgb_nxt5__23/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__24 output u_top_vga/u_draw_bg/rgb_nxt5__24/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__25 output u_top_vga/u_draw_bg/rgb_nxt5__25/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__26 output u_top_vga/u_draw_bg/rgb_nxt5__26/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__27 output u_top_vga/u_draw_bg/rgb_nxt5__27/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__28 output u_top_vga/u_draw_bg/rgb_nxt5__28/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__3 output u_top_vga/u_draw_bg/rgb_nxt5__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__4 output u_top_vga/u_draw_bg/rgb_nxt5__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__5 output u_top_vga/u_draw_bg/rgb_nxt5__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
@@ -2200,18 +2156,14 @@ WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__7 output u_top_vga/u_draw_bg/rgb_nxt5__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__8 output u_top_vga/u_draw_bg/rgb_nxt5__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__9 output u_top_vga/u_draw_bg/rgb_nxt5__9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4 output u_top_vga/u_draw_player/rgb_nxt4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__0 output u_top_vga/u_draw_player/rgb_nxt4__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__1 output u_top_vga/u_draw_player/rgb_nxt4__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__10 output u_top_vga/u_draw_player/rgb_nxt4__10/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__2 output u_top_vga/u_draw_player/rgb_nxt4__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__3 output u_top_vga/u_draw_player/rgb_nxt4__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__4 output u_top_vga/u_draw_player/rgb_nxt4__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__5 output u_top_vga/u_draw_player/rgb_nxt4__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__6 output u_top_vga/u_draw_player/rgb_nxt4__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__7 output u_top_vga/u_draw_player/rgb_nxt4__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__8 output u_top_vga/u_draw_player/rgb_nxt4__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__9 output u_top_vga/u_draw_player/rgb_nxt4__9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4 output u_top_vga/u_draw_player1/rgb_nxt4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__0 output u_top_vga/u_draw_player1/rgb_nxt4__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__1 output u_top_vga/u_draw_player1/rgb_nxt4__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__2 output u_top_vga/u_draw_player1/rgb_nxt4__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__3 output u_top_vga/u_draw_player1/rgb_nxt4__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__4 output u_top_vga/u_draw_player1/rgb_nxt4__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__5 output u_top_vga/u_draw_player1/rgb_nxt4__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__6 output u_top_vga/u_draw_player1/rgb_nxt4__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt4 multiplier stage u_top_vga/u_draw_bg/rgb_nxt4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt4__0 multiplier stage u_top_vga/u_draw_bg/rgb_nxt4__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt4__1 multiplier stage u_top_vga/u_draw_bg/rgb_nxt4__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
@@ -2262,6 +2214,9 @@ WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__23 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__23/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__24 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__24/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__25 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__25/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__26 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__26/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__27 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__27/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__28 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__28/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__3 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__4 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__5 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
@@ -2269,19 +2224,15 @@ WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__7 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__8 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_bg/rgb_nxt5__9 multiplier stage u_top_vga/u_draw_bg/rgb_nxt5__9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4 multiplier stage u_top_vga/u_draw_player/rgb_nxt4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__0 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__1 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__10 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__10/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__2 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__3 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__4 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__5 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__6 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__7 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__8 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player/rgb_nxt4__9 multiplier stage u_top_vga/u_draw_player/rgb_nxt4__9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 276 Warnings
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__0 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__1 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__2 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__3 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__4 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__5 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_draw_player1/rgb_nxt4__6 multiplier stage u_top_vga/u_draw_player1/rgb_nxt4__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 272 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
 Loading data files...
@@ -2294,11 +2245,11 @@ Writing bitstream ./top_vga_basys3.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-13 Infos, 238 Warnings, 0 Critical Warnings and 0 Errors encountered.
+13 Infos, 236 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3733.898 ; gain = 250.117 ; free physical = 2206 ; free virtual = 11727
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 29 21:55:28 2024...
-[Thu Aug 29 21:55:29 2024] impl_1 finished
-wait_on_runs: Time (s): cpu = 00:03:05 ; elapsed = 00:01:55 . Memory (MB): peak = 2724.816 ; gain = 0.000 ; free physical = 3793 ; free virtual = 13315
+write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3719.066 ; gain = 240.148 ; free physical = 3055 ; free virtual = 14465
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 08:40:27 2024...
+[Fri Aug 30 08:40:27 2024] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:03:22 ; elapsed = 00:02:00 . Memory (MB): peak = 2724.812 ; gain = 0.000 ; free physical = 4630 ; free virtual = 16041
 # exit
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 29 21:55:29 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 30 08:40:27 2024...

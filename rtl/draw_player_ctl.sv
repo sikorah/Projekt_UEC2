@@ -18,15 +18,15 @@ module draw_player_ctl (
     input logic button_pressed,
     output logic [11:0] xpos_player1,
     output logic [11:0] ypos_player1,
-    output logic [11:0] xpos_player2,
-    output logic [11:0] ypos_player2,
+   // output logic [11:0] xpos_player2,
+   // output logic [11:0] ypos_player2,
     output State state
 
 );
 
 State state_nxt;
 logic [11:0] xpos_nxt1, ypos_nxt1;
-logic [11:0] xpos_nxt2, ypos_nxt2;
+//logic [11:0] xpos_nxt2, ypos_nxt2;
 logic v_tick_old;
 
 always_ff @(posedge clk) begin
@@ -34,16 +34,16 @@ always_ff @(posedge clk) begin
         state   <= IDLE;
         xpos_player1    <= '0;
         ypos_player1    <= '0;
-        xpos_player2    <= '0;
-        ypos_player2    <= '0;
+    //    xpos_player2    <= '0;
+      //  ypos_player2    <= '0;
     end else begin
         v_tick_old <= v_tick;
         if (v_tick && !v_tick_old) begin
             state   <= state_nxt;
             xpos_player1    <= xpos_nxt1;
             ypos_player1    <= ypos_nxt1;
-            xpos_player2    <= xpos_nxt2;
-            ypos_player2    <= ypos_nxt2;
+           // xpos_player2    <= xpos_nxt2;
+           // ypos_player2    <= ypos_nxt2;
         end
     end
 end
@@ -58,20 +58,21 @@ always_comb begin
             else if (m_left) begin
                 state_nxt = LEFT1;
             end
+            /*
             else if (middle && m_right) begin
                 state_nxt = RIGHT2;
             end 
             else if (middle && m_left) begin
                 state_nxt = LEFT2;
             end
-            
+            */
             else begin
                 state_nxt = IDLE;
             end
             xpos_nxt1 = xpos_player1;
             ypos_nxt1 = ypos_player1;
-            xpos_nxt2 = xpos_player2;
-            ypos_nxt2 = ypos_player2;
+            //xpos_nxt2 = xpos_player2;
+            //ypos_nxt2 = ypos_player2;
         end
         RIGHT1: begin
             if (xpos_player1 < 350 && m_right) begin      //przed klockiem
@@ -97,8 +98,8 @@ always_comb begin
             end
             
             ypos_nxt1 = ypos_player1;
-            xpos_nxt2 = xpos_player2;
-            ypos_nxt2 = ypos_player2;
+            //xpos_nxt2 = xpos_player2;
+            //ypos_nxt2 = ypos_player2;
         end
         LEFT1: begin
             if (xpos_player1 > 0 && xpos_player1 < 350 && m_left ) begin // przed klockiem
@@ -124,9 +125,10 @@ always_comb begin
             end
             
             ypos_nxt1 = ypos_player1;
-            xpos_nxt2 = xpos_player2;
-            ypos_nxt2 = ypos_player2;
+            //xpos_nxt2 = xpos_player2;
+            //ypos_nxt2 = ypos_player2;
         end
+        /*
         RIGHT2: begin
             if (xpos_player2 < 350 && m_right) begin      //przed klockiem
                 xpos_nxt2 = xpos_player2 + 1;
@@ -179,12 +181,13 @@ always_comb begin
             ypos_nxt1 = ypos_player1;
             ypos_nxt2 = ypos_player2;
         end
+        */
         default: begin
             state_nxt = IDLE;
             xpos_nxt1 = xpos_player1;
             ypos_nxt1 = ypos_player1;
-            xpos_nxt2 = xpos_player2;
-            ypos_nxt2 = ypos_player2;
+           // xpos_nxt2 = xpos_player2;
+            //ypos_nxt2 = ypos_player2;
         end
     endcase
 end

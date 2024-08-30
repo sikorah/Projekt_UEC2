@@ -70,7 +70,7 @@ always_comb begin : bg_comb_blk
             // eyes
             if ((((vga_in.vcount - (440 - ypos_player2))**2 + (vga_in.hcount - (10 + ypos_player2))**2 <= 30)) || 
                 ((vga_in.vcount - (440 - ypos_player2))**2 + (vga_in.hcount - (27 + ypos_player2))**2 <= 30))
-                rgb_nxt = 12'h000;
+                rgb_nxt = 12'h0FF;
         end
         RIGHT2: begin
             // player going right
@@ -81,7 +81,7 @@ always_comb begin : bg_comb_blk
             // eye
             if ((vga_in.vcount > 425 + ypos_player2 && vga_in.vcount < 455 + ypos_player2) && 
                      (vga_in.hcount  >= 25 + ypos_player2 && vga_in.hcount < 30 + ypos_player2 ))
-                rgb_nxt = 12'h000;
+                rgb_nxt = 12'h0FF;
         end
         LEFT2: begin
             // player going left
@@ -92,7 +92,7 @@ always_comb begin : bg_comb_blk
             // eye
             if ((vga_in.vcount > 425 + ypos_player2 && vga_in.vcount < 455 + ypos_player2 ) && 
                      (vga_in.hcount >= 0 + ypos_player2 && vga_in.hcount < 5 + ypos_player2))
-                rgb_nxt = 12'h000;
+                rgb_nxt = 12'h0FF;
         end
     endcase
 end

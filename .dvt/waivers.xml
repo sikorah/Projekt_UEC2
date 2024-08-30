@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE waivers PUBLIC "-//DVT//waivers" "waivers.dtd">
+<waivers>
+  <waiver name="Disable by message" severity="DISABLED">
+    <match message="*JUST_A_FOO_PROBLEM"/>
+    <description>This waiver disables all problems containing 'JUST_A_FOO_PROBLEM' inside their message.</description>
+  </waiver>
+  <waiver name="Demote by path" severity="WARNING">
+    <match path="/path/to/foo/*"/>
+    <description>This waiver turns into warnings all problems reported under '/path/to/foo'.</description>
+  </waiver>
+  <waiver name="Promote by path OR message" severity="ERROR">
+    <match path="/path/to/foo/*" message="*JUST_A_FOO_PROBLEM"/>
+    <description>This waiver turns into errors all problems that contain 'JUST_A_FOO_PROBLEM' inside their message OR were reported under '/path/to/foo'.</description>
+  </waiver>
+  <waiver name="Disable by path AND message" severity="DISABLED">
+    <match message="*JUST_A_FOO_PROBLEM"/>
+    <description>This waiver disables all problems that contain 'JUST_A_FOO_PROBLEM' inside their message AND were reported under '/path/to/foo'.</description>
+  </waiver>
+  <waiver name="UNDECLARED_MODULE" severity="DISABLED">
+    <match path="/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv" message="UNDECLARED_MODULE: Module 'draw_player1' is not declared"/>
+  </waiver>
+</waivers>
