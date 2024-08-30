@@ -128,8 +128,8 @@ draw_player_ctl u_draw_player_ctl (
     .ypos_player2(ypos_player_ctl2),
     .button_pressed(button_pressed),
     .state(state),
-    .gpio_left(m_left2),   // Drugi gracz sterowany przez sygnał z PMOD (mysz na płytce B)
-    .gpio_right(m_right2)  // Drugi gracz sterowany przez sygnał z PMOD (mysz na płytce B)
+    .gpio_left(gpio_left),   // Drugi gracz sterowany przez sygnał z PMOD (mysz na płytce B)
+    .gpio_right(gpio_right)  // Drugi gracz sterowany przez sygnał z PMOD (mysz na płytce B)
 );
 
 
