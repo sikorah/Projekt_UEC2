@@ -12,7 +12,7 @@
  );
 
  delay#(
-  .W(24),
+  .WIDTH(24),
   .CLK_DEL(1))
  u_delay_pos(
   .clk,

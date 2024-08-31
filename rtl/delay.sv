@@ -2,17 +2,17 @@
 // set by CLK_DEL input parameter
 module delay
     #( parameter
-        W   = 8, // bit width of the input/output data
+        WIDTH   = 8, // bit width of the input/output data
         CLK_DEL = 1  // number of clock cycles the data is delayed
     )
     (
         input  logic clk, // posedge active clock
         input  logic rst, // ASYNC reset active HIGH
-        input  logic [ W - 1 : 0 ] din, // data to be delayed
-        output logic [ W - 1 : 0 ] dout // delayed data
+        input  logic [ WIDTH - 1 : 0 ] din, // data to be delayed
+        output logic [ WIDTH - 1 : 0 ] dout // delayed data
     );
 
-    logic [ W - 1 : 0 ] del_mem [ CLK_DEL - 1 : 0 ];
+    logic [ WIDTH - 1 : 0 ] del_mem [ CLK_DEL - 1 : 0 ];
 
     assign dout = del_mem[ CLK_DEL - 1 ];
 
