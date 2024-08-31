@@ -41,16 +41,7 @@ start_screen u_start_screen(
     .clk(clk_40),
     .rst(rst),
     .vga_in,
-    .vga_out(mouse)
-);
-
-draw_mouse  u_draw_mouse(
-    .clk(clk_40),
-    .rst,
-    .vga_in(mouse),
-    .vga_out(game_menu),
-    .xpos(x_pos),
-    .ypos(y_pos)
+    .vga_out(game_menu)
 );
 
 
@@ -58,10 +49,10 @@ level_1 u_level_1(
     .clk(clk_40),
     .rst(rst),
     .vga_in,
-    .vga_out(lvl_start)
+    .vga_out(level_1)
 );
 
-draw_buttons u_draw_buttons (
+/*draw_buttons u_draw_buttons (
     .clk(clk_40),
     .rst(rst),
     .vga_in(lvl_start),
@@ -90,7 +81,7 @@ draw_player u_draw_player(
     .xpos_player(xpos_player_ctl),  
     .ypos_player(ypos_player_ctl),
     .state
-);
+);*/
 
 finish_screen u_finish_screen(
     .clk(clk_40),
@@ -100,7 +91,7 @@ finish_screen u_finish_screen(
 );
 
 
-always_comb begin : screen_selected
+always_comb begin
     case(game_state)
         START: begin
             out.vcount <= game_menu.vcount;
@@ -121,13 +112,13 @@ always_comb begin : screen_selected
             out.rgb   <= level_1.rgb;
         end
         FINISH: begin
-            out.vcount <= level_1.vcount;
-            out.vsync <= level_1.vsync;
-            out.vblnk<= level_1.vblnk;
-            out.hcount <= level_1.hcount;
-            out.hsync  <= level_1.hsync;
-            out.hblnk <= level_1.hblnk;
-            out.rgb   <= level_1.rgb;
+            out.vcount <= finish.vcount;
+            out.vsync <= finish.vsync;
+            out.vblnk<= finish.vblnk;
+            out.hcount <= finish.hcount;
+            out.hsync  <= finish.hsync;
+            out.hblnk <= finish.hblnk;
+            out.rgb   <= finish.rgb;
         end
         default: begin
             out.vcount <= game_menu.vcount;
@@ -141,7 +132,7 @@ always_comb begin : screen_selected
     endcase
 end
 
-always_ff @(posedge clk_40) begin : data_passed
+always_ff @(posedge clk_40) begin
     if(rst) begin
         vga_out.vcount <= '0;
         vga_out.vsync <= '0;

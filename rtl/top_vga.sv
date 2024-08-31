@@ -27,8 +27,7 @@ module top_vga (
  * Local variables and signals
  */
 vga_if vga_tim();
-vga_if vga_start();
-vga_if vga_control();
+vga_if vga_mouse();
 vga_if vga_out();
 
 logic [11:0] xpos_mouse, ypos_mouse;
@@ -87,7 +86,16 @@ start_game u_start_game(
     .xpos,
     .ypos,
     .vga_in(vga_tim),
-    .vga_out(vga_out)
+    .vga_out(vga_mouse)
+);
+
+draw_mouse  u_draw_mouse(
+    .clk(clk_40),
+    .rst,
+    .vga_in(vga_mouse),
+    .vga_out(vga_out),
+    .xpos(x_pos),
+    .ypos(y_pos)
 );
 
 state_control u_state_control(

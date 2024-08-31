@@ -23,7 +23,7 @@ module state_control(
 
 g_state game_state_nxt;
 
-always_ff @(posedge clk_40) begin : data_passed
+always_ff @(posedge clk_40) begin
     if(rst) begin
         game_state <= START;
     end
@@ -35,7 +35,7 @@ end
 always_comb begin
     case(game_state)
         START: begin
-            if(m_left && ypos_mouse >= 250 && ypos_mouse<= 320 && xpos_mouse >= 160 && xpos_mouse <= 650) begin
+            if(m_left /*&& ypos_mouse >= 250 && ypos_mouse<= 320 && xpos_mouse >= 160 && xpos_mouse <= 650*/) begin
                 game_state_nxt = LEVEL_1;
             end
             else begin
@@ -56,6 +56,9 @@ always_comb begin
             else begin
                 game_state_nxt = FINISH;
             end
+        end
+        default: begin
+            game_state_nxt = START;
         end
     endcase
 end

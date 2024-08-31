@@ -22,38 +22,28 @@
 
  
  logic [11:0] rgb_nxt;
- logic [10:0] vcount_nxt, hcount_nxt;
- logic hblnk_nxt, vblnk_nxt, hsync_nxt, vsync_nxt;
  
 
-  always_ff @(posedge clk) begin : bg_ff_blk
-    if (rst) begin
-        vga_out.vcount <= '0;
-        vga_out.vsync <= '0;
-        vga_out.vblnk<= '0;
-        vga_out.hcount <= '0;
-        vga_out.hsync  <= '0;
-        vga_out.hblnk <= '0;
-        vga_out.rgb   <= '0;
-    end else begin
-     vga_out.vcount <= vcount_nxt;
-     vga_out.vsync  <= vsync_nxt;
-     vga_out.vblnk <= vblnk_nxt;
-     vga_out.hcount <= hcount_nxt;
-     vga_out.hsync  <= hsync_nxt;
-     vga_out.hblnk <= hblnk_nxt;
-     vga_out.rgb  <= rgb_nxt;
-    end
-end
-
-always_comb begin : data_passed
-     vcount_nxt = vga_in.vcount;
-     vblnk_nxt = vga_in.vblnk;
-     vsync_nxt = vga_in.vsync;
-     hcount_nxt = vga_in.hcount;
-     hblnk_nxt = vga_in.hblnk;
-     hsync_nxt = vga_in.hsync;
+ always_ff @(posedge clk) begin : bg_ff_blk
+     if (rst) begin
+         vga_out.vcount <= '0;
+         vga_out.vsync  <= '0;
+         vga_out.vblnk  <= '0;
+         vga_out.hcount <= '0;
+         vga_out.hsync  <= '0;
+         vga_out.hblnk  <= '0;
+         vga_out.rgb    <= '0;
+     end else begin
+         vga_out.vcount <= vga_in.vcount;
+         vga_out.vsync  <= vga_in.vsync;
+         vga_out.vblnk  <= vga_in.vblnk;
+         vga_out.hcount <= vga_in.hcount;
+         vga_out.hsync  <= vga_in.hsync;
+         vga_out.rgb    <= rgb_nxt;
+     end
  end
+
+
  
  always_comb begin : bg_comb_blk
      if ((vga_in.vblnk == 1 ) || (vga_in.hblnk == 1)) begin             // Blanking region:
