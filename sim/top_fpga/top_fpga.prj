@@ -9,23 +9,24 @@
 # https://docs.xilinx.com/r/en-US/ug900-vivado-logic-simulation/Project-File-.prj-Syntax
 
 
-sv work ../../rtl/vga_pkg.sv \
-        ../../rtl/state_pkg.sv \
+sv work ../../rtl/pkgs/vga_pkg.sv \
+        ../../rtl/pkgs/state_pkg.sv \
         ../../rtl/vga_timing.sv \
         ../../rtl/top_vga.sv \
-        ../../rtl/state_control.sv \
-        ../../rtl/start_screen.sv \
-        ../../rtl/start_game.sv \
+        ../../rtl/pkgs/vga_if.sv \
         ../../rtl/delay.sv \
-        ../../rtl/draw_mouse.sv \
-        ../../rtl/level_1.sv \
-        ../../rtl/finish_screen.sv \
-        ../../rtl/vga_if.sv \
-        ../../rtl/draw_rect.sv \
-        ../../rtl/draw_rect_ctl.sv \
-        ../../rtl/image_rom.sv \
-        ../../rtl/draw_player.sv \
-        ../../rtl/draw_player_ctl.sv \
+        ../../rtl/state_machine/state_control.sv \
+        ../../rtl/start_finish/start_screen.sv \
+        ../../rtl/start_finish/start_game.sv \
+        ../../rtl/LEVEL_1/level_1.sv \
+        ../../rtl/start_finish/finish_screen.sv \
+        ../../rtl/LEVEL_1/draw_rect.sv \
+        ../../rtl/LEVEL_1/draw_rect_ctl.sv \
+        ../../rtl/mouse/draw_mouse.sv \
+        ../../rtl/LEVEL_1/draw_buttons.sv \
+        ../../rtl/LEVEL_1/image_rom.sv \
+        ../../rtl/LEVEL_1/draw_player.sv \
+        ../../rtl/LEVEL_1/draw_player_ctl.sv \
         ../../fpga/rtl/top_vga_basys3.sv \
         ../../fpga/rtl/clk_wiz_0_clk_wiz.v \
         ../../fpga/rtl/clk_wiz_0.v \
@@ -35,6 +36,6 @@ sv work ../../rtl/vga_pkg.sv \
 # compile glbl module - required for IP simulation
 verilog work ../common/glbl.v
 
-vhdl work ../../rtl/MouseCtl.vhd \
-          ../../rtl/Ps2Interface.vhd \
-          ../../rtl/MouseDisplay.vhd \
+vhdl work ../../rtl/mouse/MouseCtl.vhd \
+          ../../rtl/mouse/Ps2Interface.vhd \
+          ../../rtl/mouse/MouseDisplay.vhd \

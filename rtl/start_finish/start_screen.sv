@@ -84,7 +84,7 @@ function logic [11:0] get_text_pixel(input int x, input int y);
     else return 12'hf_f_0; // Żółty kolor tła, jeśli nie litera
 endfunction
 
-always_ff @(posedge clk) begin : bg_ff_blk
+always_ff @(posedge clk) begin
     if (rst) begin
         vga_out.vcount <= '0;
         vga_out.vsync  <= '0;

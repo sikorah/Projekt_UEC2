@@ -24,7 +24,7 @@
  logic [11:0] rgb_nxt;
  
 
- always_ff @(posedge clk) begin : bg_ff_blk
+ always_ff @(posedge clk) begin
      if (rst) begin
          vga_out.vcount <= '0;
          vga_out.vsync  <= '0;

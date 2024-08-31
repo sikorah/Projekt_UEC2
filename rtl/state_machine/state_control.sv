@@ -14,9 +14,11 @@ module state_control(
     input logic clk_40,
     input logic rst,
     input logic m_left,
+    input logic m_right,
     input logic xpos_mouse,
     input logic ypos_mouse,
-    input logic ypos_player,
+    input logic [11:0] xpos_player_ctl1,
+    input logic [11:0] xpos_player_ctl2,
 
     output g_state game_state
 );
@@ -43,14 +45,14 @@ always_comb begin
             end
         end
         LEVEL_1: begin
-            if(ypos_player >= 500) begin
+            if(xpos_player_ctl1 >= 750 && xpos_player_ctl2 >= 750) begin
                 game_state_nxt = FINISH;
             end else begin
                 game_state_nxt = LEVEL_1;
             end
         end
         FINISH: begin
-            if(rst) begin
+            if(m_right) begin
                 game_state_nxt = START;
             end
             else begin

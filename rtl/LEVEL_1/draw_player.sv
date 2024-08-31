@@ -12,11 +12,12 @@
 module draw_player(
     input  logic clk,
     input  logic rst,
-    vga_if.out vga_out,
-    vga_if.in vga_in,
     input logic [11:0] xpos_player,
     input logic [11:0] ypos_player,
-    input State state
+    input State state,
+
+    vga_if.in vga_in,
+    vga_if.out vga_out
 );
 
 import vga_pkg::*;
@@ -38,16 +39,17 @@ always_ff @(posedge clk) begin : bg_ff_blk
         vga_out.hcount <= vga_in.hcount;
         vga_out.hsync  <= vga_in.hsync ;
         vga_out.hblnk <= vga_in.hblnk ;
+        vga_out.rgb  <= rgb_nxt ; 
     end
 end
 
-always_ff @(posedge clk) begin
+/*always_ff @(posedge clk) begin
     if (rst) begin
         vga_out.rgb   <= '0;
     end else begin
         vga_out.rgb  <= rgb_nxt;
     end
-end
+end*/
 
 always_comb begin : bg_comb_blk                            
     rgb_nxt = vga_in.rgb;

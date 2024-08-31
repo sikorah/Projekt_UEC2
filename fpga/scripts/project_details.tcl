@@ -33,24 +33,24 @@ set xdc_files {
 
 # Specify SystemVerilog design files location   -- EDIT
 set sv_files {
-    ../rtl/vga_pkg.sv 
-    ../rtl/state_pkg.sv
-    ../rtl/vga_if.sv
+    ../rtl/pkgs/vga_pkg.sv 
+    ../rtl/pkgs/state_pkg.sv
+    ../rtl/pkgs/vga_if.sv
     ../rtl/vga_timing.sv
-    ../rtl/state_control.sv 
-    ../rtl/start_screen.sv 
+    ../rtl/state_machine/state_control.sv 
+    ../rtl/start_finish/start_screen.sv 
     ../rtl/delay.sv 
-    ../rtl/start_game.sv 
-    ../rtl/level_1.sv 
-    ../rtl/finish_screen.sv 
-    ../rtl/draw_rect.sv
-    ../rtl/draw_rect_ctl.sv
+    ../rtl/state_machine/start_game.sv 
+    ../rtl/LEVEL_1/level_1.sv 
+    ../rtl/start_finish/finish_screen.sv 
+    ../rtl/LEVEL_1/draw_rect.sv
+    ../rtl/LEVEL_1/draw_rect_ctl.sv
     ../rtl/top_vga.sv
-    ../rtl/draw_mouse.sv
-    ../rtl/image_rom.sv
-    ../rtl/draw_buttons.sv
-    ../rtl/draw_player.sv
-    ../rtl/draw_player_ctl.sv
+    ../rtl/mouse/draw_mouse.sv
+    ../rtl/LEVEL_1/image_rom.sv
+    ../rtl/LEVEL_1/draw_buttons.sv
+    ../rtl/LEVEL_1/draw_player.sv
+    ../rtl/LEVEL_1/draw_player_ctl.sv
     rtl/top_vga_basys3.sv
     rtl/clk_wiz_0_clk_wiz.v
     rtl/clk_wiz_0.v
@@ -64,13 +64,13 @@ set sv_files {
 
 # Specify VHDL design files location            -- EDIT
  set vhdl_files {
-    ../rtl/MouseCtl.vhd
-    ../rtl/MouseDisplay.vhd
-    ../rtl/Ps2Interface.vhd
+    ../rtl/mouse/MouseCtl.vhd
+    ../rtl/mouse/MouseDisplay.vhd
+    ../rtl/mouse/Ps2Interface.vhd
  }
 
 # Specify files for a memory initialization     -- EDIT
  set mem_files {
-    ../rtl/mine.dat
+    ../rtl/LEVEL_1/mine.dat
  
  }
