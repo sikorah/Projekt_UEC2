@@ -10,16 +10,6 @@
    vga_if.out   vga_out,
    vga_if.in    vga_in
  );
-
- delay#(
-  .WIDTH(24),
-  .CLK_DEL(1))
- u_delay_pos(
-  .clk,
-  .rst,
-  .din({xpos,ypos}),
-  .dout({xpos_delay, ypos_delay})
- );
  
  always_ff @(posedge clk) begin
   if(rst) begin
@@ -29,6 +19,8 @@
     vga_out.vcount <= '0;
     vga_out.vblnk  <= '0;
     vga_out.vsync  <= '0;
+    xpos <= '0;
+    ypos <= '0;
 
   end else begin
     vga_out.hcount <= vga_in.hcount;

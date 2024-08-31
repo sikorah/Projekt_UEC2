@@ -56,7 +56,7 @@ always_comb begin : start_screen_comb_blk
         else if (vga_in.hcount == HOR_PIXELS - 1)   // - prawa krawędź:
             rgb_nxt = 12'h0_0_f;                // - - ustaw na niebiesko.
         else if (vga_in.vcount > 250 && vga_in.vcount < 320 && vga_in.hcount > 160 && vga_in.hcount < 650) 
-            rgb_nxt = 12'hf_f_f;       
+            rgb_nxt = 12'hf_f_0;       
         else                                    // Reszta aktywnego ekranu:
             rgb_nxt = 12'h0_f_0;                // - ustaw na zielono.
     end       

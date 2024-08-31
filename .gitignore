@@ -5,6 +5,7 @@
 ../fpga/*.jou
 ../fpga/*.xpr
 ../fpga/.nfs*
+fpga/.nfs*
 *.xpr
 *.jou
 *.log

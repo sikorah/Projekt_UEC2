@@ -37,7 +37,7 @@ end
 always_comb begin
     case(game_state)
         START: begin
-            if(m_left /*&& ypos_mouse >= 250 && ypos_mouse<= 320 && xpos_mouse >= 160 && xpos_mouse <= 650*/) begin
+            if(m_left && /*ypos_mouse >= 250 && ypos_mouse<= 320 && xpos_mouse >= 160 && xpos_mouse <= 650*/) begin
                 game_state_nxt = LEVEL_1;
             end
             else begin

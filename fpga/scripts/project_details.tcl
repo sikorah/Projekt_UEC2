@@ -46,6 +46,9 @@ set sv_files {
     ../rtl/LEVEL_1/draw_rect.sv
     ../rtl/LEVEL_1/draw_rect_ctl.sv
     ../rtl/top_vga.sv
+    ../rtl/text/font_rom.sv
+    ../rtl/text/draw_text.sv
+    ../rtl/text/char_rom_title.sv
     ../rtl/mouse/draw_mouse.sv
     ../rtl/LEVEL_1/image_rom.sv
     ../rtl/LEVEL_1/draw_buttons.sv

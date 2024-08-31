@@ -14,7 +14,6 @@ module start_game(
     input logic clk_40,
     input logic rst,
     input g_state game_state,
-    inout logic [11:0] xpos, ypos,
     inout logic [11:0] xpos_rect_ctl, ypos_rect_ctl,
     inout logic [11:0] xpos_player_ctl1, ypos_player_ctl1, xpos_player_ctl2, ypos_player_ctl2,
     inout logic [11:0] xpos_mouse, ypos_mouse,
