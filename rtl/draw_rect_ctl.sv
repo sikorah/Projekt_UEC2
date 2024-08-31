@@ -11,7 +11,7 @@ module draw_rect_ctl (
     input  logic rst,
     input  logic v_tick,
     input  logic clk,
-    input  logic button_pressed,
+    input  logic [1:0] button_pressed,
     output logic [11:0] xpos_rect,
     output logic [11:0] ypos_rect
 );

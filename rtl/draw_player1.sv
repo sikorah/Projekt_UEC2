@@ -94,6 +94,41 @@ always_comb begin : bg_comb_blk
                 rgb_nxt = 12'h0FF;
         end
         
+        RIGHT2: begin
+            // player1 standing
+            
+            // body
+            if ((vga_in.vcount + ypos_player1 > 420 && vga_in.vcount <= 480 + ypos_player1) && 
+                     (vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 40 + xpos_player1))
+                rgb_nxt = 12'hF0F;
+            // legs
+            if ((vga_in.vcount > 480 + ypos_player1 && vga_in.vcount < 500 + ypos_player1 ) && 
+                     ((vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 15 + xpos_player1) || 
+                      (vga_in.hcount > 25 + xpos_player1 && vga_in.hcount < 40 + xpos_player1)))
+                rgb_nxt = 12'hF0F;
+            // eyes
+            if ((((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (10 + xpos_player1))**2 <= 30)) || 
+                ((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (27 + xpos_player1))**2 <= 30))
+                rgb_nxt = 12'h0FF;
+        end
+
+        LEFT2: begin
+// player1 standing
+            
+            // body
+            if ((vga_in.vcount + ypos_player1 > 420 && vga_in.vcount <= 480 + ypos_player1) && 
+                     (vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 40 + xpos_player1))
+                rgb_nxt = 12'hF0F;
+            // legs
+            if ((vga_in.vcount > 480 + ypos_player1 && vga_in.vcount < 500 + ypos_player1 ) && 
+                     ((vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 15 + xpos_player1) || 
+                      (vga_in.hcount > 25 + xpos_player1 && vga_in.hcount < 40 + xpos_player1)))
+                rgb_nxt = 12'hF0F;
+            // eyes
+            if ((((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (10 + xpos_player1))**2 <= 30)) || 
+                ((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (27 + xpos_player1))**2 <= 30))
+                rgb_nxt = 12'h0FF;
+        end
     endcase
 end
 

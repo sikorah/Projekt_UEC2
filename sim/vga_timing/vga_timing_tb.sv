@@ -40,7 +40,7 @@ end
 vga_timing dut(
     .clk,
     .rst,
-    .out(timing_out.OUT)
+    .vga_out(timing_out.out)
 );
 
 

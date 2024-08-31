@@ -14,7 +14,7 @@ module draw_player_ctl (
     input logic clk,
     input logic m_left,
     input logic m_right,
-    input logic button_pressed,
+    input logic [1:0] button_pressed,
     input logic gpio_left,
     input logic gpio_right,
     output logic [11:0] xpos_player1,
@@ -55,19 +55,20 @@ always_comb begin
 
         IDLE: begin
             
-            if(gpio_right) begin
+            if (m_right) begin
+                state_nxt = RIGHT1;
+            end 
+            else if (m_left) begin
+                state_nxt = LEFT1;
+            end
+            else if(gpio_right) begin
                 state_nxt = RIGHT2;
             end 
             
             else if (gpio_left) begin
                 state_nxt = LEFT2;
             end
-            else if (m_right) begin
-                state_nxt = RIGHT1;
-            end 
-            else if (m_left) begin
-                state_nxt = LEFT1;
-            end
+            
             else begin
                 state_nxt = IDLE;
             end

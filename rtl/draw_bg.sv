@@ -15,9 +15,8 @@
      input  logic rst,
  
      vga_if.out vga_out,
-     vga_if.in vga_in,
- 
-     output logic [11:0] rgb_out
+     vga_if.in vga_in
+  
  );
  
  import vga_pkg::*;
@@ -44,6 +43,7 @@
         vga_out.hblnk <= vga_in.hblnk;
         vga_out.rgb  <=rgb_nxt;
     end
+    
 end
  
  always_comb begin : bg_comb_blk
