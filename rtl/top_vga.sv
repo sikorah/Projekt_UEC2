@@ -68,9 +68,7 @@ draw_buttons u_draw_buttons (
     .vga_in(vga_bg),
     .vga_out(vga_buttons),
     .xpos_player1(xpos_player_ctl1),
-    .ypos_player1(ypos_player_ctl1),
     .xpos_player2(xpos_player_ctl2),
-    .ypos_player2(ypos_player_ctl2),
     .button_pressed(button_pressed)
 );
 
@@ -95,8 +93,8 @@ draw_rect_ctl u_draw_rect_ctl (
     .clk(clk_40),
     .rst(rst),
     .v_tick(vga_tim.vsync),
-    .xpos_rect(xpos_rect_ctl),  
-    .ypos_rect(ypos_rect_ctl),  
+    .xpos_rect(xpos_rect_ctl),
+    .ypos_rect(ypos_rect_ctl),
     .button_pressed(button_pressed)
 );
 
@@ -106,7 +104,7 @@ MouseCtl u_mouse_ctl(
     .rst(rst),
     .xpos(xpos_mouse),
     .ypos(ypos_mouse),
-    .ps2_clk(ps2_clk), 
+    .ps2_clk(ps2_clk),
     .ps2_data(ps2_data),
     .left(m_left),
     .right(m_right),

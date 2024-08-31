@@ -7,7 +7,7 @@ module mouse_to_gpio (
     output logic gpio_right_output
 );
 
-always_ff @(posedge clk or posedge rst) begin
+always_ff @(posedge clk) begin
     if (rst) begin
         gpio_left_output <= 0;
         gpio_right_output <= 0;

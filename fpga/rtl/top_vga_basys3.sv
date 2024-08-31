@@ -96,7 +96,7 @@
      .gpio_left_input(JA2),
      .gpio_right_input(JA3),
      .gpio_left_output(JA4),
-     .gpio_right_output(JA5)  
+     .gpio_right_output(JA5)
      );
  
  endmodule

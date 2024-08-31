@@ -69,7 +69,7 @@ always_comb begin
             else begin
                 state_nxt = FALL;
                 ypos_nxt = ypos_rect;
-            end 
+            end
                 xpos_nxt = xpos_rect;
         end
         FALL: begin

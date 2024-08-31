@@ -13,17 +13,16 @@
  module draw_bg (
      input  logic clk,
      input  logic rst,
- 
+
      vga_if.out vga_out,
      vga_if.in vga_in
-  
  );
- 
+
  import vga_pkg::*;
 
- 
+
  logic [11:0] rgb_nxt;
- 
+
 
   always_ff @(posedge clk) begin : bg_ff_blk
     if (rst) begin
@@ -43,9 +42,8 @@
         vga_out.hblnk <= vga_in.hblnk;
         vga_out.rgb  <=rgb_nxt;
     end
-    
 end
- 
+
  always_comb begin : bg_comb_blk
      if (vga_in.vblnk || vga_in.hblnk) begin             // Blanking region:
          rgb_nxt = 12'h0_0_0;                    // - make it it black.
@@ -62,13 +60,13 @@ end
         //terrain
 
              //ground
-        else if (vga_in.vcount > 500)             
+        else if (vga_in.vcount > 500)
              rgb_nxt = 12'h0_f_0;
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////       
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
              //house
-        else if ((vga_in.vcount > 350 && vga_in.vcount <= 500) && (vga_in.hcount > 699 && vga_in.hcount < 725))
+        else if ((vga_in.vcount>350 && vga_in.vcount <= 500)&&(vga_in.hcount > 699 && vga_in.hcount < 725))
              rgb_nxt = 12'hf_f_0;
         else if ((vga_in.vcount > 350 && vga_in.vcount <= 500) && (vga_in.hcount > 775 && vga_in.hcount < 800))
              rgb_nxt = 12'hf_f_0;

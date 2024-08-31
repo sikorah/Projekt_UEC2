@@ -5,17 +5,15 @@
  *
  * Description:
  * Draw buttons.
- * 
+ *
  */module draw_buttons (
     input logic clk,
     input logic rst,
     vga_if.out vga_out,
     vga_if.in vga_in,
     input logic [11:0] xpos_player1,
-    input logic [11:0] ypos_player1,
     input logic [11:0] xpos_player2,
-    input logic [11:0] ypos_player2,
-    output logic button_pressed
+    output logic [1:0] button_pressed
 );
 
 import vga_pkg::*;
@@ -48,28 +46,33 @@ end
 always_comb begin
     rgb_nxt = vga_in.rgb;
 
-    if ((xpos_player1 >= 200 && xpos_player1 <= 250) || (xpos_player2 >= 200 && xpos_player2 <= 250)) begin
+    if((xpos_player1 >= 200 && xpos_player1 <= 250) || (xpos_player2 >= 200 && xpos_player2 <= 250))
+    begin
         button1_pressed = 1;
     end else begin
         button1_pressed = 0;
     end
-    
-    if ((xpos_player1 >= 600 && xpos_player1 <= 650) || (xpos_player2 >= 600 && xpos_player2 <= 650) ) begin
+
+    if((xpos_player1 >= 600 && xpos_player1 <= 650) || (xpos_player2 >= 600 && xpos_player2 <= 650))
+    begin
         button2_pressed = 1;
     end else begin
         button2_pressed = 0;
     end
 
     // Rysowanie przycisków
-    if ((vga_in.vcount > 490 && vga_in.vcount <= 500) && (vga_in.hcount > 200 && vga_in.hcount < 250)) begin
+    if((vga_in.vcount > 490 && vga_in.vcount <= 500) && (vga_in.hcount> 200 && vga_in.hcount < 250))
+    begin
         rgb_nxt = 12'hf_0_0;
-    
-    end else if ((vga_in.vcount > 490 && vga_in.vcount <= 500) && (vga_in.hcount > 600 && vga_in.hcount < 650)) begin
+
+    end
+    else if((vga_in.vcount>490 && vga_in.vcount<= 500) && (vga_in.hcount >600 && vga_in.hcount<650))
+    begin
         rgb_nxt = 12'hf_0_0;
-    
+
     end
 
     button_pressed_nxt = button1_pressed || button2_pressed;
-end 
+end
 
 endmodule

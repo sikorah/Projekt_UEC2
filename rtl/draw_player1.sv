@@ -50,7 +50,7 @@ always_ff @(posedge clk) begin
 end
 
 always_comb begin : bg_comb_blk                            
-    rgb_nxt = vga_in.rgb;
+    
     
     // Sprawdzenie stanu i odpowiednie rysowanie postaci
     case (state)
@@ -62,14 +62,16 @@ always_comb begin : bg_comb_blk
                      (vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 40 + xpos_player1))
                 rgb_nxt = 12'hF0F;
             // legs
-            if ((vga_in.vcount > 480 + ypos_player1 && vga_in.vcount < 500 + ypos_player1 ) && 
+            else if ((vga_in.vcount > 480 + ypos_player1 && vga_in.vcount < 500 + ypos_player1 ) && 
                      ((vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 15 + xpos_player1) || 
                       (vga_in.hcount > 25 + xpos_player1 && vga_in.hcount < 40 + xpos_player1)))
                 rgb_nxt = 12'hF0F;
             // eyes
-            if ((((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (10 + xpos_player1))**2 <= 30)) || 
+            else if ((((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (10 + xpos_player1))**2 <= 30)) || 
                 ((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (27 + xpos_player1))**2 <= 30))
                 rgb_nxt = 12'h0FF;
+                else 
+            rgb_nxt = vga_in.rgb;
         end
         RIGHT1: begin
             // player going right
@@ -78,9 +80,12 @@ always_comb begin : bg_comb_blk
                 (vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 25 + xpos_player1))
                 rgb_nxt = 12'hF0F;
             // eye
-            if ((vga_in.vcount > 425 + ypos_player1 && vga_in.vcount < 455 + ypos_player1) && 
+            else if ((vga_in.vcount > 425 + ypos_player1 && vga_in.vcount < 455 + ypos_player1) && 
                      (vga_in.hcount  >= 25 + xpos_player1 && vga_in.hcount < 30 + xpos_player1 ))
                 rgb_nxt = 12'h0FF;
+
+                else 
+            rgb_nxt = vga_in.rgb;
         end
         LEFT1: begin
             // player going left
@@ -89,9 +94,11 @@ always_comb begin : bg_comb_blk
                 (vga_in.hcount > 5 + xpos_player1 && vga_in.hcount < 30 + xpos_player1))
                 rgb_nxt = 12'hF0F;
             // eye
-            if ((vga_in.vcount > 425 + ypos_player1 && vga_in.vcount < 455 + ypos_player1 ) && 
+            else if ((vga_in.vcount > 425 + ypos_player1 && vga_in.vcount < 455 + ypos_player1 ) && 
                      (vga_in.hcount >= 0 + xpos_player1 && vga_in.hcount < 5 + xpos_player1))
                 rgb_nxt = 12'h0FF;
+                else 
+            rgb_nxt = vga_in.rgb;
         end
         
         RIGHT2: begin
@@ -102,14 +109,16 @@ always_comb begin : bg_comb_blk
                      (vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 40 + xpos_player1))
                 rgb_nxt = 12'hF0F;
             // legs
-            if ((vga_in.vcount > 480 + ypos_player1 && vga_in.vcount < 500 + ypos_player1 ) && 
+            else if ((vga_in.vcount > 480 + ypos_player1 && vga_in.vcount < 500 + ypos_player1 ) && 
                      ((vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 15 + xpos_player1) || 
                       (vga_in.hcount > 25 + xpos_player1 && vga_in.hcount < 40 + xpos_player1)))
                 rgb_nxt = 12'hF0F;
             // eyes
-            if ((((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (10 + xpos_player1))**2 <= 30)) || 
+            else if ((((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (10 + xpos_player1))**2 <= 30)) || 
                 ((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (27 + xpos_player1))**2 <= 30))
                 rgb_nxt = 12'h0FF;
+                else 
+            rgb_nxt = vga_in.rgb;
         end
 
         LEFT2: begin
@@ -120,14 +129,16 @@ always_comb begin : bg_comb_blk
                      (vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 40 + xpos_player1))
                 rgb_nxt = 12'hF0F;
             // legs
-            if ((vga_in.vcount > 480 + ypos_player1 && vga_in.vcount < 500 + ypos_player1 ) && 
+            else if ((vga_in.vcount > 480 + ypos_player1 && vga_in.vcount < 500 + ypos_player1 ) && 
                      ((vga_in.hcount > 0 + xpos_player1 && vga_in.hcount < 15 + xpos_player1) || 
                       (vga_in.hcount > 25 + xpos_player1 && vga_in.hcount < 40 + xpos_player1)))
                 rgb_nxt = 12'hF0F;
             // eyes
-            if ((((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (10 + xpos_player1))**2 <= 30)) || 
+            else if ((((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (10 + xpos_player1))**2 <= 30)) || 
                 ((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (27 + xpos_player1))**2 <= 30))
                 rgb_nxt = 12'h0FF;
+                else 
+            rgb_nxt = vga_in.rgb;
         end
     endcase
 end
