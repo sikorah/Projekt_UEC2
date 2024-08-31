@@ -3,8 +3,10 @@ module top_vga (
     input  logic clk_100,
     inout  logic ps2_clk,
     inout  logic ps2_data,
-    input  logic gpio_left,      // PMOD sygnał z drugiej płytki (ps2_clk drugiej myszy)
-    input  logic gpio_right,     // PMOD sygnał z drugiej płytki (ps2_data drugiej myszy)
+    input  logic gpio_left_input,      // PMOD sygnał z drugiej płytki (ps2_clk drugiej myszy)
+    input  logic gpio_right_input,     // PMOD sygnał z drugiej płytki (ps2_data drugiej myszy)
+    output  logic gpio_left_output,      // PMOD sygnał z drugiej płytki (ps2_clk drugiej myszy)
+    output  logic gpio_right_output,
     input  logic rst,
     output logic vs,
     output logic hs,
@@ -30,7 +32,7 @@ logic [11:0] xpos_player_ctl2, ypos_player_ctl2;
 logic [1:0]  button_pressed;
 
 
-logic m_left1, m_right1;
+logic m_left, m_right;
 wire [11:0] rom2rect_pixel;
 wire [13:0] rect2rom_address;
 
@@ -108,28 +110,35 @@ MouseCtl u_mouse_ctl1(
     .ypos(),
     .ps2_clk(ps2_clk), 
     .ps2_data(ps2_data),
-    .left(m_left1),
-    .right(m_right1),
+    .left(m_left),
+    .right(m_right),
     .middle()
 );
 
-
+mouse_to_gpio u_mouse_to_gpio(
+    .clk(clk_40),
+    .rst(rst),
+    .m_left,   // lewy przycisk myszki
+    .m_right,  // prawy przycisk myszki
+    .gpio_left_output,
+    .gpio_right_output
+);
 
 // Zmodyfikowany moduł draw_player_ctl
 draw_player_ctl u_draw_player_ctl (
     .clk(clk_40),
     .rst(rst),
     .v_tick(vga_tim.vsync),
-    .m_left(m_left1),    // Pierwszy gracz sterowany przez pierwszą mysz
-    .m_right(m_right1),  // Pierwszy gracz sterowany przez pierwszą mysz
+    .m_left(m_left),    // Pierwszy gracz sterowany przez pierwszą mysz
+    .m_right(m_right),  // Pierwszy gracz sterowany przez pierwszą mysz
     .xpos_player1(xpos_player_ctl1),
     .ypos_player1(ypos_player_ctl1),
     .xpos_player2(xpos_player_ctl2),
     .ypos_player2(ypos_player_ctl2),
     .button_pressed(button_pressed),
     .state(state),
-    .gpio_left(gpio_left),   // Drugi gracz sterowany przez sygnał z PMOD (mysz na płytce B)
-    .gpio_right(gpio_right)  // Drugi gracz sterowany przez sygnał z PMOD (mysz na płytce B)
+    .gpio_left(gpio_left_input),   // Drugi gracz sterowany przez sygnał z PMOD (mysz na płytce B)
+    .gpio_right(gpio_right_input)  // Drugi gracz sterowany przez sygnał z PMOD (mysz na płytce B)
 );
 
 

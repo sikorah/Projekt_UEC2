@@ -41,6 +41,7 @@ set sv_files {
     ../rtl/draw_rect.sv
     ../rtl/draw_rect_ctl.sv
     ../rtl/top_vga.sv
+    ../rtl/mouse_to_gpio.sv
     ../rtl/draw_mouse.sv
     ../rtl/image_rom.sv
     ../rtl/draw_buttons.sv

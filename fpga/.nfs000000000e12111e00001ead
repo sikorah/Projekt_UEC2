@@ -1,0 +1,364 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sat Aug 31 11:12:48 2024
+# Process ID: 24839
+# Current directory: /home/student/zschab/Desktop/Projekt_UEC2/fpga
+# Command line: vivado -mode tcl -source scripts/generate_bitstream.tcl
+# Log file: /home/student/zschab/Desktop/Projekt_UEC2/fpga/vivado.log
+# Journal file: /home/student/zschab/Desktop/Projekt_UEC2/fpga/vivado.jou
+# Running On: cadence33, OS: Linux, CPU Frequency: 3653.320 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+#-----------------------------------------------------------
+source scripts/generate_bitstream.tcl
+# source scripts/project_details.tcl
+## set project_name vga_project
+## set top_module top_vga_basys3
+## set target xc7a35tcpg236-1
+## set xdc_files {
+##     constraints/top_vga_basys3.xdc    
+##     constraints/clk_wiz_0.xdc
+##     constraints/clk_wiz_0_late.xdc
+## }
+## set sv_files {
+##     ../rtl/vga_pkg.sv 
+##     ../rtl/state_pkg.sv
+##     ../rtl/vga_if.sv
+##     ../rtl/vga_timing.sv
+##     ../rtl/draw_bg.sv
+##     ../rtl/draw_rect.sv
+##     ../rtl/draw_rect_ctl.sv
+##     ../rtl/top_vga.sv
+##     ../rtl/draw_mouse.sv
+##     ../rtl/image_rom.sv
+##     ../rtl/draw_buttons.sv
+##     ../rtl/draw_player1.sv
+##     ../rtl/draw_player2.sv
+##     ../rtl/draw_player_ctl.sv
+##     rtl/top_vga_basys3.sv
+##     rtl/clk_wiz_0_clk_wiz.v
+##     rtl/clk_wiz_0.v
+## }
+## set verilog_files {
+##     rtl/clk_wiz_0_clk_wiz.v
+##     rtl/clk_wiz_0.v
+##  }
+## set vhdl_files {
+##     ../rtl/MouseCtl.vhd
+##     ../rtl/MouseDisplay.vhd
+##     ../rtl/Ps2Interface.vhd
+##  }
+## set mem_files {
+##     ../rtl/mine.dat
+##  
+##  }
+# proc create_new_project {project_name target top_module} {
+#     file mkdir build
+#     create_project ${project_name} build -part ${target} -force
+# 
+#     # read files from the variables provided by the project_details.tcl
+#     if {[info exists ::xdc_files]}     {read_xdc ${::xdc_files}}
+#     if {[info exists ::sv_files]}      {read_verilog -sv ${::sv_files}}
+#     if {[info exists ::verilog_files]} {read_verilog ${::verilog_files}}
+#     if {[info exists ::vhdl_files]}    {read_vhdl ${::vhdl_files}}
+#     if {[info exists ::mem_files]}     {read_mem ${::mem_files}}
+# 
+#     set_property top ${top_module} [current_fileset]
+#     update_compile_order -fileset sources_1
+# }
+# proc generate_bitstream {} {
+#     # Run synthesis
+#     reset_run synth_1
+#     launch_runs synth_1 -jobs 8
+#     wait_on_run synth_1
+# 
+#     # Run implemenatation up to bitstream generation
+#     launch_runs impl_1 -to_step write_bitstream -jobs 8
+#     wait_on_run impl_1
+# }
+# create_new_project $project_name $target $top_module
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2715.691 ; gain = 7.961 ; free physical = 2675 ; free virtual = 13284
+WARNING: [filemgmt 56-12] File '/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v' cannot be added to the project because it already exists in the project, skipping this file
+# generate_bitstream
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sat Aug 31 11:13:06 2024] Launched synth_1...
+Run output will be captured here: /home/student/zschab/Desktop/Projekt_UEC2/fpga/build/vga_project.runs/synth_1/runme.log
+[Sat Aug 31 11:13:06 2024] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log top_vga_basys3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_vga_basys3.tcl
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source top_vga_basys3.tcl -notrace
+Command: synth_design -top top_vga_basys3 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 25609
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 997 ; free virtual = 11612
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_vga_basys3' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v:71]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55204]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55204]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:63510]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 25 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (2#1) [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:63510]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1093]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (4#1) [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1093]
+INFO: [Synth 8-6157] synthesizing module 'BUFH' [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1319]
+INFO: [Synth 8-6155] done synthesizing module 'BUFH' (5#1) [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1319]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (6#1) [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (7#1) [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v:71]
+WARNING: [Synth 8-7071] port 'locked' of module 'clk_wiz_0' is unconnected for instance 'u_clk' [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:50]
+WARNING: [Synth 8-7023] instance 'u_clk' of module 'clk_wiz_0' has 4 connections declared, but only 3 given [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:50]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:74749]
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (8#1) [/home_local/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:74749]
+INFO: [Synth 8-6157] synthesizing module 'top_vga' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'vga_if' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'vga_if' (8#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'vga_timing' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:13]
+WARNING: [Synth 8-3848] Net vga_out\.rgb in module/entity vga_timing does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:16]
+INFO: [Synth 8-6155] done synthesizing module 'vga_timing' (9#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'draw_bg' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv:13]
+WARNING: [Synth 8-3848] Net rgb_out in module/entity draw_bg does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'draw_bg' (10#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'draw_buttons' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'draw_buttons' (11#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv:9]
+WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_buttons' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:75]
+INFO: [Synth 8-6157] synthesizing module 'draw_rect' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'draw_rect' (12#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'image_rom' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:9]
+INFO: [Synth 8-3876] $readmem data file 'mine.dat' is read successfully [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'image_rom' (13#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'draw_rect_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'draw_rect_ctl' (14#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv:10]
+WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_rect_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:101]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:207]
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at '/home/student/zschab/Desktop/Projekt_UEC2/rtl/Ps2Interface.vhd:152' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/Ps2Interface.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (15#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/Ps2Interface.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element set_x.inc_reg was removed.  [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:450]
+WARNING: [Synth 8-6014] Unused sequential element set_x.x_inter_reg was removed.  [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:456]
+WARNING: [Synth 8-6014] Unused sequential element set_y.inc_reg was removed.  [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:514]
+WARNING: [Synth 8-6014] Unused sequential element set_y.y_inter_reg was removed.  [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:520]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (16#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd:207]
+WARNING: [Synth 8-7071] port 'zpos' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'new_event' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'value' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'setx' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'sety' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'setmax_x' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'setmax_y' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:106]
+WARNING: [Synth 8-7023] instance 'u_mouse_ctl1' of module 'MouseCtl' has 16 connections declared, but only 9 given [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:106]
+INFO: [Synth 8-6157] synthesizing module 'draw_player_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:11]
+WARNING: [Synth 8-87] always_comb on 'xpos_nxt1_reg' did not result in combinational logic [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:75]
+WARNING: [Synth 8-87] always_comb on 'ypos_nxt1_reg' did not result in combinational logic [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:76]
+WARNING: [Synth 8-87] always_comb on 'xpos_nxt2_reg' did not result in combinational logic [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:77]
+WARNING: [Synth 8-87] always_comb on 'ypos_nxt2_reg' did not result in combinational logic [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:78]
+INFO: [Synth 8-6155] done synthesizing module 'draw_player_ctl' (17#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv:11]
+WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_player_ctl' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:131]
+INFO: [Synth 8-6157] synthesizing module 'draw_player1' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv:12]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'draw_player1' (18#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'draw_player2' [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player2.sv:12]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player2.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'draw_player2' (19#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player2.sv:12]
+WARNING: [Synth 8-3848] Net gpio_left_output in module/entity top_vga does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:8]
+WARNING: [Synth 8-3848] Net gpio_right_output in module/entity top_vga does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:9]
+WARNING: [Synth 8-3848] Net gpio_left in module/entity top_vga does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:133]
+WARNING: [Synth 8-3848] Net gpio_right in module/entity top_vga does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:134]
+INFO: [Synth 8-6155] done synthesizing module 'top_vga' (20#1) [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:1]
+WARNING: [Synth 8-3848] Net clk40 in module/entity top_vga_basys3 does not have driver. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:86]
+INFO: [Synth 8-6155] done synthesizing module 'top_vga_basys3' (21#1) [/home/student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv:17]
+WARNING: [Synth 8-7129] Port xpos_player2[11] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[10] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[9] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[8] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[7] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[6] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[5] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[4] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[3] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[2] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[1] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[0] in module draw_player2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[11] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[10] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[9] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[8] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[7] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[6] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[5] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[4] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[3] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[2] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[1] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player1[0] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[11] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[10] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[9] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[8] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[7] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[6] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[5] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[4] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[3] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[2] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[1] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xpos_player2[0] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[11] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[10] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[9] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[8] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[7] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[6] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[5] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[4] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[3] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[2] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[1] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ypos_player2[0] in module draw_buttons is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[11] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[10] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[9] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[8] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[7] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[6] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[5] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[4] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[3] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[2] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[1] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rgb_out[0] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[11] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[10] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[9] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[8] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[7] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[6] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[5] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[4] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[3] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[2] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[1] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[0] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[11] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[10] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[9] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[8] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[7] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[6] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[5] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[4] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[3] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[2] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[1] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_out\.rgb[0] in module vga_timing is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio_left_output in module top_vga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio_right_output in module top_vga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio_left_input in module top_vga is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio_right_input in module top_vga is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 1684 ; free virtual = 12319
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 1712 ; free virtual = 12347
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 1711 ; free virtual = 12347
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 1707 ; free virtual = 12327
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_clk/inst/clkout1_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'u_clk/inst/clkout2_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc]
+WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[2]'. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[2]'. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[3]'. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[3]'. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[4]'. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[4]'. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc:139]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_vga_basys3_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_vga_basys3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc]
+Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_vga_basys3_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_vga_basys3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0_late.xdc]
+Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0_late.xdc]
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 1634 ; free virtual = 12254
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  BUFGCE => BUFGCTRL: 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2781.727 ; gain = 0.000 ; free physical = 1635 ; free virtual = 12255

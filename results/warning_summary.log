@@ -1,31 +1,32 @@
 Warnings, critical warnings and errors from synthesis and implementation
 
-Created: 2024-08-30 21:39:58
+Created: 2024-08-31 11:52:38
 
 ----SYNTHESIS----
-WARNING: [Synth 8-7071] port 'locked' of module 'clk_wiz_0' is unconnected for instance 'u_clk' [fpga/rtl/top_vga_basys3.sv:47]
-WARNING: [Synth 8-7023] instance 'u_clk' of module 'clk_wiz_0' has 4 connections declared, but only 3 given [fpga/rtl/top_vga_basys3.sv:47]
+WARNING: [Synth 8-7071] port 'locked' of module 'clk_wiz_0' is unconnected for instance 'u_clk' [fpga/rtl/top_vga_basys3.sv:51]
+WARNING: [Synth 8-7023] instance 'u_clk' of module 'clk_wiz_0' has 4 connections declared, but only 3 given [fpga/rtl/top_vga_basys3.sv:51]
 WARNING: [Synth 8-3848] Net vga_out\.rgb in module/entity vga_timing does not have driver. [rtl/vga_timing.sv:16]
 WARNING: [Synth 8-3848] Net rgb_out in module/entity draw_bg does not have driver. [rtl/draw_bg.sv:20]
-WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_buttons' [rtl/top_vga.sv:73]
-WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_rect_ctl' [rtl/top_vga.sv:99]
+WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_buttons' [rtl/top_vga.sv:75]
+WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_rect_ctl' [rtl/top_vga.sv:101]
 WARNING: [Synth 8-6014] Unused sequential element set_x.inc_reg was removed.  [rtl/MouseCtl.vhd:450]
 WARNING: [Synth 8-6014] Unused sequential element set_x.x_inter_reg was removed.  [rtl/MouseCtl.vhd:456]
 WARNING: [Synth 8-6014] Unused sequential element set_y.inc_reg was removed.  [rtl/MouseCtl.vhd:514]
 WARNING: [Synth 8-6014] Unused sequential element set_y.y_inter_reg was removed.  [rtl/MouseCtl.vhd:520]
-WARNING: [Synth 8-7071] port 'zpos' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:104]
-WARNING: [Synth 8-7071] port 'new_event' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:104]
-WARNING: [Synth 8-7071] port 'value' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:104]
-WARNING: [Synth 8-7071] port 'setx' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:104]
-WARNING: [Synth 8-7071] port 'sety' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:104]
-WARNING: [Synth 8-7071] port 'setmax_x' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:104]
-WARNING: [Synth 8-7071] port 'setmax_y' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:104]
-WARNING: [Synth 8-7023] instance 'u_mouse_ctl1' of module 'MouseCtl' has 16 connections declared, but only 9 given [rtl/top_vga.sv:104]
+WARNING: [Synth 8-7071] port 'zpos' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'new_event' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'value' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'setx' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'sety' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'setmax_x' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:106]
+WARNING: [Synth 8-7071] port 'setmax_y' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl1' [rtl/top_vga.sv:106]
+WARNING: [Synth 8-7023] instance 'u_mouse_ctl1' of module 'MouseCtl' has 16 connections declared, but only 9 given [rtl/top_vga.sv:106]
 WARNING: [Synth 8-87] always_comb on 'xpos_nxt1_reg' did not result in combinational logic [rtl/draw_player_ctl.sv:75]
 WARNING: [Synth 8-87] always_comb on 'ypos_nxt1_reg' did not result in combinational logic [rtl/draw_player_ctl.sv:76]
 WARNING: [Synth 8-87] always_comb on 'xpos_nxt2_reg' did not result in combinational logic [rtl/draw_player_ctl.sv:77]
 WARNING: [Synth 8-87] always_comb on 'ypos_nxt2_reg' did not result in combinational logic [rtl/draw_player_ctl.sv:78]
-WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_player_ctl' [rtl/top_vga.sv:129]
+WARNING: [Synth 8-689] width (2) of port connection 'button_pressed' does not match port width (1) of module 'draw_player_ctl' [rtl/top_vga.sv:138]
+WARNING: [Synth 8-3848] Net clk40 in module/entity top_vga_basys3 does not have driver. [fpga/rtl/top_vga_basys3.sv:87]
 WARNING: [Synth 8-7129] Port xpos_player2[11] in module draw_player2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port xpos_player2[10] in module draw_player2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port xpos_player2[9] in module draw_player2 is either unconnected or has no load
@@ -110,10 +111,6 @@ WARNING: [Synth 8-7129] Port vga_out\.rgb[3] in module vga_timing is either unco
 WARNING: [Synth 8-7129] Port vga_out\.rgb[2] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[1] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[0] in module vga_timing is either unconnected or has no load
-WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [fpga/constraints/top_vga_basys3.xdc:129]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [fpga/constraints/top_vga_basys3.xdc:129]
-WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [fpga/constraints/top_vga_basys3.xdc:130]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [fpga/constraints/top_vga_basys3.xdc:130]
 WARNING: [Synth 8-327] inferring latch for variable 'xpos_nxt1_reg' [rtl/draw_player_ctl.sv:75]
 WARNING: [Synth 8-327] inferring latch for variable 'ypos_nxt1_reg' [rtl/draw_player_ctl.sv:76]
 WARNING: [Synth 8-327] inferring latch for variable 'xpos_nxt2_reg' [rtl/draw_player_ctl.sv:77]
@@ -136,6 +133,23 @@ WARNING: [Synth 8-7129] Port ypos_player1[10] in module draw_buttons is either u
 WARNING: [Synth 8-7129] Port ypos_player1[9] in module draw_buttons is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ypos_player1[8] in module draw_buttons is either unconnected or has no load
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 119, Available = 90. Use report_utilization command for details.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_rect_ctl/FSM_sequential_state_reg[1]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_rect_ctl/FSM_sequential_state_reg[0]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/FSM_sequential_state_reg[2]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/FSM_sequential_state_reg[1]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/FSM_sequential_state_reg[0]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[11]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[10]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[9]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[8]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[7]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[6]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[5]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[4]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[3]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[2]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[1]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt1_reg[0]) is unused and will be removed from module top_vga_basys3.
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt1_reg[11]) is unused and will be removed from module top_vga_basys3.
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt1_reg[10]) is unused and will be removed from module top_vga_basys3.
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt1_reg[9]) is unused and will be removed from module top_vga_basys3.
@@ -148,6 +162,18 @@ WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt1_reg[2]) is unused and will be removed from module top_vga_basys3.
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt1_reg[1]) is unused and will be removed from module top_vga_basys3.
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt1_reg[0]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[11]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[10]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[9]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[8]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[7]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[6]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[5]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[4]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[3]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[2]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[1]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/xpos_nxt2_reg[0]) is unused and will be removed from module top_vga_basys3.
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt2_reg[11]) is unused and will be removed from module top_vga_basys3.
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt2_reg[10]) is unused and will be removed from module top_vga_basys3.
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt2_reg[9]) is unused and will be removed from module top_vga_basys3.
@@ -160,16 +186,6 @@ WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt2_reg[2]) is unused and will be removed from module top_vga_basys3.
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt2_reg[1]) is unused and will be removed from module top_vga_basys3.
 WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl/ypos_nxt2_reg[0]) is unused and will be removed from module top_vga_basys3.
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 
 ----IMPLEMENTATION----
-WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [fpga/constraints/top_vga_basys3.xdc:129]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [fpga/constraints/top_vga_basys3.xdc:129]
-WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [fpga/constraints/top_vga_basys3.xdc:130]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [fpga/constraints/top_vga_basys3.xdc:130]
-ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced IO Ports (1) is greater than number of available sites (0).
-ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced IO Ports (1) is greater than number of available sites (0).
-ERROR: [Place 30-374] IO placer failed to find a solution
-ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
-Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
-ERROR: [Common 17-69] Command failed: Placer could not place all instances
+CLEAR :)

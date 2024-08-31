@@ -97,6 +97,7 @@ read_verilog -library xil_defaultlib -sv {
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv
+  /home/student/zschab/Desktop/Projekt_UEC2/rtl/mouse_to_gpio.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv
   /home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv
