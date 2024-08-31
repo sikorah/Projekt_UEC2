@@ -12,15 +12,16 @@
     vga_if.out vga_out,
     vga_if.in vga_in,
     input logic [11:0] xpos_player1,
+    input logic [11:0] ypos_player1,
     input logic [11:0] xpos_player2,
-    output logic [1:0] button_pressed
+    input logic [11:0] ypos_player2,
+    output logic button_pressed
 );
 
 import vga_pkg::*;
 logic [11:0] rgb_nxt;
-logic [1:0] button1_pressed;
-logic [1:0] button2_pressed;
-logic [1:0] button_pressed_nxt;
+logic button1_pressed, button2_pressed;
+logic button_pressed_nxt;
 
 always_ff @(posedge clk) begin
     if (rst) begin
@@ -31,7 +32,7 @@ always_ff @(posedge clk) begin
         vga_out.hsync  <= '0;
         vga_out.hblnk <= '0;
         vga_out.rgb   <= '0;
-        button_pressed <= 2'b00;
+        button_pressed <= 1'b0;
     end else begin
         vga_out.vcount <= vga_in.vcount;
         vga_out.vsync  <= vga_in.vsync;
