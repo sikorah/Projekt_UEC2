@@ -9,8 +9,8 @@ module mouse_to_gpio (
 
 always_ff @(posedge clk) begin
     if (rst) begin
-        gpio_left_output <= 0;
-        gpio_right_output <= 0;
+        gpio_left_output <= '0;
+        gpio_right_output <= '0;
     end else begin
         gpio_left_output <= m_left;
         gpio_right_output <= m_right;
