@@ -17,7 +17,6 @@ module draw_player_ctl (
     input logic button_pressed,
     input logic gpio_left,
     input logic gpio_right,
-
     output logic [11:0] xpos_player1,
     output logic [11:0] ypos_player1,
     output logic [11:0] xpos_player2,
@@ -113,7 +112,7 @@ always_comb begin
 
         LEFT2: begin
             
-            if (xpos_player2 > 0 && xpos_player2 < 310 && gpio_left ) begin // przed klockiem
+            if (xpos_player2 > 0 && xpos_player2 < 310 && gpio_left) begin // przed klockiem
                 xpos_nxt2 = xpos_player2 - 1;
                 state_nxt = state;
             end 
@@ -122,7 +121,7 @@ always_comb begin
                 state_nxt = state;
             end 
             
-            else if ((xpos_player2 <= 310) && gpio_left&& !button_pressed) begin //na granicy klocka od lewej, przycisk nie wciśnięty
+            else if ((xpos_player2 <= 310) && gpio_left && !button_pressed) begin //na granicy klocka od lewej, przycisk nie wciśnięty
                 xpos_nxt2 = xpos_player2 - 1;
                 state_nxt = state;
             end

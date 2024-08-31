@@ -121,7 +121,7 @@ set_property PACKAGE_PIN U18 [get_ports btnC]
 
 
 
-##Pmod Header JA        for reciving mouse signal from second board 		- INPUTS
+##Pmod Header JA
 ##Sch name = JA1
 set_property PACKAGE_PIN J1 [get_ports {JA1}]
 	set_property IOSTANDARD LVCMOS33 [get_ports {JA1}]
