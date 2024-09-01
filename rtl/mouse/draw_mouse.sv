@@ -19,8 +19,6 @@
     vga_out.vcount <= '0;
     vga_out.vblnk  <= '0;
     vga_out.vsync  <= '0;
-    xpos <= '0;
-    ypos <= '0;
 
   end else begin
     vga_out.hcount <= vga_in.hcount;
@@ -32,9 +30,6 @@
   
   end
  end
-
- 
-
 
  MouseDisplay u_MouseDisplay(
     .pixel_clk(clk),

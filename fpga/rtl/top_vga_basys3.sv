@@ -14,9 +14,14 @@
 
 `timescale 1 ns / 1 ps
 
-module top_vga_basys3 (
+
+ module top_vga_basys3 (
     input  wire clk,
     input  wire btnC,
+    input wire JA2,
+    input wire JA3,
+    output wire JA4,
+    output wire JA5,
     output wire Vsync,
     output wire Hsync,
     output wire [3:0] vgaRed,
@@ -78,17 +83,21 @@ ODDR pclk100_oddr (
  *  Project functional top module
  */
 
-top_vga u_top_vga (
-    .clk_40(pclk40),
-    .clk_100(pclk100),
-    .rst(btnC),
-    .r(vgaRed),
-    .g(vgaGreen),
-    .b(vgaBlue),
-    .hs(Hsync),
-    .vs(Vsync),
-    .ps2_clk(PS2Clk),
-    .ps2_data(PS2Data)
-);
+ top_vga u_top_vga (
+     .clk_40(pclk40),
+     .clk_100(pclk100),
+     .rst(btnC),
+     .r(vgaRed),
+     .g(vgaGreen),
+     .b(vgaBlue),
+     .hs(Hsync),
+     .vs(Vsync),
+     .ps2_clk(PS2Clk),
+     .ps2_data(PS2Data),
+     .gpio_left_input(JA2),
+     .gpio_right_input(JA3),
+     .gpio_left_output(JA4),
+     .gpio_right_output(JA5)
+     );
 
 endmodule

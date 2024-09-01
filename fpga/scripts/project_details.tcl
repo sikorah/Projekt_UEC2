@@ -35,6 +35,7 @@ set xdc_files {
 set sv_files {
     ../rtl/pkgs/vga_pkg.sv 
     ../rtl/pkgs/state_pkg.sv
+    ../rtl/mouse_to_gpio.sv
     ../rtl/pkgs/vga_if.sv
     ../rtl/vga_timing.sv
     ../rtl/state_machine/state_control.sv 
@@ -52,7 +53,8 @@ set sv_files {
     ../rtl/mouse/draw_mouse.sv
     ../rtl/LEVEL_1/image_rom.sv
     ../rtl/LEVEL_1/draw_buttons.sv
-    ../rtl/LEVEL_1/draw_player.sv
+    ../rtl/LEVEL_1/draw_player_1.sv 
+    ../rtl/LEVEL_1/draw_player_2.sv 
     ../rtl/LEVEL_1/draw_player_ctl.sv
     rtl/top_vga_basys3.sv
     rtl/clk_wiz_0_clk_wiz.v

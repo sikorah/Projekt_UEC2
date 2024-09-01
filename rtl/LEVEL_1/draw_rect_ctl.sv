@@ -11,7 +11,7 @@ module draw_rect_ctl (
     input  logic rst,
     input  logic v_tick,
     input  logic clk,
-    input  logic button_pressed,
+    input  logic [1:0] button_pressed,
     output logic [11:0] xpos_rect,
     output logic [11:0] ypos_rect
 );
@@ -69,7 +69,7 @@ always_comb begin
             else begin
                 state_nxt = FALL;
                 ypos_nxt = ypos_rect;
-            end 
+            end
                 xpos_nxt = xpos_rect;
         end
         FALL: begin

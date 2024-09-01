@@ -12,12 +12,12 @@
      output  logic [3:0] char_line,
      output  logic [7:0] char_xy,
  
-     vga_if.OUT out,
-     vga_if.IN in
+     vga_if.out vga_out,
+     vga_if.in vga_in
  );
  import vga_pkg::*;
 
- delay #(.CLK_DEL(5),.W(4))u_delay(
+/* delay #(.CLK_DEL(5),.W(4))u_delay(
     .clk(clk),
     .rst,
     .din({in.vsync,in.vblnk,in.hsync,in.hblnk}),
@@ -43,24 +43,24 @@ delay #(.CLK_DEL(1), .W(4)) u_delay_char_line(
     .rst,
     .din(y[3:0]),
     .dout(char_line)
-);
+);*/
 
 
 logic [10:0]  x,y;
 
-assign x =in.hcount-XPOS;
-assign y= in.vcount-YPOS;
+assign x =vga_in.hcount-XPOS;
+assign y= vga_in.vcount-YPOS;
 
 always_ff @(posedge  clk) begin
     if (rst) begin
-        out.rgb   <= '0;
+        vga_out.rgb   <= '0;
         char_xy <= '0;
     end else begin
-        if( XPOS<=in.hcount && in.hcount <= XPOS+128+6 &&  YPOS <= in.vcount && in.vcount <= YPOS+256) begin
-            out.rgb <= char_pixels[~x[2:0]] ? 12'h0_0_0 : in.rgb;
+        if( XPOS<=vga_in.hcount && vga_in.hcount <= XPOS+128+6 &&  YPOS <= vga_in.vcount && vga_in.vcount <= YPOS+256) begin
+            vga_out.rgb <= char_pixels[~x[2:0]] ? 12'h0_0_0 : vga_in.rgb;
             char_xy <=  {y[7:4],x[6:3]};
         end else begin
-            out.rgb <= in.rgb;
+            vga_out.rgb <= vga_in.rgb;
             char_xy <='X;
         end
     end

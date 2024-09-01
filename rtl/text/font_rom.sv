@@ -9,26 +9,30 @@
 module font_rom
     (
         input  logic clk,
-        input  logic [10:0] addr,            // {char_code[6:0], char_line[3:0]}
-        output logic  [7:0] char_line_pixels // pixels of the character line
+        input  logic [3:0] char_line,
+        input  logic [6:0] char_code,
+        output logic  [7:0] char_line_pixels
+    
     );
 
     // signal declaration
     logic [7:0] data;
+    logic [10:0] addr;
 
     import vga_pkg::*;
 
-    // body
-    //always_ff @(posedge clk)
-      //  char_line_pixels <= data;
+     
+    always_ff @(posedge clk)
+        char_line_pixels <= data;
 
-    delay #(.CLK_DEL(4), .W(8)) u_delay_char_pix(
+    /*delay #(.CLK_DEL(4), .W(8)) u_delay_char_pix(
     .clk(clk),
     .din(data),
     .dout(char_line_pixels)
-    );
+    );*/
 
-    always_comb
+    always_comb begin
+        addr = {char_code[6:0], char_line[3:0]};
         case (addr)
             //code x00
             11'h000: data = 8'b00000000; //
@@ -2207,5 +2211,6 @@ module font_rom
             11'h7fe: data = 8'b00000000; //
             11'h7ff: data = 8'b00000000; //
         endcase
+    end
 
 endmodule

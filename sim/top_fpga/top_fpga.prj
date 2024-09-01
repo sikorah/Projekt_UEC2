@@ -25,7 +25,9 @@ sv work ../../rtl/pkgs/vga_pkg.sv \
         ../../rtl/mouse/draw_mouse.sv \
         ../../rtl/LEVEL_1/draw_buttons.sv \
         ../../rtl/LEVEL_1/image_rom.sv \
-        ../../rtl/LEVEL_1/draw_player.sv \
+        ../../rtl/LEVEL_1/draw_player_1.sv \
+        ../../rtl/LEVEL_1/draw_player_2.sv \
+        ../../rtl/mouse_to_gpio.sv \
         ../../rtl/LEVEL_1/draw_player_ctl.sv \
         ../../fpga/rtl/top_vga_basys3.sv \
         ../../fpga/rtl/clk_wiz_0_clk_wiz.v \

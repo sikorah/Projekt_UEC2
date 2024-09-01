@@ -17,18 +17,18 @@ module start_game(
     inout logic [11:0] xpos_rect_ctl, ypos_rect_ctl,
     inout logic [11:0] xpos_player_ctl1, ypos_player_ctl1, xpos_player_ctl2, ypos_player_ctl2,
     inout logic [11:0] xpos_mouse, ypos_mouse,
-    inout logic  button_pressed,
+    inout logic [1:0] button_pressed,
     input State state,
 
     vga_if.in vga_in,
     vga_if.out vga_out
 );
 
-vga_if lvl_start();
-vga_if buttons();
-vga_if rect();
-vga_if mouse();
 vga_if game_menu();
+vga_if lvl_start();
+vga_if buttons();;
+vga_if rect();
+vga_if player_1();
 vga_if level_1();
 vga_if out();
 vga_if finish();
@@ -41,16 +41,7 @@ start_screen u_start_screen(
     .clk(clk_40),
     .rst(rst),
     .vga_in,
-    .vga_out(mouse)
-);
-
-draw_mouse  u_draw_mouse(
-    .clk(clk_40),
-    .rst,
-    .vga_in(mouse),
-    .vga_out(game_menu),
-    .xpos(xpos_mouse),
-    .ypos(ypos_mouse)
+    .vga_out(game_menu)
 );
 
 level_1 u_level_1(
@@ -65,8 +56,8 @@ draw_buttons u_draw_buttons (
     .rst(rst),
     .vga_in(lvl_start),
     .vga_out(buttons),
-    .xpos_player(xpos_player_ctl1),
-    .ypos_player(ypos_player_ctl1),
+    .xpos_player1(xpos_player_ctl1),
+    .xpos_player2(xpos_player_ctl2),
     .button_pressed(button_pressed)
 );
 
@@ -87,13 +78,23 @@ image_rom u_image_rom (
     .rgb(rom2rect_pixel)
 );
 
-draw_player u_draw_player(
+draw_player_1 u_draw_player_1(
     .clk(clk_40),
     .rst(rst),
     .vga_in(rect),
+    .vga_out(player_1),
+    .xpos_player1(xpos_player_ctl1),  
+    .ypos_player1(ypos_player_ctl1),
+    .state
+);
+
+draw_player_2 u_draw_player_2(
+    .clk(clk_40),
+    .rst(rst),
+    .vga_in(player_1),
     .vga_out(level_1),
-    .xpos_player(xpos_player_ctl1),  
-    .ypos_player(ypos_player_ctl1),
+    .xpos_player2(xpos_player_ctl2),  
+    .ypos_player2(ypos_player_ctl2),
     .state
 );
 
@@ -104,6 +105,38 @@ finish_screen u_finish_screen(
     .vga_out(finish)
 );
 
+// TEXT
+
+/*wire [11:0] char_xy_title;
+wire [6:0] char_code_title;
+wire [3:0] char_line_title;
+wire [7:0] char_pixels_title;
+
+draw_text #(
+    .XPOS(320),
+    .YPOS(120)
+) u_draw_title(
+    .clk(clk_40),
+    .rst(rst),
+    .char_pixels(char_pixels_title),
+    .char_xy(char_xy_title),
+    .char_line(char_line_title),
+    .vga_in(mouse),
+    .vga_out(game_menu)
+);
+
+font_rom u_font_rom_title(
+    .clk(clk_40),
+    .char_line(char_line_title),
+    .char_code(char_code_title),
+    .char_line_pixels(char_pixels_title)
+);
+
+char_rom_title u_char_rom_title(
+    .clk(clk_40),
+    .char_xy(char_xy_title),
+    .char_code(char_code_title)
+);*/
 
 always_comb begin
     case(game_state)
