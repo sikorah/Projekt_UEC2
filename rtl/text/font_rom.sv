@@ -25,11 +25,6 @@ module font_rom
     always_ff @(posedge clk)
         char_line_pixels <= data;
 
-    /*delay #(.CLK_DEL(4), .W(8)) u_delay_char_pix(
-    .clk(clk),
-    .din(data),
-    .dout(char_line_pixels)
-    );*/
 
     always_comb begin
         addr = {char_code[6:0], char_line[3:0]};

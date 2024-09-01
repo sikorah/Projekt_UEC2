@@ -15,7 +15,6 @@
     vga_if.out vga_out,
     vga_if.in vga_in,
     input logic [11:0] xpos_player1,
-    //input logic [11:0] ypos_player1,
     input State state
 );
 

@@ -15,7 +15,6 @@ module draw_player_2(
     vga_if.out vga_out,
     vga_if.in vga_in,
     input logic [11:0] xpos_player2,
-    //input logic [11:0] ypos_player2,
     input State state
 );
 

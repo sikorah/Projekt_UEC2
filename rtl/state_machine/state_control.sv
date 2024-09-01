@@ -13,7 +13,6 @@ import state_pkg::*;
 module state_control(
     input logic clk_40,
     input logic rst,
-    input logic m_left,
     input logic m_right,
     inout logic [11:0] xpos_mouse,
     inout logic [11:0] ypos_mouse,
@@ -37,7 +36,7 @@ end
 always_comb begin
     case(game_state)
         START: begin
-            if(m_left /*&& ypos_mouse >= 250 && ypos_mouse<= 320 && xpos_mouse >= 160 && xpos_mouse <= 650*/) begin
+            if(m_right /*&& ypos_mouse >= 250 && ypos_mouse<= 320 && xpos_mouse >= 160 && xpos_mouse <= 650*/) begin
                 game_state_nxt = LEVEL_1;
             end
             else begin
