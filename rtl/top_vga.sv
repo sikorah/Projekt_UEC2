@@ -15,6 +15,7 @@ module top_vga (
     output logic [3:0] g,
     output logic [3:0] b
 );
+import state_pkg::*;
 
 /**
  * Local variables and signals

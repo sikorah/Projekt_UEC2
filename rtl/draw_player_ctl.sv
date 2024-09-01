@@ -58,8 +58,16 @@ always_comb begin
     case (state)
 
         IDLE: begin
+            if (xpos_player1 >= 310 && xpos_player1 <= 450 && !button_pressed) begin
+                xpos_player1 = 310;
+                xpos_nxt1 = xpos_player1;
+            end
+            else if (xpos_player2 >= 310 && xpos_player2 <= 450 && !button_pressed) begin
+                xpos_player2 = 310;
+                xpos_nxt2 = xpos_player2;
+            end
 
-            if (m_right) begin
+            else if (m_right) begin
                 state_nxt = RIGHT1;
             end
             else if (m_left) begin
@@ -79,7 +87,11 @@ always_comb begin
 
         end
         RIGHT2: begin
-            if (xpos_player2 < 310 && gpio_right) begin      //przed klockiem
+            if (xpos_player2 >= 310 && xpos_player2 <= 450 && !button_pressed) begin
+                xpos_player2 = 310;
+                xpos_nxt2 = xpos_player2;
+            end
+            else if (xpos_player2 < 310 && gpio_right) begin      //przed klockiem
                 xpos_nxt2 = xpos_player2 + 1;
                 state_nxt = state;
             end
@@ -117,8 +129,11 @@ always_comb begin
         end
 
         LEFT2: begin
-
-            if (xpos_player2 > 0 && xpos_player2 < 310 && gpio_left) begin // przed klockiem
+            if (xpos_player2 >= 310 && xpos_player2 <= 450 && !button_pressed) begin
+                xpos_player2 = 310;
+                xpos_nxt2 = xpos_player2;
+            end
+            else if (xpos_player2 > 0 && xpos_player2 < 310 && gpio_left) begin // przed klockiem
                 xpos_nxt2 = xpos_player2 - 1;
                 state_nxt = state;
             end
@@ -156,7 +171,11 @@ always_comb begin
             ypos_nxt2 = ypos_player2;
         end
         RIGHT1: begin
-            if (xpos_player1 < 310 && m_right) begin      //przed klockiem
+            if (xpos_player1 >= 310 && xpos_player1 <= 450 && !button_pressed) begin
+                xpos_player1 = 310;
+                xpos_nxt1 = xpos_player1;
+            end
+            else if (xpos_player1 < 310 && m_right) begin      //przed klockiem
                 xpos_nxt1 = xpos_player1 + 1;
                 state_nxt = state;
             end
@@ -193,8 +212,11 @@ always_comb begin
 
         end
         LEFT1: begin
-
-            if (xpos_player1 > 0 && xpos_player1 < 310 && m_left ) begin // przed klockiem
+            if (xpos_player1 >= 310 && xpos_player1 <= 450 && !button_pressed) begin
+                xpos_player1 = 310;
+                xpos_nxt1 = xpos_player1;
+            end
+            else if (xpos_player1 > 0 && xpos_player1 < 310 && m_left ) begin // przed klockiem
                 xpos_nxt1 = xpos_player1 - 1;
                 state_nxt = state;
             end

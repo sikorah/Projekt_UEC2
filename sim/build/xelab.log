@@ -1,0 +1,77 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab work.top_vga_tb -snapshot top_vga_tb -prj /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga.prj -timescale 1ns/1ps -L unisims_ver -standalone -runall 
+Multi-threading is on. Using 6 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/state_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv" into library work
+INFO: [VRFC 10-311] analyzing module vga_timing
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_bg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv" into library work
+INFO: [VRFC 10-311] analyzing module top_vga
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_rect
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_mouse.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_mouse
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_rect_ctl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_buttons
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv" into library work
+INFO: [VRFC 10-311] analyzing module image_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/mouse_to_gpio.sv" into library work
+INFO: [VRFC 10-311] analyzing module mouse_to_gpio
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_player1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player2.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_player2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv" into library work
+INFO: [VRFC 10-311] analyzing module draw_player_ctl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/sim/common/tiff_writer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tiff_writer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module top_vga_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseCtl.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'MouseCtl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/Ps2Interface.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'Ps2Interface'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/student/zschab/Desktop/Projekt_UEC2/rtl/MouseDisplay.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'MouseDisplay'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'xpos' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv:66]
+WARNING: [VRFC 10-5021] port 'gpio_left_input' is not connected on this instance [/home/student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv:66]
+WARNING: [VRFC 10-3645] port 'setx' remains unconnected for this instance [/home/student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv:103]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package work.state_pkg
+Compiling package work.vga_pkg
+Compiling module work.vga_if
+Compiling module work.vga_timing
+Compiling module work.draw_bg
+Compiling module work.draw_buttons
+Compiling module work.draw_rect
+Compiling module work.image_rom
+Compiling module work.draw_rect_ctl
+Compiling architecture behavioral of entity work.Ps2Interface [ps2interface_default]
+Compiling architecture behavioral of entity work.MouseCtl [mousectl_default]
+Compiling module work.mouse_to_gpio
+Compiling module work.draw_player_ctl
+Compiling module work.draw_player1
+Compiling module work.draw_player2
+Compiling module work.top_vga
+Compiling module work.tiff_writer
+Compiling module work.top_vga_tb
+Built simulation snapshot top_vga_tb

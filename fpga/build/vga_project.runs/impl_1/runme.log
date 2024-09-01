@@ -1,0 +1,80 @@
+
+*** Running vivado
+    with args -log top_vga_basys3.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_vga_basys3.tcl -notrace
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source top_vga_basys3.tcl -notrace
+Command: link_design -top top_vga_basys3 -part xc7a35tcpg236-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2717.816 ; gain = 0.000 ; free physical = 2970 ; free virtual = 12815
+INFO: [Netlist 29-17] Analyzing 1418 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc]
+Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/top_vga_basys3.xdc]
+Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2867.566 ; gain = 93.844 ; free physical = 2476 ; free virtual = 12322
+Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0.xdc]
+Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0_late.xdc]
+Finished Parsing XDC File [/home/student/zschab/Desktop/Projekt_UEC2/fpga/constraints/clk_wiz_0_late.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2867.570 ; gain = 0.000 ; free physical = 2504 ; free virtual = 12349
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+9 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2867.570 ; gain = 149.871 ; free physical = 2504 ; free virtual = 12349
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[0] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[0]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[0]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[10] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[10]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[10]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[11] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[11]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[11]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[1] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[1]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[1]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[2] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[2]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[2]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[3] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[3]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[3]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[4] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[4]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[4]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[5] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[5]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[5]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[6] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[6]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[6]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[7] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[7]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[7]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[8] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[8]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[8]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT[9] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player2_reg[9]/Q, and u_top_vga/u_draw_player_ctl/xpos_player2_reg[9]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[0] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[0]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[0]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[10] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[10]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[10]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[11] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[11]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[11]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[1] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[1]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[1]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[2] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[2]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[2]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[3] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[3]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[3]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[4] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[4]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[4]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[5] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[5]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[5]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[6] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[6]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[6]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[7] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[7]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[7]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[8] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[8]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[8]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_top_vga/u_draw_player_ctl/UNCONN_OUT_0[9] has multiple drivers: u_top_vga/u_draw_player_ctl/xpos_player1_reg[9]/Q, and u_top_vga/u_draw_player_ctl/xpos_player1_reg[9]__0/Q.
+INFO: [Project 1-461] DRC finished with 24 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2931.598 ; gain = 64.027 ; free physical = 2492 ; free virtual = 12337
+INFO: [Common 17-83] Releasing license: Implementation
+14 Infos, 0 Warnings, 0 Critical Warnings and 25 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  1 11:51:16 2024...

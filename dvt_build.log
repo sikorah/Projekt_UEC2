@@ -8,293 +8,244 @@ INFO: Auto-config - Wrote:
     -f /home/student/zschab/Desktop/Projekt_UEC2/.dvt/default.build.auto.1
 *** List of invocations ***
 Invocation #1 +dvt_init+dvt in /home/student/zschab/Desktop/Projekt_UEC2/.dvt/default.build.auto.1 at line 9
-*** Done analyzing build configuration [1s.576ms] ***
-Loaded compile waivers from /student/zschab/Desktop/Projekt_UEC2/.dvt/waivers.xml
+*** Done analyzing build configuration [335 ms] ***
 *** Start SystemVerilog build ***
 *** Invocation #1***
 Loading (1) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv [204 ms, 232 lines, SystemVerilog_2012] ...
-Loading (2) /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v ...
-Done /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v [6 ms, 94 lines, Verilog_2001] ...
-Loading (3) /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v ...
-Done /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [15 ms, 235 lines, Verilog_2001] ...
-Loading (4) /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [6 ms, 103 lines, SystemVerilog_2012] ...
-Loading (5) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_mouse.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_mouse.sv [6 ms, 52 lines, SystemVerilog_2012] ...
-Loading (6) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv [9 ms, 101 lines, SystemVerilog_2012] ...
-Loading (7) /student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv [5 ms, 34 lines, SystemVerilog_2012] ...
-Loading (8) /student/zschab/Desktop/Projekt_UEC2/rtl/mouse_to_gpio.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/mouse_to_gpio.sv [2 ms, 21 lines, SystemVerilog_2012] ...
-Loading (9) /student/zschab/Desktop/Projekt_UEC2/rtl/state_pkg.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player_ctl.sv [201 ms, 247 lines, SystemVerilog_2012] ...
+Loading (2) /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv [18 ms, 167 lines, SystemVerilog_2012] ...
+Loading (3) /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v ...
+Done /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0.v [1 ms, 94 lines, Verilog_2001] ...
+Loading (4) /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v ...
+Done /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [10 ms, 235 lines, Verilog_2001] ...
+Loading (5) /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [4 ms, 103 lines, SystemVerilog_2012] ...
+Loading (6) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_mouse.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_mouse.sv [3 ms, 52 lines, SystemVerilog_2012] ...
+Loading (7) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect_ctl.sv [8 ms, 101 lines, SystemVerilog_2012] ...
+Loading (8) /student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv [3 ms, 34 lines, SystemVerilog_2012] ...
+Loading (9) /student/zschab/Desktop/Projekt_UEC2/rtl/mouse_to_gpio.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/mouse_to_gpio.sv [1 ms, 29 lines, SystemVerilog_2012] ...
+Loading (10) /student/zschab/Desktop/Projekt_UEC2/rtl/state_pkg.sv ...
 Done /student/zschab/Desktop/Projekt_UEC2/rtl/state_pkg.sv [2 ms, 18 lines, SystemVerilog_2012] ...
-Loading (10) /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv [23 ms, 170 lines, SystemVerilog_2012] ...
 Loading (11) /student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv [5 ms, 30 lines, SystemVerilog_2012] ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/vga_if.sv [4 ms, 30 lines, SystemVerilog_2012] ...
 Loading (12) /student/zschab/Desktop/Projekt_UEC2/sim/common/tiff_writer.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/sim/common/tiff_writer.sv [44 ms, 405 lines, SystemVerilog_2012] ...
-Loading (13) /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [9 ms, 92 lines, SystemVerilog_2012] ...
-Loading (14) /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv [4 ms, 106 lines, SystemVerilog_2012] ...
-Loading (15) /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv [6 ms, 115 lines, SystemVerilog_2012] ...
-Loading (16) /student/zschab/Desktop/Projekt_UEC2/rtl/vga_pkg.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/vga_pkg.sv [1 ms, 38 lines, SystemVerilog_2012] ...
-Loading (17) /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [14 ms, 135 lines, SystemVerilog_2012] ...
-Loading (18) /student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv [8 ms, 123 lines, SystemVerilog_2012] ...
-Loading (19) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/sim/common/tiff_writer.sv [50 ms, 405 lines, SystemVerilog_2012] ...
+Loading (13) /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv [6 ms, 106 lines, SystemVerilog_2012] ...
+Loading (14) /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv [4 ms, 115 lines, SystemVerilog_2012] ...
+Loading (15) /student/zschab/Desktop/Projekt_UEC2/rtl/vga_pkg.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/vga_pkg.sv [2 ms, 38 lines, SystemVerilog_2012] ...
+Loading (16) /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [13 ms, 135 lines, SystemVerilog_2012] ...
+Loading (17) /student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/vga_timing.sv [6 ms, 123 lines, SystemVerilog_2012] ...
+Loading (18) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv ...
 Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_rect.sv [5 ms, 70 lines, SystemVerilog_2012] ...
-Loading (20) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player2.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player2.sv [9 ms, 101 lines, SystemVerilog_2012] ...
-Loading (21) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv [8 ms, 101 lines, SystemVerilog_2012] ...
-Loading (22) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv [5 ms, 76 lines, SystemVerilog_2012] ...
-Loading (23) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv ...
-Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv [13 ms, 106 lines, SystemVerilog_2012] ...
-Loading (24) /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v ...
-Done /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [4 ms, 85 lines, Verilog_2001] ...
-Loading (25) /student/zschab/Desktop/Projekt_UEC2/tools/sim/common/glbl.v ...
+Loading (19) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player2.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player2.sv [13 ms, 153 lines, SystemVerilog_2012] ...
+Loading (20) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player1.sv [13 ms, 147 lines, SystemVerilog_2012] ...
+Loading (21) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv [6 ms, 79 lines, SystemVerilog_2012] ...
+Loading (22) /student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv ...
+Done /student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv [9 ms, 104 lines, SystemVerilog_2012] ...
+Loading (23) /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v ...
+Done /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [3 ms, 85 lines, Verilog_2001] ...
+Loading (24) /student/zschab/Desktop/Projekt_UEC2/tools/sim/common/glbl.v ...
 Done /student/zschab/Desktop/Projekt_UEC2/tools/sim/common/glbl.v [0 ms, 85 lines, Verilog_2001] ...
-*** Done invocation #1 [275 ms] ***
-*** Total number of lines [2 728] ***
+*** Done invocation #1 [253 ms] ***
+*** Total number of lines [2 755] ***
 Performing post full build actions ...
-Performing post full build step 1 (SRI) [1 ms] ...
-Performing post full build step 2 (RI) [3 ms] ...
+Performing post full build step 1 (SRI) [2 ms] ...
+Performing post full build step 2 (RI) [2 ms] ...
 Performing post full build step 3 (RCP) [0 ms] ...
-*** Done SystemVerilog build [464 ms] ***
+*** Done SystemVerilog build [410 ms] ***
 *** Start mixed mode extension build ***
-Performing mixed post full build step (VLOG - RI) [1 ms] ...
+Performing mixed post full build step (VLOG - RI) [2 ms] ...
 *** Warning: UNSPECIFIED_TOP: Please specify a -top module/entity/configuration in the project build file
-*** Top design candidates: work.draw_mouse, work.rect_ctl_tb, work.top_fpga_tb, work.top_vga_tb, work.vga_timing_tb
-Performing mixed post full build step (MIXED - ELAB) [352 ms] ...
+*** Top design candidates: work.draw_mouse, work.top_fpga_tb, work.top_vga_tb, work.vga_timing_tb
+Performing mixed post full build step (MIXED - ELAB) [399 ms] ...
 Performing mixed post full build step (MIXED - UNEL) [52 ms] ...
 *** Warning: UNDECLARED_MODULE: Module 'MouseDisplay' is not declared
-    at line 38 in /student/zschab/Desktop/Projekt_UEC2/rtl/draw_mouse.sv [compile index 5]
-*** Warning: UNDECLARED_MODULE: Module 'MouseCtl' is not declared
-    at line 107 in /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv [compile index 10]
-*** Warning: MISSING_PORT_CONNECTION: Instance 'u_draw_bg' of module 'draw_bg' is missing port connection to output 'rgb_out'
-    at line 60 in /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv [compile index 10]
-*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'button_pressed' of '2-bit' type from 'button_pressed' of '1-bit' type
-    at line 76 in /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv [compile index 10]
-*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'button_pressed' of '1-bit' type from 'button_pressed' of '2-bit' type
-    at line 102 in /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv [compile index 10]
-*** Warning: WIDTH_MISMATCH_TRUNCATION: Assignment to 'button_pressed' of '1-bit' type from 'button_pressed' of '2-bit' type
-    at line 142 in /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv [compile index 10]
+    at line 38 in /student/zschab/Desktop/Projekt_UEC2/rtl/draw_mouse.sv [compile index 6]
 *** Warning: UNDECLARED_MODULE: Module 'IBUF' is not declared
-    at line 83 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 83 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: UNDECLARED_MODULE: Module 'MMCME2_ADV' is not declared
-    at line 130 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 130 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: UNDECLARED_MODULE: Module 'BUFG' is not declared
-    at line 196 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 196 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: UNDECLARED_MODULE: Module 'BUFGCE' is not declared
-    at line 206 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 206 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: UNDECLARED_MODULE: Module 'BUFH' is not declared
-    at line 211 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 211 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: UNDECLARED_MODULE: Module 'BUFGCE' is not declared
-    at line 218 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 218 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: UNDECLARED_MODULE: Module 'BUFH' is not declared
-    at line 223 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 223 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: UNDECLARED_MODULE: Module 'ODDR' is not declared
-    at line 60 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [compile index 4]
+    at line 60 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [compile index 5]
 *** Warning: UNDECLARED_MODULE: Module 'ODDR' is not declared
-    at line 71 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [compile index 4]
+    at line 71 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [compile index 5]
 *** Warning: MISSING_PORT_CONNECTION: Instance 'u_clk' of module 'clk_wiz_0' is missing port connection to output 'locked'
-    at line 50 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [compile index 4]
-*** Error: NON_EXISTING_PORT: Non existing port 'out' of module 'vga_timing'
-    at line 43 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'OUT' is not a member of 'timing_out'
-    at line 43 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
-    at line 55 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'VCNT_MAX' is not declared
-    at line 55 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'HSYNC_START' is not declared
-    at line 60 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'HSYNC_STOP' is not declared
-    at line 65 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'HBLK_START' is not declared
-    at line 70 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'HBLK_STOP' is not declared
-    at line 75 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
-    at line 82 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'VSYNC_START' is not declared
-    at line 82 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
-    at line 87 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'VSYNC_STOP' is not declared
-    at line 87 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
-    at line 92 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'VBLK_START' is not declared
-    at line 92 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
-    at line 97 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'VBLK_STOP' is not declared
-    at line 97 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
-    at line 105 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'VCNT_MAX' is not declared
-    at line 106 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
-*** Warning: MISSING_PORT_CONNECTION: Instance 'dut' of module 'vga_timing' is missing port connection to interface 'vga_out'
-    at line 40 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 17]
+    at line 50 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [compile index 5]
+*** Warning: MISSING_PORT_CONNECTION: Instance 'u_top_vga' of module 'top_vga' is missing port connection to inout 'xpos, ypos'
+    at line 85 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [compile index 5]
+*** Warning: UNDECLARED_MODULE: Module 'MouseCtl' is not declared
+    at line 103 in /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv [compile index 2]
 *** Warning: MISSING_PORT_CONNECTION: Instance 'dut' of module 'top_vga_basys3' is missing port connection to inout 'PS2Clk, PS2Data'
-    at line 59 in /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv [compile index 14]
+    at line 59 in /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv [compile index 13]
 *** Warning: MISSING_PORT_CONNECTION: Instance 'dut' of module 'top_vga_basys3' is missing port connection to input 'JA2, JA3'
-    at line 59 in /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv [compile index 14]
+    at line 59 in /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv [compile index 13]
 *** Warning: MISSING_PORT_CONNECTION: Instance 'dut' of module 'top_vga_basys3' is missing port connection to output 'JA4, JA5'
-    at line 59 in /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv [compile index 14]
+    at line 59 in /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv [compile index 13]
+*** Warning: MISSING_PORT_CONNECTION: Instance 'dut' of module 'top_vga' is missing port connection to inout 'xpos, ypos'
+    at line 66 in /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv [compile index 14]
 *** Warning: MISSING_PORT_CONNECTION: Instance 'dut' of module 'top_vga' is missing port connection to input 'gpio_left_input, gpio_right_input'
-    at line 66 in /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv [compile index 15]
+    at line 66 in /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv [compile index 14]
 *** Warning: MISSING_PORT_CONNECTION: Instance 'dut' of module 'top_vga' is missing port connection to output 'gpio_left_output, gpio_right_output'
-    at line 66 in /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv [compile index 15]
-*** Error: NON_EXISTING_PORT: Non existing port 'clk40' of module 'top_vga'
-    at line 40 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
-*** Error: NON_EXISTING_PORT: Non existing port 'clk100' of module 'top_vga'
-    at line 41 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'velocity' is not a member of 'draw_rect_ctl'
-    at line 75 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'ypos' is not a member of 'draw_rect_ctl'
-    at line 75 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'velocity' is not a member of 'draw_rect_ctl'
-    at line 80 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'ypos' is not a member of 'draw_rect_ctl'
-    at line 80 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'velocity' is not a member of 'draw_rect_ctl'
-    at line 85 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
-*** Error: UNDECLARED_IDENTIFIER: Identifier 'ypos' is not a member of 'draw_rect_ctl'
-    at line 85 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
-*** Warning: MISSING_PORT_CONNECTION: Instance 'dut' of module 'top_vga' is missing port connection to inout 'ps2_clk, ps2_data'
-    at line 39 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
-*** Warning: MISSING_PORT_CONNECTION: Instance 'dut' of module 'top_vga' is missing port connection to input 'clk_40, clk_100, gpio_left_input, gpio_right_input'
-    at line 39 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
-*** Warning: MISSING_PORT_CONNECTION: Instance 'dut' of module 'top_vga' is missing port connection to output 'gpio_left_output, gpio_right_output'
-    at line 39 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
+    at line 66 in /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv [compile index 14]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
+    at line 55 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'VCNT_MAX' is not declared
+    at line 55 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'HSYNC_START' is not declared
+    at line 60 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'HSYNC_STOP' is not declared
+    at line 65 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'HBLK_START' is not declared
+    at line 70 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'HBLK_STOP' is not declared
+    at line 75 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
+    at line 82 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'VSYNC_START' is not declared
+    at line 82 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
+    at line 87 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'VSYNC_STOP' is not declared
+    at line 87 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
+    at line 92 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'VBLK_START' is not declared
+    at line 92 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
+    at line 97 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'VBLK_STOP' is not declared
+    at line 97 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'HCNT_MAX' is not declared
+    at line 105 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'VCNT_MAX' is not declared
+    at line 106 in /student/zschab/Desktop/Projekt_UEC2/sim/vga_timing/vga_timing_tb.sv [compile index 16]
+*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'button_pressed' of '2-bit' type from '1'b0' of '1-bit' type
+    at line 33 in /student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv [compile index 21]
+*** Warning: WIDTH_MISMATCH_PADDING: Assignment to 'button_pressed' of '2-bit' type from 'button_pressed_nxt' of '1-bit' type
+    at line 42 in /student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv [compile index 21]
 *** Warning: UNELABORATED_MODULE: Module 'work.glbl' is not elaborated
-    at line 6 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
-Performing mixed post full build step (VLOG - RD) [7 ms] ...
+    at line 6 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
+Performing mixed post full build step (VLOG - RD) [6 ms] ...
 Performing mixed post full build step (VLOG - FSC) [51 ms] ...
 Performing mixed post full build step (VLOG - EV) [51 ms] ...
 Performing mixed post full build step (VLOG - ELPC) [53 ms] ...
-Performing mixed post full build step (VLOG - US) [50 ms] ...
+Performing mixed post full build step (VLOG - US) [101 ms] ...
+*** Warning: SIGNAL_NEVER_USED: Signal 'xpos' is never used
+    at line 6 in /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'ypos' is never used
+    at line 6 in /student/zschab/Desktop/Projekt_UEC2/rtl/top_vga.sv [compile index 2]
 *** Warning: SIGNAL_NEVER_USED: Signal 'clk_in2_clk_wiz_0' is never used
-    at line 82 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 82 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: SIGNAL_NEVER_USED: Signal 'clk_out3_clk_wiz_0' is never used
-    at line 99 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 99 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: SIGNAL_NEVER_USED: Signal 'clk_out4_clk_wiz_0' is never used
-    at line 100 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 100 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: SIGNAL_NEVER_USED: Signal 'clk_out5_clk_wiz_0' is never used
-    at line 101 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 101 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: SIGNAL_NEVER_USED: Signal 'clk_out6_clk_wiz_0' is never used
-    at line 102 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 102 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: SIGNAL_NEVER_USED: Signal 'clk_out7_clk_wiz_0' is never used
-    at line 103 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 103 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'clk100MHz_clk_wiz_0_en_clk' using `default_nettype set to wire
-    at line 212 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 212 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: INTERNAL_GENERATED_CLOCK: Clock signal 'clk100MHz_clk_wiz_0_en_clk' is not an input port
-    at line 214 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 214 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'clk40MHz_clk_wiz_0_en_clk' using `default_nettype set to wire
-    at line 224 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
+    at line 224 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: INTERNAL_GENERATED_CLOCK: Clock signal 'clk40MHz_clk_wiz_0_en_clk' is not an input port
-    at line 227 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 3]
-*** Warning: IMPLICIT_DECLARATION: Implicit declaration of 'clk40' using `default_nettype set to wire
-    at line 86 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [compile index 4]
-*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'clk40' is never written (connected to sub-instance input port)
-    at line 86 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/top_vga_basys3.sv [compile index 4]
+    at line 227 in /student/zschab/Desktop/Projekt_UEC2/fpga/rtl/clk_wiz_0_clk_wiz.v [compile index 4]
 *** Warning: SIGNAL_NEVER_WRITTEN: Signal 'rom' is never written
-    at line 19 in /student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv [compile index 7]
+    at line 19 in /student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv [compile index 8]
 *** Warning: INTERNAL_GENERATED_RESET: Reset signal 'file_open' is not an input port
     at line 388 in /student/zschab/Desktop/Projekt_UEC2/sim/common/tiff_writer.sv [compile index 12]
 *** Warning: MULTIPLE_CLOCKS_BLOCK: Procedural block driven by multiple clocks (go_delayed, go)
     at line 395 in /student/zschab/Desktop/Projekt_UEC2/sim/common/tiff_writer.sv [compile index 12]
 *** Warning: SIGNAL_NEVER_READ: Signal 'hs' is never read (connected to sub-instance output port)
-    at line 17 in /student/zschab/Desktop/Projekt_UEC2/sim/rect_ctl/rect_ctl_tb.sv [compile index 13]
+    at line 41 in /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv [compile index 13]
 *** Warning: SIGNAL_NEVER_READ: Signal 'hs' is never read (connected to sub-instance output port)
-    at line 41 in /student/zschab/Desktop/Projekt_UEC2/sim/top_fpga/top_fpga_tb.sv [compile index 14]
-*** Warning: SIGNAL_NEVER_READ: Signal 'hs' is never read (connected to sub-instance output port)
-    at line 40 in /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv [compile index 15]
-*** Warning: SIGNAL_NEVER_USED: Signal 'xpos_player2' is never used
-    at line 17 in /student/zschab/Desktop/Projekt_UEC2/rtl/draw_player2.sv [compile index 20]
-*** Warning: SIGNAL_NEVER_USED: Signal 'ypos_player1' is never used
-    at line 15 in /student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv [compile index 22]
-*** Warning: SIGNAL_NEVER_USED: Signal 'xpos_player2' is never used
-    at line 16 in /student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv [compile index 22]
-*** Warning: SIGNAL_NEVER_USED: Signal 'ypos_player2' is never used
-    at line 17 in /student/zschab/Desktop/Projekt_UEC2/rtl/draw_buttons.sv [compile index 22]
-*** Warning: SIGNAL_NEVER_USED: Signal 'rgb_out' is never used
-    at line 20 in /student/zschab/Desktop/Projekt_UEC2/rtl/draw_bg.sv [compile index 23]
+    at line 40 in /student/zschab/Desktop/Projekt_UEC2/sim/top_vga/top_vga_tb.sv [compile index 14]
 *** Warning: SIGNAL_NEVER_READ: Signal 'GSR' is never read
-    at line 14 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 14 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'GTS' is never read
-    at line 15 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 15 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'GWE' is never used
-    at line 16 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 16 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'PRLD' is never read
-    at line 17 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 17 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'GRESTORE' is never read
-    at line 18 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 18 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_WRITTEN: Signal 'p_up_tmp' is never written
-    at line 19 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 19 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'PLL_LOCKG' is never read
-    at line 20 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 20 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'PROGB_GLBL' is never used
-    at line 22 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 22 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'CCLKO_GLBL' is never used
-    at line 23 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 23 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'FCSBO_GLBL' is never used
-    at line 24 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 24 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'DO_GLBL' is never used
-    at line 25 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 25 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'DI_GLBL' is never used
-    at line 26 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 26 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'JTAG_TDO_GLBL' is never used
-    at line 34 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 34 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'JTAG_TCK_GLBL' is never used
-    at line 35 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 35 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'JTAG_TDI_GLBL' is never used
-    at line 36 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 36 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'JTAG_TMS_GLBL' is never used
-    at line 37 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 37 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'JTAG_TRST_GLBL' is never used
-    at line 38 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 38 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'JTAG_CAPTURE_GLBL' is never used
-    at line 40 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 40 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'JTAG_RESET_GLBL' is never used
-    at line 41 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 41 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'JTAG_SHIFT_GLBL' is never used
-    at line 42 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 42 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'JTAG_UPDATE_GLBL' is never used
-    at line 43 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 43 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_USED: Signal 'JTAG_RUNTEST_GLBL' is never used
-    at line 44 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 44 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'JTAG_SEL1_GLBL' is never read
-    at line 46 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 46 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'JTAG_SEL2_GLBL' is never read
-    at line 47 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 47 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'JTAG_SEL3_GLBL' is never read
-    at line 48 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 48 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'JTAG_SEL4_GLBL' is never read
-    at line 49 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 49 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'JTAG_USER_TDO1_GLBL' is never read
-    at line 51 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 51 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'JTAG_USER_TDO2_GLBL' is never read
-    at line 52 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 52 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'JTAG_USER_TDO3_GLBL' is never read
-    at line 53 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
+    at line 53 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
 *** Warning: SIGNAL_NEVER_READ: Signal 'JTAG_USER_TDO4_GLBL' is never read
-    at line 54 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 24]
-*** Done mixed mode extension build [744 ms] ***
-Waiver 'Disable by message' defined in '/student/zschab/Desktop/Projekt_UEC2/.dvt/waivers.xml' at line 4 applied to 0 problems
-Waiver 'Demote by path' defined in '/student/zschab/Desktop/Projekt_UEC2/.dvt/waivers.xml' at line 8 applied to 0 problems
-Waiver 'Promote by path OR message' defined in '/student/zschab/Desktop/Projekt_UEC2/.dvt/waivers.xml' at line 12 applied to 0 problems
-Waiver 'Disable by path AND message' defined in '/student/zschab/Desktop/Projekt_UEC2/.dvt/waivers.xml' at line 16 applied to 0 problems
-Waiver 'UNDECLARED_MODULE' defined in '/student/zschab/Desktop/Projekt_UEC2/.dvt/waivers.xml' at line 20 applied to 0 problems
-*** Total build time [3s.112ms] ***
-Loaded compile waivers from /home/student/zschab/Desktop/Projekt_UEC2/.dvt/waivers.xml
+    at line 54 in /student/zschab/Desktop/Projekt_UEC2/sim/common/glbl.v [compile index 23]
+*** Done mixed mode extension build [722 ms] ***
+*** Total build time [1s.509ms] ***

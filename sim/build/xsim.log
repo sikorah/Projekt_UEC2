@@ -1,0 +1,10 @@
+WARNING: File mine.dat referenced from process on /home/student/zschab/Desktop/Projekt_UEC2/rtl/image_rom.sv at line 25 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+If simulation ends before the testbench
+completes, use the menu option to run all.
+Prepare to wait a long time...
+Info: tiff_writer started frame           0
+Info: negedge VS at          15333300000
+Info: tiff writer finished frame           0
+Info: tiff_writer started frame           1
+Info: negedge VS at          31249332000
+Simulation is over, check the waveforms.
