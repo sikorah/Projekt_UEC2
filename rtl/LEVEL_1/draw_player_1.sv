@@ -15,13 +15,14 @@
     vga_if.out vga_out,
     vga_if.in vga_in,
     input logic [11:0] xpos_player1,
-    input logic [11:0] ypos_player1,
+    //input logic [11:0] ypos_player1,
     input State state
 );
 
 import vga_pkg::*;
 
 logic [11:0] rgb_nxt;
+logic ypos_player1 = '0;
 
 always_ff @(posedge clk) begin : bg_ff_blk
     if (rst) begin

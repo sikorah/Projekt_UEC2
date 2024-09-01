@@ -18,16 +18,23 @@ module draw_player_ctl (
     input logic gpio_left,
     input logic gpio_right,
     output logic [11:0] xpos_player1,
-    output logic [11:0] ypos_player1,
+    //output logic [11:0] ypos_player1,
     output logic [11:0] xpos_player2,
-    output logic [11:0] ypos_player2,
+    //output logic [11:0] ypos_player2,
     output State state
 
 );
 
+/*delay #(.CLK_DEL(1), .WIDTH(16)) u_delay(
+    .clk(clk),
+    .rst,
+    .din({vga_in.vcount, vga_in.hcount, vga_in.vsync,vga_in.vblnk,vga_in.hsync,vga_in.hblnk}),
+    .dout({vga_out.vcount, vga_out.hcount, vga_out.vsync,vga_out.vblnk,vga_out.hsync,vga_out.hblnk})
+);*/
+
 State state_nxt;
-logic [11:0] xpos_nxt1, ypos_nxt1;
-logic [11:0] xpos_nxt2, ypos_nxt2;
+logic [11:0] xpos_nxt1; //, ypos_nxt1;
+logic [11:0] xpos_nxt2; //, ypos_nxt2;
 logic v_tick_old;
 
 always_ff @(posedge clk) begin
@@ -35,25 +42,25 @@ always_ff @(posedge clk) begin
         state   <= IDLE;
         xpos_player1    <= '0;
         xpos_player2    <= '0;
-        ypos_player1    <= '0;
-        ypos_player2    <= '0;
+       // ypos_player1    <= '0;
+       // ypos_player2    <= '0;
     end else begin
         v_tick_old <= v_tick;
         if (v_tick && !v_tick_old) begin
             state   <= state_nxt;
             xpos_player1    <= xpos_nxt1;
             xpos_player2    <= xpos_nxt2;
-            ypos_player1    <= ypos_nxt1;
-            ypos_player2    <= ypos_nxt2;
+            //ypos_player1    <= ypos_nxt1;
+           // ypos_player2    <= ypos_nxt2;
         end
     end
 end
 
 always_comb begin
     xpos_nxt1 = xpos_player1;
-    ypos_nxt1 = ypos_player1;
+    //ypos_nxt1 = ypos_player1;
     xpos_nxt2 = xpos_player2;
-    ypos_nxt2 = ypos_player2;
+    //ypos_nxt2 = ypos_player2;
     state_nxt = state;
     case (state)
 
@@ -113,7 +120,7 @@ always_comb begin
                 xpos_nxt2  = xpos_player2;
             end
 
-            ypos_nxt2 = ypos_player2;
+            //ypos_nxt2 = ypos_player2;
         end
 
         LEFT2: begin
@@ -153,7 +160,7 @@ always_comb begin
                 xpos_nxt2  = xpos_player2;
             end
 
-            ypos_nxt2 = ypos_player2;
+            //ypos_nxt2 = ypos_player2;
         end
         RIGHT1: begin
             if (xpos_player1 < 310 && m_right) begin      //przed klockiem
@@ -189,7 +196,7 @@ always_comb begin
                 xpos_nxt1 = xpos_player1;
             end
 
-            ypos_nxt1 = ypos_player1;
+            //ypos_nxt1 = ypos_player1;
 
         end
         LEFT1: begin
@@ -228,7 +235,7 @@ always_comb begin
                 xpos_nxt1  = xpos_player1;
             end
 
-            ypos_nxt1 = ypos_player1;
+            //ypos_nxt1 = ypos_player1;
 
         end
 
@@ -236,9 +243,9 @@ always_comb begin
         default: begin
             state_nxt = IDLE;
             xpos_nxt1 = xpos_player1;
-            ypos_nxt1 = ypos_player1;
+            //ypos_nxt1 = ypos_player1;
             xpos_nxt2 = xpos_player2;
-            ypos_nxt2 = ypos_player2;
+            //ypos_nxt2 = ypos_player2;
         end
     endcase
 end

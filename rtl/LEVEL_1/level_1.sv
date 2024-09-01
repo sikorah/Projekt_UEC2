@@ -38,6 +38,7 @@
          vga_out.vsync  <= vga_in.vsync;
          vga_out.vblnk  <= vga_in.vblnk;
          vga_out.hcount <= vga_in.hcount;
+         vga_out.hblnk  <= vga_in.hblnk;
          vga_out.hsync  <= vga_in.hsync;
          vga_out.rgb    <= rgb_nxt;
      end

@@ -35,8 +35,6 @@ vga_if vga_tim();
 vga_if start();
 vga_if vga_out();
 
-//logic  button_pressed;
-
 wire m_left, m_right;
 
 g_state game_state;
@@ -46,6 +44,18 @@ State state;
 assign vs = vga_out.vsync;
 assign hs = vga_out.hsync;
 assign {r, g, b} = vga_out.rgb; 
+
+state_control u_state_control(
+    .clk_40(clk_40),
+    .rst(rst),
+    .xpos_mouse(xpos_mouse),
+    .ypos_mouse(ypos_mouse),
+    .m_left(m_left),
+    .m_right(m_right),
+    .xpos_player1(xpos_player_ctl1),
+    .xpos_player2(xpos_player_ctl2),
+    .game_state
+);
 
 
 vga_timing u_vga_timing (
@@ -73,32 +83,6 @@ MouseCtl u_mouse_ctl(
     .sety('0)
 );
 
-mouse_to_gpio u_mouse_to_gpio(
-    .clk(clk_40),
-    .rst(rst),
-    .m_left,
-    .m_right,
-    .gpio_left_output,
-    .gpio_right_output
-
-);
-
-draw_player_ctl u_draw_player_ctl (
-    .clk(clk_40),
-    .rst(rst),
-    .v_tick(vga_tim.vsync),
-    .m_left(m_left),
-    .m_right(m_right),
-    .gpio_left(gpio_left_input),
-    .gpio_right(gpio_right_input),
-    .xpos_player1(xpos_player_ctl1),
-    .ypos_player1(ypos_player_ctl1),
-    .xpos_player2(xpos_player_ctl2),
-    .ypos_player2(ypos_player_ctl2),
-    .button_pressed(button_pressed),
-    .state(state)
-);
-
 start_game u_start_game(
     .clk_40(clk_40),
     .rst(rst),
@@ -110,25 +94,40 @@ start_game u_start_game(
     .xpos_rect_ctl(xpos_rect_ctl),
     .ypos_rect_ctl(ypos_rect_ctl),
     .xpos_player_ctl1(xpos_player_ctl1),
-    .ypos_player_ctl1(ypos_player_ctl1),
+    //.ypos_player_ctl1(ypos_player_ctl1),
     .xpos_player_ctl2(xpos_player_ctl2),
-    .ypos_player_ctl2(xpos_player_ctl2),
+    //.ypos_player_ctl2(xpos_player_ctl2),
     .vga_in(vga_tim),
     .vga_out(vga_out)
 );
 
-
-state_control u_state_control(
-    .clk_40(clk_40),
+mouse_to_gpio u_mouse_to_gpio(
+    .clk(clk_40),
     .rst(rst),
-    .xpos_mouse(xpos_mouse),
-    .ypos_mouse(ypos_mouse),
+    .m_left,
+    .m_right,
+    .gpio_left_output,
+    .gpio_right_output
+
+);
+
+
+draw_player_ctl u_draw_player_ctl (
+    .clk(clk_40),
+    .rst(rst),
+    .v_tick(vga_tim.vsync),
     .m_left(m_left),
     .m_right(m_right),
-    .xpos_player_ctl1(xpos_player_ctl1),
-    .xpos_player_ctl2(xpos_player_ctl2),
-    .game_state
+    .gpio_left(gpio_left_input),
+    .gpio_right(gpio_right_input),
+    .xpos_player1(xpos_player_ctl1),
+   // .ypos_player1(ypos_player_ctl1),
+    .xpos_player2(xpos_player_ctl2),
+   // .ypos_player2(ypos_player_ctl2),
+    .button_pressed(button_pressed),
+    .state(state)
 );
+
 
 /*draw_mouse  u_draw_mouse(
     .clk(clk_40),
