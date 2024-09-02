@@ -73,7 +73,7 @@ always_comb begin
             end
 
         end
-        RIGHT2: begin
+      /*  RIGHT2: begin
             if (xpos_player2 < 310 && gpio_right) begin      //przed klockiem
                 xpos_nxt2 = xpos_player2 + 1;
                 state_nxt = state;
@@ -108,7 +108,7 @@ always_comb begin
                 xpos_nxt2  = xpos_player2;
             end
 
-        end
+        end*/
 
         LEFT2: begin
 
@@ -147,7 +147,6 @@ always_comb begin
                 xpos_nxt2  = xpos_player2;
             end
 
-            //ypos_nxt2 = ypos_player2;
         end
         RIGHT1: begin
             if (xpos_player1 < 310 && m_right) begin      //przed klockiem
@@ -183,7 +182,6 @@ always_comb begin
                 xpos_nxt1 = xpos_player1;
             end
 
-            //ypos_nxt1 = ypos_player1;
 
         end
         LEFT1: begin
@@ -222,7 +220,6 @@ always_comb begin
                 xpos_nxt1  = xpos_player1;
             end
 
-            //ypos_nxt1 = ypos_player1;
 
         end
 
@@ -230,9 +227,7 @@ always_comb begin
         default: begin
             state_nxt = IDLE;
             xpos_nxt1 = xpos_player1;
-            //ypos_nxt1 = ypos_player1;
             xpos_nxt2 = xpos_player2;
-            //ypos_nxt2 = ypos_player2;
         end
     endcase
 end

@@ -22,6 +22,7 @@
     input wire JA3,
     output wire JA4,
     output wire JA5,
+    inout wire JA6,
     output wire Vsync,
     output wire Hsync,
     output wire [3:0] vgaRed,
@@ -46,6 +47,7 @@ wire pclk_mirror100;
 
 
 assign JA1 = pclk_mirror40;
+assign JA6 = btnC;
 
 
 clk_wiz_0  u_clk
@@ -86,7 +88,7 @@ ODDR pclk100_oddr (
  top_vga u_top_vga (
      .clk_40(pclk40),
      .clk_100(pclk100),
-     .rst(btnC),
+     .rst(JA6),
      .r(vgaRed),
      .g(vgaGreen),
      .b(vgaBlue),
