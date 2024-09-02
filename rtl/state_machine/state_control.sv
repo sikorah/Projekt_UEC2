@@ -27,7 +27,7 @@ g_state game_state_nxt;
 
 always_ff @(posedge clk_40) begin
     if(rst) begin
-        game_state <= LEVEL_1;
+        game_state <= FINISH;
     end
     else begin
         game_state <= game_state_nxt;
