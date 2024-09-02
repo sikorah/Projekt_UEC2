@@ -15,7 +15,6 @@ module draw_player_ctl2 (
     input logic [1:0] button_pressed,
     input logic gpio_left,
     input logic gpio_right,
-    input logic m_right,
     output logic [11:0] xpos_player2,
     output State2 state
 

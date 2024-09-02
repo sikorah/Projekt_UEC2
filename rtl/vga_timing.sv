@@ -1,7 +1,7 @@
 /**
  * MTM Project_HubertSikora_ZuzannaSchab
  * 
- * Author: Hubert Sikora
+ * Author: Hubert Sikora, Zuzanna Schab
  *
  * Description:
  * Timing module for VGA display

@@ -1,7 +1,7 @@
 /**
  * Copyright (C) 2024  AGH University of Science and Technology
  * MTM UEC2
- * Author: Hubert Sikora
+ * Author: Hubert Sikora, Zuzanna Schab
  *
  * Description:
  * Finish screen for game
@@ -45,71 +45,46 @@
 end
 
 function logic [11:0] get_text_pixel(input int x, input int y);
-    // Litera "y"
-    if (((x >= 300 && x < 330) && (y >= 230 && y < 270)) || // górna pozioma linia
-        ((x >= 360 && x < 390) && (y >= 230 && y < 270)) || // lewy pionowy
-        ((x >= 330 && x < 360) && (y >= 200 && y < 230))) // środkowa pozioma linia
-        
+    // Litera "Y"
+    if (((x >= 220 && x < 230) && (y >= 260 && y < 280)) || // lewy górny pionowy
+        ((x >= 250 && x < 260) && (y >= 260 && y < 280)) || // prawy górny pionowy
+        ((x >= 235 && x < 245) && (y >= 280 && y < 310)))   // dolny pionowy
         return 12'h0_0_0; // czarny
 
-    // Litera "T"
-    else if (((x >= 255 && x < 295) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 270 && x < 280) && (y >= 270 && y < 310)))   // środkowy pionowy
+    // Litera "O"
+    else if (((x >= 275 && x < 285) && (y >= 260 && y < 310)) || // lewy pionowy
+             ((x >= 305 && x < 315) && (y >= 260 && y < 310)) || // prawy pionowy
+             ((x >= 285 && x < 305) && (y >= 260 && y < 270)) || // górna pozioma linia
+             ((x >= 285 && x < 305) && (y >= 300 && y < 310)))   // dolna pozioma linia
         return 12'h0_0_0; // czarny
 
-    // Litera "A"
-    else if (((x >= 300 && x < 310) && (y >= 270 && y < 310)) || // lewy pionowy
-             ((x >= 320 && x < 330) && (y >= 270 && y < 310)) || // prawy pionowy
-             ((x >= 310 && x < 320) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 310 && x < 320) && (y >= 280 && y < 290)))   // środkowa pozioma linia
-        return 12'h0_0_0; // czarny
-
-    // Litera "R"
-    else if (((x >= 340 && x < 350) && (y >= 260 && y < 310)) || // lewy pionowy
-             ((x >= 350 && x < 360) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 360 && x < 370) && (y >= 270 && y < 290)) || // prawy górny pionowy
-             ((x >= 350 && x < 370) && (y >= 280 && y < 290)) || // środkowa pozioma linia
-             ((x >= 355 && x < 365) && (y >= 290 && y < 300)) || // prawy dolny pionowy
-             ((x >= 360 && x < 370) && (y >= 300 && y < 310)))  // prawy dolny pionowy
-        return 12'h0_0_0; // czarny
-
-    // Litera "T" (druga)
-    else if (((x >= 375 && x < 415) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 390 && x < 400) && (y >= 270 && y < 310)))   // środkowy pionowy
+    // Litera "U"
+    else if (((x >= 330 && x < 340) && (y >= 260 && y < 310)) || // lewy pionowy
+             ((x >= 360 && x < 370) && (y >= 260 && y < 310)) || // prawy pionowy
+             ((x >= 340 && x < 360) && (y >= 300 && y < 310)))   // dolna pozioma linia
         return 12'h0_0_0; // czarny
 
     // Przerwa między wyrazami (10 pikseli szerokości)
-    else if (x >= 415 && x < 425)
+    else if (x >= 380 && x < 390)
         return 12'hf_f_0; // żółty
 
-    // Litera "G"
-    else if (((x >= 435 && x < 465) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 435 && x < 445) && (y >= 270 && y < 310)) || // lewy pionowy
-             ((x >= 445 && x < 465) && (y >= 300 && y < 310)) || // dolna pozioma linia
-             ((x >= 455 && x < 465) && (y >= 280 && y < 290)) || // prawy górny pionowy
-             ((x >= 455 && x < 465) && (y >= 290 && y < 310)))   // prawy dolny pionowy
+    // Litera "W"
+    else if (((x >= 400 && x < 410) && (y >= 260 && y < 310)) || // lewy pionowy
+             ((x >= 430 && x < 440) && (y >= 260 && y < 310)) || // prawy pionowy
+             ((x >= 410 && x < 415) && (y >= 290 && y < 300)) || // lewy ukośny
+             ((x >= 425 && x < 430) && (y >= 290 && y < 300)))   // prawy ukośny
         return 12'h0_0_0; // czarny
 
-    // Litera "A" (druga)
-    else if (((x >= 475 && x < 485) && (y >= 270 && y < 310)) || // lewy pionowy
-             ((x >= 495 && x < 505) && (y >= 270 && y < 310)) || // prawy pionowy
-             ((x >= 485 && x < 495) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 485 && x < 495) && (y >= 280 && y < 290)))   // środkowa pozioma linia
+    // Litera "I"
+    else if (((x >= 450 && x < 490) && (y >= 260 && y < 270)) || // górna pozioma linia
+             ((x >= 465 && x < 475) && (y >= 270 && y < 310)) || // środkowy pionowy
+             ((x >= 450 && x < 490) && (y >= 300 && y < 310)))   // dolna pozioma linia
         return 12'h0_0_0; // czarny
 
-    // Litera "M"
-    else if (((x >= 515 && x < 525) && (y >= 260 && y < 310)) || // lewy pionowy
-             ((x >= 545 && x < 555) && (y >= 260 && y < 310)) || // prawy pionowy
-             ((x >= 525 && x < 530) && (y >= 270 && y < 280)) || // lewy ukośny
-             ((x >= 540 && x < 545) && (y >= 270 && y < 280)) || // prawy ukośny
-             ((x >= 530 && x < 540) && (y >= 280 && y < 290)))  // środkowa pozioma linia
-        return 12'h0_0_0; // czarny
-
-    // Litera "E"
-    else if (((x >= 565 && x < 575) && (y >= 260 && y < 310)) || // lewy pionowy
-             ((x >= 575 && x < 605) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 575 && x < 605) && (y >= 280 && y < 290)) || // środkowa pozioma linia
-             ((x >= 575 && x < 605) && (y >= 300 && y < 310)))   // dolna pozioma linia
+    // Litera "N"
+    else if (((x >= 510 && x < 520) && (y >= 260 && y < 310)) || // lewy pionowy
+             ((x >= 540 && x < 550) && (y >= 260 && y < 310)) || // prawy pionowy
+             ((x >= 520 && x < 540) && (y >= 270 && y < 280)))   // ukośny
         return 12'h0_0_0; // czarny
 
     else return 12'hf_f_0; // Żółty kolor tła, jeśli nie litera
@@ -135,7 +110,7 @@ always_ff @(posedge clk) begin
     end
 end
 
-always_comb begin : start_screen_comb_blk
+always_comb begin : win_screen_comb_blk
     if (vga_in.vblnk || vga_in.hblnk) begin             // Region wygaszania:
         rgb_nxt = 12'h0_0_0;                    // - ustaw na czarno.
     end else begin                              // Aktywny region:

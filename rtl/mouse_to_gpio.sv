@@ -1,3 +1,11 @@
+/**
+ * Copyright (C) 2024  AGH University of Science and Technology
+ * MTM UEC2
+ * Author: Zuzanna Schab
+ *
+ * Description:
+ * Finish screen for game
+ */
 module mouse_to_gpio (
     input logic clk,
     input logic rst,

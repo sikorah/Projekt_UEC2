@@ -108,7 +108,6 @@
      .clk(clk_40),
      .rst(rst),
      .v_tick(vga_tim.vsync),
-     .m_right(m_right),
      .gpio_left(gpio_left_input),
      .gpio_right(gpio_right_input),
      .xpos_player2(xpos_player_ctl2),
