@@ -7,13 +7,17 @@
  * State package.
  */
 package state_pkg;
-    typedef enum logic [2:0] {
-        IDLE  = 3'b000,
-        RIGHT1 = 3'b001,
-        LEFT1  = 3'b010,
-        RIGHT2 = 3'b011,
-        LEFT2 = 3'b100
-    } State;
+    typedef enum logic [1:0] {
+        IDLE1  = 2'b00,
+        RIGHT1 = 2'b01,
+        LEFT1  = 2'b10
+    } State1;
+
+    typedef enum logic [1:0] {
+        IDLE2  = 2'b00,
+        RIGHT2 = 2'b01,
+        LEFT2 = 2'b10
+    } State2;
 
     typedef enum logic [1:0] {START, LEVEL_1, FINISH} g_state;
 endpackage

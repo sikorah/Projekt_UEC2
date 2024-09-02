@@ -15,7 +15,7 @@ module draw_player_2(
     vga_if.out vga_out,
     vga_if.in vga_in,
     input logic [11:0] xpos_player2,
-    input State state
+    input State2 state
 );
 
 import vga_pkg::*;
@@ -55,7 +55,7 @@ always_comb begin : bg_comb_blk
     
     // Sprawdzenie stanu i odpowiednie rysowanie postaci
     case (state)
-        IDLE: begin
+        IDLE2: begin
                 // player2 standing
             
             // eyes
@@ -113,7 +113,7 @@ always_comb begin : bg_comb_blk
             rgb_nxt = vga_in.rgb;
         end
 
-        RIGHT1: begin
+     /*   RIGHT1: begin
 
             // eyes
             if ((((vga_in.vcount - (440 - ypos_player2))**2 + (vga_in.hcount - (10 + xpos_player2))**2 <= 30)) || 
@@ -173,7 +173,7 @@ always_comb begin : bg_comb_blk
 
             else 
             rgb_nxt = vga_in.rgb;
-        end
+        end*/
     endcase
 end
 

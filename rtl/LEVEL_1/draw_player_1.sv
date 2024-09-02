@@ -15,7 +15,7 @@
     vga_if.out vga_out,
     vga_if.in vga_in,
     input logic [11:0] xpos_player1,
-    input State state
+    input State1 state
 );
 
 import vga_pkg::*;
@@ -54,7 +54,7 @@ always_comb begin : bg_comb_blk
     
     // Sprawdzenie stanu i odpowiednie rysowanie postaci
     case (state)
-        IDLE: begin
+        IDLE1: begin
             // eyes
             if ((((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (10 + xpos_player1))**2 <= 30)) || 
                 ((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (27 + xpos_player1))**2 <= 30))
@@ -111,7 +111,7 @@ always_comb begin : bg_comb_blk
             rgb_nxt = vga_in.rgb;
         end
         
-        RIGHT2: begin
+     /*   RIGHT2: begin
             // player1 standing
              // eyes
             if ((((vga_in.vcount - (440 - ypos_player1))**2 + (vga_in.hcount - (10 + xpos_player1))**2 <= 30)) || 
@@ -170,7 +170,7 @@ always_comb begin : bg_comb_blk
 
             else 
             rgb_nxt = vga_in.rgb;
-        end
+        end*/
     endcase
 end
 

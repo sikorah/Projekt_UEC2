@@ -55,7 +55,8 @@ set sv_files {
     ../rtl/LEVEL_1/draw_buttons.sv
     ../rtl/LEVEL_1/draw_player_1.sv 
     ../rtl/LEVEL_1/draw_player_2.sv 
-    ../rtl/LEVEL_1/draw_player_ctl.sv
+    ../rtl/LEVEL_1/draw_player_ctl1.sv
+    ../rtl/LEVEL_1/draw_player_ctl2.sv
     rtl/top_vga_basys3.sv
     rtl/clk_wiz_0_clk_wiz.v
     rtl/clk_wiz_0.v

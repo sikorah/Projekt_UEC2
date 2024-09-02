@@ -18,7 +18,8 @@ module start_game(
     input logic [11:0] xpos_player_ctl1, xpos_player_ctl2,
     inout logic [11:0] xpos_mouse, ypos_mouse,
     inout logic [1:0] button_pressed,
-    input State state,
+    input State1 state1,
+    input State2 state2,
 
     vga_if.in vga_in,
     vga_if.out vga_out
@@ -83,7 +84,7 @@ draw_player_2 u_draw_player_2(
     .vga_in(rect),
     .vga_out(player_1),
     .xpos_player2(xpos_player_ctl2),
-    .state
+    .state(state2)
 );
 
 draw_player_1 u_draw_player_1(
@@ -92,7 +93,7 @@ draw_player_1 u_draw_player_1(
     .vga_in(player_1),
     .vga_out(level_1),
     .xpos_player1(xpos_player_ctl1),
-    .state
+    .state(state1)
 );
 
 

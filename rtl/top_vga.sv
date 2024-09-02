@@ -36,9 +36,11 @@ vga_if start();
 vga_if vga_out();
 
 wire m_left, m_right;
+wire gpio_l, gpio_r;
 
 g_state game_state;
-State state;
+State1 state1;
+State2 state2;
 
 
 assign vs = vga_out.vsync;
@@ -73,8 +75,12 @@ MouseCtl u_mouse_ctl(
 mouse_to_gpio u_mouse_to_gpio(
     .clk(clk_100),
     .rst(rst),
-    .m_left,
-    .m_right,
+    .m_left(m_left),
+    .m_right(m_right),
+    .gpio_r(gpio_r),
+    .gpio_l(gpio_l),
+    .gpio_left_input(gpio_left_input),
+    .gpio_right_input(gpio_right_input),
     .gpio_left_output(gpio_left_output),
     .gpio_right_output(gpio_right_output)
 
@@ -86,32 +92,42 @@ state_control u_state_control(
     .xpos_mouse(xpos_mouse),
     .ypos_mouse(ypos_mouse),
     .m_left(m_left),
-    .gpio(gpio_input_left),
+    .gpio(gpio_l),
     .xpos_player1(xpos_player_ctl1),
     .xpos_player2(xpos_player_ctl2),
     .game_state
 );
 
 
-/*draw_player_ctl u_draw_player_ctl (
+draw_player_ctl1 u_draw_player_ctl1 (
     .clk(clk_40),
     .rst(rst),
     .v_tick(vga_tim.vsync),
-    .gpio_left(gpio_left_input),
-    .gpio_right(gpio_right_input),
     .m_left(m_left),
     .m_right(m_right),
     .xpos_player1(xpos_player_ctl1),
+    .button_pressed(button_pressed),
+    .state(state1)
+);
+
+draw_player_ctl2 u_draw_player_ctl2 (
+    .clk(clk_40),
+    .rst(rst),
+    .v_tick(vga_tim.vsync),
+    .m_right(m_right),
+    .gpio_left(gpio_l),
+    .gpio_right(gpio_r),
     .xpos_player2(xpos_player_ctl2),
     .button_pressed(button_pressed),
-    .state(state)
-);*/
+    .state(state2)
+);
 
 start_game u_start_game(
     .clk_40(clk_40),
     .rst(rst),
     .game_state,
-    .state,
+    .state1,
+    .state2,
     .xpos_mouse(xpos_mouse),
     .ypos_mouse(ypos_mouse),
     .button_pressed,

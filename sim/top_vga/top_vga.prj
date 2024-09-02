@@ -31,7 +31,8 @@ sv work ../../rtl/pkgs/vga_pkg.sv \
         ../../rtl/LEVEL_1/draw_player_1.sv \
         ../../rtl/LEVEL_1/draw_player_2.sv \
         ../../rtl/mouse_to_gpio.sv \
-        ../../rtl/LEVEL_1/draw_player_ctl.sv \
+        ../../rtl/LEVEL_1/draw_player_ctl1.sv \
+        ../../rtl/LEVEL_1/draw_player_ctl2.sv \
         ../common/tiff_writer.sv \
         top_vga_tb.sv
 
