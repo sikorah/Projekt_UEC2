@@ -22,31 +22,52 @@
 
  
  logic [11:0] rgb_nxt;
- 
+ logic [11:0] rgb_nxt_pipe;
+ logic [23:0] vcount_centered_pipe1, hcount_centered_pipe1;
+ logic [23:0] vcount_centered_pipe2, hcount_centered_pipe2;
+ logic [47:0] squared_dist_pipe;
 
  always_ff @(posedge clk) begin
      if (rst) begin
-         vga_out.vcount <= '0;
-         vga_out.vsync  <= '0;
-         vga_out.vblnk  <= '0;
-         vga_out.hcount <= '0;
-         vga_out.hsync  <= '0;
-         vga_out.hblnk  <= '0;
-         vga_out.rgb    <= '0;
-     end else begin
-         vga_out.vcount <= vga_in.vcount;
-         vga_out.vsync  <= vga_in.vsync;
-         vga_out.vblnk  <= vga_in.vblnk;
-         vga_out.hcount <= vga_in.hcount;
-         vga_out.hblnk  <= vga_in.hblnk;
-         vga_out.hsync  <= vga_in.hsync;
-         vga_out.rgb    <= rgb_nxt;
+          vga_out.vcount <= '0;
+          vga_out.vsync <= '0;
+          vga_out.vblnk<= '0;
+          vga_out.hcount <= '0;
+          vga_out.hsync  <= '0;
+          vga_out.hblnk <= '0;
+          vga_out.rgb <= '0;
+
+  
+      end else begin
+          vga_out.vcount <= vga_in.vcount;
+          vga_out.vsync  <= vga_in.vsync ;
+          vga_out.vblnk <= vga_in.vblnk ;
+          vga_out.hcount <= vga_in.hcount;
+          vga_out.hsync  <= vga_in.hsync ;
+          vga_out.hblnk <= vga_in.hblnk ;
+          vga_out.rgb <= rgb_nxt_pipe;
+          
+         
+
      end
+ end
+ always_ff @(posedge clk) begin
+     vcount_centered_pipe1 <= vga_in.vcount - 100;
+     hcount_centered_pipe1 <= vga_in.hcount - 100;
+
+     vcount_centered_pipe2 <= vcount_centered_pipe1 * vcount_centered_pipe1;
+     hcount_centered_pipe2 <= hcount_centered_pipe1 * hcount_centered_pipe1;
+ 
+     squared_dist_pipe <= vcount_centered_pipe2 + hcount_centered_pipe2;
+ end
+
+ always_ff @(posedge clk) begin
+     rgb_nxt_pipe <= rgb_nxt;
  end
 
 
- 
- always_comb begin : bg_comb_blk
+ always_comb begin
+     
      if ((vga_in.vblnk == 1 ) || (vga_in.hblnk == 1)) begin             // Blanking region:
          rgb_nxt = 12'h0_0_0;                    // - make it it black.
      end else begin                              // Active region:
@@ -86,16 +107,9 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
             
              //clouds
-        else if (((vga_in.vcount - 100)**2 + (vga_in.hcount - 100)**2 <= 300) || ((vga_in.vcount - 100)**2 + (vga_in.hcount - 150)**2 <= 300) || ((vga_in.vcount - 90)**2 + (vga_in.hcount - 125)**2 <= 600))
-             rgb_nxt = 12'hFFF;
-        else if (((vga_in.vcount - 275)**2 + (vga_in.hcount - 200)**2 <= 300) || ((vga_in.vcount - 275)**2 + (vga_in.hcount - 250)**2 <= 300) || ((vga_in.vcount - 265)**2 + (vga_in.hcount - 225)**2 <= 600))
-             rgb_nxt = 12'hFFF;
-        else if (((vga_in.vcount - 150)**2 + (vga_in.hcount - 400)**2 <= 700) || ((vga_in.vcount - 150)**2 + (vga_in.hcount - 460)**2 <= 700) || ((vga_in.vcount - 140)**2 + (vga_in.hcount - 425)**2 <= 900))
-             rgb_nxt = 12'hFFF;
-        else if (((vga_in.vcount - 200)**2 + (vga_in.hcount - 600)**2 <= 300) || ((vga_in.vcount - 200)**2 + (vga_in.hcount - 650)**2 <= 300) || ((vga_in.vcount - 190)**2 + (vga_in.hcount - 625)**2 <= 600))
-             rgb_nxt = 12'hFFF;
-        else if (((vga_in.vcount - 50)**2 + (vga_in.hcount - 700)**2 <= 300) || ((vga_in.vcount - 50)**2 + (vga_in.hcount - 750)**2 <= 300) || ((vga_in.vcount - 40)**2 + (vga_in.hcount - 725)**2 <= 600))
-             rgb_nxt = 12'hFFF;
+          else if(squared_dist_pipe <= 800)
+             rgb_nxt = 12'hFF0;
+          
         else                                    // The rest of active display pixels:
              rgb_nxt = 12'h00F;                // - fill withdeep blue.
      end

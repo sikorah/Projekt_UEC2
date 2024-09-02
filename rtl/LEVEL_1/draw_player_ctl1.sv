@@ -29,7 +29,7 @@ logic v_tick_old;
 always_ff @(posedge clk) begin
     if (rst) begin
         state   <= IDLE1;
-        xpos_player1    <= '0;
+        xpos_player1    <= 500;
         v_tick_old <= '0;
     end else begin
         v_tick_old <= v_tick;

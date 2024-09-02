@@ -18,10 +18,9 @@ module top_vga (
     input  logic gpio_right_input,
     output logic gpio_left_output,
     output logic gpio_right_output,
-    inout  logic [11:0] xpos, ypos,
     inout  logic [11:0] xpos_rect_ctl, ypos_rect_ctl,
+    inout logic [11:0] xpos_mouse, ypos_mouse,
     inout  logic [11:0] xpos_player_ctl1, xpos_player_ctl2,
-    inout  logic [11:0] xpos_mouse, ypos_mouse,
     inout  logic [1:0] button_pressed,
     input  logic rst,
     output logic vs,
@@ -36,7 +35,6 @@ vga_if start();
 vga_if vga_out();
 
 wire m_left, m_right;
-wire gpio_l, gpio_r;
 
 g_state game_state;
 State1 state1;
@@ -77,10 +75,6 @@ mouse_to_gpio u_mouse_to_gpio(
     .rst(rst),
     .m_left(m_left),
     .m_right(m_right),
-    .gpio_r(gpio_r),
-    .gpio_l(gpio_l),
-    .gpio_left_input(gpio_left_input),
-    .gpio_right_input(gpio_right_input),
     .gpio_left_output(gpio_left_output),
     .gpio_right_output(gpio_right_output)
 
@@ -92,7 +86,7 @@ state_control u_state_control(
     .xpos_mouse(xpos_mouse),
     .ypos_mouse(ypos_mouse),
     .m_left(m_left),
-    .gpio(gpio_l),
+    .gpio(gpio_left_output),
     .xpos_player1(xpos_player_ctl1),
     .xpos_player2(xpos_player_ctl2),
     .game_state
@@ -115,8 +109,8 @@ draw_player_ctl2 u_draw_player_ctl2 (
     .rst(rst),
     .v_tick(vga_tim.vsync),
     .m_right(m_right),
-    .gpio_left(gpio_l),
-    .gpio_right(gpio_r),
+    .gpio_left(gpio_left_output),
+    .gpio_right(gpio_right_output),
     .xpos_player2(xpos_player_ctl2),
     .button_pressed(button_pressed),
     .state(state2)
@@ -140,14 +134,7 @@ start_game u_start_game(
 );
 
 
-/*draw_mouse  u_draw_mouse(
-    .clk(clk_40),
-    .rst,
-    .vga_in(start),
-    .vga_out(vga_out),
-    .xpos(xpos_mouse),
-    .ypos(ypos_mouse)
-);*/
+
 
 draw_rect_ctl u_draw_rect_ctl (
     .clk(clk_40),

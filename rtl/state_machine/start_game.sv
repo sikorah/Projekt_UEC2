@@ -104,39 +104,6 @@ finish_screen u_finish_screen(
     .vga_out(finish)
 );
 
-// TEXT
-
-/*wire [11:0] char_xy_title;
-wire [6:0] char_code_title;
-wire [3:0] char_line_title;
-wire [7:0] char_pixels_title;
-
-draw_text #(
-    .XPOS(320),
-    .YPOS(120)
-) u_draw_title(
-    .clk(clk_40),
-    .rst(rst),
-    .char_pixels(char_pixels_title),
-    .char_xy(char_xy_title),
-    .char_line(char_line_title),
-    .vga_in(mouse),
-    .vga_out(game_menu)
-);
-
-font_rom u_font_rom_title(
-    .clk(clk_40),
-    .char_line(char_line_title),
-    .char_code(char_code_title),
-    .char_line_pixels(char_pixels_title)
-);
-
-char_rom_title u_char_rom_title(
-    .clk(clk_40),
-    .char_xy(char_xy_title),
-    .char_code(char_code_title)
-);*/
-
 always_ff @(posedge clk_40) begin
     case(game_state)
         START: begin
