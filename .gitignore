@@ -19,3 +19,4 @@ xvlog.pb
 sim/build/
 fpga/build/
 xcelium.d/
+xsim.dir/work/
