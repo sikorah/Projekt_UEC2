@@ -43,6 +43,7 @@
          vga_out.vcount <= '0;
          vga_out.vsync  <= '0;
          vga_out.vblnk  <= '0;
+         vga_out.rgb    <= '0;
      end
      else begin
          vga_out.hcount <= hcount_nxt;

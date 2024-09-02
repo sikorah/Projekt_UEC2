@@ -23,9 +23,9 @@
  
  logic [11:0] rgb_nxt;
  logic [11:0] rgb_nxt_pipe;
- logic [23:0] vcount_centered_pipe1, hcount_centered_pipe1;
- logic [23:0] vcount_centered_pipe2, hcount_centered_pipe2;
- logic [47:0] squared_dist_pipe;
+ logic [18:0] vcount_centered_pipe1, hcount_centered_pipe1;
+ logic [18:0] vcount_centered_pipe2, hcount_centered_pipe2;
+ logic [20:0] squared_dist_pipe;
 
  always_ff @(posedge clk) begin
      if (rst) begin
@@ -107,7 +107,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
             
              //clouds
-          else if(squared_dist_pipe <= 800)
+          else if(squared_dist_pipe <= 4000)
              rgb_nxt = 12'hFF0;
           
         else                                    // The rest of active display pixels:

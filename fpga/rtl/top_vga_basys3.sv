@@ -38,6 +38,7 @@ wire pclk100;
 wire pclk_mirror100;
 wire locked;
 
+
 (* KEEP = "TRUE" *)
 (* ASYNC_REG = "TRUE" *)
 
