@@ -132,16 +132,6 @@
      .vga_out(vga_out)
  );
  
- 
- /*draw_mouse  u_draw_mouse(
-     .clk(clk_40),
-     .rst,
-     .vga_in(start),
-     .vga_out(vga_out),
-     .xpos(xpos_mouse),
-     .ypos(ypos_mouse)
- );*/
- 
  draw_rect_ctl u_draw_rect_ctl (
      .clk(clk_40),
      .rst(rst),
