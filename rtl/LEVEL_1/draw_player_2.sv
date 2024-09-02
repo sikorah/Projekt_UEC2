@@ -21,9 +21,20 @@ module draw_player_2(
 import vga_pkg::*;
 
 logic [11:0] rgb_nxt;
-
+logic [11:0] rgb_pipe1, rgb_pipe2;
 logic ypos_player2 = '0;
 
+logic [11:0] vcount_d1, vcount_d2;
+logic [11:0] hcount_d1, hcount_d2;
+logic [11:0] ypos_d1, ypos_d2;
+logic [11:0] xpos_d1, xpos_d2;
+
+logic [23:0] vcount_diff1_stage1, hcount_diff1_stage1;
+logic [23:0] vcount_diff2_stage1, hcount_diff2_stage1;
+logic [23:0] dist1_stage2, dist2_stage2;
+
+
+          
 always_ff @(posedge clk) begin : bg_ff_blk
     if (rst) begin
         vga_out.vcount <= '0;
@@ -32,23 +43,59 @@ always_ff @(posedge clk) begin : bg_ff_blk
         vga_out.hcount <= '0;
         vga_out.hsync  <= '0;
         vga_out.hblnk <= '0;
+        rgb_pipe1 <= 12'h000;
+        rgb_pipe2 <= 12'h000;
+        vga_out.rgb <= 12'h000;
+
+        vcount_d1 <= '0;
+        vcount_d2 <= '0;
+        hcount_d1 <= '0;
+        hcount_d2 <= '0;
+        ypos_d1 <= '0;
+        ypos_d2 <= '0;
+        xpos_d1 <= '0;
+        xpos_d2 <= '0;
+
+        vcount_diff1_stage1 <= '0;
+        hcount_diff1_stage1 <= '0;
+        vcount_diff2_stage1 <= '0;
+        hcount_diff2_stage1 <= '0;
+        dist1_stage2 <= '0;
+        dist2_stage2 <= '0;
+
+
     end else begin
         vga_out.vcount <= vga_in.vcount;
         vga_out.vsync  <= vga_in.vsync ;
         vga_out.vblnk <= vga_in.vblnk ;
         vga_out.hcount <= vga_in.hcount;
-        vga_out.hsync  <= vga_in.hsync;
+        vga_out.hsync  <= vga_in.hsync ;
         vga_out.hblnk <= vga_in.hblnk ;
+
+        rgb_pipe1 <= rgb_nxt;
+        rgb_pipe2 <= rgb_pipe1;
+        vga_out.rgb  <= rgb_pipe2;
+
+        vcount_d1 <= vga_in.vcount;
+        vcount_d2 <= vcount_d1;
+        hcount_d1 <= vga_in.hcount;
+        hcount_d2 <= hcount_d1;
+        ypos_d1 <= ypos_player2;
+        ypos_d2 <= ypos_d1;
+        xpos_d1 <= xpos_player2;
+        xpos_d2 <= xpos_d1;
+
+        vcount_diff1_stage1  <= vcount_d2 - (440 - ypos_d2);
+        hcount_diff1_stage1  <= hcount_d2 - (10 + xpos_d2);
+        vcount_diff2_stage1  <= vcount_d2 - (440 - ypos_d2);
+        hcount_diff2_stage1  <= hcount_d2 - (27 + xpos_d2);
+        
+        dist1_stage2 <= vcount_diff1_stage1 * vcount_diff1_stage1 + hcount_diff1_stage1 * hcount_diff1_stage1;
+        dist2_stage2 <= vcount_diff2_stage1 * vcount_diff2_stage1 + hcount_diff2_stage1 * hcount_diff2_stage1;
+
     end
 end
 
-always_ff @(posedge clk) begin
-    if (rst) begin
-        vga_out.rgb   <= '0;
-    end else begin
-        vga_out.rgb  <= rgb_nxt;
-    end
-end
 
 always_comb begin : bg_comb_blk                            
     
@@ -56,12 +103,11 @@ always_comb begin : bg_comb_blk
     // Sprawdzenie stanu i odpowiednie rysowanie postaci
     case (state)
         IDLE: begin
-                // player2 standing
-            
             // eyes
-            if ((((vga_in.vcount - (440 - ypos_player2))**2 + (vga_in.hcount - (10 + xpos_player2))**2 <= 30)) || 
-                ((vga_in.vcount - (440 - ypos_player2))**2 + (vga_in.hcount - (27 + xpos_player2))**2 <= 30))
+            if(dist1_stage2 <= 30 || dist2_stage2 <= 30)
                 rgb_nxt = 12'h0FF;
+                //ears
+
             // body
             else if ((vga_in.vcount + ypos_player2 > 420 && vga_in.vcount <= 480 + ypos_player2) && 
                      (vga_in.hcount > xpos_player2 && vga_in.hcount < 40 + xpos_player2))
@@ -116,9 +162,10 @@ always_comb begin : bg_comb_blk
         RIGHT1: begin
 
             // eyes
-            if ((((vga_in.vcount - (440 - ypos_player2))**2 + (vga_in.hcount - (10 + xpos_player2))**2 <= 30)) || 
-                ((vga_in.vcount - (440 - ypos_player2))**2 + (vga_in.hcount - (27 + xpos_player2))**2 <= 30))
+            if(dist1_stage2 <= 30 || dist2_stage2 <= 30)
                 rgb_nxt = 12'h0FF;
+                //ears
+
             // body
             else if ((vga_in.vcount + ypos_player2 > 420 && vga_in.vcount <= 480 + ypos_player2) && 
                      (vga_in.hcount > xpos_player2 && vga_in.hcount < 40 + xpos_player2))
@@ -147,9 +194,10 @@ always_comb begin : bg_comb_blk
         LEFT1: begin
 
             // eyes
-            if ((((vga_in.vcount - (440 - ypos_player2))**2 + (vga_in.hcount - (10 + xpos_player2))**2 <= 30)) || 
-                ((vga_in.vcount - (440 - ypos_player2))**2 + (vga_in.hcount - (27 + xpos_player2))**2 <= 30))
+            if(dist1_stage2 <= 30 || dist2_stage2 <= 30)
                 rgb_nxt = 12'h0FF;
+                //ears
+
             // body
             else if ((vga_in.vcount + ypos_player2 > 420 && vga_in.vcount <= 480 + ypos_player2) && 
                      (vga_in.hcount > xpos_player2 && vga_in.hcount < 40 + xpos_player2))
