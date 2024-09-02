@@ -36,7 +36,7 @@ wire pclk40;
 wire pclk_mirror40;
 wire pclk100;
 wire pclk_mirror100;
-
+wire locked;
 
 (* KEEP = "TRUE" *)
 (* ASYNC_REG = "TRUE" *)
@@ -52,7 +52,8 @@ clk_wiz_0  u_clk
     (
      .clk40MHz(pclk40),
      .clk100MHz(pclk100),
-     .clk(clk)
+     .clk(clk),
+     .locked(locked)
     );
 
 // Mirror pclk on a pin for use by the testbench;

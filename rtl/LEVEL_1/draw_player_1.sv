@@ -96,14 +96,12 @@ always_ff @(posedge clk) begin : bg_ff_blk
 end
 
 
-always_comb begin                            
-    
-    
+always_comb begin
+
     // Sprawdzenie stanu i odpowiednie rysowanie postaci
     case (state)
         IDLE1: begin
 
-        
             // eyes
             if(dist1_stage2 <= 30 || dist2_stage2 <= 30)
                 rgb_nxt = 12'h0FF;

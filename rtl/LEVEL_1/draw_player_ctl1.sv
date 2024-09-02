@@ -23,13 +23,13 @@ module draw_player_ctl1 (
 
 
 State1 state_nxt;
-logic [11:0] xpos_nxt1; 
+logic [11:0] xpos_nxt1;
 logic v_tick_old;
 
 always_ff @(posedge clk) begin
     if (rst) begin
         state   <= IDLE1;
-        xpos_player1    <= 500;
+        xpos_player1    <= '0;
         v_tick_old <= '0;
     end else begin
         v_tick_old <= v_tick;

@@ -40,16 +40,12 @@ set sv_files {
     ../rtl/vga_timing.sv
     ../rtl/state_machine/state_control.sv 
     ../rtl/start_finish/start_screen.sv 
-    ../rtl/delay.sv 
     ../rtl/state_machine/start_game.sv 
     ../rtl/LEVEL_1/level_1.sv 
     ../rtl/start_finish/finish_screen.sv 
     ../rtl/LEVEL_1/draw_rect.sv
     ../rtl/LEVEL_1/draw_rect_ctl.sv
     ../rtl/top_vga.sv
-    ../rtl/text/font_rom.sv
-    ../rtl/text/draw_text.sv
-    ../rtl/text/char_rom_title.sv
     ../rtl/mouse/draw_mouse.sv
     ../rtl/LEVEL_1/image_rom.sv
     ../rtl/LEVEL_1/draw_buttons.sv
