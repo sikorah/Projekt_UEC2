@@ -32,9 +32,9 @@
 );
 
 
-wire pclk40;
-wire pclk_mirror40;
-wire pclk100;
+wire pclk;
+wire pclk_100;
+wire pclk_mirror;
 wire pclk_mirror100;
 wire locked;
 
@@ -45,13 +45,13 @@ wire locked;
 // https://docs.xilinx.com/r/en-US/ug901-vivado-synthesis/Synthesis-Attributes
 
 
-assign JA1 = pclk_mirror40;
+assign JA1 = pclk_mirror;
 
 
-clk_wiz_0  u_clk
+clk_wiz_0_clk_wiz  CLK
     (
-     .clk40MHz(pclk40),
-     .clk100MHz(pclk100),
+     .clk65MHz(pclk),
+     .clk100MHz(pclk_100),
      .clk(clk),
      .locked(locked)
     );
@@ -59,9 +59,9 @@ clk_wiz_0  u_clk
 // Mirror pclk on a pin for use by the testbench;
 // not functionally required for this design to work.
 
-ODDR pclk40_oddr (
-    .Q(pclk_mirror40),
-    .C(pclk40),
+ODDR pclk65_oddr (
+    .Q(pclk_mirror),
+    .C(pclk),
     .CE(1'b1),
     .D1(1'b1),
     .D2(1'b0),
@@ -85,7 +85,7 @@ ODDR pclk100_oddr (
  */
 
  top_vga u_top_vga (
-     .clk_40(pclk40),
+     .clk_65(pclk),
      .clk_100(pclk100),
      .rst(btnC),
      .r(vgaRed),

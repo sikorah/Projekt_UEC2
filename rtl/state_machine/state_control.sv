@@ -11,7 +11,7 @@ import vga_pkg::*;
 import state_pkg::*;
 
 module state_control(
-    input logic clk_40,
+    input logic clk,
     input logic rst,
     input logic m_left,
     input logic gpio,
@@ -25,9 +25,9 @@ module state_control(
 
 g_state game_state_nxt;
 
-always_ff @(posedge clk_40) begin
+always_ff @(posedge clk) begin
     if(rst) begin
-        game_state <= START;
+        game_state <= LEVEL_1;
     end
     else begin
         game_state <= game_state_nxt;

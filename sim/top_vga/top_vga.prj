@@ -21,7 +21,6 @@ sv work ../../rtl/pkgs/vga_pkg.sv \
         ../../rtl/start_finish/finish_screen.sv \
         ../../rtl/LEVEL_1/draw_rect.sv \
         ../../rtl/LEVEL_1/draw_rect_ctl.sv \
-        ../../rtl/mouse/draw_mouse.sv \
         ../../rtl/LEVEL_1/draw_buttons.sv \
         ../../rtl/LEVEL_1/image_rom.sv \
         ../../rtl/LEVEL_1/draw_player_1.sv \

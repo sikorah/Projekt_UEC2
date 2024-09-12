@@ -11,7 +11,7 @@
  import state_pkg::*;
 
 module start_game(
-    input logic clk_40,
+    input logic clk,
     input logic rst,
     input g_state game_state,
     inout logic [11:0] xpos_rect_ctl, ypos_rect_ctl,
@@ -38,21 +38,21 @@ wire [11:0] rom2rect_pixel;
 wire [13:0] rect2rom_address;
 
 start_screen u_start_screen(
-    .clk(clk_40),
+    .clk(clk),
     .rst(rst),
     .vga_in,
     .vga_out(game_menu)
 );
 
 level_1 u_level_1(
-    .clk(clk_40),
+    .clk(clk),
     .rst(rst),
     .vga_in,
     .vga_out(lvl_start)
 );
 
 draw_buttons u_draw_buttons (
-    .clk(clk_40),
+    .clk(clk),
     .rst(rst),
     .vga_in(lvl_start),
     .vga_out(buttons),
@@ -62,7 +62,7 @@ draw_buttons u_draw_buttons (
 );
 
 draw_rect u_draw_rect (
-    .clk(clk_40),
+    .clk(clk),
     .rst(rst),
     .vga_in(buttons),
     .vga_out(rect),
@@ -73,13 +73,13 @@ draw_rect u_draw_rect (
 );
 
 image_rom u_image_rom (
-    .clk(clk_40),
+    .clk(clk),
     .address(rect2rom_address),
     .rgb(rom2rect_pixel)
 );
 
 draw_player_2 u_draw_player_2(
-    .clk(clk_40),
+    .clk(clk),
     .rst(rst),
     .vga_in(rect),
     .vga_out(player_1),
@@ -88,7 +88,7 @@ draw_player_2 u_draw_player_2(
 );
 
 draw_player_1 u_draw_player_1(
-    .clk(clk_40),
+    .clk(clk),
     .rst(rst),
     .vga_in(player_1),
     .vga_out(level_1),
@@ -98,13 +98,13 @@ draw_player_1 u_draw_player_1(
 
 
 finish_screen u_finish_screen(
-    .clk(clk_40),
+    .clk(clk),
     .rst(rst),
     .vga_in,
     .vga_out(finish)
 );
 
-always_ff @(posedge clk_40) begin
+always_ff @(posedge clk) begin
     case(game_state)
         START: begin
             out.vcount <= game_menu.vcount;
@@ -145,7 +145,7 @@ always_ff @(posedge clk_40) begin
     endcase
 end
 
-always_ff @(posedge clk_40) begin
+always_ff @(posedge clk) begin
     if(rst) begin
         vga_out.vcount <= '0;
         vga_out.vsync <= '0;

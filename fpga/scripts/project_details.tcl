@@ -28,7 +28,6 @@ set target xc7a35tcpg236-1
 set xdc_files {
     constraints/top_vga_basys3.xdc
     constraints/clk_wiz_0.xdc
-    constraints/clk_wiz_0_late.xdc
 }
 
 # Specify SystemVerilog design files location   -- EDIT
@@ -46,7 +45,6 @@ set sv_files {
     ../rtl/LEVEL_1/draw_rect.sv
     ../rtl/LEVEL_1/draw_rect_ctl.sv
     ../rtl/top_vga.sv
-    ../rtl/mouse/draw_mouse.sv
     ../rtl/LEVEL_1/image_rom.sv
     ../rtl/LEVEL_1/draw_buttons.sv
     ../rtl/LEVEL_1/draw_player_1.sv 

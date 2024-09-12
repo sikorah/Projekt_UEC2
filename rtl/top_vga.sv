@@ -10,7 +10,7 @@
  import state_pkg::*;
 
  module top_vga (
-     input  logic clk_40,
+     input  logic clk_65,
      input  logic clk_100,
      inout  logic ps2_clk,
      inout  logic ps2_data,
@@ -46,7 +46,7 @@
  assign {r, g, b} = vga_out.rgb; 
  
  vga_timing u_vga_timing (
-     .clk(clk_40),
+     .clk(clk_65),
      .rst(rst),
      .vga_out(vga_tim)
  );
@@ -71,7 +71,7 @@
  );
  
  mouse_to_gpio u_mouse_to_gpio(
-     .clk(clk_100),
+     .clk(clk_65),
      .rst(rst),
      .m_left(m_left),
      .m_right(m_right),
@@ -81,7 +81,7 @@
  );
  
  state_control u_state_control(
-     .clk_40(clk_40),
+     .clk(clk_65),
      .rst(rst),
      .xpos_mouse(xpos_mouse),
      .ypos_mouse(ypos_mouse),
@@ -94,7 +94,7 @@
  
  
  draw_player_ctl1 u_draw_player_ctl1 (
-     .clk(clk_40),
+     .clk(clk_65),
      .rst(rst),
      .v_tick(vga_tim.vsync),
      .m_left(m_left),
@@ -105,7 +105,7 @@
  );
  
  draw_player_ctl2 u_draw_player_ctl2 (
-     .clk(clk_40),
+     .clk(clk_65),
      .rst(rst),
      .v_tick(vga_tim.vsync),
      .gpio_left(gpio_left_input),
@@ -116,7 +116,7 @@
  );
  
  start_game u_start_game(
-     .clk_40(clk_40),
+     .clk(clk_65),
      .rst(rst),
      .game_state,
      .state1,
@@ -133,7 +133,7 @@
  );
  
  draw_rect_ctl u_draw_rect_ctl (
-     .clk(clk_40),
+     .clk(clk_65),
      .rst(rst),
      .v_tick(vga_tim.vsync),
      .xpos_rect(xpos_rect_ctl),  

@@ -24,48 +24,46 @@
 
 module top_vga_tb;
 
+import state_pkg::*;
 
 /**
  *  Local parameters
  */
 
-localparam CLK40_PERIOD = 25;     // 40 MHz
-localparam CLK100_PERIOD = 10;     // 40 MHz
+ localparam CLK_PERIOD = (200/13);     // 65 MHz
 
-/**
- * Local variables and signals
- */
-
-logic clk40,clk100, rst;
-wire vs, hs;
-wire [3:0] r, g, b;
-
-
-/**
- * Clock generation
- */
-
-initial begin
-    clk40 = 1'b0;
-    clk100= 1'b0;
-    fork
-        forever #(CLK40_PERIOD/2) clk40 = ~clk40;
-        forever #(CLK100_PERIOD/2) clk100 = ~clk100;
-    join
-end
-/*
-initial begin
-    force dut.x_pos=400;
-    force dut.y_pos=250;
-end
-*/
-/**
- * Submodules instances
- */
-
-top_vga dut (
-    .clk_40(clk40),
-    .clk_100(clk100),
+ localparam CLK100_PERIOD = 10;  //100 MHz
+ 
+ /**
+  * Local variables and signals
+  */
+ 
+ logic clk, rst, clk100MHz, solo_enable, rx;
+ wire vs, hs;
+ wire [3:0] r, g, b;
+ 
+ 
+ /**
+  * Clock generation
+  */
+ 
+ initial begin
+     clk = 1'b0;
+     forever #(CLK_PERIOD/2) clk = ~clk;
+ end
+ 
+ initial begin
+     clk100MHz= 1'b0;
+     forever #(CLK100_PERIOD/2) clk100MHz = ~clk100MHz;
+ end
+ 
+ /**
+  * Submodules instances
+  */
+ 
+  top_vga dut (
+    .clk_65(clk),
+    .clk_100(clk100MHz),
     .rst(rst),
     .vs(vs),
     .hs(hs),
@@ -75,40 +73,43 @@ top_vga dut (
     .ps2_clk(),
     .ps2_data()
 );
-
-tiff_writer #(
-    .XDIM(16'd1056),
-    .YDIM(16'd628),
-    .FILE_DIR("../../results")
-) u_tiff_writer (
-    .clk(clk40),
-    .r({r,r}), // fabricate an 8-bit value
-    .g({g,g}), // fabricate an 8-bit value
-    .b({b,b}), // fabricate an 8-bit value
-    .go(vs)
-);
-
-
-/**
- * Main test
- */
-
-initial begin
-    rst = 1'b0;
-    # 30 rst = 1'b1;
-    # 30 rst = 1'b0;
-
-    $display("If simulation ends before the testbench");
-    $display("completes, use the menu option to run all.");
-    $display("Prepare to wait a long time...");
-
-    wait (vs == 1'b0);
-    @(negedge vs) $display("Info: negedge VS at %t",$time);
-    @(negedge vs) $display("Info: negedge VS at %t",$time);
-
-    // End the simulation.
-    $display("Simulation is over, check the waveforms.");
-    $finish;
-end
-
-endmodule
+ 
+ tiff_writer #(
+     .XDIM(16'd1344),
+     .YDIM(16'd806),
+     .FILE_DIR("../../results")
+ ) u_tiff_writer (
+     .clk(clk),
+     .r({r,r}), // fabricate an 8-bit value
+     .g({g,g}), // fabricate an 8-bit value
+     .b({b,b}), // fabricate an 8-bit value
+     .go(vs)
+ );
+ 
+ 
+ /**
+  * Main test
+  */
+ 
+ initial begin
+     rst = 1'b0;
+     rx = 1'b0;
+     # 30 rst = 1'b1;
+     # 30 rst = 1'b0;
+     # 30 solo_enable = 1'b1;
+     $display("If simulation ends before the testbench");
+     $display("completes, use the menu option to run all.");
+     $display("Prepare to wait a long time...");
+     $display("Juz zaraz");
+ 
+     wait (hs == 1'b0);
+     wait (vs == 1'b0);
+     @(negedge vs) $display("Info: negedge VS at %t",$time);
+     @(negedge vs) $display("Info: negedge VS at %t",$time);
+ 
+     // End the simulation.
+     $display("Simulation is over, check the waveforms.");
+     $finish;
+ end
+ 
+ endmodule
