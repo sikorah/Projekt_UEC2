@@ -14,10 +14,8 @@ module start_game(
     input logic clk,
     input logic rst,
     input g_state game_state,
-    inout logic [11:0] xpos_rect_ctl, ypos_rect_ctl,
+    input logic [11:0] xpos_rect_ctl, ypos_rect_ctl,
     input logic [11:0] xpos_player_ctl1, xpos_player_ctl2,
-    inout logic [11:0] xpos_mouse, ypos_mouse,
-    inout logic [1:0] button_pressed,
     input State1 state1,
     input State2 state2,
 
@@ -55,10 +53,7 @@ draw_buttons u_draw_buttons (
     .clk(clk),
     .rst(rst),
     .vga_in(lvl_start),
-    .vga_out(buttons),
-    .xpos_player1(xpos_player_ctl1),
-    .xpos_player2(xpos_player_ctl2),
-    .button_pressed(button_pressed)
+    .vga_out(buttons)
 );
 
 draw_rect u_draw_rect (
@@ -104,43 +99,43 @@ finish_screen u_finish_screen(
     .vga_out(finish)
 );
 
-always_ff @(posedge clk) begin
+always_comb begin
     case(game_state)
         START: begin
-            out.vcount <= game_menu.vcount;
-            out.vsync <= game_menu.vsync;
-            out.vblnk <= game_menu.vblnk;
-            out.hcount <= game_menu.hcount;
-            out.hsync  <= game_menu.hsync;
-            out.hblnk <= game_menu.hblnk;
-            out.rgb   <= game_menu.rgb;
+            out.vcount = game_menu.vcount;
+            out.vsync = game_menu.vsync;
+            out.vblnk = game_menu.vblnk;
+            out.hcount = game_menu.hcount;
+            out.hsync  = game_menu.hsync;
+            out.hblnk = game_menu.hblnk;
+            out.rgb   = game_menu.rgb;
         end
         LEVEL_1: begin
-            out.vcount <= level_1.vcount;
-            out.vsync <= level_1.vsync;
-            out.vblnk <= level_1.vblnk;
-            out.hcount <= level_1.hcount;
-            out.hsync  <= level_1.hsync;
-            out.hblnk <= level_1.hblnk;
-            out.rgb   <= level_1.rgb;
+            out.vcount = level_1.vcount;
+            out.vsync = level_1.vsync;
+            out.vblnk = level_1.vblnk;
+            out.hcount = level_1.hcount;
+            out.hsync  = level_1.hsync;
+            out.hblnk = level_1.hblnk;
+            out.rgb   = level_1.rgb;
         end
         FINISH: begin
-            out.vcount <= finish.vcount;
-            out.vsync <= finish.vsync;
-            out.vblnk <= finish.vblnk;
-            out.hcount <= finish.hcount;
-            out.hsync  <= finish.hsync;
-            out.hblnk <= finish.hblnk;
-            out.rgb   <= finish.rgb;
+            out.vcount = finish.vcount;
+            out.vsync = finish.vsync;
+            out.vblnk = finish.vblnk;
+            out.hcount = finish.hcount;
+            out.hsync  = finish.hsync;
+            out.hblnk = finish.hblnk;
+            out.rgb   = finish.rgb;
         end
         default: begin
-            out.vcount <= game_menu.vcount;
-            out.vsync <= game_menu.vsync;
-            out.vblnk <= game_menu.vblnk;
-            out.hcount <= game_menu.hcount;
-            out.hsync  <= game_menu.hsync;
-            out.hblnk <= game_menu.hblnk;
-            out.rgb   <= game_menu.rgb;
+            out.vcount = game_menu.vcount;
+            out.vsync = game_menu.vsync;
+            out.vblnk = game_menu.vblnk;
+            out.hcount = game_menu.hcount;
+            out.hsync  = game_menu.hsync;
+            out.hblnk = game_menu.hblnk;
+            out.rgb   = game_menu.rgb;
         end
     endcase
 end

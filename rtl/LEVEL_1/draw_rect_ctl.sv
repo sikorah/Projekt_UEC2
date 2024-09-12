@@ -11,7 +11,9 @@ module draw_rect_ctl (
     input  logic rst,
     input  logic v_tick,
     input  logic clk,
-    input  logic [1:0] button_pressed,
+    output  logic [1:0] button_pressed,
+    input logic [11:0] xpos_player1,
+    input logic [11:0] xpos_player2,
     output logic [11:0] xpos_rect,
     output logic [11:0] ypos_rect
 );
@@ -27,23 +29,41 @@ State state, state_nxt;
 
 logic [11:0] xpos_nxt, ypos_nxt;
 logic v_tick_old;
+logic [1:0] button1_pressed, button2_pressed;
+logic [1:0] button_pressed_nxt;
 
 always_ff @(posedge clk) begin
     if (rst) begin
         state <= IDLE;
-        xpos_rect <= 350;
-        ypos_rect <= 400;
+        xpos_rect <= 476;
+        ypos_rect <= 540;
+        button_pressed <= 2'b00;
     end else begin
         v_tick_old <= v_tick;
         if (v_tick && !v_tick_old) begin
             state <= state_nxt;
             xpos_rect <= xpos_nxt;
             ypos_rect <= ypos_nxt;
+            button_pressed <= button_pressed_nxt;
         end
     end
 end
 
 always_comb begin
+
+    if((xpos_player1 >= 256 && xpos_player1 <= 320) || (xpos_player2 >= 256 && xpos_player2 <= 320))
+    begin
+        button1_pressed = 1;
+    end else begin
+        button1_pressed = 0;
+    end
+
+    if((xpos_player1 >= 768 && xpos_player1 <= 832) || (xpos_player2 >= 768 && xpos_player2 <= 832))
+    begin
+        button2_pressed = 1;
+    end else begin
+        button2_pressed = 0;
+    end
 
     case (state)
         IDLE: begin
@@ -58,11 +78,11 @@ always_comb begin
 
         end
         ELEVATE: begin
-            if (ypos_rect > 300 && button_pressed) begin
+            if (ypos_rect > 412 && button_pressed) begin
                 state_nxt = state;
                 ypos_nxt = ypos_rect - 1;
             end
-            else if (ypos_rect == 300 && button_pressed) begin
+            else if (ypos_rect == 412 && button_pressed) begin
                 ypos_nxt = ypos_rect;
                 state_nxt = state;
             end
@@ -73,7 +93,7 @@ always_comb begin
                 xpos_nxt = xpos_rect;
         end
         FALL: begin
-            if (!button_pressed && ypos_rect < 400) begin
+            if (!button_pressed && ypos_rect < 540) begin
                 ypos_nxt = ypos_rect + 1;
                 state_nxt = state;
             end
@@ -94,6 +114,8 @@ always_comb begin
 
         end
     endcase
+
+    button_pressed_nxt = button1_pressed || button2_pressed;
 end
 
 

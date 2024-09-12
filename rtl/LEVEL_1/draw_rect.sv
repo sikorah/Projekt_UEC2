@@ -48,13 +48,6 @@ module draw_rect
          end
      end
      
-    /* always_ff @(posedge clk) begin
-        if (rst) begin
-            vga_out.rgb <= '0;
-        end else begin
-            vga_out.rgb <= rgb_nxt;
-        end
-    end*/
     
      always_comb begin : bg_comb_blk                            
         if (vga_in.vcount <= ypos_rect + W && vga_in.vcount >= ypos_rect && vga_in.hcount <= xpos_rect + L && vga_in.hcount >= xpos_rect) begin

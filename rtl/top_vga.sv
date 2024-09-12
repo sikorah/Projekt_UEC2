@@ -18,10 +18,6 @@
      input  logic gpio_right_input,
      output logic gpio_left_output,
      output logic gpio_right_output,
-     inout  logic [11:0] xpos_rect_ctl, ypos_rect_ctl,
-     inout  logic [11:0] xpos_player_ctl1, xpos_player_ctl2,
-     inout  logic [11:0] xpos_mouse, ypos_mouse,
-     inout  logic [1:0] button_pressed,
      input  logic rst,
      output logic vs,
      output logic hs,
@@ -35,7 +31,10 @@
  vga_if vga_out();
  
  wire m_left, m_right;
- 
+ wire [11:0] xpos_rect_ctl, ypos_rect_ctl;
+ wire [11:0] xpos_player_ctl1, xpos_player_ctl2;
+ wire [1:0] button_pressed;
+
  g_state game_state;
  State1 state1;
  State2 state2;
@@ -54,20 +53,14 @@
  MouseCtl u_mouse_ctl(
      .clk(clk_100),
      .rst(rst),
-     .xpos(xpos_mouse),
-     .ypos(ypos_mouse),
      .setmax_x(1'b0),
      .setmax_y(1'b0),
      .ps2_clk(ps2_clk), 
      .ps2_data(ps2_data),
      .left(m_left),
      .right(m_right),
-     .zpos(),
-     .middle(),
      .new_event(),
-     .value('0),
-     .setx('0),
-     .sety('0)
+     .value('0)
  );
  
  mouse_to_gpio u_mouse_to_gpio(
@@ -83,16 +76,16 @@
  state_control u_state_control(
      .clk(clk_65),
      .rst(rst),
-     .xpos_mouse(xpos_mouse),
-     .ypos_mouse(ypos_mouse),
      .m_left(m_left),
+     .m_right(m_right),
      .gpio(gpio_left_input),
      .xpos_player1(xpos_player_ctl1),
      .xpos_player2(xpos_player_ctl2),
      .game_state
  );
+
  
- 
+
  draw_player_ctl1 u_draw_player_ctl1 (
      .clk(clk_65),
      .rst(rst),
@@ -103,17 +96,29 @@
      .button_pressed(button_pressed),
      .state(state1)
  );
- 
+
  draw_player_ctl2 u_draw_player_ctl2 (
-     .clk(clk_65),
-     .rst(rst),
-     .v_tick(vga_tim.vsync),
-     .gpio_left(gpio_left_input),
-     .gpio_right(gpio_right_input),
-     .xpos_player2(xpos_player_ctl2),
-     .button_pressed(button_pressed),
-     .state(state2)
- );
+    .clk(clk_65),
+    .rst(rst),
+    .v_tick(vga_tim.vsync),
+    .gpio_left(gpio_left_input),
+    .gpio_right(gpio_right_input),
+    .xpos_player2(xpos_player_ctl2),
+    .button_pressed(button_pressed),
+    .state(state2)
+);
+
+ draw_rect_ctl u_draw_rect_ctl (
+    .clk(clk_65),
+    .rst(rst),
+    .v_tick(vga_tim.vsync),
+    .xpos_rect(xpos_rect_ctl),  
+    .ypos_rect(ypos_rect_ctl),  
+    .button_pressed(button_pressed),
+    .xpos_player1(xpos_player_ctl1),
+    .xpos_player2(xpos_player_ctl2)
+);
+ 
  
  start_game u_start_game(
      .clk(clk_65),
@@ -121,24 +126,12 @@
      .game_state,
      .state1,
      .state2,
-     .xpos_mouse(xpos_mouse),
-     .ypos_mouse(ypos_mouse),
-     .button_pressed,
-     .xpos_rect_ctl(xpos_rect_ctl),
-     .ypos_rect_ctl(ypos_rect_ctl),
-     .xpos_player_ctl1(xpos_player_ctl1),
-     .xpos_player_ctl2(xpos_player_ctl2),
+     .xpos_rect_ctl,
+     .ypos_rect_ctl,
+     .xpos_player_ctl1,
+     .xpos_player_ctl2,
      .vga_in(vga_tim),
      .vga_out(vga_out)
- );
- 
- draw_rect_ctl u_draw_rect_ctl (
-     .clk(clk_65),
-     .rst(rst),
-     .v_tick(vga_tim.vsync),
-     .xpos_rect(xpos_rect_ctl),  
-     .ypos_rect(ypos_rect_ctl),  
-     .button_pressed(button_pressed)
  );
  
  

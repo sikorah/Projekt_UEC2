@@ -22,71 +22,71 @@ logic [11:0] rgb_nxt;
 
 function logic [11:0] get_text_pixel(input int x, input int y);
     // Litera "S"
-    if (((x >= 215 && x < 245) && (y >= 260 && y < 270)) || // górna pozioma linia
-        ((x >= 215 && x < 225) && (y >= 270 && y < 290)) || // lewy pionowy
-        ((x >= 215 && x < 245) && (y >= 280 && y < 290)) || // środkowa pozioma linia
-        ((x >= 235 && x < 245) && (y >= 290 && y < 310)) || // prawy pionowy
-        ((x >= 215 && x < 245) && (y >= 300 && y < 310)))   // dolna pozioma linia
+    if (((x >= 275 && x < 313) && (y >= 333 && y < 346)) || // górna pozioma linia
+        ((x >= 275 && x < 288) && (y >= 346 && y < 371)) || // lewy pionowy
+        ((x >= 275 && x < 313) && (y >= 358 && y < 371)) || // środkowa pozioma linia
+        ((x >= 300 && x < 313) && (y >= 371 && y < 397)) || // prawy pionowy
+        ((x >= 275 && x < 313) && (y >= 384 && y < 397)))   // dolna pozioma linia
         return 12'h0_0_0; // czarny
 
     // Litera "T"
-    else if (((x >= 255 && x < 295) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 270 && x < 280) && (y >= 270 && y < 310)))   // środkowy pionowy
+    else if (((x >= 326 && x < 378) && (y >= 333 && y < 346)) || // górna pozioma linia
+             ((x >= 346 && x < 358) && (y >= 346 && y < 397)))   // środkowy pionowy
         return 12'h0_0_0; // czarny
 
     // Litera "A"
-    else if (((x >= 300 && x < 310) && (y >= 270 && y < 310)) || // lewy pionowy
-             ((x >= 320 && x < 330) && (y >= 270 && y < 310)) || // prawy pionowy
-             ((x >= 310 && x < 320) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 310 && x < 320) && (y >= 280 && y < 290)))   // środkowa pozioma linia
+    else if (((x >= 384 && x < 397) && (y >= 346 && y < 397)) || // lewy pionowy
+             ((x >= 410 && x < 422) && (y >= 346 && y < 397)) || // prawy pionowy
+             ((x >= 397 && x < 410) && (y >= 333 && y < 346)) || // górna pozioma linia
+             ((x >= 397 && x < 410) && (y >= 358 && y < 371)))   // środkowa pozioma linia
         return 12'h0_0_0; // czarny
 
     // Litera "R"
-    else if (((x >= 340 && x < 350) && (y >= 260 && y < 310)) || // lewy pionowy
-             ((x >= 350 && x < 360) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 360 && x < 370) && (y >= 270 && y < 290)) || // prawy górny pionowy
-             ((x >= 350 && x < 370) && (y >= 280 && y < 290)) || // środkowa pozioma linia
-             ((x >= 355 && x < 365) && (y >= 290 && y < 300)) || // prawy dolny pionowy
-             ((x >= 360 && x < 370) && (y >= 300 && y < 310)))  // prawy dolny pionowy
+    else if (((x >= 435 && x < 448) && (y >= 333 && y < 397)) || // lewy pionowy
+             ((x >= 448 && x < 461) && (y >= 333 && y < 346)) || // górna pozioma linia
+             ((x >= 461 && x < 474) && (y >= 346 && y < 371)) || // prawy górny pionowy
+             ((x >= 448 && x < 474) && (y >= 358 && y < 371)) || // środkowa pozioma linia
+             ((x >= 454 && x < 467) && (y >= 371 && y < 384)) || // prawy dolny pionowy
+             ((x >= 461 && x < 474) && (y >= 384 && y < 397)))  // prawy dolny pionowy
         return 12'h0_0_0; // czarny
 
     // Litera "T" (druga)
-    else if (((x >= 375 && x < 415) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 390 && x < 400) && (y >= 270 && y < 310)))   // środkowy pionowy
+    else if (((x >= 480 && x < 531) && (y >= 333 && y < 346)) || // górna pozioma linia
+             ((x >= 499 && x < 512) && (y >= 346 && y < 397)))   // środkowy pionowy
         return 12'h0_0_0; // czarny
 
     // Przerwa między wyrazami (10 pikseli szerokości)
-    else if (x >= 415 && x < 425)
+    else if (x >= 531 && x < 544)
         return 12'hf_f_0; // żółty
 
     // Litera "G"
-    else if (((x >= 435 && x < 465) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 435 && x < 445) && (y >= 270 && y < 310)) || // lewy pionowy
-             ((x >= 445 && x < 465) && (y >= 300 && y < 310)) || // dolna pozioma linia
-             ((x >= 455 && x < 465) && (y >= 280 && y < 290)) || // prawy górny pionowy
-             ((x >= 455 && x < 465) && (y >= 290 && y < 310)))   // prawy dolny pionowy
+    else if (((x >= 557 && x < 595) && (y >= 333 && y < 346)) || // górna pozioma linia
+             ((x >= 557 && x < 570) && (y >= 346 && y < 397)) || // lewy pionowy
+             ((x >= 570 && x < 595) && (y >= 384 && y < 397)) || // dolna pozioma linia
+             ((x >= 582 && x < 595) && (y >= 358 && y < 371)) || // prawy górny pionowy
+             ((x >= 582 && x < 595) && (y >= 371 && y < 397)))   // prawy dolny pionowy
         return 12'h0_0_0; // czarny
 
     // Litera "A" (druga)
-    else if (((x >= 475 && x < 485) && (y >= 270 && y < 310)) || // lewy pionowy
-             ((x >= 495 && x < 505) && (y >= 270 && y < 310)) || // prawy pionowy
-             ((x >= 485 && x < 495) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 485 && x < 495) && (y >= 280 && y < 290)))   // środkowa pozioma linia
+    else if (((x >= 608 && x < 621) && (y >= 346 && y < 397)) || // lewy pionowy
+             ((x >= 634 && x < 646) && (y >= 346 && y < 397)) || // prawy pionowy
+             ((x >= 621 && x < 634) && (y >= 333 && y < 346)) || // górna pozioma linia
+             ((x >= 621 && x < 634) && (y >= 358 && y < 371)))   // środkowa pozioma linia
         return 12'h0_0_0; // czarny
 
     // Litera "M"
-    else if (((x >= 515 && x < 525) && (y >= 260 && y < 310)) || // lewy pionowy
-             ((x >= 545 && x < 555) && (y >= 260 && y < 310)) || // prawy pionowy
-             ((x >= 525 && x < 530) && (y >= 270 && y < 280)) || // lewy ukośny
-             ((x >= 540 && x < 545) && (y >= 270 && y < 280)) || // prawy ukośny
-             ((x >= 530 && x < 540) && (y >= 280 && y < 290)))  // środkowa pozioma linia
+    else if (((x >= 659 && x < 672) && (y >= 333 && y < 397)) || // lewy pionowy
+             ((x >= 698 && x < 710) && (y >= 333 && y < 397)) || // prawy pionowy
+             ((x >= 672 && x < 678) && (y >= 346 && y < 359)) || // lewy ukośny
+             ((x >= 691 && x < 698) && (y >= 346 && y < 359)) || // prawy ukośny
+             ((x >= 678 && x < 691) && (y >= 358 && y < 371)))  // środkowa pozioma linia
         return 12'h0_0_0; // czarny
 
     // Litera "E"
-    else if (((x >= 565 && x < 575) && (y >= 260 && y < 310)) || // lewy pionowy
-             ((x >= 575 && x < 605) && (y >= 260 && y < 270)) || // górna pozioma linia
-             ((x >= 575 && x < 605) && (y >= 280 && y < 290)) || // środkowa pozioma linia
-             ((x >= 575 && x < 605) && (y >= 300 && y < 310)))   // dolna pozioma linia
+    else if (((x >= 723 && x < 736) && (y >= 333 && y < 397)) || // lewy pionowy
+             ((x >= 736 && x < 774) && (y >= 333 && y < 346)) || // górna pozioma linia
+             ((x >= 736 && x < 774) && (y >= 358 && y < 371)) || // środkowa pozioma linia
+             ((x >= 736 && x < 774) && (y >= 384 && y < 397)))   // dolna pozioma linia
         return 12'h0_0_0; // czarny
 
     else return 12'hf_f_0; // Żółty kolor tła, jeśli nie litera
@@ -124,7 +124,7 @@ always_comb begin : start_screen_comb_blk
             rgb_nxt = 12'h0_f_0;               
         else if (vga_in.hcount == HOR_PIXELS - 1)   // - prawa krawędź:
             rgb_nxt = 12'h0_0_f;                // - - ustaw na niebiesko.
-        else if (vga_in.vcount > 250 && vga_in.vcount < 320 && vga_in.hcount > 160 && vga_in.hcount < 650) 
+        else if (vga_in.vcount > 320 && vga_in.vcount < 410 && vga_in.hcount > 205 && vga_in.hcount < 832) 
             rgb_nxt = get_text_pixel(vga_in.hcount, vga_in.vcount);       
         else                                    // Reszta aktywnego ekranu:
             rgb_nxt = 12'h0_f_0;                // - ustaw na zielono.

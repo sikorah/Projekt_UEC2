@@ -85,10 +85,10 @@ always_ff @(posedge clk) begin : bg_ff_blk
         xpos_d1 <= xpos_player2;
         xpos_d2 <= xpos_d1;
 
-        vcount_diff1_stage1  <= vcount_d2 - (440 - ypos_d2);
-        hcount_diff1_stage1  <= hcount_d2 - (10 + xpos_d2);
-        vcount_diff2_stage1  <= vcount_d2 - (440 - ypos_d2);
-        hcount_diff2_stage1  <= hcount_d2 - (27 + xpos_d2);
+        vcount_diff1_stage1  <= vcount_d2 - (563 - ypos_d2);
+         hcount_diff1_stage1  <= hcount_d2 - (13 + xpos_d2);
+         vcount_diff2_stage1  <= vcount_d2 - (563 - ypos_d2);
+         hcount_diff2_stage1  <= hcount_d2 - (35 + xpos_d2);
         
         dist1_stage2 <= vcount_diff1_stage1 * vcount_diff1_stage1 + hcount_diff1_stage1 * hcount_diff1_stage1;
         dist2_stage2 <= vcount_diff2_stage1 * vcount_diff2_stage1 + hcount_diff2_stage1 * hcount_diff2_stage1;
@@ -106,60 +106,61 @@ always_ff @(posedge clk) begin
         
             //ears
 
-            if ((vga_in.vcount + ypos_player2 >= 415 && vga_in.vcount <= 420 + ypos_player2) && (
-                (vga_in.hcount > xpos_player2 && vga_in.hcount < 15 + xpos_player2) || vga_in.hcount > 25 +
-                xpos_player2 && vga_in.hcount < 40 + xpos_player2))
-            rgb_nxt <= 12'hF00;
-            else if ((vga_in.vcount + ypos_player2 >= 410 && vga_in.vcount <= 415 + ypos_player2) && (
-                    (vga_in.hcount > xpos_player2 && vga_in.hcount < 10 + xpos_player2) || vga_in.hcount > 30 +
-                    xpos_player2 && vga_in.hcount < 40 + xpos_player2))
-                rgb_nxt <= 12'hF00;
-
-            // eyes
-            else if(dist1_stage2 <= 30 || dist2_stage2 <= 30)
-                rgb_nxt <= 12'h0FF;
-               
-            // body
-            else if ((vga_in.vcount + ypos_player2 > 420 && vga_in.vcount <= 480 + ypos_player2) && 
-                     (vga_in.hcount > xpos_player2 && vga_in.hcount < 40 + xpos_player2))
-                rgb_nxt <= 12'hF00;
-     
-                
-            // legs
-            else if ((vga_in.vcount > 480 + ypos_player2 && vga_in.vcount < 500 + ypos_player2 ) && 
-                     ((vga_in.hcount > 0 + xpos_player2 && vga_in.hcount < 15 + xpos_player2) || 
-                      (vga_in.hcount > 25 + xpos_player2 && vga_in.hcount < 40 + xpos_player2)))
-                rgb_nxt <= 12'hF00;
-
-            else 
-            rgb_nxt <= vga_in.rgb;
-        end
-        RIGHT2: begin
-            // player going right
-            // body
-            if ((vga_in.vcount > 410 + ypos_player2 && vga_in.vcount < 500 + ypos_player2 ) && 
-                (vga_in.hcount > 0 + xpos_player2 && vga_in.hcount < 25 + xpos_player2))
-                rgb_nxt <= 12'hF00;
-            // eye
-            else if ((vga_in.vcount > 430 + ypos_player2 && vga_in.vcount < 450 + ypos_player2) && 
-                     (vga_in.hcount  >= 25 + xpos_player2 && vga_in.hcount < 30 + xpos_player2 ))
-                rgb_nxt <= 12'h0FF;
-                else 
-            rgb_nxt <= vga_in.rgb;
-        end
-        LEFT2: begin
-            // player going left
-            // body
-            if ((vga_in.vcount > 410 + ypos_player2 && vga_in.vcount < 500 + ypos_player2 ) && 
-                (vga_in.hcount > 5 + xpos_player2 && vga_in.hcount < 30 + xpos_player2))
-                rgb_nxt <= 12'hF00;
-            // eye
-            else if ((vga_in.vcount > 430 + ypos_player2 && vga_in.vcount < 450 + ypos_player2 ) && 
-                     (vga_in.hcount >= 0 + xpos_player2 && vga_in.hcount < 5 + xpos_player2))
-                rgb_nxt <= 12'h0FF;
-                else 
-            rgb_nxt <= vga_in.rgb;
-        end
+            if ((vga_in.vcount + ypos_player2 >= 531 && vga_in.vcount <= 538 + ypos_player2) && (
+                 (vga_in.hcount > xpos_player2 && vga_in.hcount < 19 + xpos_player2) || 
+                 (vga_in.hcount > 32 + xpos_player2 && vga_in.hcount < 51 + xpos_player2)))
+                 rgb_nxt <= 12'hF00;
+ 
+             // eyes
+             else if (dist1_stage2 <= 38 || dist2_stage2 <= 38)
+                 rgb_nxt <= 12'h0FF;
+ 
+             else if ((vga_in.vcount + ypos_player2 >= 525 && vga_in.vcount <= 531 + ypos_player2) && (
+                 (vga_in.hcount > xpos_player2 && vga_in.hcount < 13 + xpos_player2) || 
+                 (vga_in.hcount > 38 + xpos_player2 && vga_in.hcount < 51 + xpos_player2)))
+                 rgb_nxt <= 12'hF00;
+ 
+             else if ((vga_in.vcount + ypos_player2 > 538 && vga_in.vcount <= 614 + ypos_player2) && 
+                      (vga_in.hcount > xpos_player2 && vga_in.hcount < 51 + xpos_player2))
+                 rgb_nxt <= 12'hF00;
+                 
+             // legs
+             else if ((vga_in.vcount > 614 + ypos_player2 && vga_in.vcount < 640 + ypos_player2 ) && 
+                      ((vga_in.hcount > 0 + xpos_player2 && vga_in.hcount < 19 + xpos_player2) || 
+                       (vga_in.hcount > 32 + xpos_player2 && vga_in.hcount < 51 + xpos_player2)))
+                 rgb_nxt <= 12'hF00;
+ 
+             else 
+                 rgb_nxt <= vga_in.rgb;
+         end
+         RIGHT2: begin
+             // player going right
+             // body
+             if ((vga_in.vcount > 525 + ypos_player2 && vga_in.vcount < 640 + ypos_player2 ) && 
+                 (vga_in.hcount > 0 + xpos_player2 && vga_in.hcount < 32 + xpos_player2))
+                 rgb_nxt <= 12'hF00;
+             // eye
+             else if ((vga_in.vcount > 550 + ypos_player2 && vga_in.vcount < 576 + ypos_player2) && 
+                      (vga_in.hcount  >= 32 + xpos_player2 && vga_in.hcount < 38 + xpos_player2 ))
+                 rgb_nxt <= 12'h0FF;
+ 
+             else 
+                 rgb_nxt <= vga_in.rgb;
+         end
+         LEFT2: begin
+             // player going left
+             // body
+             if ((vga_in.vcount > 525 + ypos_player2 && vga_in.vcount < 640 + ypos_player2 ) && 
+                 (vga_in.hcount > 6 + xpos_player2 && vga_in.hcount < 38 + xpos_player2))
+                 rgb_nxt <= 12'hF00;
+             // eye
+             else if ((vga_in.vcount > 550 + ypos_player2 && vga_in.vcount < 576 + ypos_player2 ) && 
+                      (vga_in.hcount >= 0 + xpos_player2 && vga_in.hcount < 6 + xpos_player2))
+                 rgb_nxt <= 12'h0FF;
+ 
+             else 
+                 rgb_nxt <= vga_in.rgb;
+         end
     endcase
 end
 

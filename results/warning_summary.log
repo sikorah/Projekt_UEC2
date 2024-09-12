@@ -1,6 +1,6 @@
 Warnings, critical warnings and errors from synthesis and implementation
 
-Created: 2024-09-12 15:07:49
+Created: 2024-09-13 00:20:29
 
 ----SYNTHESIS----
 WARNING: [Synth 8-3848] Net vga_out\.rgb in module/entity vga_timing does not have driver. [rtl/vga_timing.sv:17]
@@ -8,19 +8,18 @@ WARNING: [Synth 8-6014] Unused sequential element set_x.inc_reg was removed.  [r
 WARNING: [Synth 8-6014] Unused sequential element set_x.x_inter_reg was removed.  [rtl/mouse/MouseCtl.vhd:456]
 WARNING: [Synth 8-6014] Unused sequential element set_y.inc_reg was removed.  [rtl/mouse/MouseCtl.vhd:514]
 WARNING: [Synth 8-6014] Unused sequential element set_y.y_inter_reg was removed.  [rtl/mouse/MouseCtl.vhd:520]
+WARNING: [Synth 8-7071] port 'xpos' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:53]
+WARNING: [Synth 8-7071] port 'ypos' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:53]
+WARNING: [Synth 8-7071] port 'zpos' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:53]
+WARNING: [Synth 8-7071] port 'middle' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:53]
+WARNING: [Synth 8-7071] port 'setx' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:53]
+WARNING: [Synth 8-7071] port 'sety' of module 'MouseCtl' is unconnected for instance 'u_mouse_ctl' [rtl/top_vga.sv:53]
+WARNING: [Synth 8-7023] instance 'u_mouse_ctl' of module 'MouseCtl' has 16 connections declared, but only 10 given [rtl/top_vga.sv:53]
 WARNING: [Synth 8-6014] Unused sequential element vcount_diff2_stage1_reg was removed.  [rtl/LEVEL_1/draw_player_2.sv:61]
 WARNING: [Synth 8-6014] Unused sequential element vcount_d1_reg was removed.  [rtl/LEVEL_1/draw_player_1.sv:49]
 WARNING: [Synth 8-6014] Unused sequential element hcount_d1_reg was removed.  [rtl/LEVEL_1/draw_player_1.sv:51]
 WARNING: [Synth 8-6014] Unused sequential element vcount_diff2_stage1_reg was removed.  [rtl/LEVEL_1/draw_player_1.sv:60]
-WARNING: [Synth 8-7071] port 'xpos_rect_ctl' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:87]
-WARNING: [Synth 8-7071] port 'ypos_rect_ctl' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:87]
-WARNING: [Synth 8-7071] port 'xpos_player_ctl1' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:87]
-WARNING: [Synth 8-7071] port 'xpos_player_ctl2' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:87]
-WARNING: [Synth 8-7071] port 'xpos_mouse' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:87]
-WARNING: [Synth 8-7071] port 'ypos_mouse' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:87]
-WARNING: [Synth 8-7071] port 'button_pressed' of module 'top_vga' is unconnected for instance 'u_top_vga' [fpga/rtl/top_vga_basys3.sv:87]
-WARNING: [Synth 8-7023] instance 'u_top_vga' of module 'top_vga' has 21 connections declared, but only 14 given [fpga/rtl/top_vga_basys3.sv:87]
-WARNING: [Synth 8-3848] Net pclk100 in module/entity top_vga_basys3 does not have driver. [fpga/rtl/top_vga_basys3.sv:75]
+WARNING: [Synth 8-3848] Net pclk in module/entity top_vga_basys3 does not have driver. [fpga/rtl/top_vga_basys3.sv:64]
 WARNING: [Synth 8-7129] Port vga_in\.rgb[11] in module finish_screen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_in\.rgb[10] in module finish_screen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_in\.rgb[9] in module finish_screen is either unconnected or has no load
@@ -57,54 +56,6 @@ WARNING: [Synth 8-7129] Port vga_in\.rgb[3] in module start_screen is either unc
 WARNING: [Synth 8-7129] Port vga_in\.rgb[2] in module start_screen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_in\.rgb[1] in module start_screen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_in\.rgb[0] in module start_screen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[11] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[10] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[9] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[8] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[7] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[6] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[5] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[4] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[3] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[2] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[1] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[0] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[11] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[10] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[9] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[8] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[7] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[6] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[5] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[4] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[3] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[2] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[1] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[0] in module start_game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[11] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[10] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[9] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[8] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[7] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[6] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[5] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[4] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[3] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[2] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[1] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port xpos_mouse[0] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[11] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[10] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[9] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[8] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[7] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[6] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[5] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[4] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[3] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[2] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[1] in module state_control is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ypos_mouse[0] in module state_control is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[11] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[10] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[9] in module vga_timing is either unconnected or has no load
@@ -128,65 +79,42 @@ WARNING: [Synth 8-7129] Port vga_in\.rgb[11] in module finish_screen is either u
 WARNING: [Synth 8-7129] Port vga_in\.rgb[10] in module finish_screen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_in\.rgb[9] in module finish_screen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_in\.rgb[8] in module finish_screen is either unconnected or has no load
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[16]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[15]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[14]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[13]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[12]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[11]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[10]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[9]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[8]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[7]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[6]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[5]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[4]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[3]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[2]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[1]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/Inst_Ps2Interface/FSM_onehot_state_reg[0]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[36]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[35]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[34]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[33]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[32]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[31]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[30]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[29]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[28]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[27]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[26]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[25]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[24]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[23]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[22]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[21]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[20]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[19]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[18]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[17]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[16]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[15]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[14]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[13]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[12]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[11]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[10]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[9]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[8]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[7]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[6]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[5]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[4]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[3]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[2]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[1]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_mouse_ctl/FSM_onehot_state_reg[0]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_state_control/FSM_onehot_game_state_reg[2]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl1/FSM_sequential_state_reg[1]) is unused and will be removed from module top_vga_basys3.
-WARNING: [Synth 8-3332] Sequential element (u_top_vga/u_draw_player_ctl1/FSM_sequential_state_reg[0]) is unused and will be removed from module top_vga_basys3.
+WARNING: [Synth 8-7129] Port vga_in\.rgb[7] in module finish_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[6] in module finish_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[5] in module finish_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[4] in module finish_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[3] in module finish_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[2] in module finish_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[1] in module finish_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[0] in module finish_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[11] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[10] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[9] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[8] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[7] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[6] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[5] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[4] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[3] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[2] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[1] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[0] in module level_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[11] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[10] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[9] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[8] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[7] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[6] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[5] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[4] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[3] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[2] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[1] in module start_screen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vga_in\.rgb[0] in module start_screen is either unconnected or has no load
 
 ----IMPLEMENTATION----
+WARNING: [Route 35-328] Router estimated timing not met.
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_start_game/u_draw_player_1/dist1_stage21 output u_top_vga/u_start_game/u_draw_player_1/dist1_stage21/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_start_game/u_draw_player_1/dist1_stage21__0 output u_top_vga/u_start_game/u_draw_player_1/dist1_stage21__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_top_vga/u_start_game/u_draw_player_1/dist2_stage21 output u_top_vga/u_start_game/u_draw_player_1/dist2_stage21/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
