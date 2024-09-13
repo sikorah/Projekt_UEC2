@@ -28,7 +28,7 @@
  vga_if vga_tim();
  vga_if vga_out();
  
- wire m_left, m_right, middle;
+ wire m_left, m_right;
  wire [11:0] xpos_rect_ctl, ypos_rect_ctl;
  wire [11:0] xpos_player_ctl1, xpos_player_ctl2;
  wire [1:0] button_pressed;
@@ -57,7 +57,7 @@
      .left(m_left),
      .right(m_right),
      .new_event(),
-     .middle(middle),
+     .middle(),
      .setmax_x('0),
      .setmax_y('0),
      .setx('0),
@@ -83,8 +83,8 @@
      .rst(rst),
      .m_left(m_left),
      .m_right(m_right),
-     .middle(middle),
-     .gpio(gpio_left_input),
+     .gpio_l(gpio_left_input),
+     .gpio_r(gpio_right_input),
      .xpos_player1(xpos_player_ctl1),
      .xpos_player2(xpos_player_ctl2),
      .zero,

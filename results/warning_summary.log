@@ -1,6 +1,6 @@
 Warnings, critical warnings and errors from synthesis and implementation
 
-Created: 2024-09-13 18:16:47
+Created: 2024-09-13 18:34:13
 
 ----SYNTHESIS----
 WARNING: [Synth 8-3848] Net vga_out\.rgb in module/entity vga_timing does not have driver. [rtl/vga_timing.sv:19]
@@ -8,7 +8,6 @@ WARNING: [Synth 8-6014] Unused sequential element set_x.inc_reg was removed.  [r
 WARNING: [Synth 8-6014] Unused sequential element set_x.x_inter_reg was removed.  [rtl/mouse/MouseCtl.vhd:456]
 WARNING: [Synth 8-6014] Unused sequential element set_y.inc_reg was removed.  [rtl/mouse/MouseCtl.vhd:514]
 WARNING: [Synth 8-6014] Unused sequential element set_y.y_inter_reg was removed.  [rtl/mouse/MouseCtl.vhd:520]
-WARNING: [Synth 8-87] always_comb on 'zero_reg' did not result in combinational logic [rtl/state_machine/state_control.sv:54]
 WARNING: [Synth 8-6014] Unused sequential element vcount_diff2_stage1_reg was removed.  [rtl/LEVEL_1/draw_player_2.sv:61]
 WARNING: [Synth 8-6014] Unused sequential element vcount_d1_reg was removed.  [rtl/LEVEL_1/draw_player_1.sv:49]
 WARNING: [Synth 8-6014] Unused sequential element hcount_d1_reg was removed.  [rtl/LEVEL_1/draw_player_1.sv:51]
@@ -49,7 +48,6 @@ WARNING: [Synth 8-7129] Port vga_in\.rgb[3] in module start_screen is either unc
 WARNING: [Synth 8-7129] Port vga_in\.rgb[2] in module start_screen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_in\.rgb[1] in module start_screen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_in\.rgb[0] in module start_screen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_right in module state_control is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[11] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[10] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[9] in module vga_timing is either unconnected or has no load
@@ -62,7 +60,6 @@ WARNING: [Synth 8-7129] Port vga_out\.rgb[3] in module vga_timing is either unco
 WARNING: [Synth 8-7129] Port vga_out\.rgb[2] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[1] in module vga_timing is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vga_out\.rgb[0] in module vga_timing is either unconnected or has no load
-WARNING: [Synth 8-327] inferring latch for variable 'zero_reg' [rtl/state_machine/state_control.sv:54]
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3936] Found unconnected internal register 'hcount_centered_pipe2_reg' and it is trimmed from '48' to '2' bits. [rtl/LEVEL_1/level_1.sv:59]
 WARNING: [Synth 8-3936] Found unconnected internal register 'hcount_centered_pipe2_reg' and it is trimmed from '48' to '17' bits. [rtl/LEVEL_1/level_1.sv:59]
@@ -128,4 +125,3 @@ WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_start_game/u_level
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_start_game/u_level_1/rgb_nxt5 multiplier stage u_top_vga/u_start_game/u_level_1/rgb_nxt5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_start_game/u_level_1/rgb_nxt5__0 multiplier stage u_top_vga/u_start_game/u_level_1/rgb_nxt5__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_top_vga/u_start_game/u_level_1/vcount_centered_pipe20 multiplier stage u_top_vga/u_start_game/u_level_1/vcount_centered_pipe20/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC PDRC-153] Gated clock check: Net u_top_vga/u_state_control/zero_reg_i_1_n_0 is a gated clock net sourced by a combinational pin u_top_vga/u_state_control/zero_reg_i_1/O, cell u_top_vga/u_state_control/zero_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.

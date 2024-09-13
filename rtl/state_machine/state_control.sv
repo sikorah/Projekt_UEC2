@@ -15,8 +15,8 @@ module state_control(
     input logic rst,
     input logic m_left,
     input logic m_right,
-    input logic middle,
-    input logic gpio,
+    input logic gpio_l,
+    input logic gpio_r,
     input logic [11:0] xpos_player1,
     input logic [11:0] xpos_player2,
     output logic zero,
@@ -35,11 +35,19 @@ always_ff @(posedge clk) begin
     end
 end
 
+always_ff @(posedge clk) begin
+    if(game_state == FINISH) begin
+        zero <= '1;
+    end else begin
+        zero <= '0;
+    end
+end
+
 
 always_comb begin
     case(game_state)
         START: begin
-            if(m_left || gpio) begin
+            if(m_right || gpio_r) begin
                 game_state_nxt = LEVEL_1;
             end
             else begin
@@ -51,16 +59,14 @@ always_comb begin
                 game_state_nxt = FINISH;
             end else begin
                 game_state_nxt = LEVEL_1;
-                zero = 0;
             end
         end
         FINISH: begin
-            if(middle) begin
+            if(m_left || gpio_l) begin
                 game_state_nxt = START;
             end
             else begin
                 game_state_nxt = FINISH;
-                zero = 1;
             end
         end
         default: begin
