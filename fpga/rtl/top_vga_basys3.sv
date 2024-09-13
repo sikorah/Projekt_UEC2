@@ -33,9 +33,7 @@
 
 
 wire pclk_65;
-wire pclk_100;
 wire pclk_mirror65;
-wire pclk_mirror100;
 wire locked;
 
 (* KEEP = "TRUE" *)
@@ -51,7 +49,7 @@ assign JA1 = pclk_mirror65;
 clk_wiz_0_clk_wiz  CLK
     (
      .clk65MHz(pclk_65),
-     .clk100MHz(pclk_100),
+     .clk100MHz(),
      .clk(clk),
      .locked(locked)
     );
@@ -61,7 +59,7 @@ clk_wiz_0_clk_wiz  CLK
 
 ODDR pclk65_oddr (
     .Q(pclk_mirror65),
-    .C(pclk),
+    .C(pclk_65),
     .CE(1'b1),
     .D1(1'b1),
     .D2(1'b0),
@@ -69,16 +67,6 @@ ODDR pclk65_oddr (
     .S(1'b0)
 );
 
-
-ODDR pclk100_oddr (
-    .Q(pclk_mirror100),
-    .C(pclk_100),
-    .CE(1'b1),
-    .D1(1'b1),
-    .D2(1'b0),
-    .R(1'b0),
-    .S(1'b0)
-);
 
 /**
  *  Project functional top module
@@ -86,7 +74,6 @@ ODDR pclk100_oddr (
 
  top_vga u_top_vga (
      .clk_65(pclk_65),
-     .clk_100(pclk_100),
      .rst(btnC),
      .r(vgaRed),
      .g(vgaGreen),

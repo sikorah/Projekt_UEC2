@@ -15,11 +15,11 @@ module draw_player_ctl1 (
     input logic m_left,
     input logic m_right,
     input logic [1:0] button_pressed,
+    input logic zero,
     output logic [11:0] xpos_player1,
     output State1 state
 
 );
-
 
 
 State1 state_nxt;
@@ -27,7 +27,7 @@ logic [11:0] xpos_nxt1;
 logic v_tick_old;
 
 always_ff @(posedge clk) begin
-    if (rst) begin
+    if (rst || zero) begin
         state   <= IDLE1;
         xpos_player1    <= '0;
         v_tick_old <= '0;

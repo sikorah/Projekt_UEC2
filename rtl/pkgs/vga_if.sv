@@ -24,6 +24,4 @@
     modport out (
         output hcount, hsync, hblnk, vcount, vsync, vblnk, rgb
     );
-    
-
-endinterface
+ endinterface

@@ -63,7 +63,6 @@ import state_pkg::*;
  
   top_vga dut (
     .clk_65(clk),
-    .clk_100(clk100MHz),
     .rst(rst),
     .vs(vs),
     .hs(hs),

@@ -13,6 +13,7 @@ module draw_player_ctl2 (
     input logic v_tick,
     input logic clk,
     input logic [1:0] button_pressed,
+    input logic zero,
     input logic gpio_left,
     input logic gpio_right,
     output logic [11:0] xpos_player2,
@@ -21,13 +22,12 @@ module draw_player_ctl2 (
 );
 
 
-
 State2 state_nxt;
 logic [11:0] xpos_nxt2; 
 logic v_tick_old;
 
 always_ff @(posedge clk) begin
-    if (rst) begin
+    if (rst || zero) begin
         state   <= IDLE2;
         xpos_player2    <= '0;
         v_tick_old <= '0;

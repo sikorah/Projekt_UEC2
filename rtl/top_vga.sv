@@ -11,7 +11,6 @@
 
  module top_vga (
      input  logic clk_65,
-     input  logic clk_100,
      inout  logic ps2_clk,
      inout  logic ps2_data,
      input  logic gpio_left_input,
@@ -27,13 +26,13 @@
  );
  
  vga_if vga_tim();
- vga_if start();
  vga_if vga_out();
  
- wire m_left, m_right;
+ wire m_left, m_right, middle;
  wire [11:0] xpos_rect_ctl, ypos_rect_ctl;
  wire [11:0] xpos_player_ctl1, xpos_player_ctl2;
  wire [1:0] button_pressed;
+ wire zero;
 
  g_state game_state;
  State1 state1;
@@ -51,16 +50,22 @@
  );
  
  MouseCtl u_mouse_ctl(
-     .clk(clk_100),
+     .clk(clk_65),
      .rst(rst),
-     .setmax_x(1'b0),
-     .setmax_y(1'b0),
      .ps2_clk(ps2_clk), 
      .ps2_data(ps2_data),
      .left(m_left),
      .right(m_right),
      .new_event(),
-     .value('0)
+     .middle(middle),
+     .setmax_x('0),
+     .setmax_y('0),
+     .setx('0),
+     .sety('0),
+     .value('0),
+     .zpos(),
+     .xpos(),
+     .ypos()
  );
  
  mouse_to_gpio u_mouse_to_gpio(
@@ -78,9 +83,11 @@
      .rst(rst),
      .m_left(m_left),
      .m_right(m_right),
+     .middle(middle),
      .gpio(gpio_left_input),
      .xpos_player1(xpos_player_ctl1),
      .xpos_player2(xpos_player_ctl2),
+     .zero,
      .game_state
  );
 
@@ -94,6 +101,7 @@
      .m_right(m_right),
      .xpos_player1(xpos_player_ctl1),
      .button_pressed(button_pressed),
+     .zero,
      .state(state1)
  );
 
@@ -105,6 +113,7 @@
     .gpio_right(gpio_right_input),
     .xpos_player2(xpos_player_ctl2),
     .button_pressed(button_pressed),
+    .zero,
     .state(state2)
 );
 

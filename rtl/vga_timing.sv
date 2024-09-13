@@ -10,15 +10,16 @@
 
  `timescale 1 ns / 1 ps
 
+ import vga_pkg::*;
+
  module vga_timing (
   input  logic clk,
   input  logic rst,
-  
+
   vga_if.out vga_out
 
 );
 
-import vga_pkg::*;
 
 
 /**
